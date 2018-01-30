@@ -15,10 +15,12 @@
 <meta property="og:site_name" content="L3F.win">
 <meta property="og:description" content="stylus介绍stylus 是一个CSS的预处理框架，2010年产生，来自Node.js社区，主要用来给Node项目进行CSS预处理支持，所以 Stylus 是一种新型语言，可以创建健壮的、动态的、富有表现力的CSS。比较年轻，其本质上做的事情与 SASS/LESS 等类似，应该是有很多借鉴，所以近似脚本的方式去写CSS代码。 .styl 是 stylus 的文件扩展名，支持多样性的CSS语法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-26T06:59:55.433Z">
+<meta property="og:image" content="http://yoursite.com/images/post/l3f_01.jpg">
+<meta property="og:updated_time" content="2018-01-29T09:29:41.253Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习stylus">
 <meta name="twitter:description" content="stylus介绍stylus 是一个CSS的预处理框架，2010年产生，来自Node.js社区，主要用来给Node项目进行CSS预处理支持，所以 Stylus 是一种新型语言，可以创建健壮的、动态的、富有表现力的CSS。比较年轻，其本质上做的事情与 SASS/LESS 等类似，应该是有很多借鉴，所以近似脚本的方式去写CSS代码。 .styl 是 stylus 的文件扩展名，支持多样性的CSS语法。">
+<meta name="twitter:image" content="http://yoursite.com/images/post/l3f_01.jpg">
   
     <link rel="alternate" href="/atom.xml" title="L3F.win" type="application/atom+xml">
   
@@ -95,6 +97,17 @@
 <p><em>.styl</em> 是 <strong>stylus</strong> 的文件扩展名，支持多样性的CSS语法。</p>
 <p><strong>参考文档</strong><br><a href="http://stylus-lang.com/" target="_blank" rel="noopener">官方API</a></p>
 <a id="more"></a>
+<p>首先我们通过修改Hexo的LandScape模板来学习 <strong>stylus</strong></p>
+<ol>
+<li><p>【找到.styl文件】打开根目录下的 themes/landscape/source/css目录，在这里我们可以看到很多的后缀名为.styl的文件。这就是stylus编写的CSS文件了。</p>
+</li>
+<li><p>【试着修改.styl文件】可以使用任意一款文本编辑器来修改 <em>.styl</em> 文件  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">  background: color-background</span><br><span class="line">  font: font-size font-sans</span><br><span class="line">  -webkit-text-size-adjust: 100%</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>stylus选择器</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">  background: color-background</span><br><span class="line"></span><br><span class="line">  /* -- 相当于--</span><br><span class="line">这里面省略了&#123;大括号&#125;，省略了最后的;分号，一些场合冒号也可以省略如 color red 相当于color: red;</span><br><span class="line">   */</span><br><span class="line">body&#123;background: color-background;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  我们做个试验，将所有文本设置为红色，为了不影响原有样式，我们在下面追加一行。<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/*background: color-background 好在这个注释符号一直好用*/</span><br><span class="line">background red</span><br></pre></td></tr></table></figure></p>
+<p>  返回到页面会看到以下状态<br>  <img src="/images/post/l3f_01.jpg" alt="修改背景" title="修改背景"></p>
 
       
     </div>
