@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>学习stylus【4】 | L3F.win</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="方法在 stylus 中可以直接定义函数方法，不需要使用 function下面是一个最简单的返回值的方法 1234567add(a, b)  a + bbody  padding add(10px, 5)=&amp;gt;body&amp;#123;padding: 15px;&amp;#125;">
+<meta name="keywords" content="stylus,CSS3,学习Stylus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习stylus【4】">
+<meta property="og:url" content="http://yoursite.com/2018/02/05/学习stylus【4】/index.html">
+<meta property="og:site_name" content="L3F.win">
+<meta property="og:description" content="方法在 stylus 中可以直接定义函数方法，不需要使用 function下面是一个最简单的返回值的方法 1234567add(a, b)  a + bbody  padding add(10px, 5)=&amp;gt;body&amp;#123;padding: 15px;&amp;#125;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-05T08:13:48.551Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习stylus【4】">
+<meta name="twitter:description" content="方法在 stylus 中可以直接定义函数方法，不需要使用 function下面是一个最简单的返回值的方法 1234567add(a, b)  a + bbody  padding add(10px, 5)=&amp;gt;body&amp;#123;padding: 15px;&amp;#125;">
+  
+    <link rel="alternate" href="/atom.xml" title="L3F.win" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">L3F.win</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Github及Hexo的使用</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">Archive</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-学习stylus【4】" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/05/学习stylus【4】/" class="article-date">
+  <time datetime="2018-02-05T06:51:52.000Z" itemprop="datePublished">2018-02-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      学习stylus【4】
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>方法</strong><br>在 <strong>stylus</strong> 中可以直接定义函数方法，不需要使用 <em>function</em><br>下面是一个最简单的返回值的方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">add(a, b)</span><br><span class="line">  a + b</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  padding add(10px, 5)</span><br><span class="line">=&gt;</span><br><span class="line">body&#123;padding: 15px;&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><strong>参数</strong><br>在 <strong>stylus</strong> 中我们可以设置超级参数<br>例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">add(a, b = a)</span><br><span class="line">  a + b</span><br><span class="line"></span><br><span class="line">add(10, 5)</span><br><span class="line">// =&gt; 15</span><br><span class="line"></span><br><span class="line">add(10)</span><br><span class="line">// =&gt; 20</span><br></pre></td></tr></table></figure></p>
+<p><strong>stylus</strong> 也可以使用函数作为参数进行调用<br>例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">add(a, b = unit(a, px))</span><br><span class="line">  a + b</span><br><span class="line"></span><br><span class="line">/* unit()为stylus的内置方法，其作用为将参数变为指定单位 */</span><br><span class="line">add(a, b = a)</span><br><span class="line">  a = unit(a, px)   //将a的单位变为px</span><br><span class="line">  b = unit(b, px)  //将b的单位变为px</span><br><span class="line">  a + b</span><br><span class="line"></span><br><span class="line">add(15%, 10deg)</span><br><span class="line">// =&gt; 25px</span><br></pre></td></tr></table></figure></p>
+<p><strong>数组</strong><br>例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/*<span class="comment">#1*/</span></span><br><span class="line">sizes = 15px 10px</span><br><span class="line"></span><br><span class="line">sizes[0]</span><br><span class="line">// =&gt; 15px</span><br><span class="line"></span><br><span class="line">/*<span class="comment">#2*/</span></span><br><span class="line">sizes()</span><br><span class="line"> 15px 10px</span><br><span class="line"></span><br><span class="line">sizes()[0]</span><br><span class="line">// =&gt; 15px</span><br></pre></td></tr></table></figure></p>
+<p><strong>条件判断</strong><br>我们判断val是否是字符串或缩进。如下，使用yes和no代替true和false.</p>
+<p>例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">stringish(val)</span><br><span class="line">  <span class="keyword">if</span> val is a <span class="string">'string'</span> or val is a <span class="string">'ident'</span></span><br><span class="line">    yes</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    no</span><br><span class="line"></span><br><span class="line">stringish(<span class="string">'yay'</span>) == yes</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">stringish(yay) == yes</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">stringish(0) == no</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">compare(a, b)</span><br><span class="line">  <span class="keyword">if</span> a &gt; b</span><br><span class="line">    higher</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> a &lt; b</span><br><span class="line">    lower</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    equal</span><br><span class="line"></span><br><span class="line">compare(5, 2)</span><br><span class="line">// =&gt; higher</span><br><span class="line"></span><br><span class="line">compare(1, 5)</span><br><span class="line">// =&gt; lower</span><br><span class="line"></span><br><span class="line">compare(10, 10)</span><br><span class="line">// =&gt; equal</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/05/学习stylus【4】/" data-id="cjd9xgiru00013outt51u5vxs" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/02/01/学习stylus【3】/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学习stylus【3】</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Landscape/">Landscape</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stylus/">stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/themes/">themes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS3/" style="font-size: 20px;">CSS3</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Landscape/" style="font-size: 10px;">Landscape</a> <a href="/tags/stylus/" style="font-size: 20px;">stylus</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/学习Stylus/" style="font-size: 20px;">学习Stylus</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/02/05/学习stylus【4】/">学习stylus【4】</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/01/学习stylus【3】/">学习stylus【3】</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/30/学习stylus【2】/">学习stylus【2】</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/26/学着修改Hexo的Landscape模板/">学着修改Hexo的Landscape模板</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/26/学习stylus/">学习stylus【1】</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 winbug<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archive</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
