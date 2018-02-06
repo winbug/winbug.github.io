@@ -5,19 +5,19 @@
   
 
   
-  <title>学习stylus【4】 | L3F.win</title>
+  <title>学习stylus【4】Stylus的方法及函数 | L3F.win</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="方法在 stylus 中可以直接定义函数方法，不需要使用 function下面是一个最简单的返回值的方法 1234567add(a, b)  a + bbody  padding add(10px, 5)=&amp;gt;body&amp;#123;padding: 15px;&amp;#125;">
 <meta name="keywords" content="stylus,CSS3,学习Stylus">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习stylus【4】">
+<meta property="og:title" content="学习stylus【4】Stylus的方法及函数">
 <meta property="og:url" content="http://yoursite.com/2018/02/05/学习stylus【4】/index.html">
 <meta property="og:site_name" content="L3F.win">
 <meta property="og:description" content="方法在 stylus 中可以直接定义函数方法，不需要使用 function下面是一个最简单的返回值的方法 1234567add(a, b)  a + bbody  padding add(10px, 5)=&amp;gt;body&amp;#123;padding: 15px;&amp;#125;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-05T08:13:48.551Z">
+<meta property="og:updated_time" content="2018-02-06T01:51:29.309Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习stylus【4】">
+<meta name="twitter:title" content="学习stylus【4】Stylus的方法及函数">
 <meta name="twitter:description" content="方法在 stylus 中可以直接定义函数方法，不需要使用 function下面是一个最简单的返回值的方法 1234567add(a, b)  a + bbody  padding add(10px, 5)=&amp;gt;body&amp;#123;padding: 15px;&amp;#125;">
   
     <link rel="alternate" href="/atom.xml" title="L3F.win" type="application/atom+xml">
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      学习stylus【4】
+      学习stylus【4】Stylus的方法及函数
     </h1>
   
 
@@ -99,6 +99,10 @@
 <p><strong>数组</strong><br>例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/*<span class="comment">#1*/</span></span><br><span class="line">sizes = 15px 10px</span><br><span class="line"></span><br><span class="line">sizes[0]</span><br><span class="line">// =&gt; 15px</span><br><span class="line"></span><br><span class="line">/*<span class="comment">#2*/</span></span><br><span class="line">sizes()</span><br><span class="line"> 15px 10px</span><br><span class="line"></span><br><span class="line">sizes()[0]</span><br><span class="line">// =&gt; 15px</span><br></pre></td></tr></table></figure></p>
 <p><strong>条件判断</strong><br>我们判断val是否是字符串或缩进。如下，使用yes和no代替true和false.</p>
 <p>例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">stringish(val)</span><br><span class="line">  <span class="keyword">if</span> val is a <span class="string">'string'</span> or val is a <span class="string">'ident'</span></span><br><span class="line">    yes</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    no</span><br><span class="line"></span><br><span class="line">stringish(<span class="string">'yay'</span>) == yes</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">stringish(yay) == yes</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">stringish(0) == no</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">compare(a, b)</span><br><span class="line">  <span class="keyword">if</span> a &gt; b</span><br><span class="line">    higher</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> a &lt; b</span><br><span class="line">    lower</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    equal</span><br><span class="line"></span><br><span class="line">compare(5, 2)</span><br><span class="line">// =&gt; higher</span><br><span class="line"></span><br><span class="line">compare(1, 5)</span><br><span class="line">// =&gt; lower</span><br><span class="line"></span><br><span class="line">compare(10, 10)</span><br><span class="line">// =&gt; equal</span><br></pre></td></tr></table></figure></p>
+<p><strong>别名</strong><br>别名的声明很简单，直接赋值给新的变量即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plus = add</span><br><span class="line"></span><br><span class="line">plus(1, 2)</span><br><span class="line">// =&gt; 3</span><br></pre></td></tr></table></figure>
+<p><strong>函数参数</strong><br>我们在其他编程语言中也经常遇到，将函数作为参数的情况</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">invoke(a, b, fn)</span><br><span class="line">  fn(a, b)</span><br><span class="line"></span><br><span class="line">add(a, b)</span><br><span class="line">  a + b</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  padding invoke(5, 10, add)</span><br><span class="line">  padding invoke(5, 10, sub)</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line">body &#123;</span><br><span class="line">  padding: 15;</span><br><span class="line">  padding: -5;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -113,6 +117,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2018/02/06/学习stylus【5】/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          学习stylus【5】Stylue内置方法
+        
+      </div>
+    </a>
   
   
     <a href="/2018/02/01/学习stylus【3】/" id="article-nav-older" class="article-nav-link-wrap">
@@ -168,7 +181,11 @@
       <ul>
         
           <li>
-            <a href="/2018/02/05/学习stylus【4】/">学习stylus【4】</a>
+            <a href="/2018/02/06/学习stylus【5】/">学习stylus【5】Stylue内置方法</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/05/学习stylus【4】/">学习stylus【4】Stylus的方法及函数</a>
           </li>
         
           <li>
@@ -181,10 +198,6 @@
         
           <li>
             <a href="/2018/01/26/学着修改Hexo的Landscape模板/">学着修改Hexo的Landscape模板</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/26/学习stylus/">学习stylus【1】</a>
           </li>
         
       </ul>
