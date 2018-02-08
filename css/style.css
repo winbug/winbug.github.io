@@ -1094,6 +1094,18 @@ a.article-title:hover {
   line-height: 1.6em;
   font-size: 0.85em;
 }
+.goBack {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  background: #f1f1f1 url("images/scrolltop.png") no-repeat 0 0;
+  position: fixed;
+  bottom: 110px;
+  cursor: pointer;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  right: 0;
+}
 .article-entry pre,
 .article-entry .highlight {
   background: #2d2d2d;
