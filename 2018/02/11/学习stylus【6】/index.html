@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>学习stylus【6】Rest参数（Rest Params） | L3F.win</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Rest参数Stylus 支持name…形式的其余参数。这些参数可以传递给 混入 或函数的参数们。这在处理浏览器私有属性，如-moz或-webkit的时候很管用。下面这个例子中，所有的参数们(1px, 2px, …)都被一个args参数给简单处理了：1234567891011121314box-shadow(args...)   -webkit-box-shadow args   -moz-box">
+<meta name="keywords" content="stylus,CSS3,学习Stylus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习stylus【6】Rest参数（Rest Params）">
+<meta property="og:url" content="http://yoursite.com/2018/02/11/学习stylus【6】/index.html">
+<meta property="og:site_name" content="L3F.win">
+<meta property="og:description" content="Rest参数Stylus 支持name…形式的其余参数。这些参数可以传递给 混入 或函数的参数们。这在处理浏览器私有属性，如-moz或-webkit的时候很管用。下面这个例子中，所有的参数们(1px, 2px, …)都被一个args参数给简单处理了：1234567891011121314box-shadow(args...)   -webkit-box-shadow args   -moz-box">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-11T02:37:58.518Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习stylus【6】Rest参数（Rest Params）">
+<meta name="twitter:description" content="Rest参数Stylus 支持name…形式的其余参数。这些参数可以传递给 混入 或函数的参数们。这在处理浏览器私有属性，如-moz或-webkit的时候很管用。下面这个例子中，所有的参数们(1px, 2px, …)都被一个args参数给简单处理了：1234567891011121314box-shadow(args...)   -webkit-box-shadow args   -moz-box">
+  
+    <link rel="alternate" href="/atom.xml" title="L3F.win" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">L3F.win</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Github及Hexo的使用</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">Archive</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-学习stylus【6】" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/11/学习stylus【6】/" class="article-date">
+  <time datetime="2018-02-11T02:24:54.000Z" itemprop="datePublished">2018-02-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      学习stylus【6】Rest参数（Rest Params）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Rest参数"><a href="#Rest参数" class="headerlink" title="Rest参数"></a>Rest参数</h2><p><strong>Stylus</strong> 支持name…形式的其余参数。这些参数可以传递给 <a href="/2018/02/01/学习stylus【3】/">混入</a> 或<a href="/2018/02/05/学习stylus【4】/">函数</a>的参数们。这在处理浏览器私有属性，如-moz或-webkit的时候很管用。<br>下面这个例子中，所有的参数们(1px, 2px, …)都被一个args参数给简单处理了：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">box-shadow(args...)</span><br><span class="line">   -webkit-box-shadow args</span><br><span class="line">   -moz-box-shadow args</span><br><span class="line">   box-shadow args</span><br><span class="line"></span><br><span class="line"> <span class="comment">#login</span></span><br><span class="line">   box-shadow 1px 2px 5px <span class="comment">#eee</span></span><br><span class="line"></span><br><span class="line">   =&gt;</span><br><span class="line">   <span class="comment">#login &#123;</span></span><br><span class="line">    -webkit-box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">    -moz-box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">    box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>如果我们想查看一个特定的参数，比如x-offset，我们可以简单地使用args[0]。 或者，我们可能希望重新定义混入mixin：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">box-shadow(offset-x, args...)</span><br><span class="line">  got-offset-x offset-x</span><br><span class="line">  -webkit-box-shadow offset-x args</span><br><span class="line">  -moz-box-shadow offset-x args</span><br><span class="line">  box-shadow offset-x args</span><br><span class="line"></span><br><span class="line"><span class="comment">#login</span></span><br><span class="line">  box-shadow 1px 2px 5px <span class="comment">#eee</span></span><br><span class="line"></span><br><span class="line">  =&gt;</span><br><span class="line">  <span class="comment">#login &#123;</span></span><br><span class="line">    got-offset-x: 1px;</span><br><span class="line">    -webkit-box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">    -moz-box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">    box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>arguments变量可以实现表达式的精确传递，包括逗号等等。这可以弥补args…参数的一些不足，见下面的例子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">box-shadow(args...)</span><br><span class="line">  -webkit-box-shadow args</span><br><span class="line">  -moz-box-shadow args</span><br><span class="line">  box-shadow args</span><br><span class="line"></span><br><span class="line"><span class="comment">#login</span></span><br><span class="line">  box-shadow <span class="comment">#ddd 1px 1px, #eee 2px 2px</span></span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line"><span class="comment">#login &#123;</span></span><br><span class="line">  -webkit-box-shadow: <span class="comment">#ddd 1px 1px #eee 2px 2px;</span></span><br><span class="line">  -moz-box-shadow: <span class="comment">#ddd 1px 1px #eee 2px 2px;</span></span><br><span class="line">  box-shadow: <span class="comment">#ddd 1px 1px #eee 2px 2px;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>逗号给忽略了。我们现在使用arguments重新定义这个混合书写。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">box-shadow()</span><br><span class="line">  -webkit-box-shadow arguments</span><br><span class="line">  -moz-box-shadow arguments</span><br><span class="line">  box-shadow arguments</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  box-shadow <span class="comment">#ddd 1px 1px, #eee 2px 2px</span></span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line">body &#123;</span><br><span class="line">  -webkit-box-shadow: <span class="comment">#ddd 1px 1px, #eee 2px 2px;</span></span><br><span class="line">  -moz-box-shadow: <span class="comment">#ddd 1px 1px, #eee 2px 2px;</span></span><br><span class="line">  box-shadow: <span class="comment">#ddd 1px 1px, #eee 2px 2px;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/11/学习stylus【6】/" data-id="cjdi6k92a0006c8ut3jafsemq" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/02/06/学习stylus【5】/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学习stylus【5】Stylue内置方法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Landscape/">Landscape</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stylus/">stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/themes/">themes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/返回顶部/">返回顶部</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS3/" style="font-size: 20px;">CSS3</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Landscape/" style="font-size: 10px;">Landscape</a> <a href="/tags/stylus/" style="font-size: 20px;">stylus</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/学习Stylus/" style="font-size: 20px;">学习Stylus</a> <a href="/tags/返回顶部/" style="font-size: 10px;">返回顶部</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/02/11/学习stylus【6】/">学习stylus【6】Rest参数（Rest Params）</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/06/学习stylus【5】/">学习stylus【5】Stylue内置方法</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/05/学习stylus【4】/">学习stylus【4】Stylus的方法及函数</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/01/学习stylus【3】/">学习stylus【3】</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/30/学习stylus【2】/">学习stylus【2】</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  <div class="goBack" onclick="window.scrollTo('0','0')"></div>
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 winbug<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archive</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

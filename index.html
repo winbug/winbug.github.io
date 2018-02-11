@@ -69,6 +69,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-学习stylus【6】" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/11/学习stylus【6】/" class="article-date">
+  <time datetime="2018-02-11T02:24:54.000Z" itemprop="datePublished">2018-02-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/11/学习stylus【6】/">学习stylus【6】Rest参数（Rest Params）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Rest参数"><a href="#Rest参数" class="headerlink" title="Rest参数"></a>Rest参数</h2><p><strong>Stylus</strong> 支持name…形式的其余参数。这些参数可以传递给 <a href="/2018/02/01/学习stylus【3】/">混入</a> 或<a href="/2018/02/05/学习stylus【4】/">函数</a>的参数们。这在处理浏览器私有属性，如-moz或-webkit的时候很管用。<br>下面这个例子中，所有的参数们(1px, 2px, …)都被一个args参数给简单处理了：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">box-shadow(args...)</span><br><span class="line">   -webkit-box-shadow args</span><br><span class="line">   -moz-box-shadow args</span><br><span class="line">   box-shadow args</span><br><span class="line"></span><br><span class="line"> <span class="comment">#login</span></span><br><span class="line">   box-shadow 1px 2px 5px <span class="comment">#eee</span></span><br><span class="line"></span><br><span class="line">   =&gt;</span><br><span class="line">   <span class="comment">#login &#123;</span></span><br><span class="line">    -webkit-box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">    -moz-box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">    box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+        
+          <p class="article-more-link">
+            <a href="/2018/02/11/学习stylus【6】/#more">查看全部</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/11/学习stylus【6】/" data-id="cjdi6k92a0006c8ut3jafsemq" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-学习stylus【5】" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/02/06/学习stylus【5】/" class="article-date">
@@ -104,7 +147,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/06/学习stylus【5】/" data-id="cjddvep710004oout7j2jfn8n" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/06/学习stylus【5】/" data-id="cjdi6k92c0008c8ut1d97vorg" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -148,7 +191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/05/学习stylus【4】/" data-id="cjddvep6y0002oout0zchtqbe" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/05/学习stylus【4】/" data-id="cjdi6k9230002c8utvmd3p097" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -191,7 +234,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/01/学习stylus【3】/" data-id="cjddvep720005ooutuj9z4vwn" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/01/学习stylus【3】/" data-id="cjdi6k9280005c8uttv2mq4ye" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -235,7 +278,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/30/学习stylus【2】/" data-id="cjddvep730006ooutmo34cjcy" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/01/30/学习stylus【2】/" data-id="cjdi6k9260004c8utj7qwh8jl" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -281,7 +324,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/26/学着修改Hexo的Landscape模板/" data-id="cjddvep750008ooutzwdmw14b" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/01/26/学着修改Hexo的Landscape模板/" data-id="cjdi6k92e0009c8utjdpuleac" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Landscape/">Landscape</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/themes/">themes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/返回顶部/">返回顶部</a></li></ul>
@@ -326,7 +369,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/26/学习stylus/" data-id="cjddvep6v0001ooutjv85ferp" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/01/26/学习stylus/" data-id="cjdi6k9200001c8utk1fhcwz4" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -373,7 +416,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/09/hello-world/" data-id="cjddvep6q0000ooutkr7swi2e" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/01/09/hello-world/" data-id="cjdi6k91u0000c8utkjmmtdk6" class="article-share-link">分享</a>
       
       
     </footer>
@@ -428,6 +471,10 @@
       <ul>
         
           <li>
+            <a href="/2018/02/11/学习stylus【6】/">学习stylus【6】Rest参数（Rest Params）</a>
+          </li>
+        
+          <li>
             <a href="/2018/02/06/学习stylus【5】/">学习stylus【5】Stylue内置方法</a>
           </li>
         
@@ -441,10 +488,6 @@
         
           <li>
             <a href="/2018/01/30/学习stylus【2】/">学习stylus【2】</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/26/学着修改Hexo的Landscape模板/">学着修改Hexo的Landscape模板</a>
           </li>
         
       </ul>
