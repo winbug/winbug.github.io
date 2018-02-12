@@ -69,6 +69,92 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-学习stylus【8】" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/12/学习stylus【8】/" class="article-date">
+  <time datetime="2018-02-12T01:42:17.000Z" itemprop="datePublished">2018-02-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/12/学习stylus【8】/">学习stylus【8】条件式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="条件式"><a href="#条件式" class="headerlink" title="条件式"></a>条件式</h2><p>条件提供控制流，否则就是静态语言了，提供有条件的导入，混合，函数等。 下面的例子是简单的例子，不推荐:)</p>
+<h3 id="if-else-if-else"><a href="#if-else-if-else" class="headerlink" title="if / else if / else"></a><em>if / else if / else</em></h3><p>跟一般的语言一致，if表达式满足(true)的时候执行后面语句块，否则，继续后面的else if或else.<br>下面这个例子，根据overload的条件，决定是使用padding还是margin.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">overload-padding = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> overload-padding</span><br><span class="line">  padding(y, x)</span><br><span class="line">    margin y x</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  padding 5px 10px</span><br></pre></td></tr></table></figure></p>
+        
+          <p class="article-more-link">
+            <a href="/2018/02/12/学习stylus【8】/#more">查看全部</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/12/学习stylus【8】/" data-id="cjdjkd5qh000jq0utppgp7mzi" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-学习stylus【7】" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/12/学习stylus【7】/" class="article-date">
+  <time datetime="2018-02-12T01:31:27.000Z" itemprop="datePublished">2018-02-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/12/学习stylus【7】/">学习stylus【7】注释(Comments)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>Stylus支持三种注释，单行注释，多行注释，以及多行缓冲注释。</p>
+<h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><p>跟JavaScript一样，双斜杠，CSS中不输出。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 我是注释!</span><br><span class="line">body</span><br><span class="line">  padding 5px // 蛋疼的padding</span><br></pre></td></tr></table></figure></p>
+<h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><p>多行注释看起来有点像CSS的常规注释。然而，它们只有在compress选项未启用的时候才会被输出。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"> * 给定数值合体</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">add(a, b)</span><br><span class="line">  a + b</span><br></pre></td></tr></table></figure></p>
+<h3 id="多行缓冲注释"><a href="#多行缓冲注释" class="headerlink" title="多行缓冲注释"></a>多行缓冲注释</h3><p>跟多行注释类似，不同之处在于开始的时候，这里是/*!. 这个相当于告诉Stylus压缩的时候这段无视直接输出。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/*!</span><br><span class="line"> * 给定数值合体</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">add(a, b)</span><br><span class="line">  a + b</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/12/学习stylus【7】/" data-id="cjdjkd5qb000dq0utuf9vst26" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-学习stylus【6】" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/02/11/学习stylus【6】/" class="article-date">
@@ -100,7 +186,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/11/学习stylus【6】/" data-id="cjdi6k92a0006c8ut3jafsemq" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/11/学习stylus【6】/" data-id="cjdjkd5qd000fq0utxk1mr9wj" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -147,7 +233,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/06/学习stylus【5】/" data-id="cjdi6k92c0008c8ut1d97vorg" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/06/学习stylus【5】/" data-id="cjdjkd5qf000hq0utdintenc6" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -191,7 +277,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/05/学习stylus【4】/" data-id="cjdi6k9230002c8utvmd3p097" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/05/学习stylus【4】/" data-id="cjdjkd5q9000bq0utybees0dy" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -234,7 +320,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/01/学习stylus【3】/" data-id="cjdi6k9280005c8uttv2mq4ye" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/01/学习stylus【3】/" data-id="cjdjkd5q70009q0uth7jiyy10" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -278,7 +364,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/30/学习stylus【2】/" data-id="cjdi6k9260004c8utj7qwh8jl" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/01/30/学习stylus【2】/" data-id="cjdjkd5q50008q0utm65klz85" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -324,7 +410,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/26/学着修改Hexo的Landscape模板/" data-id="cjdi6k92e0009c8utjdpuleac" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/01/26/学着修改Hexo的Landscape模板/" data-id="cjdjkd5qj000lq0ut4maez7c6" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Landscape/">Landscape</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/themes/">themes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/返回顶部/">返回顶部</a></li></ul>
@@ -369,7 +455,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/26/学习stylus/" data-id="cjdi6k9200001c8utk1fhcwz4" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/01/26/学习stylus/" data-id="cjdjkd5po0001q0utlz35xxgw" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -416,7 +502,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/09/hello-world/" data-id="cjdi6k91u0000c8utkjmmtdk6" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/01/09/hello-world/" data-id="cjdjkd5pj0000q0utd5juyy77" class="article-share-link">分享</a>
       
       
     </footer>
@@ -471,6 +557,14 @@
       <ul>
         
           <li>
+            <a href="/2018/02/12/学习stylus【8】/">学习stylus【8】条件式</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/12/学习stylus【7】/">学习stylus【7】注释(Comments)</a>
+          </li>
+        
+          <li>
             <a href="/2018/02/11/学习stylus【6】/">学习stylus【6】Rest参数（Rest Params）</a>
           </li>
         
@@ -480,14 +574,6 @@
         
           <li>
             <a href="/2018/02/05/学习stylus【4】/">学习stylus【4】Stylus的方法及函数</a>
-          </li>
-        
-          <li>
-            <a href="/2018/02/01/学习stylus【3】/">学习stylus【3】</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/30/学习stylus【2】/">学习stylus【2】</a>
           </li>
         
       </ul>
