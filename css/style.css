@@ -117,6 +117,12 @@ button::-moz-focus-inner {
   src: url("fonts/fontawesome-webfont.eot?v=#4.0.3");
   src: url("fonts/fontawesome-webfont.eot?#iefix&v=#4.0.3") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff?v=#4.0.3") format("woff"), url("fonts/fontawesome-webfont.ttf?v=#4.0.3") format("truetype"), url("fonts/fontawesome-webfont.svg#fontawesomeregular?v=#4.0.3") format("svg");
 }
+@font-face {
+  font-family: SquadaOne;
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/SquadaOne-Regular.woff.ttf") format("truetype");
+}
 html,
 body,
 #container {
@@ -542,7 +548,6 @@ body {
 .article-title {
   text-decoration: none;
   font-size: 2em;
-  font-weight: bold;
   color: #555;
   line-height: 1.1em;
   -webkit-transition: color 0.2s;
@@ -569,14 +574,6 @@ a.article-title:hover {
 .article-entry table {
   line-height: 1.6em;
   margin: 1.6em 0;
-}
-.article-entry h1,
-.article-entry h2,
-.article-entry h3,
-.article-entry h4,
-.article-entry h5,
-.article-entry h6 {
-  font-weight: bold;
 }
 .article-entry h1,
 .article-entry h2,
