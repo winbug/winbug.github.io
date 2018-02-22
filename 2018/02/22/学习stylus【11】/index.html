@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>学习stylus【11】@IMPORT 和 @REQUIRE | L3F.WIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="@IMPORT 和 @REQUIREStylus 支持CSS的关键字@import，以及动态导入其他Stylus表。 关键字CSS任何.css扩展的文件名将作为关键字的值。例如：123@import &quot;reset.css&quot;=&amp;gt;@import &quot;reset.css&quot; 导入Stylus免责声明：在@import所有的地方都使用stylus，也可以使用@require当使用不带.css扩展名的@i">
+<meta name="keywords" content="stylus,CSS3,学习Stylus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习stylus【11】@IMPORT 和 @REQUIRE">
+<meta property="og:url" content="http://www.l3f.win/2018/02/22/学习stylus【11】/index.html">
+<meta property="og:site_name" content="L3F.WIN">
+<meta property="og:description" content="@IMPORT 和 @REQUIREStylus 支持CSS的关键字@import，以及动态导入其他Stylus表。 关键字CSS任何.css扩展的文件名将作为关键字的值。例如：123@import &quot;reset.css&quot;=&amp;gt;@import &quot;reset.css&quot; 导入Stylus免责声明：在@import所有的地方都使用stylus，也可以使用@require当使用不带.css扩展名的@i">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-22T02:00:57.785Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习stylus【11】@IMPORT 和 @REQUIRE">
+<meta name="twitter:description" content="@IMPORT 和 @REQUIREStylus 支持CSS的关键字@import，以及动态导入其他Stylus表。 关键字CSS任何.css扩展的文件名将作为关键字的值。例如：123@import &quot;reset.css&quot;=&amp;gt;@import &quot;reset.css&quot; 导入Stylus免责声明：在@import所有的地方都使用stylus，也可以使用@require当使用不带.css扩展名的@i">
+  
+    <link rel="alternate" href="/atom.xml" title="L3F.WIN" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">L3F.WIN</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Github及Hexo的使用</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">Archive</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.l3f.win"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-学习stylus【11】" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/22/学习stylus【11】/" class="article-date">
+  <time datetime="2018-02-22T01:22:35.000Z" itemprop="datePublished">2018-02-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      学习stylus【11】@IMPORT 和 @REQUIRE
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="IMPORT-和-REQUIRE"><a href="#IMPORT-和-REQUIRE" class="headerlink" title="@IMPORT 和 @REQUIRE"></a>@IMPORT 和 @REQUIRE</h2><p>Stylus 支持CSS的关键字@import，以及动态导入其他Stylus表。</p>
+<h3 id="关键字CSS"><a href="#关键字CSS" class="headerlink" title="关键字CSS"></a>关键字CSS</h3><p>任何.css扩展的文件名将作为关键字的值。例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@import <span class="string">"reset.css"</span></span><br><span class="line">=&gt;</span><br><span class="line">@import <span class="string">"reset.css"</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="导入Stylus"><a href="#导入Stylus" class="headerlink" title="导入Stylus"></a>导入Stylus</h3><p>免责声明：在@import所有的地方都使用stylus，也可以使用@require<br>当使用不带.css扩展名的@import时，它被假定使用stylus（例如@import”mixins/border-radius”）。<br>@import可以通过遍历目录来工作，并检查这个文件是否存在于其中任何一个目录中（类似于node的require.paths）。 此数组默认为单个路径，该路径是从文件名选项的dirname派生的。 因此，如果您的文件名是/tmp/testing/stylus/main.styl，那么导入将会在/tmp/testing/stylus/中查找。<br>@import也支持索引样式。 这意味着当你@import blueprint，它将解析成blueprint.styl或blueprint/index.styl。 这对于想要公开其所有功能的库非常有用，同时仍允许导入功能子集。<br>例如，一个常见的库结构：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">./tablet</span><br><span class="line">  |-- index.styl</span><br><span class="line">  |-- vendor.styl</span><br><span class="line">  |-- buttons.styl</span><br><span class="line">  |-- images.styl</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>在下面的例子中，我们设置了路径选项来为Stylus提供额外的路径。 在./test.styl中，我们可以使用@import”mixins/border-radius”或@import”border-radius”（因为./mixins暴露给Stylus）。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Module dependencies.依赖模块</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">var stylus = require(<span class="string">'../'</span>)</span><br><span class="line">  , str = require(<span class="string">'fs'</span>).readFileSync(__dirname + <span class="string">'/test.styl'</span>, <span class="string">'utf8'</span>);</span><br><span class="line"></span><br><span class="line">var paths = [</span><br><span class="line">    __dirname</span><br><span class="line">  , __dirname + <span class="string">'/mixins'</span></span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">stylus(str)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'filename'</span>, __dirname + <span class="string">'/test.styl'</span>)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'paths'</span>, paths)</span><br><span class="line">  .render(<span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) throw err;</span><br><span class="line">    console.log(css);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Require"><a href="#Require" class="headerlink" title="Require"></a>Require</h3><p>@import之后，Stylus也推出了@require。 它几乎以相同的方式工作，除了只导入任何给定文件一次。</p>
+<h3 id="块级导入（Block-level-import）"><a href="#块级导入（Block-level-import）" class="headerlink" title="块级导入（Block-level import）"></a>块级导入（Block-level import）</h3><p>Stylus支持块级导入。 这意味着你不仅可以在根级别使用@import，而且可以嵌套在其他选择器或规则中。<br>代码bar.styl：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.bar</span><br><span class="line">  width: 10px;</span><br></pre></td></tr></table></figure></p>
+<p>然后你可以像这样在foo.styl里面导入它：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.foo</span><br><span class="line">  @import <span class="string">'bar.styl'</span></span><br><span class="line"></span><br><span class="line">@media screen and (min-width: 640px)</span><br><span class="line">  @import <span class="string">'bar.styl'</span></span><br></pre></td></tr></table></figure></p>
+<p>你会得到这个编译好的CSS结果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.foo .bar &#123;</span><br><span class="line">  width: 10px;</span><br><span class="line">&#125;</span><br><span class="line">@media screen and (min-width: 640px) &#123;</span><br><span class="line">  .bar &#123;</span><br><span class="line">    width: 10px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="文件通配符-File-globbing"><a href="#文件通配符-File-globbing" class="headerlink" title="文件通配符(File globbing)"></a>文件通配符(File globbing)</h3><p>Stylus支持通配符。 有了它，你可以使用文件掩码导入许多文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import <span class="string">'product/*'</span></span><br></pre></td></tr></table></figure></p>
+<p>这将从这个结构的目录中导入所有的Stylus表：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./product</span><br><span class="line">  |-- body.styl</span><br><span class="line">  |-- foot.styl</span><br><span class="line">  |-- head.styl</span><br></pre></td></tr></table></figure></p>
+<p>通配符也适用于@require 所以如果你有一个./product/index.styl这个内容：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@require <span class="string">'head'</span></span><br><span class="line">@require <span class="string">'body'</span></span><br><span class="line">@require <span class="string">'foot'</span></span><br></pre></td></tr></table></figure></p>
+<p>那么@require’product/*’将只包含一次单个表。</p>
+<h3 id="解析导入中的相关URL"><a href="#解析导入中的相关URL" class="headerlink" title="解析导入中的相关URL"></a>解析导入中的相关URL</h3><p>默认情况下，Stylus不能解析导入的.styl文件中的url，所以如果你碰巧有一个带有@import“bar/bar.styl”的foo.styl，它含有url(“baz.png”)，它在得到的CSS中也会是url(“baz.png”)。<br>但是你可以通过使用–resolve-url（或者只是-r）CLI选项在你的结果CSS中获取url(“bar/baz.png”)来改变这种行为。</p>
+<h3 id="JavaScript导入API"><a href="#JavaScript导入API" class="headerlink" title="JavaScript导入API"></a>JavaScript导入API</h3><p>当使用.import(path)方法，这些导入是被推迟的，直到赋值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'../'</span>)</span><br><span class="line">  , str = require(<span class="string">'fs'</span>).readFileSync(__dirname + <span class="string">'/test.styl'</span>, <span class="string">'utf8'</span>);</span><br><span class="line"></span><br><span class="line">stylus(str)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'filename'</span>, __dirname + <span class="string">'/test.styl'</span>)</span><br><span class="line">  .import(<span class="string">'mixins/vendor'</span>)</span><br><span class="line">  .render(<span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) throw err;</span><br><span class="line">  console.log(css);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>下面的代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@import <span class="string">'mixins/vendor'</span></span><br><span class="line">=&gt;</span><br><span class="line"> .import(<span class="string">'mixins/vendor'</span>)</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.l3f.win/2018/02/22/学习stylus【11】/" data-id="cjdxtp6e70004jwutl3j9rith" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/02/22/学习stylus【10】/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学习stylus【10】迭代(Iteration)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Landscape/">Landscape</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stylus/">stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/themes/">themes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/返回顶部/">返回顶部</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS3/" style="font-size: 20px;">CSS3</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Landscape/" style="font-size: 10px;">Landscape</a> <a href="/tags/stylus/" style="font-size: 20px;">stylus</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/学习Stylus/" style="font-size: 20px;">学习Stylus</a> <a href="/tags/返回顶部/" style="font-size: 10px;">返回顶部</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/02/22/学习stylus【11】/">学习stylus【11】@IMPORT 和 @REQUIRE</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/22/学习stylus【10】/">学习stylus【10】迭代(Iteration)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/14/学着修改Hexo的Landscape模板/">学着修改Hexo的Landscape模板</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/14/学习stylus【9】/">学习stylus【9】哈希（Hashes）</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/12/学习stylus【8】/">学习stylus【8】条件式</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  <div class="goBack" onclick="window.scrollTo('0','0')"></div>
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 winbug<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archive</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
