@@ -5,18 +5,20 @@
   
 
   
-  <title>Tag: 学习Stylus | L3F.WIN</title>
+  <title>theme01 | L3F.WIN</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
-<meta property="og:type" content="website">
-<meta property="og:title" content="L3F.WIN">
-<meta property="og:url" content="http://www.l3f.win/tags/学习Stylus/page/2/index.html">
+  <meta name="description" content="学习修改Landscape模板本次修改需有一定的前端技术能力， 我们将以Landscape模板作为基础，修改成其他样式的模板。 1. 头部修改目标： 将Logo 置于页面的左上角，缩小头部的高度。 首先将Logo，移动到 header-inner 下的 main-nav里面打开landscape目录下的layout/_partial/header.ejs文件将1&amp;lt;a href=&quot;&amp;lt;%-">
+<meta name="keywords" content="Theme,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="theme01">
+<meta property="og:url" content="http://www.l3f.win/2018/02/23/theme01/index.html">
 <meta property="og:site_name" content="L3F.WIN">
-<meta property="og:description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
+<meta property="og:description" content="学习修改Landscape模板本次修改需有一定的前端技术能力， 我们将以Landscape模板作为基础，修改成其他样式的模板。 1. 头部修改目标： 将Logo 置于页面的左上角，缩小头部的高度。 首先将Logo，移动到 header-inner 下的 main-nav里面打开landscape目录下的layout/_partial/header.ejs文件将1&amp;lt;a href=&quot;&amp;lt;%-">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-23T01:32:05.052Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="L3F.WIN">
-<meta name="twitter:description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
+<meta name="twitter:title" content="theme01">
+<meta name="twitter:description" content="学习修改Landscape模板本次修改需有一定的前端技术能力， 我们将以Landscape模板作为基础，修改成其他样式的模板。 1. 头部修改目标： 将Logo 置于页面的左上角，缩小头部的高度。 首先将Logo，移动到 header-inner 下的 main-nav里面打开landscape目录下的layout/_partial/header.ejs文件将1&amp;lt;a href=&quot;&amp;lt;%-">
   
     <link rel="alternate" href="/atom.xml" title="L3F.WIN" type="application/atom+xml">
   
@@ -69,64 +71,59 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/30/学习stylus【2】/" class="archive-article-date">
-  <time datetime="2018-01-29T23:01:29.000Z" itemprop="datePublished">1月 30</time>
+        <section id="main"><article id="post-theme01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/23/theme01/" class="article-date">
+  <time datetime="2018-02-23T01:17:40.000Z" itemprop="datePublished">2018-02-23</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/30/学习stylus【2】/">学习stylus【2】</a>
+    <h1 class="article-title" itemprop="name">
+      theme01
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/26/学习stylus/" class="archive-article-date">
-  <time datetime="2018-01-25T23:57:26.000Z" itemprop="datePublished">1月 26</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/26/学习stylus/">学习stylus【1】</a>
-    </h1>
-  
+        <h2 id="学习修改Landscape模板"><a href="#学习修改Landscape模板" class="headerlink" title="学习修改Landscape模板"></a>学习修改Landscape模板</h2><p>本次修改需有一定的前端技术能力， 我们将以Landscape模板作为基础，修改成其他样式的模板。</p>
+<h3 id="1-头部修改"><a href="#1-头部修改" class="headerlink" title="1. 头部修改"></a>1. 头部修改</h3><p>目标： 将Logo 置于页面的左上角，缩小头部的高度。</p>
+<p>首先将Logo，移动到 header-inner 下的 main-nav里面<br>打开landscape目录下的layout/_partial/header.ejs文件<br>将<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">"&lt;%- url_for() %&gt;"</span> id=<span class="string">"logo"</span> class=<span class="string">"main-nav-link"</span>&gt;&lt;%= config.title %&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<p>复制到<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;nav id=<span class="string">"main-nav"</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>下<br><a id="more"></a></p>
+<p>修改</p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.l3f.win/2018/02/23/theme01/" data-id="cjdz9zmmk0000s4uta4e2ovhd" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Theme/">Theme</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </footer>
   </div>
-</article>
   
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/tags/学习Stylus/">&laquo; 上一页</a><a class="page-number" href="/tags/学习Stylus/">1</a><span class="page-number current">2</span>
-  </nav>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/02/23/学习stylus【12】/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学习stylus【12】</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
