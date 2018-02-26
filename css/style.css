@@ -129,7 +129,7 @@ body,
   height: 100%;
 }
 body {
-  background: #eee;
+  background: #f5f8fa;
   font: 14px -apple-system, "Microsoft YaHei" BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
@@ -180,7 +180,7 @@ body {
   -ms-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   z-index: 1;
-  background: #eee;
+  background: #f5f8fa;
 }
 .mobile-nav-on #wrap {
   left: 280px;
@@ -210,8 +210,6 @@ body {
 .article-inner,
 .archive-article-inner {
   background: #fff;
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
   border: 1px solid #ddd;
   border-radius: 3px;
 }
@@ -314,8 +312,8 @@ body {
   font-weight: bold;
 }
 #header {
-  height: 300px;
-  position: relative;
+  position: fixed;
+  width: 100%;
   border-bottom: 1px solid #ddd;
 }
 #header:before,
@@ -347,6 +345,7 @@ body {
 #header-inner {
   position: relative;
   overflow: hidden;
+  background-color: #3097d1;
 }
 #banner {
   position: absolute;
@@ -381,7 +380,8 @@ body {
   letter-spacing: 2px;
   font-weight: bold;
   font-family: SquadaOne;
-  padding: 16px 15px;
+  padding: 13px 15px;
+  opacity: 1;
 }
 #subtitle {
   font-size: 16px;
@@ -407,7 +407,7 @@ body {
   -ms-transition: opacity 0.2s;
   transition: opacity 0.2s;
   display: block;
-  padding: 20px 15px;
+  padding: 17px 15px;
 }
 .nav-icon:hover,
 .main-nav-link:hover {
@@ -419,7 +419,7 @@ body {
   font-size: 14px;
   width: 14px;
   height: 14px;
-  padding: 20px 15px;
+  padding: 17px 15px;
   position: relative;
   cursor: pointer;
 }
@@ -514,7 +514,7 @@ body {
   color: #777;
 }
 .article {
-  margin: 50px 0;
+  margin: 20px 0;
 }
 .article-inner {
   overflow: hidden;
@@ -528,7 +528,7 @@ body {
   clear: both;
 }
 .article-date {
-  float: left;
+  float: right;
 }
 .article-category {
   float: left;
@@ -680,7 +680,7 @@ a.article-title:hover {
   line-height: 1em;
   padding: 6px 15px;
   border-radius: 15px;
-  background: #eee;
+  background: #f5f8fa;
   color: #999;
   text-shadow: 0 1px #fff;
   text-decoration: none;
@@ -751,7 +751,7 @@ a.article-title:hover {
 }
 @media screen and (min-width: 768px) {
   #article-nav {
-    margin: 50px 0;
+    margin: 20px 0;
   }
   #article-nav:before {
     width: 8px;
@@ -775,7 +775,7 @@ a.article-title:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin-top: 50px;
+  margin-top: 20px;
   text-align: center;
   display: block;
 }
@@ -847,7 +847,7 @@ a.article-title:hover {
   line-height: 36px;
 }
 .article-share-links {
-  background: #eee;
+  background: #f5f8fa;
 }
 .article-share-links:before,
 .article-share-links:after {
@@ -949,13 +949,22 @@ a.article-title:hover {
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 3px;
-  margin: 50px 0;
+  margin: 20px 0;
 }
 #comments a {
   color: #258fb8;
 }
+.lr15 {
+  padding: 0 15px;
+}
+.z2 {
+  z-index: 2;
+}
+.mb50 {
+  margin-bottom: 50px;
+}
 .archives-wrap {
-  margin: 50px 0;
+  margin: 20px 0;
 }
 .archives:before,
 .archives:after {
@@ -1022,7 +1031,7 @@ a.article-title:hover {
   display: block;
 }
 #page-nav {
-  margin: 50px auto;
+  margin: 20px auto;
   background: #fff;
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
@@ -1076,17 +1085,19 @@ a.article-title:hover {
   color: #ddd;
 }
 #footer {
-  background: #262a30;
-  padding: 50px 0;
+  background: #3097d1;
+  padding: 10px 0;
   border-top: 1px solid #ddd;
-  color: #999;
+  color: #fff;
 }
 #footer a {
-  color: #258fb8;
+  color: #fff;
+  opacity: 0.6;
   text-decoration: none;
 }
 #footer a:hover {
   text-decoration: underline;
+  opacity: 1;
 }
 #footer-info {
   line-height: 1.6em;
@@ -1126,7 +1137,7 @@ a.article-title:hover {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
-  background: #eee;
+  background: #f5f8fa;
   text-shadow: 0 1px #fff;
   padding: 0 0.3em;
 }
@@ -1309,17 +1320,19 @@ pre .javascript .function {
   }
 }
 .widget-wrap {
-  margin: 50px 0;
+  margin: 20px 0 0;
+}
+.widget-title {
+  margin-left: 0;
+  font-weight: normal;
 }
 .widget {
   color: #777;
   text-shadow: 0 1px #fff;
-  background: #ddd;
-  -webkit-box-shadow: 0 -1px 4px #ccc inset;
-  box-shadow: 0 -1px 4px #ccc inset;
+  background: #fff;
   border: 1px solid #ccc;
   padding: 15px;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .widget a {
   color: #258fb8;
@@ -1339,6 +1352,9 @@ pre .javascript .function {
 .widget dl dl {
   margin-left: 15px;
   list-style: disc;
+}
+#sidebar {
+  margin-bottom: 40px;
 }
 .widget {
   line-height: 1.6em;
