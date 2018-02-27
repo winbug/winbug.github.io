@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>学习stylus【14】@KEYFRAMES | L3F.WIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="@KEYFRAMESStylus支持@keyframes规则，当编译的时候转换成@-webkit-keyframes：123456789101112131415161718192021222324252627$keyframe-name = pulse@keyframes &amp;#123;$keyframe-name&amp;#125;  for i in 0..10    &amp;#123;10% * i&amp;#12">
+<meta name="keywords" content="stylus,CSS3,学习Stylus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习stylus【14】@KEYFRAMES">
+<meta property="og:url" content="http://www.l3f.win/2018/02/27/学习stylus【14】/index.html">
+<meta property="og:site_name" content="L3F.WIN">
+<meta property="og:description" content="@KEYFRAMESStylus支持@keyframes规则，当编译的时候转换成@-webkit-keyframes：123456789101112131415161718192021222324252627$keyframe-name = pulse@keyframes &amp;#123;$keyframe-name&amp;#125;  for i in 0..10    &amp;#123;10% * i&amp;#12">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-27T02:15:59.960Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习stylus【14】@KEYFRAMES">
+<meta name="twitter:description" content="@KEYFRAMESStylus支持@keyframes规则，当编译的时候转换成@-webkit-keyframes：123456789101112131415161718192021222324252627$keyframe-name = pulse@keyframes &amp;#123;$keyframe-name&amp;#125;  for i in 0..10    &amp;#123;10% * i&amp;#12">
+  
+    <link rel="alternate" href="/atom.xml" title="L3F.WIN" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-inner" class="lr15 z2">
+    <nav id="main-nav">
+      <a href="/" id="logo" class="main-nav-link"><h1 id="logo-wrap">L3F.WIN </h1></a>
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      
+        <a class="main-nav-link" href="/">首页</a>
+      
+        <a class="main-nav-link" href="/archives">Archive</a>
+      
+    </nav>
+    <nav id="sub-nav">
+      
+        <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+      
+      <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+    </nav>
+    <div id="search-form-wrap">
+      <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.l3f.win"></form>
+    </div>
+  </div>
+</header>
+<div class="mb50"></div>
+
+      <div class="outer">
+        <section id="main"><article id="post-学习stylus【14】" class="article article-type-post" itemscope itemprop="blogPost">
+  <!--<div class="article-meta">
+    <a href="/2018/02/27/学习stylus【14】/" class="article-date">
+  <time datetime="2018-02-27T02:07:20.000Z" itemprop="datePublished">2018-02-27</time>
+</a>
+    
+</div>-->
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      学习stylus【14】@KEYFRAMES
+    </h1>
+  
+
+        <a href="/2018/02/27/学习stylus【14】/" class="article-date">
+  <time datetime="2018-02-27T02:07:20.000Z" itemprop="datePublished">2018-02-27</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="KEYFRAMES"><a href="#KEYFRAMES" class="headerlink" title="@KEYFRAMES"></a>@KEYFRAMES</h2><p>Stylus支持@keyframes规则，当编译的时候转换成@-webkit-keyframes：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$keyframe</span>-name = pulse</span><br><span class="line">@keyframes &#123;<span class="variable">$keyframe</span>-name&#125;</span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> 0..10</span><br><span class="line">    &#123;10% * i&#125;</span><br><span class="line">      opacity (i/10)</span><br><span class="line"></span><br><span class="line">  =&gt;</span><br><span class="line">  @keyframes pulse &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    opacity: 0;</span><br><span class="line">  &#125;</span><br><span class="line">  20% &#123;</span><br><span class="line">    opacity: 0.2;</span><br><span class="line">  &#125;</span><br><span class="line">  40% &#123;</span><br><span class="line">    opacity: 0.4;</span><br><span class="line">  &#125;</span><br><span class="line">  60% &#123;</span><br><span class="line">    opacity: 0.6;</span><br><span class="line">  &#125;</span><br><span class="line">  80% &#123;</span><br><span class="line">    opacity: 0.8;</span><br><span class="line">  &#125;</span><br><span class="line">  100% &#123;</span><br><span class="line">    opacity: 1;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><p>使用@keyframes，通过vendors变量，会自动添加私有前缀(webkit moz official)。这意味着你可以子啊任意时候立即高效地做修改。<br>考虑下面的例子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@keyframes foo &#123;</span><br><span class="line">  from &#123;</span><br><span class="line">    color: black</span><br><span class="line">  &#125;</span><br><span class="line">  to &#123;</span><br><span class="line">    color: white</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这扩展到我们的三个默认供应商和官方语法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">@-moz-keyframes foo &#123;</span><br><span class="line">  from &#123;</span><br><span class="line">    color: <span class="comment">#000;</span></span><br><span class="line">  &#125;</span><br><span class="line">  to &#123;</span><br><span class="line">    color: <span class="comment">#fff;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">@-webkit-keyframes foo &#123;</span><br><span class="line">  from &#123;</span><br><span class="line">    color: <span class="comment">#000;</span></span><br><span class="line">  &#125;</span><br><span class="line">  to &#123;</span><br><span class="line">    color: <span class="comment">#fff;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">@-o-keyframes foo &#123;</span><br><span class="line">  from &#123;</span><br><span class="line">    color: <span class="comment">#000;</span></span><br><span class="line">  &#125;</span><br><span class="line">  to &#123;</span><br><span class="line">    color: <span class="comment">#fff;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">@keyframes foo &#123;</span><br><span class="line">  from &#123;</span><br><span class="line">    color: <span class="comment">#000;</span></span><br><span class="line">  &#125;</span><br><span class="line">  to &#123;</span><br><span class="line">    color: <span class="comment">#fff;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果我们只想限制官方语法，只需更改vendor：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">vendors = official</span><br><span class="line"></span><br><span class="line">@keyframes foo &#123;</span><br><span class="line">  from &#123;</span><br><span class="line">    color: black</span><br><span class="line">  &#125;</span><br><span class="line">  to &#123;</span><br><span class="line">    color: white</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line">@keyframes foo &#123;</span><br><span class="line">  from &#123;</span><br><span class="line">    color: <span class="comment">#000;</span></span><br><span class="line">  &#125;</span><br><span class="line">  to &#123;</span><br><span class="line">    color: <span class="comment">#fff;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.l3f.win/2018/02/27/学习stylus【14】/" data-id="cje50trf7000fcsut6vvonhux" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/02/27/学习stylus【13】/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学习stylus【13】@FONT-FACE</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Landscape/">Landscape</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Theme/">Theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stylus/">stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/themes/">themes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/返回顶部/">返回顶部</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget tagcloud">
+      <h3 class="widget-title">标签云</h3>
+      <a href="/tags/CSS3/" style="font-size: 20px;">CSS3</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Landscape/" style="font-size: 10px;">Landscape</a> <a href="/tags/Theme/" style="font-size: 10px;">Theme</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/stylus/" style="font-size: 20px;">stylus</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/学习Stylus/" style="font-size: 20px;">学习Stylus</a> <a href="/tags/返回顶部/" style="font-size: 10px;">返回顶部</a>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">归档</h3>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">最新文章</h3>
+      <ul>
+        
+          <li>
+            <a href="/2018/02/27/学习stylus【14】/">学习stylus【14】@KEYFRAMES</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/27/学习stylus【13】/">学习stylus【13】@FONT-FACE</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/23/theme01/">theme01</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/23/学习stylus【12】/">学习stylus【12】@MEDIA</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/22/学习stylus【11】/">学习stylus【11】@IMPORT 和 @REQUIRE</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  <div class="goBack" onclick="window.scrollTo('0','0')"></div>
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 winbug<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archive</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
