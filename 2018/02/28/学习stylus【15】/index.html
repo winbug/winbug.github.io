@@ -5,20 +5,20 @@
   
 
   
-  <title>学习stylus【13】@FONT-FACE | L3F.WIN</title>
+  <title>学习stylus【15】其他 @-RULES | L3F.WIN</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="@FONT-FACE@font-face跟其在CSS中作用表现一样，在后面简单地添加个块状属性即可，类似下面：1234567891011121314151617@font-face  font-family Geo  font-style normal  src url(fonts/geo_sans_light/GensansLight.ttf).ingeo  font-family Geo=&amp;g">
+  <meta name="description" content="其他 @-RULESstylus对大多数CSS @规则都有支持，比如@viewport，@page，@host，@supports和其他：123456789101112131415161718192021222324@viewport  color: #00f@supports (display: flex)  div    display: flex@page :blank  @top-cent">
 <meta name="keywords" content="stylus,CSS3,学习Stylus">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习stylus【13】@FONT-FACE">
-<meta property="og:url" content="http://www.l3f.win/2018/02/27/学习stylus【13】/index.html">
+<meta property="og:title" content="学习stylus【15】其他 @-RULES">
+<meta property="og:url" content="http://www.l3f.win/2018/02/28/学习stylus【15】/index.html">
 <meta property="og:site_name" content="L3F.WIN">
-<meta property="og:description" content="@FONT-FACE@font-face跟其在CSS中作用表现一样，在后面简单地添加个块状属性即可，类似下面：1234567891011121314151617@font-face  font-family Geo  font-style normal  src url(fonts/geo_sans_light/GensansLight.ttf).ingeo  font-family Geo=&amp;g">
+<meta property="og:description" content="其他 @-RULESstylus对大多数CSS @规则都有支持，比如@viewport，@page，@host，@supports和其他：123456789101112131415161718192021222324@viewport  color: #00f@supports (display: flex)  div    display: flex@page :blank  @top-cent">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-27T01:57:54.634Z">
+<meta property="og:updated_time" content="2018-02-28T03:00:21.071Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习stylus【13】@FONT-FACE">
-<meta name="twitter:description" content="@FONT-FACE@font-face跟其在CSS中作用表现一样，在后面简单地添加个块状属性即可，类似下面：1234567891011121314151617@font-face  font-family Geo  font-style normal  src url(fonts/geo_sans_light/GensansLight.ttf).ingeo  font-family Geo=&amp;g">
+<meta name="twitter:title" content="学习stylus【15】其他 @-RULES">
+<meta name="twitter:description" content="其他 @-RULESstylus对大多数CSS @规则都有支持，比如@viewport，@page，@host，@supports和其他：123456789101112131415161718192021222324@viewport  color: #00f@supports (display: flex)  div    display: flex@page :blank  @top-cent">
   
     <link rel="alternate" href="/atom.xml" title="L3F.WIN" type="application/atom+xml">
   
@@ -60,10 +60,10 @@
 <div class="mb50"></div>
 
       <div class="outer">
-        <section id="main"><article id="post-学习stylus【13】" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-学习stylus【15】" class="article article-type-post" itemscope itemprop="blogPost">
   <!--<div class="article-meta">
-    <a href="/2018/02/27/学习stylus【13】/" class="article-date">
-  <time datetime="2018-02-27T00:57:25.000Z" itemprop="datePublished">2018-02-27</time>
+    <a href="/2018/02/28/学习stylus【15】/" class="article-date">
+  <time datetime="2018-02-28T02:55:34.000Z" itemprop="datePublished">2018-02-28</time>
 </a>
     
 </div>-->
@@ -74,23 +74,25 @@
         
   
     <h1 class="article-title" itemprop="name">
-      学习stylus【13】@FONT-FACE
+      学习stylus【15】其他 @-RULES
     </h1>
   
 
-        <a href="/2018/02/27/学习stylus【13】/" class="article-date">
-  <time datetime="2018-02-27T00:57:25.000Z" itemprop="datePublished">2018-02-27</time>
+        <a href="/2018/02/28/学习stylus【15】/" class="article-date">
+  <time datetime="2018-02-28T02:55:34.000Z" itemprop="datePublished">2018-02-28</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="FONT-FACE"><a href="#FONT-FACE" class="headerlink" title="@FONT-FACE"></a>@FONT-FACE</h2><p>@font-face跟其在CSS中作用表现一样，在后面简单地添加个块状属性即可，类似下面：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">@font-face</span><br><span class="line">  font-family Geo</span><br><span class="line">  font-style normal</span><br><span class="line">  src url(fonts/geo_sans_light/GensansLight.ttf)</span><br><span class="line"></span><br><span class="line">.ingeo</span><br><span class="line">  font-family Geo</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line">@font-face &#123;</span><br><span class="line">   font-family: Geo;</span><br><span class="line">   font-style: normal;</span><br><span class="line">   src: url(<span class="string">"fonts/geo_sans_light/GensansLight.ttf"</span>);</span><br><span class="line"> &#125;</span><br><span class="line"> .ingeo &#123;</span><br><span class="line">   font-family: Geo;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+        <h2 id="其他-RULES"><a href="#其他-RULES" class="headerlink" title="其他 @-RULES"></a>其他 @-RULES</h2><p>stylus对大多数CSS @规则都有支持，比如@viewport，@page，@host，@supports和其他：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">@viewport</span><br><span class="line">  color: <span class="comment">#00f</span></span><br><span class="line"></span><br><span class="line">@supports (display: flex)</span><br><span class="line">  div</span><br><span class="line">    display: flex</span><br><span class="line"></span><br><span class="line">@page :blank</span><br><span class="line">  @top-center</span><br><span class="line">    content: none</span><br><span class="line">=&gt;</span><br><span class="line">@viewport &#123;</span><br><span class="line">  color: <span class="comment">#00f;</span></span><br><span class="line">&#125;</span><br><span class="line">@supports (display: flex) &#123;</span><br><span class="line">  div &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">@page :blank &#123;</span><br><span class="line">  @top-center &#123;</span><br><span class="line">    content: none;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="未知规则"><a href="#未知规则" class="headerlink" title="未知规则"></a>未知规则</h2><p>stylus支持任何未知的@规则，因此它对为正式发布的规则很友好，因为CSS中的任何新规则都可以用Stylus的基于缩进的语法编写，并且可以完美呈现：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@foo</span><br><span class="line">  @bar</span><br><span class="line">    width: 10px</span><br><span class="line"></span><br><span class="line">    .baz</span><br><span class="line">      height: 10px</span><br><span class="line">=&gt;</span><br><span class="line">@foo &#123;</span><br><span class="line">  @bar &#123;</span><br><span class="line">    width: 10px;</span><br><span class="line">    .baz &#123;</span><br><span class="line">      height: 10px;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/02/27/学习stylus【13】/" data-id="cje6jusxo0008u0utf1ma9t35" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/02/28/学习stylus【15】/" data-id="cje6jusy1000ku0utubl9uwdj" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -101,19 +103,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/02/27/学习stylus【14】/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          学习stylus【14】@KEYFRAMES
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/02/23/theme01/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/02/27/学习stylus【14】/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">theme01</div>
+      <div class="article-nav-title">学习stylus【14】@KEYFRAMES</div>
     </a>
   
 </nav>
