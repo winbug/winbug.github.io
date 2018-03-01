@@ -43,6 +43,8 @@
       
         <a class="main-nav-link" href="/archives">Archive</a>
       
+        <a class="main-nav-link" href="/categories/Stylus中文文档">Stylus中文文档</a>
+      
     </nav>
     <nav id="sub-nav">
       
@@ -60,12 +62,117 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-学习stylus【17】" class="article article-type-post" itemscope itemprop="blogPost">
+  <!--<div class="article-meta">
+    <a href="/2018/03/01/学习stylus【17】/" class="article-date">
+  <time datetime="2018-03-01T01:23:24.000Z" itemprop="datePublished">2018-03-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
+</div>-->
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/01/学习stylus【17】/">学习stylus【17】@BLOCK</a>
+    </h1>
+  
+
+        <a href="/2018/03/01/学习stylus【17】/" class="article-date">
+  <time datetime="2018-03-01T01:23:24.000Z" itemprop="datePublished">2018-03-01</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="BLOCK"><a href="#BLOCK" class="headerlink" title="@BLOCK"></a>@BLOCK</h2><p>您可以将Stylus中的任何代码块分配给一个变量，然后调用它，作为参数传递或以任何其他方式重用。<br>要定义一个块，可以在分配符号之后用增加的缩进记下它：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">foo =</span><br><span class="line">  width: 20px</span><br><span class="line">  height: 20px</span><br></pre></td></tr></table></figure></p>
+<p>或者在@block关键字中使用花括号语法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">foo = @block &#123;</span><br><span class="line">  width: 20px</span><br><span class="line">  height: 20px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果你想在任何地方渲染这个块，你可以在插值中调用这个变量，所以<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.icon</span><br><span class="line">  &#123;foo&#125;</span><br><span class="line">=&gt;</span><br><span class="line">.icon &#123;</span><br><span class="line">  width: 20px;</span><br><span class="line">  height: 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>顺便说一句，你也可以使用传递给块mixin的块的方式相同。<br>现在，您只能将该变量作为其他变量传递并在插值内呈现。 将来我们会提供更多的处理方法。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.l3f.win/2018/03/01/学习stylus【17】/" data-id="cje7x46i8000xi8utp14qsbkh" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-学习stylus【16】" class="article article-type-post" itemscope itemprop="blogPost">
+  <!--<div class="article-meta">
+    <a href="/2018/03/01/学习stylus【16】/" class="article-date">
+  <time datetime="2018-03-01T00:59:15.000Z" itemprop="datePublished">2018-03-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
+</div>-->
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/01/学习stylus【16】/">学习stylus【16】继承 @EXTEND</a>
+    </h1>
+  
+
+        <a href="/2018/03/01/学习stylus【16】/" class="article-date">
+  <time datetime="2018-03-01T00:59:15.000Z" itemprop="datePublished">2018-03-01</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="继承-EXTEND"><a href="#继承-EXTEND" class="headerlink" title="继承 @EXTEND"></a>继承 @EXTEND</h2><p>Stylus的@extend指令受SASS实现的启发，基本一致，除了些轻微差异。此功能大大简化了继承其他语义规则集的语义规则集的维护。<br>混入的“继承”<br>尽管你可以使用混入实现类似效果，但会导致重复的CSS. 典型的模式式定义如下的几个类名，然后归结到一个元素中，例如”warning message”.<br>该技术实现是没什么问题，但是维护就比较麻烦了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">message,</span><br><span class="line">.warning &#123;</span><br><span class="line">  padding: 10px;</span><br><span class="line">  border: 1px solid <span class="comment">#eee;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.warning &#123;</span><br><span class="line">  color: <span class="comment">#E2E21E;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        
+          <p class="article-more-link">
+            <a href="/2018/03/01/学习stylus【16】/#more">查看全部</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.l3f.win/2018/03/01/学习stylus【16】/" data-id="cje7x46hu000fi8utmsyz9r44" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-学习stylus【15】" class="article article-type-post" itemscope itemprop="blogPost">
   <!--<div class="article-meta">
     <a href="/2018/02/28/学习stylus【15】/" class="article-date">
   <time datetime="2018-02-28T02:55:34.000Z" itemprop="datePublished">2018-02-28</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
 </div>-->
   <div class="article-inner">
     
@@ -94,7 +201,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/02/28/学习stylus【15】/" data-id="cje6jusy1000ku0utubl9uwdj" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/02/28/学习stylus【15】/" data-id="cje7x46hy000ki8utldrels6t" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -113,6 +220,10 @@
   <time datetime="2018-02-27T02:07:20.000Z" itemprop="datePublished">2018-02-27</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
 </div>-->
   <div class="article-inner">
     
@@ -141,7 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/02/27/学习stylus【14】/" data-id="cje6jusxq000au0utxwwe39yg" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/02/27/学习stylus【14】/" data-id="cje7x46hq000bi8utada3iwcm" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -160,6 +271,10 @@
   <time datetime="2018-02-27T00:57:25.000Z" itemprop="datePublished">2018-02-27</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
 </div>-->
   <div class="article-inner">
     
@@ -184,7 +299,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/02/27/学习stylus【13】/" data-id="cje6jusxo0008u0utf1ma9t35" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/02/27/学习stylus【13】/" data-id="cje7x46ho000ai8ut1i60eak9" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -235,7 +350,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/02/23/theme01/" data-id="cje6jusx70000u0utl8zx4kfr" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/02/23/theme01/" data-id="cje7x46gy0001i8ut2vxrjlsn" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Theme/">Theme</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
@@ -254,6 +369,10 @@
   <time datetime="2018-02-22T23:56:57.000Z" itemprop="datePublished">2018-02-23</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
 </div>-->
   <div class="article-inner">
     
@@ -282,7 +401,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/02/23/学习stylus【12】/" data-id="cje6jusxk0005u0utt42rj3hq" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/02/23/学习stylus【12】/" data-id="cje7x46hr000ci8utzuax9acw" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -301,6 +420,10 @@
   <time datetime="2018-02-22T11:22:35.000Z" itemprop="datePublished">2018-02-22</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
 </div>-->
   <div class="article-inner">
     
@@ -331,7 +454,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/02/22/学习stylus【11】/" data-id="cje6jusxm0007u0uttbjp8w0u" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/02/22/学习stylus【11】/" data-id="cje7x46hl0007i8ut0tky38xp" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -350,6 +473,10 @@
   <time datetime="2018-02-22T11:08:47.000Z" itemprop="datePublished">2018-02-22</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
 </div>-->
   <div class="article-inner">
     
@@ -379,7 +506,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/02/22/学习stylus【10】/" data-id="cje6jusxi0004u0utsha5htsx" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/02/22/学习stylus【10】/" data-id="cje7x46hv000gi8ut692w397j" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -429,109 +556,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/02/14/学着修改Hexo的Landscape模板/" data-id="cje6jusya000uu0ut37lj6gdi" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/02/14/学着修改Hexo的Landscape模板/" data-id="cje7x46ie0017i8utkny7cim4" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Landscape/">Landscape</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/themes/">themes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/返回顶部/">返回顶部</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-学习stylus【9】" class="article article-type-post" itemscope itemprop="blogPost">
-  <!--<div class="article-meta">
-    <a href="/2018/02/14/学习stylus【9】/" class="article-date">
-  <time datetime="2018-02-14T11:29:30.000Z" itemprop="datePublished">2018-02-14</time>
-</a>
-    
-</div>-->
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/14/学习stylus【9】/">学习stylus【9】哈希（Hashes）</a>
-    </h1>
-  
-
-        <a href="/2018/02/14/学习stylus【9】/" class="article-date">
-  <time datetime="2018-02-14T11:29:30.000Z" itemprop="datePublished">2018-02-14</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="哈希"><a href="#哈希" class="headerlink" title="哈希"></a>哈希</h2><p>在 <em>Stylus</em> 的0.39.0版添加了对哈希的支持</p>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>你可以使用大括号和逗号将键和值定义一个哈希对象：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">foo = &#123;</span><br><span class="line">  bar: baz,</span><br><span class="line">  baz: raz</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>Key值应该是合法的标识或字符串：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">foo = &#123;</span><br><span class="line">  bar: baz,</span><br><span class="line">  <span class="string">'baz'</span>: raz,</span><br><span class="line">  <span class="string">'0'</span>: raz</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>当你已经有hash后，你就可以使用括号和字符串来设置它的值：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">foo = &#123;&#125;</span><br><span class="line">foo[<span class="string">'bar'</span>] = baz</span><br><span class="line">foo[<span class="string">'baz'</span>] = raz</span><br></pre></td></tr></table></figure></p>
-<p>注意，你不能使用变量或插值在大括号定义，你可以在括号中使用变量：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">foo = &#123;&#125;</span><br><span class="line">bar = <span class="string">'baz'</span></span><br><span class="line">foo[bar] = raz</span><br><span class="line"></span><br><span class="line">foo.baz</span><br><span class="line">// =&gt; raz</span><br></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/2018/02/14/学习stylus【9】/#more">查看全部</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/02/14/学习stylus【9】/" data-id="cje6jusy5000nu0ut7n8whr2y" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-学习stylus【8】" class="article article-type-post" itemscope itemprop="blogPost">
-  <!--<div class="article-meta">
-    <a href="/2018/02/12/学习stylus【8】/" class="article-date">
-  <time datetime="2018-02-12T11:42:17.000Z" itemprop="datePublished">2018-02-12</time>
-</a>
-    
-</div>-->
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/12/学习stylus【8】/">学习stylus【8】条件式</a>
-    </h1>
-  
-
-        <a href="/2018/02/12/学习stylus【8】/" class="article-date">
-  <time datetime="2018-02-12T11:42:17.000Z" itemprop="datePublished">2018-02-12</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="条件式"><a href="#条件式" class="headerlink" title="条件式"></a>条件式</h2><p>条件提供控制流，否则就是静态语言了，提供有条件的导入，混合，函数等。 下面的例子是简单的例子，不推荐:)</p>
-<h3 id="if-else-if-else"><a href="#if-else-if-else" class="headerlink" title="if / else if / else"></a><em>if / else if / else</em></h3><p>跟一般的语言一致，if表达式满足(true)的时候执行后面语句块，否则，继续后面的else if或else.<br>下面这个例子，根据overload的条件，决定是使用padding还是margin.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">overload-padding = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> overload-padding</span><br><span class="line">  padding(y, x)</span><br><span class="line">    margin y x</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  padding 5px 10px</span><br></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/2018/02/12/学习stylus【8】/#more">查看全部</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/02/12/学习stylus【8】/" data-id="cje6jusy9000su0ut069b3098" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
 
     </footer>
   </div>
@@ -553,6 +581,13 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分类</h3>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Stylus中文文档/">Stylus中文文档</a></li></ul>
+    </div>
+  </div>
+
 
   
     
@@ -579,7 +614,7 @@
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title">归档</h3>
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
     </div>
   </div>
 
@@ -592,6 +627,14 @@
       <ul>
         
           <li>
+            <a href="/2018/03/01/学习stylus【17】/">学习stylus【17】@BLOCK</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/01/学习stylus【16】/">学习stylus【16】继承 @EXTEND</a>
+          </li>
+        
+          <li>
             <a href="/2018/02/28/学习stylus【15】/">学习stylus【15】其他 @-RULES</a>
           </li>
         
@@ -601,14 +644,6 @@
         
           <li>
             <a href="/2018/02/27/学习stylus【13】/">学习stylus【13】@FONT-FACE</a>
-          </li>
-        
-          <li>
-            <a href="/2018/02/23/theme01/">theme01</a>
-          </li>
-        
-          <li>
-            <a href="/2018/02/23/学习stylus【12】/">学习stylus【12】@MEDIA</a>
           </li>
         
       </ul>
@@ -637,6 +672,8 @@
     <a href="/" class="mobile-nav-link">首页</a>
   
     <a href="/archives" class="mobile-nav-link">Archive</a>
+  
+    <a href="/categories/Stylus中文文档" class="mobile-nav-link">Stylus中文文档</a>
   
 </nav>
     

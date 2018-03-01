@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>学习stylus【16】继承 @EXTEND | L3F.WIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="继承 @EXTENDStylus的@extend指令受SASS实现的启发，基本一致，除了些轻微差异。此功能大大简化了继承其他语义规则集的语义规则集的维护。混入的“继承”尽管你可以使用混入实现类似效果，但会导致重复的CSS. 典型的模式式定义如下的几个类名，然后归结到一个元素中，例如”warning message”.该技术实现是没什么问题，但是维护就比较麻烦了。123456789message,.">
+<meta name="keywords" content="stylus,CSS3,学习Stylus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习stylus【16】继承 @EXTEND">
+<meta property="og:url" content="http://www.l3f.win/2018/03/01/学习stylus【16】/index.html">
+<meta property="og:site_name" content="L3F.WIN">
+<meta property="og:description" content="继承 @EXTENDStylus的@extend指令受SASS实现的启发，基本一致，除了些轻微差异。此功能大大简化了继承其他语义规则集的语义规则集的维护。混入的“继承”尽管你可以使用混入实现类似效果，但会导致重复的CSS. 典型的模式式定义如下的几个类名，然后归结到一个元素中，例如”warning message”.该技术实现是没什么问题，但是维护就比较麻烦了。123456789message,.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-01T02:33:38.774Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习stylus【16】继承 @EXTEND">
+<meta name="twitter:description" content="继承 @EXTENDStylus的@extend指令受SASS实现的启发，基本一致，除了些轻微差异。此功能大大简化了继承其他语义规则集的语义规则集的维护。混入的“继承”尽管你可以使用混入实现类似效果，但会导致重复的CSS. 典型的模式式定义如下的几个类名，然后归结到一个元素中，例如”warning message”.该技术实现是没什么问题，但是维护就比较麻烦了。123456789message,.">
+  
+    <link rel="alternate" href="/atom.xml" title="L3F.WIN" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-inner" class="lr15 z2">
+    <nav id="main-nav">
+      <a href="/" id="logo" class="main-nav-link"><h1 id="logo-wrap">L3F.WIN </h1></a>
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      
+        <a class="main-nav-link" href="/">首页</a>
+      
+        <a class="main-nav-link" href="/archives">Archive</a>
+      
+        <a class="main-nav-link" href="/categories/Stylus中文文档">Stylus中文文档</a>
+      
+    </nav>
+    <nav id="sub-nav">
+      
+        <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+      
+      <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+    </nav>
+    <div id="search-form-wrap">
+      <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.l3f.win"></form>
+    </div>
+  </div>
+</header>
+<div class="mb50"></div>
+
+      <div class="outer">
+        <section id="main"><article id="post-学习stylus【16】" class="article article-type-post" itemscope itemprop="blogPost">
+  <!--<div class="article-meta">
+    <a href="/2018/03/01/学习stylus【16】/" class="article-date">
+  <time datetime="2018-03-01T00:59:15.000Z" itemprop="datePublished">2018-03-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
+</div>-->
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      学习stylus【16】继承 @EXTEND
+    </h1>
+  
+
+        <a href="/2018/03/01/学习stylus【16】/" class="article-date">
+  <time datetime="2018-03-01T00:59:15.000Z" itemprop="datePublished">2018-03-01</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="继承-EXTEND"><a href="#继承-EXTEND" class="headerlink" title="继承 @EXTEND"></a>继承 @EXTEND</h2><p>Stylus的@extend指令受SASS实现的启发，基本一致，除了些轻微差异。此功能大大简化了继承其他语义规则集的语义规则集的维护。<br>混入的“继承”<br>尽管你可以使用混入实现类似效果，但会导致重复的CSS. 典型的模式式定义如下的几个类名，然后归结到一个元素中，例如”warning message”.<br>该技术实现是没什么问题，但是维护就比较麻烦了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">message,</span><br><span class="line">.warning &#123;</span><br><span class="line">  padding: 10px;</span><br><span class="line">  border: 1px solid <span class="comment">#eee;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.warning &#123;</span><br><span class="line">  color: <span class="comment">#E2E21E;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="使用-extend"><a href="#使用-extend" class="headerlink" title="使用@extend"></a>使用<strong>@extend</strong></h3><p>使用<strong>@extend</strong>得到同样的输出，只要把对应的选择器传给@extend即可。然后.warning选择器就会继承已经存在的.message规则。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.message &#123;</span><br><span class="line">  padding: 10px;</span><br><span class="line">  border: 1px solid <span class="comment">#eee;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.warning &#123;</span><br><span class="line">  @extend .message;</span><br><span class="line">  color: <span class="comment">#E2E21E;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>儿是个更复杂的例子，演示了<strong>@extend</strong>如何级联。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">red = <span class="comment">#E33E1E</span></span><br><span class="line">yellow = <span class="comment">#E2E21E</span></span><br><span class="line"></span><br><span class="line">.message</span><br><span class="line">  padding: 10px</span><br><span class="line">  font: 14px Helvetica</span><br><span class="line">  border: 1px solid <span class="comment">#eee</span></span><br><span class="line"></span><br><span class="line">.warning</span><br><span class="line">  @extends .message</span><br><span class="line">  border-color: yellow</span><br><span class="line">  background: yellow + 70%</span><br><span class="line"></span><br><span class="line">.error</span><br><span class="line">  @extends .message</span><br><span class="line">  border-color: red</span><br><span class="line">  background: red + 70%</span><br><span class="line"></span><br><span class="line">.fatal</span><br><span class="line">  @extends .error</span><br><span class="line">  font-weight: bold</span><br><span class="line">  color: red</span><br><span class="line">=&gt;</span><br><span class="line">.message,</span><br><span class="line">.warning,</span><br><span class="line">.error,</span><br><span class="line">.fatal &#123;</span><br><span class="line">  padding: 10px;</span><br><span class="line">  font: 14px Helvetica;</span><br><span class="line">  border: 1px solid <span class="comment">#eee;</span></span><br><span class="line">&#125;</span><br><span class="line">.warning &#123;</span><br><span class="line">  border-color: <span class="comment">#e2e21e;</span></span><br><span class="line">  background: <span class="comment">#f6f6bc;</span></span><br><span class="line">&#125;</span><br><span class="line">.error,</span><br><span class="line">.fatal &#123;</span><br><span class="line">  border-color: <span class="comment">#e33e1e;</span></span><br><span class="line">  background: <span class="comment">#f7c5bc;</span></span><br><span class="line">&#125;</span><br><span class="line">.fatal &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">  color: <span class="comment">#e33e1e;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>目前Stylus与SASS不同之处在于SASS不允许<strong>@extend</strong>嵌套选择器。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">form</span><br><span class="line">  button</span><br><span class="line">    padding: 10px</span><br><span class="line"></span><br><span class="line">a.button</span><br><span class="line">  @extend form button</span><br><span class="line">Syntax error: Can<span class="string">'t extend form button: can'</span>t extend nested selectors</span><br><span class="line">// 解析错误： 无法继承自 button: 不能继承嵌套选择器</span><br><span class="line">        on line 6 of standard input</span><br><span class="line">  Use --trace <span class="keyword">for</span> backtrace.</span><br></pre></td></tr></table></figure></p>
+<p>Stylus中，只要选择器匹配，就可以生效：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">form</span><br><span class="line"> input[<span class="built_in">type</span>=text]</span><br><span class="line">   padding: 5px</span><br><span class="line">   border: 1px solid <span class="comment">#eee</span></span><br><span class="line">   color: <span class="comment">#ddd</span></span><br><span class="line"></span><br><span class="line">textarea</span><br><span class="line"> @extends form input[<span class="built_in">type</span>=text]</span><br><span class="line"> padding: 10px</span><br><span class="line">=&gt;</span><br><span class="line">form input[<span class="built_in">type</span>=text],</span><br><span class="line">form textarea &#123;</span><br><span class="line">  padding: 5px;</span><br><span class="line">  border: 1px solid <span class="comment">#eee;</span></span><br><span class="line">  color: <span class="comment">#ddd;</span></span><br><span class="line">&#125;</span><br><span class="line">textarea &#123;</span><br><span class="line">  padding: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="扩展多个选择器"><a href="#扩展多个选择器" class="headerlink" title="扩展多个选择器"></a>扩展多个选择器</h3><p>stylus允许一次扩展多个选择器，只需用逗号将其分开：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">.a</span><br><span class="line">  color: red</span><br><span class="line"></span><br><span class="line">.b</span><br><span class="line">  width: 100px</span><br><span class="line"></span><br><span class="line">.c</span><br><span class="line">  @extend .a, .b</span><br><span class="line">  height: 200px</span><br><span class="line">=&gt;</span><br><span class="line">.a,</span><br><span class="line">.c &#123;</span><br><span class="line">  color: <span class="comment">#f00;</span></span><br><span class="line">&#125;</span><br><span class="line">.b,</span><br><span class="line">.c &#123;</span><br><span class="line">  width: 100px;</span><br><span class="line">&#125;</span><br><span class="line">.c &#123;</span><br><span class="line">  height: 200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>请注意，如果选择器未扩展，它将不会出现在生成的CSS中，因此这是创建可扩展代码库的强大方法。 虽然您可以通过mixin插入代码，但是每次使用它们时都会插入相同的代码，而扩展占位符会为您提供紧凑的输出。</p>
+<h3 id="可选扩展"><a href="#可选扩展" class="headerlink" title="可选扩展"></a>可选扩展</h3><p>有时，根据上下文能够扩展可能存在或不存在的内容这会很有用。 可以通过 <em>!</em> 后缀任意选择器来实现此目的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$specialDesign</span></span><br><span class="line">  color: <span class="comment">#FFF</span></span><br><span class="line"></span><br><span class="line">.btn</span><br><span class="line">  @extend .design !optional, <span class="variable">$specialDesign</span> !optional</span><br><span class="line">=&gt;</span><br><span class="line">.btn &#123;</span><br><span class="line">  color: <span class="comment">#fff;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.l3f.win/2018/03/01/学习stylus【16】/" data-id="cje7x46hu000fi8utmsyz9r44" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/01/学习stylus【17】/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          学习stylus【17】@BLOCK
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/28/学习stylus【15】/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学习stylus【15】其他 @-RULES</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分类</h3>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Stylus中文文档/">Stylus中文文档</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Landscape/">Landscape</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Theme/">Theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stylus/">stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/themes/">themes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/返回顶部/">返回顶部</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget tagcloud">
+      <h3 class="widget-title">标签云</h3>
+      <a href="/tags/CSS3/" style="font-size: 20px;">CSS3</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Landscape/" style="font-size: 10px;">Landscape</a> <a href="/tags/Theme/" style="font-size: 10px;">Theme</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/stylus/" style="font-size: 20px;">stylus</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/学习Stylus/" style="font-size: 20px;">学习Stylus</a> <a href="/tags/返回顶部/" style="font-size: 10px;">返回顶部</a>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">归档</h3>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">最新文章</h3>
+      <ul>
+        
+          <li>
+            <a href="/2018/03/01/学习stylus【17】/">学习stylus【17】@BLOCK</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/01/学习stylus【16】/">学习stylus【16】继承 @EXTEND</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/28/学习stylus【15】/">学习stylus【15】其他 @-RULES</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/27/学习stylus【14】/">学习stylus【14】@KEYFRAMES</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/27/学习stylus【13】/">学习stylus【13】@FONT-FACE</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  <div class="goBack" onclick="window.scrollTo('0','0')"></div>
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 winbug & Template Blue01-&beta;<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archive</a>
+  
+    <a href="/categories/Stylus中文文档" class="mobile-nav-link">Stylus中文文档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

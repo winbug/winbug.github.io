@@ -5,18 +5,20 @@
   
 
   
-  <title>Tag: themes | L3F.WIN</title>
+  <title>学习stylus【17】@BLOCK | L3F.WIN</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
-<meta property="og:type" content="website">
-<meta property="og:title" content="L3F.WIN">
-<meta property="og:url" content="http://www.l3f.win/tags/themes/index.html">
+  <meta name="description" content="@BLOCK您可以将Stylus中的任何代码块分配给一个变量，然后调用它，作为参数传递或以任何其他方式重用。要定义一个块，可以在分配符号之后用增加的缩进记下它：123foo =  width: 20px  height: 20px 或者在@block关键字中使用花括号语法：1234foo = @block &amp;#123;  width: 20px  height: 20px&amp;#125; 如果你想在任">
+<meta name="keywords" content="stylus,CSS3,学习Stylus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习stylus【17】@BLOCK">
+<meta property="og:url" content="http://www.l3f.win/2018/03/01/学习stylus【17】/index.html">
 <meta property="og:site_name" content="L3F.WIN">
-<meta property="og:description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
+<meta property="og:description" content="@BLOCK您可以将Stylus中的任何代码块分配给一个变量，然后调用它，作为参数传递或以任何其他方式重用。要定义一个块，可以在分配符号之后用增加的缩进记下它：123foo =  width: 20px  height: 20px 或者在@block关键字中使用花括号语法：1234foo = @block &amp;#123;  width: 20px  height: 20px&amp;#125; 如果你想在任">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-01T02:33:43.548Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="L3F.WIN">
-<meta name="twitter:description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
+<meta name="twitter:title" content="学习stylus【17】@BLOCK">
+<meta name="twitter:description" content="@BLOCK您可以将Stylus中的任何代码块分配给一个变量，然后调用它，作为参数传递或以任何其他方式重用。要定义一个块，可以在分配符号之后用增加的缩进记下它：123foo =  width: 20px  height: 20px 或者在@block关键字中使用花括号语法：1234foo = @block &amp;#123;  width: 20px  height: 20px&amp;#125; 如果你想在任">
   
     <link rel="alternate" href="/atom.xml" title="L3F.WIN" type="application/atom+xml">
   
@@ -60,39 +62,64 @@
 <div class="mb50"></div>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/02/14/学着修改Hexo的Landscape模板/" class="archive-article-date">
-  <time datetime="2018-02-14T11:36:02.000Z" itemprop="datePublished">2月 14</time>
+        <section id="main"><article id="post-学习stylus【17】" class="article article-type-post" itemscope itemprop="blogPost">
+  <!--<div class="article-meta">
+    <a href="/2018/03/01/学习stylus【17】/" class="article-date">
+  <time datetime="2018-03-01T01:23:24.000Z" itemprop="datePublished">2018-03-01</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
+</div>-->
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/14/学着修改Hexo的Landscape模板/">学着修改Hexo的Landscape模板</a>
+    <h1 class="article-title" itemprop="name">
+      学习stylus【17】@BLOCK
     </h1>
   
 
-    </header>
+        <a href="/2018/03/01/学习stylus【17】/" class="article-date">
+  <time datetime="2018-03-01T01:23:24.000Z" itemprop="datePublished">2018-03-01</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="BLOCK"><a href="#BLOCK" class="headerlink" title="@BLOCK"></a>@BLOCK</h2><p>您可以将Stylus中的任何代码块分配给一个变量，然后调用它，作为参数传递或以任何其他方式重用。<br>要定义一个块，可以在分配符号之后用增加的缩进记下它：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">foo =</span><br><span class="line">  width: 20px</span><br><span class="line">  height: 20px</span><br></pre></td></tr></table></figure></p>
+<p>或者在@block关键字中使用花括号语法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">foo = @block &#123;</span><br><span class="line">  width: 20px</span><br><span class="line">  height: 20px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果你想在任何地方渲染这个块，你可以在插值中调用这个变量，所以<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.icon</span><br><span class="line">  &#123;foo&#125;</span><br><span class="line">=&gt;</span><br><span class="line">.icon &#123;</span><br><span class="line">  width: 20px;</span><br><span class="line">  height: 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>顺便说一句，你也可以使用传递给块mixin的块的方式相同。<br>现在，您只能将该变量作为其他变量传递并在插值内呈现。 将来我们会提供更多的处理方法。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.l3f.win/2018/03/01/学习stylus【17】/" data-id="cje7x46i8000xi8utp14qsbkh" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/01/学习stylus【16】/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学习stylus【16】继承 @EXTEND</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
