@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>学习stylus【20】CSS样式解析(CSS Style Syntax) | L3F.WIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="CSS样式解析(CSS Style Syntax)Stylus完全支持常规的CSS样式解析，这意味着你无需寻求其它解析器，或指定特别的文件使用特别的样式。1234567891011121314border-radius()  -webkit-border-radius arguments  -moz-border-radius arguments  border-radius argumentsb">
+<meta name="keywords" content="stylus,CSS3,学习Stylus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习stylus【20】CSS样式解析(CSS Style Syntax)">
+<meta property="og:url" content="http://www.l3f.win/2018/03/05/学习stylus【20】/index.html">
+<meta property="og:site_name" content="L3F.WIN">
+<meta property="og:description" content="CSS样式解析(CSS Style Syntax)Stylus完全支持常规的CSS样式解析，这意味着你无需寻求其它解析器，或指定特别的文件使用特别的样式。1234567891011121314border-radius()  -webkit-border-radius arguments  -moz-border-radius arguments  border-radius argumentsb">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-05T01:06:24.434Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习stylus【20】CSS样式解析(CSS Style Syntax)">
+<meta name="twitter:description" content="CSS样式解析(CSS Style Syntax)Stylus完全支持常规的CSS样式解析，这意味着你无需寻求其它解析器，或指定特别的文件使用特别的样式。1234567891011121314border-radius()  -webkit-border-radius arguments  -moz-border-radius arguments  border-radius argumentsb">
+  
+    <link rel="alternate" href="/atom.xml" title="L3F.WIN" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-inner" class="lr15 z2">
+    <nav id="main-nav">
+      <a href="/" id="logo" class="main-nav-link"><h1 id="logo-wrap">L3F.WIN </h1></a>
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      
+        <a class="main-nav-link" href="/">首页</a>
+      
+        <a class="main-nav-link" href="/archives">Archive</a>
+      
+        <a class="main-nav-link" href="/categories/Stylus中文文档">Stylus中文文档</a>
+      
+    </nav>
+    <nav id="sub-nav">
+      
+        <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+      
+      <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+    </nav>
+    <div id="search-form-wrap">
+      <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.l3f.win"></form>
+    </div>
+  </div>
+</header>
+<div class="mb50"></div>
+
+      <div class="outer">
+        <section id="main"><article id="post-学习stylus【20】" class="article article-type-post" itemscope itemprop="blogPost">
+  <!--<div class="article-meta">
+    <a href="/2018/03/05/学习stylus【20】/" class="article-date">
+  <time datetime="2018-03-05T01:03:24.000Z" itemprop="datePublished">2018-03-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
+</div>-->
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      学习stylus【20】CSS样式解析(CSS Style Syntax)
+    </h1>
+  
+
+        <a href="/2018/03/05/学习stylus【20】/" class="article-date">
+  <time datetime="2018-03-05T01:03:24.000Z" itemprop="datePublished">2018-03-05</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="CSS样式解析-CSS-Style-Syntax"><a href="#CSS样式解析-CSS-Style-Syntax" class="headerlink" title="CSS样式解析(CSS Style Syntax)"></a>CSS样式解析(CSS Style Syntax)</h2><p>Stylus完全支持常规的CSS样式解析，这意味着你无需寻求其它解析器，或指定特别的文件使用特别的样式。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">border-radius()</span><br><span class="line">  -webkit-border-radius arguments</span><br><span class="line">  -moz-border-radius arguments</span><br><span class="line">  border-radius arguments</span><br><span class="line"></span><br><span class="line">body a</span><br><span class="line">  font 12px/1.4 <span class="string">"Lucida Grande"</span>, Arial, sans-serif</span><br><span class="line">  background black</span><br><span class="line">  color <span class="comment">#ccc</span></span><br><span class="line"></span><br><span class="line">form input</span><br><span class="line">  padding 5px</span><br><span class="line">  border 1px solid</span><br><span class="line">  border-radius 5px</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>因为括号，冒号及分号都是可选的，因此上面的例子我们可以按照正常的CSS书写：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">border-<span class="function"><span class="title">radius</span></span>() &#123;</span><br><span class="line">  -webkit-border-radius: arguments;</span><br><span class="line">  -moz-border-radius: arguments;</span><br><span class="line">  border-radius: arguments;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body a &#123;</span><br><span class="line">  font: 12px/1.4 <span class="string">"Lucida Grande"</span>, Arial, sans-serif;</span><br><span class="line">  background: black;</span><br><span class="line">  color: <span class="comment">#ccc;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">form input &#123;</span><br><span class="line">  padding: 5px;</span><br><span class="line">  border: 1px solid;</span><br><span class="line">  border-radius: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>因为我们可以混合和匹配的两个变体，因此下面也是有效的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">border-radius()</span><br><span class="line">  -webkit-border-radius: arguments;</span><br><span class="line">  -moz-border-radius: arguments;</span><br><span class="line">  border-radius: arguments;</span><br><span class="line"></span><br><span class="line">body a &#123;</span><br><span class="line">  font: 12px/1.4 <span class="string">"Lucida Grande"</span>, Arial, sans-serif;</span><br><span class="line">  background: black;</span><br><span class="line">  color: <span class="comment">#ccc;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">form input</span><br><span class="line">  padding: 5px;</span><br><span class="line">  border: 1px solid;</span><br><span class="line">  border-radius: 5px;</span><br></pre></td></tr></table></figure></p>
+<p>Stylus支持的变量，函数，混写以及其他特征也可以使之按预期工作：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">main-color = white</span><br><span class="line">main-hover-color = black</span><br><span class="line"></span><br><span class="line">body a &#123;</span><br><span class="line">  color: main-color;</span><br><span class="line">  &amp;:hover &#123; color: main-hover-color; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body a &#123; color: main-color; &amp;:hover &#123; color: main-hover-color; &#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>此规则有一些注意事项：因为这两种风格可以混合和匹配，一些缩进规则仍然适用。所以，虽然不是每一个普通的CSS样式零修改都起作用，此功能仍然允许那些喜欢CSS语法的同学们继续这样做，同时又可以利用Stylus的强大功能。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【20】/" data-id="cjedkto7i000w5sut16trklr6" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/05/学习stylus【21】/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          学习stylus【21】字符转码(Char Escaping)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/02/学习stylus【19】/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学习stylus【19】CSS字面量(CSS Literal)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分类</h3>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Stylus中文文档/">Stylus中文文档</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Landscape/">Landscape</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Theme/">Theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stylus/">stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/themes/">themes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/返回顶部/">返回顶部</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget tagcloud">
+      <h3 class="widget-title">标签云</h3>
+      <a href="/tags/CSS3/" style="font-size: 20px;">CSS3</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Landscape/" style="font-size: 10px;">Landscape</a> <a href="/tags/Theme/" style="font-size: 10px;">Theme</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/stylus/" style="font-size: 20px;">stylus</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/学习Stylus/" style="font-size: 20px;">学习Stylus</a> <a href="/tags/返回顶部/" style="font-size: 10px;">返回顶部</a>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">归档</h3>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">最新文章</h3>
+      <ul>
+        
+          <li>
+            <a href="/2018/03/05/学习stylus【21】/">学习stylus【21】字符转码(Char Escaping)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/05/学习stylus【20】/">学习stylus【20】CSS样式解析(CSS Style Syntax)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/02/学习stylus【19】/">学习stylus【19】CSS字面量(CSS Literal)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/02/学习stylus【18】/">学习stylus【18】URL()</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/01/学习stylus【17】/">学习stylus【17】@BLOCK</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  <div class="goBack" onclick="window.scrollTo('0','0')"></div>
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 winbug & Template Blue01-&beta;<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archive</a>
+  
+    <a href="/categories/Stylus中文文档" class="mobile-nav-link">Stylus中文文档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
