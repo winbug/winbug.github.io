@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>学习stylus【22】可执行性(EXECUTABLE) | L3F.WIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="可执行性(EXECUTABLE)正因有stylus可执行性，Stylus才能将自身转换成CSS.12345678910111213141516171819202122232425262728293031323334353637383940Usage: stylus [options] [command] [&amp;lt; in [&amp;gt; out]]              [file|dir ...">
+<meta name="keywords" content="stylus,CSS3,学习Stylus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习stylus【22】可执行性(EXECUTABLE)">
+<meta property="og:url" content="http://www.l3f.win/2018/03/05/学习stylus【22】/index.html">
+<meta property="og:site_name" content="L3F.WIN">
+<meta property="og:description" content="可执行性(EXECUTABLE)正因有stylus可执行性，Stylus才能将自身转换成CSS.12345678910111213141516171819202122232425262728293031323334353637383940Usage: stylus [options] [command] [&amp;lt; in [&amp;gt; out]]              [file|dir ...">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-05T09:42:42.403Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习stylus【22】可执行性(EXECUTABLE)">
+<meta name="twitter:description" content="可执行性(EXECUTABLE)正因有stylus可执行性，Stylus才能将自身转换成CSS.12345678910111213141516171819202122232425262728293031323334353637383940Usage: stylus [options] [command] [&amp;lt; in [&amp;gt; out]]              [file|dir ...">
+  
+    <link rel="alternate" href="/atom.xml" title="L3F.WIN" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-inner" class="lr15 z2">
+    <nav id="main-nav">
+      <a href="/" id="logo" class="main-nav-link"><h1 id="logo-wrap">L3F.WIN </h1></a>
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      
+        <a class="main-nav-link" href="/">首页</a>
+      
+        <a class="main-nav-link" href="/archives">Archive</a>
+      
+        <a class="main-nav-link" href="/categories/Stylus中文文档">Stylus中文文档</a>
+      
+    </nav>
+    <nav id="sub-nav">
+      
+        <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+      
+      <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+    </nav>
+    <div id="search-form-wrap">
+      <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.l3f.win"></form>
+    </div>
+  </div>
+</header>
+<div class="mb50"></div>
+
+      <div class="outer">
+        <section id="main"><article id="post-学习stylus【22】" class="article article-type-post" itemscope itemprop="blogPost">
+  <!--<div class="article-meta">
+    <a href="/2018/03/05/学习stylus【22】/" class="article-date">
+  <time datetime="2018-03-05T09:13:38.000Z" itemprop="datePublished">2018-03-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
+</div>-->
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      学习stylus【22】可执行性(EXECUTABLE)
+    </h1>
+  
+
+        <a href="/2018/03/05/学习stylus【22】/" class="article-date">
+  <time datetime="2018-03-05T09:13:38.000Z" itemprop="datePublished">2018-03-05</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="可执行性-EXECUTABLE"><a href="#可执行性-EXECUTABLE" class="headerlink" title="可执行性(EXECUTABLE)"></a>可执行性(EXECUTABLE)</h2><p>正因有stylus可执行性，Stylus才能将自身转换成CSS.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">Usage: stylus [options] [<span class="built_in">command</span>] [&lt; <span class="keyword">in</span> [&gt; out]]</span><br><span class="line">              [file|dir ...]</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line"></span><br><span class="line">  <span class="built_in">help</span> [&lt;<span class="built_in">type</span>&gt;:]&lt;prop&gt; Opens <span class="built_in">help</span> info at MDC <span class="keyword">for</span> &lt;prop&gt; <span class="keyword">in</span></span><br><span class="line">                       your default browser. Optionally</span><br><span class="line">                       searches other resources of &lt;<span class="built_in">type</span>&gt;:</span><br><span class="line">                       safari opera w3c ms caniuse quirksmode</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line"></span><br><span class="line">  -i, --interactive       Start interactive REPL</span><br><span class="line">  -u, --use &lt;path&gt;        Utilize the Stylus plugin at &lt;path&gt;</span><br><span class="line">  -U, --inline            Utilize image inlining via data URI support</span><br><span class="line">  -w, --watch             Watch file(s) <span class="keyword">for</span> changes and re-compile</span><br><span class="line">  -o, --out &lt;dir&gt;         Output to &lt;dir&gt; when passing files</span><br><span class="line">  -C, --css &lt;src&gt; [dest]  Convert CSS input to Stylus</span><br><span class="line">  -I, --include &lt;path&gt;    Add &lt;path&gt; to lookup paths</span><br><span class="line">  -c, --compress          Compress CSS output</span><br><span class="line">  -d, --compare           Display input along with output</span><br><span class="line">  -f, --firebug           Emits debug infos <span class="keyword">in</span> the generated CSS that</span><br><span class="line">                          can be used by the FireStylus Firebug plugin</span><br><span class="line">  -l, --line-numbers      Emits comments <span class="keyword">in</span> the generated CSS</span><br><span class="line">                          indicating the corresponding Stylus line</span><br><span class="line">  -m, --sourcemap         Generates a sourcemap <span class="keyword">in</span> sourcemaps v3 format</span><br><span class="line">  --sourcemap-inline      Inlines sourcemap with full <span class="built_in">source</span> text <span class="keyword">in</span> base64 format</span><br><span class="line">  --sourcemap-root &lt;url&gt;  <span class="string">"sourceRoot"</span> property of the generated sourcemap</span><br><span class="line">  --sourcemap-base &lt;path&gt; Base &lt;path&gt; from <span class="built_in">which</span> sourcemap and all sources are relative</span><br><span class="line">  -P, --prefix [prefix]   Prefix all css classes</span><br><span class="line">  -p, --<span class="built_in">print</span>             Print out the compiled CSS</span><br><span class="line">  --import &lt;file&gt;         Import stylus &lt;file&gt;</span><br><span class="line">  --include-css           Include regular CSS on @import</span><br><span class="line">  -D, --deps              Display dependencies of the compiled file</span><br><span class="line">  --<span class="built_in">disable</span>-cache         Disable caching</span><br><span class="line">  --hoist-atrules         Move @import and @charset to the top</span><br><span class="line">  -r, --resolve-url       Resolve relative urls inside imports</span><br><span class="line">  --resolve-url-nocheck   Like --resolve-url but without file existence check</span><br><span class="line">  -V, --version           Display the version of Stylus</span><br><span class="line">  -h, --<span class="built_in">help</span>              Display <span class="built_in">help</span> information</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="STDIO编译范例"><a href="#STDIO编译范例" class="headerlink" title="STDIO编译范例"></a>STDIO编译范例</h3><p>stylus读取自stdin输出到stdout, 因此，如下例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus --compress &lt; some.styl &gt; some.css</span><br></pre></td></tr></table></figure></p>
+<p>在终端机上尝试Stylus，书写下面的内容，然后为<strong>EOF</strong>按下CTRL-D：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ stylus</span><br><span class="line">body</span><br><span class="line">  color red</span><br><span class="line">  font 14px Arial, sans-serif</span><br></pre></td></tr></table></figure></p>
+<h3 id="编译文件范例"><a href="#编译文件范例" class="headerlink" title="编译文件范例"></a>编译文件范例</h3><p>stylus亦接受文件和目录。例如，一个目录名为css将在同一目录编译并输出.css文件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus css</span><br></pre></td></tr></table></figure></p>
+<p>下面的将会输出到./public/stylesheets:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus css --out public/stylesheets</span><br></pre></td></tr></table></figure></p>
+<p>或一些文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus one.styl two.styl</span><br></pre></td></tr></table></figure></p>
+<p>为了开发的目的，你可以使用linenos选项发出指令在生成的CSS中显示Stylus文件名以及行数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus --line-numbers &lt;path&gt;</span><br></pre></td></tr></table></figure></p>
+<p>或是firebug选项，如果你想使用firebug的<a href="https://github.com/stylus/stylus/blob/master/docs/firebug.md" target="_blank" rel="noopener">FireStylus扩展</a>。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus --firebug &lt;path&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="类前缀"><a href="#类前缀" class="headerlink" title="类前缀"></a>类前缀</h3><p>stylus可执行文件为您提供了一种方法，使用给定[prefix]的–prefix选项为所有生成的样式添加前缀，<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus --prefix foo-</span><br></pre></td></tr></table></figure></p>
+<p>这个代码使用后<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.bar</span><br><span class="line">  width: 10px</span><br><span class="line">=&gt;</span><br><span class="line">.foo-bar &#123;</span><br><span class="line">  width: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>所有类都会被添加前缀：插值，扩展等。</p>
+<h3 id="转换CSS"><a href="#转换CSS" class="headerlink" title="转换CSS"></a>转换CSS</h3><p>如果你想把CSS转换成简洁的Stylus语法，可以使用–css标志。<br>通过标准输入输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus --css &lt; test.css &gt; test.styl</span><br></pre></td></tr></table></figure></p>
+<p>输出基本名一致的.styl文件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus --css test.css</span><br></pre></td></tr></table></figure></p>
+<p>输出特定的目标：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus --css test.css /tmp/out.styl</span><br></pre></td></tr></table></figure></p>
+<h3 id="CSS属性的帮助"><a href="#CSS属性的帮助" class="headerlink" title="CSS属性的帮助"></a>CSS属性的帮助</h3><p>在OS X上，stylus help <prop>会打开你默认浏览器并显示给定的<prop>属性的帮助文档。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus <span class="built_in">help</span> box-shadow</span><br></pre></td></tr></table></figure></prop></prop></p>
+<h3 id="壳层交互"><a href="#壳层交互" class="headerlink" title="壳层交互"></a>壳层交互</h3><p>Stylus REPL (Read-Eval-Print-Loop)或“壳层交互(Interactive Shell)”允许你直接在终端机上把玩Stylus的表达式。<br>注意只有表达式可以生效，而不是选择器之类。为了简单，我们添加-i或–interactive标志：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ stylus -i</span><br><span class="line">&gt; color = white</span><br><span class="line">=&gt; <span class="comment">#fff</span></span><br><span class="line">&gt; color - rgb(200,50,0)</span><br><span class="line">=&gt; <span class="comment">#37cdff</span></span><br><span class="line">&gt; color</span><br><span class="line">=&gt; <span class="comment">#fff</span></span><br><span class="line">&gt; color -= rgb(200,50,0)</span><br><span class="line">=&gt; <span class="comment">#37cdff</span></span><br><span class="line">&gt; color</span><br><span class="line">=&gt; <span class="comment">#37cdff</span></span><br><span class="line">&gt; rgba(color, 0.5)</span><br><span class="line">=&gt; rgba(55,205,255,0.5)</span><br></pre></td></tr></table></figure></p>
+<h3 id="解析导入中的相关URL"><a href="#解析导入中的相关URL" class="headerlink" title="解析导入中的相关URL"></a>解析导入中的相关URL</h3><p>默认情况下，Stylus不会解析导入的.styl文件中的url，所以如果你碰巧有一个带有@import”bar/bar.styl”的foo.styl，它有一个url(“baz.png”)，它在得到的CSS中也会是url(“baz.png”)。<br>但是你可以通过使用–resolve-url（或者只是-r）选项来获得你的结果CSS中的url(“bar/baz.png”)来改变这种行为。列出依赖关系<br>您可以使用–deps（或者只是-D）标志来获取编译文件的依赖关系列表。<br>例如，假设我们有test.styl：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@import <span class="string">'foo'</span></span><br><span class="line">@import <span class="string">'bar'</span></span><br><span class="line">And inside foo.styl:</span><br><span class="line"></span><br><span class="line">@import <span class="string">'baz'</span></span><br><span class="line">Running:</span><br><span class="line"></span><br><span class="line">$ stylus --deps test.styl</span><br><span class="line">Will give us list of the imports paths:</span><br><span class="line"></span><br><span class="line">foo.styl</span><br><span class="line">baz.styl</span><br><span class="line">bar.styl</span><br></pre></td></tr></table></figure></p>
+<p>请注意，目前这不适用于动态生成的路径。</p>
+<p>利用插件<br>本例我们将使用nibStylus插件来说明它的CLI使用。<br>假设我们有如下的Stylus, 其导入nib并使用nib的linear-gradient()方法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@import <span class="string">'nib'</span></span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  background: linear-gradient(20px top, white, black)</span><br></pre></td></tr></table></figure></p>
+<p>我们是使用stylus(1)通过标准输入输出试图渲染的第一个东西可能就像下面这样：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus &lt; test.styl</span><br></pre></td></tr></table></figure></p>
+<p>这可能会生成如下的错误，因为Stylus不知道去哪里找到nib.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Error: stdin:3</span><br><span class="line">   1|</span><br><span class="line">   2|</span><br><span class="line"> &gt; 3| @import <span class="string">'nib'</span></span><br><span class="line">   4|</span><br><span class="line">   5| body</span><br><span class="line">   6|   background: linear-gradient(20px top, white, black)</span><br></pre></td></tr></table></figure></p>
+<p>对于简单应用Stylus API们的插件，我们可以添加查找路径。通过使用–include或-I标志：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus &lt; test.styl --include ../nib/lib</span><br></pre></td></tr></table></figure></p>
+<p>现在生成内容如下。您可能注意到了，gradient-data-uri()以及create-gradient-image()以字面量形式输出了。这是因为，当插件提供JavaScript API的时候，光暴露插件的路径是不够的。但是，如果我们仅仅想要的是纯粹Stylus nib函数，则足够了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  background: url(gradient-data-uri(create-gradient-image(20px, top)));</span><br><span class="line">  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, <span class="comment">#fff), color-stop(1, #000));</span></span><br><span class="line">  background: -webkit-linear-gradient(top, <span class="comment">#fff 0%, #000 100%);</span></span><br><span class="line">  background: -moz-linear-gradient(top, <span class="comment">#fff 0%, #000 100%);</span></span><br><span class="line">  background: linear-gradient(top, <span class="comment">#fff 0%, #000 100%);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>因此，我们需要做的是使用–use或-u标志。其会找寻node模块（有或者没有.js扩展名）路径，这里的require()模块或调用style.use(fn())来暴露该插件（定义js函数等）。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ stylus &lt; test.styl --use ../nib/lib/nib</span><br><span class="line">=&gt;</span><br><span class="line">body &#123;</span><br><span class="line">  background: url(<span class="string">"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAUCAYAAABMDlehAAAABmJLR0QA/wD/AP+gvaeTAAAAI0lEQVQImWP4+fPnf6bPnz8zMH358oUBwkIjKJBgYGNj+w8Aphk4blt0EcMAAAAASUVORK5CYII="</span>);</span><br><span class="line">  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, <span class="comment">#fff), color-stop(1, #000));</span></span><br><span class="line">  background: -webkit-linear-gradient(top, <span class="comment">#fff 0%, #000 100%);</span></span><br><span class="line">  background: -moz-linear-gradient(top, <span class="comment">#fff 0%, #000 100%);</span></span><br><span class="line">  background: linear-gradient(top, <span class="comment">#fff 0%, #000 100%);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果您需要将参数传递给插件，请使用–with选项。 - 评估任何有效的javascript表达式并将其值传递给插件。 例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ stylus &lt; test.styl --use ../node_modules/autoprefixer-stylus --with <span class="string">"&#123; browsers: ['ie 7', 'ie 8'] &#125;"</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【22】/" data-id="cjee1k8lo000yscuttqyejwnt" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/05/学习stylus【21】/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学习stylus【21】字符转码(Char Escaping)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分类</h3>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Stylus中文文档/">Stylus中文文档</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Landscape/">Landscape</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Theme/">Theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stylus/">stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/themes/">themes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/返回顶部/">返回顶部</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget tagcloud">
+      <h3 class="widget-title">标签云</h3>
+      <a href="/tags/CSS3/" style="font-size: 20px;">CSS3</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Landscape/" style="font-size: 10px;">Landscape</a> <a href="/tags/Theme/" style="font-size: 10px;">Theme</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/stylus/" style="font-size: 20px;">stylus</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/学习Stylus/" style="font-size: 20px;">学习Stylus</a> <a href="/tags/返回顶部/" style="font-size: 10px;">返回顶部</a>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">归档</h3>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">最新文章</h3>
+      <ul>
+        
+          <li>
+            <a href="/2018/03/05/学习stylus【22】/">学习stylus【22】可执行性(EXECUTABLE)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/05/学习stylus【21】/">学习stylus【21】字符转码(Char Escaping)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/05/学习stylus【20】/">学习stylus【20】CSS样式解析(CSS Style Syntax)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/02/学习stylus【19】/">学习stylus【19】CSS字面量(CSS Literal)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/02/学习stylus【18】/">学习stylus【18】URL()</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  <div class="goBack" onclick="window.scrollTo('0','0')"></div>
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 winbug & Template Blue01-&beta;<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archive</a>
+  
+    <a href="/categories/Stylus中文文档" class="mobile-nav-link">Stylus中文文档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
