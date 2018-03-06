@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>学习stylus【24】连接中间件(Connect Middleware) | L3F.WIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="连接中间件(Connect Middleware)有了连接中间件，无论Stylus片段什么时候改变，这些片段都能够自动编译。 stylus.middleware(options)选项返回给定options下的连接中间件。123456789`serve`     从 `dest` 提供stylus文件 [true]`force`     总是重新编译`src`       资源目录用来查找 .sty">
+<meta name="keywords" content="stylus,CSS3,学习Stylus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习stylus【24】连接中间件(Connect Middleware)">
+<meta property="og:url" content="http://www.l3f.win/2018/03/06/学习stylus【24】/index.html">
+<meta property="og:site_name" content="L3F.WIN">
+<meta property="og:description" content="连接中间件(Connect Middleware)有了连接中间件，无论Stylus片段什么时候改变，这些片段都能够自动编译。 stylus.middleware(options)选项返回给定options下的连接中间件。123456789`serve`     从 `dest` 提供stylus文件 [true]`force`     总是重新编译`src`       资源目录用来查找 .sty">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-06T00:58:47.660Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习stylus【24】连接中间件(Connect Middleware)">
+<meta name="twitter:description" content="连接中间件(Connect Middleware)有了连接中间件，无论Stylus片段什么时候改变，这些片段都能够自动编译。 stylus.middleware(options)选项返回给定options下的连接中间件。123456789`serve`     从 `dest` 提供stylus文件 [true]`force`     总是重新编译`src`       资源目录用来查找 .sty">
+  
+    <link rel="alternate" href="/atom.xml" title="L3F.WIN" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-inner" class="lr15 z2">
+    <nav id="main-nav">
+      <a href="/" id="logo" class="main-nav-link"><h1 id="logo-wrap">L3F.WIN </h1></a>
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      
+        <a class="main-nav-link" href="/">首页</a>
+      
+        <a class="main-nav-link" href="/archives">Archive</a>
+      
+        <a class="main-nav-link" href="/categories/Stylus中文文档">Stylus中文文档</a>
+      
+    </nav>
+    <nav id="sub-nav">
+      
+        <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+      
+      <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+    </nav>
+    <div id="search-form-wrap">
+      <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.l3f.win"></form>
+    </div>
+  </div>
+</header>
+<div class="mb50"></div>
+
+      <div class="outer">
+        <section id="main"><article id="post-学习stylus【24】" class="article article-type-post" itemscope itemprop="blogPost">
+  <!--<div class="article-meta">
+    <a href="/2018/03/06/学习stylus【24】/" class="article-date">
+  <time datetime="2018-03-06T00:53:11.000Z" itemprop="datePublished">2018-03-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
+</div>-->
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      学习stylus【24】连接中间件(Connect Middleware)
+    </h1>
+  
+
+        <a href="/2018/03/06/学习stylus【24】/" class="article-date">
+  <time datetime="2018-03-06T00:53:11.000Z" itemprop="datePublished">2018-03-06</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="连接中间件-Connect-Middleware"><a href="#连接中间件-Connect-Middleware" class="headerlink" title="连接中间件(Connect Middleware)"></a>连接中间件(Connect Middleware)</h2><p>有了连接中间件，无论Stylus片段什么时候改变，这些片段都能够自动编译。</p>
+<h3 id="stylus-middleware-options"><a href="#stylus-middleware-options" class="headerlink" title="stylus.middleware(options)"></a>stylus.middleware(options)</h3><p>选项<br>返回给定options下的连接中间件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">`serve`     从 `dest` 提供stylus文件 [<span class="literal">true</span>]</span><br><span class="line">`force`     总是重新编译</span><br><span class="line">`src`       资源目录用来查找 .styl 文件</span><br><span class="line">`dest`      `src`默认为undefined时，用来输出 .css 文件的目标目录</span><br><span class="line">`compile`   自定义编译函数，接受参数`(str, path)`.</span><br><span class="line">`compress`  是否输出的 .css 文件要被压缩</span><br><span class="line">`firebug`   生成的CSS中发出调试信息，可被Firebug插件FireStylus使用</span><br><span class="line">`linenos`   生成的CSS中发出注解，表明响应的stylus行</span><br><span class="line">`sourcemap` 以sourcemaps v3格式生成源映射</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>从./public提供.styl文件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var app = connect();</span><br><span class="line">app.middleware(__dirname + <span class="string">'/public'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>改变src以及dest项来修改.styl文件哪里被加载，哪里被保存。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var app = connect();</span><br><span class="line"></span><br><span class="line">app.middleware(&#123;</span><br><span class="line">  src: __dirname + <span class="string">'/stylesheets'</span>,</span><br><span class="line">  dest: __dirname + <span class="string">'/public'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这里我们建立自定义的编译函数，这样，我们就能设置compress项，或是定义附加的函数。<br>默认情况下，编译函数是简单地设置filename以及渲染CSS. 在下面这个例子中，我们压缩输出内容，使用”nib”库插件，以及自动导入。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> compile(str, path) &#123;</span><br><span class="line">  <span class="built_in">return</span> stylus(str)</span><br><span class="line">    .<span class="built_in">set</span>(<span class="string">'filename'</span>, path)</span><br><span class="line">    .<span class="built_in">set</span>(<span class="string">'compress'</span>, <span class="literal">true</span>)</span><br><span class="line">    .use(nib())</span><br><span class="line">    .import(<span class="string">'nib'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>作为选项传递应该像这样：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var app = connect();</span><br><span class="line"></span><br><span class="line">app.middleware(&#123;</span><br><span class="line">    src: __dirname</span><br><span class="line">  , dest: __dirname + <span class="string">'/public'</span></span><br><span class="line">  , compile: compile</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.l3f.win/2018/03/06/学习stylus【24】/" data-id="cjeeygth5001gj8ut3d7txekm" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/06/学习stylus【23】/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学习stylus【23】错误报告(Error Reporting)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分类</h3>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Stylus中文文档/">Stylus中文文档</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Landscape/">Landscape</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Theme/">Theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stylus/">stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/themes/">themes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/返回顶部/">返回顶部</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget tagcloud">
+      <h3 class="widget-title">标签云</h3>
+      <a href="/tags/CSS3/" style="font-size: 20px;">CSS3</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Landscape/" style="font-size: 10px;">Landscape</a> <a href="/tags/Theme/" style="font-size: 10px;">Theme</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/stylus/" style="font-size: 20px;">stylus</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/学习Stylus/" style="font-size: 20px;">学习Stylus</a> <a href="/tags/返回顶部/" style="font-size: 10px;">返回顶部</a>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">归档</h3>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">最新文章</h3>
+      <ul>
+        
+          <li>
+            <a href="/2018/03/06/学习stylus【24】/">学习stylus【24】连接中间件(Connect Middleware)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/06/学习stylus【23】/">学习stylus【23】错误报告(Error Reporting)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/05/学习stylus【22】/">学习stylus【22】可执行性(EXECUTABLE)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/05/学习stylus【21】/">学习stylus【21】字符转码(Char Escaping)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/05/学习stylus【20】/">学习stylus【20】CSS样式解析(CSS Style Syntax)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  <div class="goBack" onclick="window.scrollTo('0','0')"></div>
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 winbug & Template Blue01-&beta;<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archive</a>
+  
+    <a href="/categories/Stylus中文文档" class="mobile-nav-link">Stylus中文文档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
