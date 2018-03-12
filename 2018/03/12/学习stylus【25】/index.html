@@ -5,20 +5,20 @@
   
 
   
-  <title>学习stylus【23】错误报告(Error Reporting) | L3F.WIN</title>
+  <title>学习stylus【25】自检API(Introspection API) | L3F.WIN</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="错误报告(Error Reporting)Stylus内置梦幻般的错误报告，针对语法、解析以及计算错误，完整的堆栈跟踪，行号和文件名。 解析错误解析错误例子：123456789101112body  form input    == padding 5px=&amp;gt;ParseError: test.styl:3:16  1| body  2|    form input  3|      == p">
+  <meta name="description" content="自检API(Introspection API)Stylus支持自我检测的API, 这允许混写以及函数反应调用者的相关性。 混入(mixin)mixin这个局部变量在函数体内自动赋值。如果调用的函数在根级别，则mixin包含字符串root, 如果其他情况，则是block, 如果调用函数有返回值，最终为false.下面这个例子中，我们定义reset(), 根据其是混入了根部，还是混入块状域，还是混入">
 <meta name="keywords" content="stylus,CSS3,学习Stylus">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习stylus【23】错误报告(Error Reporting)">
-<meta property="og:url" content="http://www.l3f.win/2018/03/06/学习stylus【23】/index.html">
+<meta property="og:title" content="学习stylus【25】自检API(Introspection API)">
+<meta property="og:url" content="http://www.l3f.win/2018/03/12/学习stylus【25】/index.html">
 <meta property="og:site_name" content="L3F.WIN">
-<meta property="og:description" content="错误报告(Error Reporting)Stylus内置梦幻般的错误报告，针对语法、解析以及计算错误，完整的堆栈跟踪，行号和文件名。 解析错误解析错误例子：123456789101112body  form input    == padding 5px=&amp;gt;ParseError: test.styl:3:16  1| body  2|    form input  3|      == p">
+<meta property="og:description" content="自检API(Introspection API)Stylus支持自我检测的API, 这允许混写以及函数反应调用者的相关性。 混入(mixin)mixin这个局部变量在函数体内自动赋值。如果调用的函数在根级别，则mixin包含字符串root, 如果其他情况，则是block, 如果调用函数有返回值，最终为false.下面这个例子中，我们定义reset(), 根据其是混入了根部，还是混入块状域，还是混入">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-06T00:51:39.723Z">
+<meta property="og:updated_time" content="2018-03-12T07:19:35.016Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习stylus【23】错误报告(Error Reporting)">
-<meta name="twitter:description" content="错误报告(Error Reporting)Stylus内置梦幻般的错误报告，针对语法、解析以及计算错误，完整的堆栈跟踪，行号和文件名。 解析错误解析错误例子：123456789101112body  form input    == padding 5px=&amp;gt;ParseError: test.styl:3:16  1| body  2|    form input  3|      == p">
+<meta name="twitter:title" content="学习stylus【25】自检API(Introspection API)">
+<meta name="twitter:description" content="自检API(Introspection API)Stylus支持自我检测的API, 这允许混写以及函数反应调用者的相关性。 混入(mixin)mixin这个局部变量在函数体内自动赋值。如果调用的函数在根级别，则mixin包含字符串root, 如果其他情况，则是block, 如果调用函数有返回值，最终为false.下面这个例子中，我们定义reset(), 根据其是混入了根部，还是混入块状域，还是混入">
   
     <link rel="alternate" href="/atom.xml" title="L3F.WIN" type="application/atom+xml">
   
@@ -62,10 +62,10 @@
 <div class="mb50"></div>
 
       <div class="outer">
-        <section id="main"><article id="post-学习stylus【23】" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-学习stylus【25】" class="article article-type-post" itemscope itemprop="blogPost">
   <!--<div class="article-meta">
-    <a href="/2018/03/06/学习stylus【23】/" class="article-date">
-  <time datetime="2018-03-06T00:45:31.000Z" itemprop="datePublished">2018-03-06</time>
+    <a href="/2018/03/12/学习stylus【25】/" class="article-date">
+  <time datetime="2018-03-12T07:15:16.000Z" itemprop="datePublished">2018-03-12</time>
 </a>
     
   <div class="article-category">
@@ -80,26 +80,24 @@
         
   
     <h1 class="article-title" itemprop="name">
-      学习stylus【23】错误报告(Error Reporting)
+      学习stylus【25】自检API(Introspection API)
     </h1>
   
 
-        <a href="/2018/03/06/学习stylus【23】/" class="article-date">
-  <time datetime="2018-03-06T00:45:31.000Z" itemprop="datePublished">2018-03-06</time>
+        <a href="/2018/03/12/学习stylus【25】/" class="article-date">
+  <time datetime="2018-03-12T07:15:16.000Z" itemprop="datePublished">2018-03-12</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="错误报告-Error-Reporting"><a href="#错误报告-Error-Reporting" class="headerlink" title="错误报告(Error Reporting)"></a>错误报告(Error Reporting)</h2><p>Stylus内置梦幻般的错误报告，针对语法、解析以及计算错误，完整的堆栈跟踪，行号和文件名。</p>
-<h3 id="解析错误"><a href="#解析错误" class="headerlink" title="解析错误"></a>解析错误</h3><p>解析错误例子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">  form input</span><br><span class="line">    == padding 5px</span><br><span class="line">=&gt;</span><br><span class="line">ParseError: test.styl:3:16</span><br><span class="line">  1| body</span><br><span class="line">  2|    form input</span><br><span class="line">  3|      == padding 5px</span><br><span class="line">---------------------^</span><br><span class="line">  4|</span><br><span class="line"></span><br><span class="line">illegal unary <span class="string">"=="</span>, missing left-hand operand</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h3 id="计算错误"><a href="#计算错误" class="headerlink" title="计算错误"></a>计算错误</h3><p>这种“运行”或计算错误类似于传递字符串给border-radius()，而不是单位值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">ensure(val, <span class="built_in">type</span>)</span><br><span class="line">  unless val is a <span class="built_in">type</span></span><br><span class="line">    error(<span class="string">'expected a '</span> + <span class="built_in">type</span> + <span class="string">', but got '</span> + typeof(val))</span><br><span class="line"></span><br><span class="line">border-radius(n)</span><br><span class="line">  ensure(n, <span class="string">'unit'</span>)</span><br><span class="line">  -webkit-border-radius n</span><br><span class="line">  -moz-border-radius n</span><br><span class="line">  border-radius n</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  border-radius <span class="string">'5px'</span></span><br><span class="line">=&gt;</span><br><span class="line">Error: test.styl:3:62</span><br><span class="line">  1| ensure(val, <span class="built_in">type</span>)</span><br><span class="line">  2|     unless val is a <span class="built_in">type</span></span><br><span class="line">  3|       error(<span class="string">'expected a '</span> + <span class="built_in">type</span> + <span class="string">', but got '</span> + typeof(val))</span><br><span class="line">-------------------------------------------------------------------^</span><br><span class="line">  4|</span><br><span class="line">  5| border-radius(n)</span><br><span class="line">  6|   ensure(n, <span class="string">'unit'</span>)</span><br><span class="line"></span><br><span class="line">expected a unit, but got string</span><br><span class="line">    at ensure() (test.styl:2:17)</span><br><span class="line">    at border-radius() (test.styl:6:16)</span><br><span class="line">    at <span class="string">"body"</span> (test.styl:10:18)</span><br></pre></td></tr></table></figure></p>
+        <h2 id="自检API-Introspection-API"><a href="#自检API-Introspection-API" class="headerlink" title="自检API(Introspection API)"></a>自检API(Introspection API)</h2><p>Stylus支持自我检测的API, 这允许混写以及函数反应调用者的相关性。</p>
+<h3 id="混入-mixin"><a href="#混入-mixin" class="headerlink" title="混入(mixin)"></a>混入(mixin)</h3><p>mixin这个局部变量在函数体内自动赋值。如果调用的函数在根级别，则mixin包含字符串root, 如果其他情况，则是block, 如果调用函数有返回值，最终为false.<br>下面这个例子中，我们定义reset(), 根据其是混入了根部，还是混入块状域，还是混入返回值中，来修改其值，并作为foo属性的值呈现：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">reset()</span><br><span class="line">  <span class="keyword">if</span> mixin == <span class="string">'root'</span></span><br><span class="line">    got</span><br><span class="line">      root <span class="literal">true</span></span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> mixin</span><br><span class="line">    got <span class="string">'a mixin'</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="string">'not a mixin'</span></span><br><span class="line"></span><br><span class="line">reset()</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  reset()</span><br><span class="line">  foo reset()</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line">got &#123;</span><br><span class="line">  root: <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line">body &#123;</span><br><span class="line">  foo: <span class="string">"not a mixin"</span>;</span><br><span class="line">  got: <span class="string">"a mixin"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/06/学习stylus【23】/" data-id="cjenwy1fl000uf4utmvxhjv31" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/12/学习stylus【25】/" data-id="cjenwy1fs0015f4ut7o6zxh27" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -110,19 +108,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/03/06/学习stylus【24】/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/03/12/学习stylus【26】/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          学习stylus【24】连接中间件(Connect Middleware)
+          学习stylus【26】JavaScript API
         
       </div>
     </a>
   
   
-    <a href="/2018/03/05/学习stylus【22】/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/03/06/学习stylus【24】/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">学习stylus【22】可执行性(EXECUTABLE)</div>
+      <div class="article-nav-title">学习stylus【24】连接中间件(Connect Middleware)</div>
     </a>
   
 </nav>
