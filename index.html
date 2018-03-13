@@ -62,6 +62,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-学习stylus【27】" class="article article-type-post" itemscope itemprop="blogPost">
+  <!--<div class="article-meta">
+    <a href="/2018/03/13/学习stylus【27】/" class="article-date">
+  <time datetime="2018-03-13T01:27:09.000Z" itemprop="datePublished">2018-03-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
+  </div>
+
+</div>-->
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/13/学习stylus【27】/">学习stylus【27】SOURCEMAPS</a>
+    </h1>
+  
+
+        <a href="/2018/03/13/学习stylus【27】/" class="article-date">
+  <time datetime="2018-03-13T01:27:09.000Z" itemprop="datePublished">2018-03-13</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="SOURCEMAPS"><a href="#SOURCEMAPS" class="headerlink" title="SOURCEMAPS"></a>SOURCEMAPS</h2><p>Stylus支持基础的源地图 <a href="https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k" target="_blank" rel="noopener">Sourcemap v3 spec</a></p>
+<h3 id="创建一个源地图"><a href="#创建一个源地图" class="headerlink" title="创建一个源地图"></a>创建一个源地图</h3><p>使用Stylus文件传递–sourcemap标志（或-m）。 这将创建一个style.css文件和一个style.css.map文件作为您的style.styl的兄弟文件，并将style.css底部的sourcemap链接放到您的sourcemap中。<br><em>stylus -m style.styl</em><br>您也可以在观看文件时运行此命令。 例如： <em>stylus -w -m style.styl</em>。 这会在每次保存时更新您的源映射。</p>
+<h3 id="Javascript-API"><a href="#Javascript-API" class="headerlink" title="Javascript API"></a>Javascript API</h3><p>使用选项对象或布尔值设置sourcemap设置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'stylus'</span>);</span><br><span class="line"></span><br><span class="line">var style = stylus(str)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'filename'</span>, <span class="string">'file.styl'</span>)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'sourcemap'</span>, options);</span><br><span class="line"></span><br><span class="line">style.render(<span class="keyword">function</span>(err, css) &#123;</span><br><span class="line">  // generated sourcemap object</span><br><span class="line">  console.log(style.sourcemap);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><p><code>comment</code>     在生成的CSS中添加一个带<code>sourceMappingURL</code>的注释（默认值：<code>true</code>）<br><code>inline</code>      使用base64格式的全部源文本内联源图（默认：“false”）<br><code>sourceRoot</code>  生成的源映射的“sourceRoot”属性<br><code>basePath</code>    源图和所有源相对的基本路径（默认值：<code>.</code>）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.l3f.win/2018/03/13/学习stylus【27】/" data-id="cjeozjqhf001cr0utlcy2oday" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-学习stylus【26】" class="article article-type-post" itemscope itemprop="blogPost">
   <!--<div class="article-meta">
     <a href="/2018/03/12/学习stylus【26】/" class="article-date">
@@ -101,7 +151,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/12/学习stylus【26】/" data-id="cjenwy1fu0018f4utb4zpbwox" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/12/学习stylus【26】/" data-id="cjeozjqhb0015r0uti2pqppkq" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -149,7 +199,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/12/学习stylus【25】/" data-id="cjenwy1fs0015f4ut7o6zxh27" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/12/学习stylus【25】/" data-id="cjeozjqhh001fr0utgna42uu4" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -201,7 +251,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/06/学习stylus【24】/" data-id="cjenwy1g2001mf4utt8ttkrd5" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/06/学习stylus【24】/" data-id="cjeozjqh80011r0ut03o9zgpg" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -253,7 +303,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/06/学习stylus【23】/" data-id="cjenwy1fl000uf4utmvxhjv31" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/06/学习stylus【23】/" data-id="cjeozjqh5000yr0utstm91vbr" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -304,7 +354,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【22】/" data-id="cjenwy1fq0011f4ut6zyb42ww" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【22】/" data-id="cjeozjqhk001jr0ut0zat6kvr" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -353,7 +403,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【21】/" data-id="cjenwy1fo000yf4utte0kfdhv" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【21】/" data-id="cjeozjqh1000sr0ut38fcpw5u" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -404,7 +454,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【20】/" data-id="cjenwy1fk000sf4utfu76xeu7" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【20】/" data-id="cjeozjqgw000nr0utthb8jocq" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -451,7 +501,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/02/学习stylus【19】/" data-id="cjenwy1fi000qf4utee1mk8b7" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/02/学习stylus【19】/" data-id="cjeozjqh2000ur0ut6accw1u2" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -503,57 +553,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/02/学习stylus【18】/" data-id="cjenwy1fg000nf4utl09rrfp1" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-学习stylus【17】" class="article article-type-post" itemscope itemprop="blogPost">
-  <!--<div class="article-meta">
-    <a href="/2018/03/01/学习stylus【17】/" class="article-date">
-  <time datetime="2018-03-01T01:23:24.000Z" itemprop="datePublished">2018-03-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
-  </div>
-
-</div>-->
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/01/学习stylus【17】/">学习stylus【17】@BLOCK</a>
-    </h1>
-  
-
-        <a href="/2018/03/01/学习stylus【17】/" class="article-date">
-  <time datetime="2018-03-01T01:23:24.000Z" itemprop="datePublished">2018-03-01</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="BLOCK"><a href="#BLOCK" class="headerlink" title="@BLOCK"></a>@BLOCK</h2><p>您可以将Stylus中的任何代码块分配给一个变量，然后调用它，作为参数传递或以任何其他方式重用。<br>要定义一个块，可以在分配符号之后用增加的缩进记下它：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">foo =</span><br><span class="line">  width: 20px</span><br><span class="line">  height: 20px</span><br></pre></td></tr></table></figure></p>
-<p>或者在@block关键字中使用花括号语法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">foo = @block &#123;</span><br><span class="line">  width: 20px</span><br><span class="line">  height: 20px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>如果你想在任何地方渲染这个块，你可以在插值中调用这个变量，所以<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.icon</span><br><span class="line">  &#123;foo&#125;</span><br><span class="line">=&gt;</span><br><span class="line">.icon &#123;</span><br><span class="line">  width: 20px;</span><br><span class="line">  height: 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>顺便说一句，你也可以使用传递给块mixin的块的方式相同。<br>现在，您只能将该变量作为其他变量传递并在插值内呈现。 将来我们会提供更多的处理方法。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/01/学习stylus【17】/" data-id="cjenwy1fe000lf4ut2jamp26s" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/02/学习stylus【18】/" data-id="cjeozjqgz000qr0ut4lwwk9vc" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -624,6 +624,10 @@
       <ul>
         
           <li>
+            <a href="/2018/03/13/学习stylus【27】/">学习stylus【27】SOURCEMAPS</a>
+          </li>
+        
+          <li>
             <a href="/2018/03/12/学习stylus【26】/">学习stylus【26】JavaScript API</a>
           </li>
         
@@ -637,10 +641,6 @@
         
           <li>
             <a href="/2018/03/06/学习stylus【23】/">学习stylus【23】错误报告(Error Reporting)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/05/学习stylus【22】/">学习stylus【22】可执行性(EXECUTABLE)</a>
           </li>
         
       </ul>
