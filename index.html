@@ -62,6 +62,59 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-vue-js-study-note-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <!--<div class="article-meta">
+    <a href="/2018/03/27/vue-js-study-note-1/" class="article-date">
+  <time datetime="2018-03-27T09:18:47.000Z" itemprop="datePublished">2018-03-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Vue-js/">Vue.js</a>
+  </div>
+
+</div>-->
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/27/vue-js-study-note-1/">vue.js - 学习笔记一</a>
+    </h1>
+  
+
+        <a href="/2018/03/27/vue-js-study-note-1/" class="article-date">
+  <time datetime="2018-03-27T09:18:47.000Z" itemprop="datePublished">2018-03-27</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><h3 id="Vue-js-是什么？"><a href="#Vue-js-是什么？" class="headerlink" title="Vue.js 是什么？"></a>Vue.js 是什么？</h3><p>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。</p>
+<h3 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h3><p>创建一个html文件，并将以下代码引入即可，这是最简单的vue环境<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="简单的例子1-7"><a href="#简单的例子1-7" class="headerlink" title="简单的例子1~7"></a>简单的例子1~7</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 指定vue管理内容区域，需要通过vue展示的内容都要放到找个元素中  通常我们也把它叫做边界 数据只在边界内部解析--&gt;</span><br><span class="line">&lt;div id=<span class="string">"app-1"</span>&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;div id=<span class="string">"app-2"</span>&gt;</span><br><span class="line">    &lt;span v-bind:title=<span class="string">"message"</span>&gt;鼠标悬停几秒钟查看此处动态绑定的提示信息！&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=<span class="string">"app-3"</span>&gt;</span><br><span class="line">    &lt;span v-if = <span class="string">"seen"</span>&gt;现在你可以看到我&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=<span class="string">"app-4"</span>&gt;</span><br><span class="line">    &lt;ol&gt;</span><br><span class="line">        &lt;li v-for=<span class="string">"todo in todos"</span>&gt;</span><br><span class="line">            &#123;&#123;todo.text&#125;&#125;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">    &lt;/ol&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=<span class="string">"app-5"</span>&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123;message&#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;button v-on:click=<span class="string">"reverseMessage"</span>&gt;翻转 message&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script src=<span class="string">"/common/js/vue.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var vm = new Vue(&#123;</span><br><span class="line">        //el:提供一个在页面上已存在的DOM元素作为Vue实例的挂载目标</span><br><span class="line">        el: <span class="string">'#app-1'</span>,</span><br><span class="line">        //Vue实例的数据对象，用于给View 提供数据</span><br><span class="line">        data: &#123;</span><br><span class="line">            msg: <span class="string">"Hello Vue"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    var app2 = new Vue(&#123;</span><br><span class="line">        el: <span class="string">'#app-2'</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">            message: <span class="string">"页面加载于"</span> + new Date().toLocaleString()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    //vue使用判断</span><br><span class="line">    var app3 = new Vue(&#123;</span><br><span class="line">        el: <span class="string">'#app-3'</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            seen: <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    var app4 = new Vue(&#123;</span><br><span class="line">        el: <span class="string">'#app-4'</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            todos: [</span><br><span class="line">                &#123;text: <span class="string">'学习 Javascript'</span>&#125;,</span><br><span class="line">                &#123;text: <span class="string">'学习 Vue'</span>&#125;,</span><br><span class="line">                &#123;text: <span class="string">'创建激动人心的代码'</span>&#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    var app5 = new Vue(&#123;</span><br><span class="line">        el: <span class="string">"#app-5"</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">            message: <span class="string">"Hello Vue.js"</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            reverseMessage: <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">                this.message = this.message.split(<span class="string">''</span>).reverse().join(<span class="string">""</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2018/03/27/vue-js-study-note-1/#more">查看全部</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.l3f.win/2018/03/27/vue-js-study-note-1/" data-id="cjf9g8w5i0001b8utb2u04lrh" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-学习stylus【27】" class="article article-type-post" itemscope itemprop="blogPost">
   <!--<div class="article-meta">
     <a href="/2018/03/13/学习stylus【27】/" class="article-date">
@@ -99,7 +152,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/13/学习stylus【27】/" data-id="cjeozjqhf001cr0utlcy2oday" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/13/学习stylus【27】/" data-id="cjf9g8w88001zb8ut6799ymhr" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -151,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/12/学习stylus【26】/" data-id="cjeozjqhb0015r0uti2pqppkq" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/12/学习stylus【26】/" data-id="cjf9g8w8g002bb8utf6rbwdji" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -199,7 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/12/学习stylus【25】/" data-id="cjeozjqhh001fr0utgna42uu4" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/12/学习stylus【25】/" data-id="cjf9g8w86001wb8uthd3h0ot6" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -251,7 +304,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/06/学习stylus【24】/" data-id="cjeozjqh80011r0ut03o9zgpg" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/06/学习stylus【24】/" data-id="cjf9g8w80001qb8ut3bpg3kj8" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -303,7 +356,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/06/学习stylus【23】/" data-id="cjeozjqh5000yr0utstm91vbr" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/06/学习stylus【23】/" data-id="cjf9g8w84001tb8ut2pdlnavc" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -354,7 +407,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【22】/" data-id="cjeozjqhk001jr0ut0zat6kvr" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【22】/" data-id="cjf9g8w8a0022b8utifir5q3r" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -403,7 +456,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【21】/" data-id="cjeozjqh1000sr0ut38fcpw5u" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【21】/" data-id="cjf9g8w7w001kb8utuhn7efih" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -454,7 +507,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【20】/" data-id="cjeozjqgw000nr0utthb8jocq" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/05/学习stylus【20】/" data-id="cjf9g8w8c0025b8utopmc70p9" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -501,59 +554,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/02/学习stylus【19】/" data-id="cjeozjqh2000ur0ut6accw1u2" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-学习stylus【18】" class="article article-type-post" itemscope itemprop="blogPost">
-  <!--<div class="article-meta">
-    <a href="/2018/03/02/学习stylus【18】/" class="article-date">
-  <time datetime="2018-03-02T00:41:48.000Z" itemprop="datePublished">2018-03-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Stylus中文文档/">Stylus中文文档</a>
-  </div>
-
-</div>-->
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/02/学习stylus【18】/">学习stylus【18】URL()</a>
-    </h1>
-  
-
-        <a href="/2018/03/02/学习stylus【18】/" class="article-date">
-  <time datetime="2018-03-02T00:41:48.000Z" itemprop="datePublished">2018-03-02</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="URL"><a href="#URL" class="headerlink" title="URL()"></a>URL()</h2><p>内联Data URI图像<br>Stylus捆绑了一个可选函数，名叫url()，其替换了字面上的url()调用（且使用base64 Data URIs有条件地内联它们）。</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>通过require(‘stylus’).url该函数本身是可用的，其接受一个options对象，当看到url()时候，返回Stylus内部调用的函数。<br>.define(name, callback)方法指定了一个可被调用的JavaScript函数。在这种情况下，因为我们图片在./css/images中，我们可以忽视paths选项（默认情况下，会查找相关要呈现的图像文件）。如果愿意，该行为时可以改变的。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">stylus(str)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'filename'</span>, __dirname + <span class="string">'/css/test.styl'</span>)</span><br><span class="line">  .define(<span class="string">'url'</span>, stylus.url())</span><br><span class="line">  .render(<span class="keyword">function</span>(err, css)&#123;</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/2018/03/02/学习stylus【18】/#more">查看全部</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.l3f.win/2018/03/02/学习stylus【18】/" data-id="cjeozjqgz000qr0ut4lwwk9vc" class="article-share-link">分享</a>
+      <a data-url="http://www.l3f.win/2018/03/02/学习stylus【19】/" data-id="cjf9g8w7s001eb8utml35qxqz" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stylus/">stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li></ul>
@@ -570,7 +571,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
   </nav>
 
 </section>
@@ -581,7 +582,7 @@
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title">分类</h3>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Stylus中文文档/">Stylus中文文档</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Stylus中文文档/">Stylus中文文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue-js/">Vue.js</a></li></ul>
     </div>
   </div>
 
@@ -591,7 +592,7 @@
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title">标签</h3>
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Landscape/">Landscape</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Theme/">Theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stylus/">stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/themes/">themes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/返回顶部/">返回顶部</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Landscape/">Landscape</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Theme/">Theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stylus/">stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/themes/">themes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习Stylus/">学习Stylus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/返回顶部/">返回顶部</a></li></ul>
     </div>
   </div>
 
@@ -601,7 +602,7 @@
   <div class="widget-wrap">
     <div class="widget tagcloud">
       <h3 class="widget-title">标签云</h3>
-      <a href="/tags/CSS3/" style="font-size: 20px;">CSS3</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Landscape/" style="font-size: 10px;">Landscape</a> <a href="/tags/Theme/" style="font-size: 10px;">Theme</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/stylus/" style="font-size: 20px;">stylus</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/学习Stylus/" style="font-size: 20px;">学习Stylus</a> <a href="/tags/返回顶部/" style="font-size: 10px;">返回顶部</a>
+      <a href="/tags/CSS3/" style="font-size: 20px;">CSS3</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Landscape/" style="font-size: 10px;">Landscape</a> <a href="/tags/Theme/" style="font-size: 10px;">Theme</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/stylus/" style="font-size: 20px;">stylus</a> <a href="/tags/themes/" style="font-size: 10px;">themes</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/学习Stylus/" style="font-size: 20px;">学习Stylus</a> <a href="/tags/返回顶部/" style="font-size: 10px;">返回顶部</a>
     </div>
   </div>
 
@@ -624,6 +625,10 @@
       <ul>
         
           <li>
+            <a href="/2018/03/27/vue-js-study-note-1/">vue.js - 学习笔记一</a>
+          </li>
+        
+          <li>
             <a href="/2018/03/13/学习stylus【27】/">学习stylus【27】SOURCEMAPS</a>
           </li>
         
@@ -637,10 +642,6 @@
         
           <li>
             <a href="/2018/03/06/学习stylus【24】/">学习stylus【24】连接中间件(Connect Middleware)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/06/学习stylus【23】/">学习stylus【23】错误报告(Error Reporting)</a>
           </li>
         
       </ul>
