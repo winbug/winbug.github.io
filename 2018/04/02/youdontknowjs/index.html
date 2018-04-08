@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="nodejs,js," />
+  <meta name="keywords" content="nodejs,js,javascript," />
 
 
 
@@ -80,17 +80,19 @@
 
 
 <meta name="description" content="前言我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。 第1章 作用域是什么作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ 本人理解， 这个是针对所有编程语">
-<meta name="keywords" content="nodejs,js">
+<meta name="keywords" content="nodejs,js,javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《你不知道的JavaScript》上卷读书笔记">
 <meta property="og:url" content="http://www.l3f.win/2018/04/02/youdontknowjs/index.html">
 <meta property="og:site_name" content="L3F.WIN">
 <meta property="og:description" content="前言我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。 第1章 作用域是什么作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ 本人理解， 这个是针对所有编程语">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-04T04:07:27.279Z">
+<meta property="og:image" content="http://www.l3f.win/images/post/youdongknow01.jpg">
+<meta property="og:updated_time" content="2018-04-08T03:54:09.353Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《你不知道的JavaScript》上卷读书笔记">
 <meta name="twitter:description" content="前言我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。 第1章 作用域是什么作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ 本人理解， 这个是针对所有编程语">
+<meta name="twitter:image" content="http://www.l3f.win/images/post/youdongknow01.jpg">
 
 
 
@@ -312,13 +314,21 @@
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。</p>
 <h2 id="第1章-作用域是什么"><a href="#第1章-作用域是什么" class="headerlink" title="第1章 作用域是什么"></a>第1章 作用域是什么</h2><p>作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ <em>本人理解， 这个是针对所有编程语言的概述。</em> ）</p>
-<h3 id="1-1编译原理"><a href="#1-1编译原理" class="headerlink" title="1.1编译原理"></a>1.1编译原理</h3><p><strong>JavaScript</strong> 是一门编译语言，程序中的一段代码在执行之前会经历3个步骤，统称为编译</p>
+<h3 id="编译原理"><a href="#编译原理" class="headerlink" title="编译原理"></a>编译原理</h3><p><strong>JavaScript</strong> 是一门编译语言，程序中的一段代码在执行之前会经历3个步骤，统称为编译</p>
 <ol>
 <li>分词/词法分析(Tokenizing/Lexing)</li>
 <li>解析/语法分析(Parsing)</li>
 <li>代码生成<br>（ <em>JavaScript的引擎没有很多时间去优化，一般属于即编译即执行</em> ）</li>
 </ol>
-<h3 id="1-2理解作用域"><a href="#1-2理解作用域" class="headerlink" title="1.2理解作用域"></a>1.2理解作用域</h3>
+<a id="more"></a>
+<h3 id="理解作用域"><a href="#理解作用域" class="headerlink" title="理解作用域"></a>理解作用域</h3><ol>
+<li>对话（变量在编译器中的运行过程）<br><img src="/images/post/youdongknow01.jpg" alt="变量赋值在编译器中的流程"></li>
+<li>编译器在编译过程的第二步中生成了代码，引擎会对变量进行 LHS查询，对值进行RHS查询(将函数声明理解为LHS查询和赋值的形式并不合适)<br>a. LHS, 赋值操作的目标是谁<br>b. RHS, 谁是复制操作的源头</li>
+</ol>
+<h3 id="作用域嵌套"><a href="#作用域嵌套" class="headerlink" title="作用域嵌套"></a>作用域嵌套</h3><p>当一个块或函数嵌套在另一个块或函数中时，就发生了作用域的嵌套，引擎从当前的执行作用域开始查找变量，如果找不到，就去查找上级作用域，直到找到或没找到</p>
+<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><p><strong>严格模式</strong>，在ES5中引入了严格模式，在严格模式中，LHS如果找不到变量是不会自动创建其变量，此时因为没有生成变量，引擎会抛出异常 <strong>ReferenceError</strong>。<br>如果不是严格模式，会抛出异常 <strong>TypeError</strong>，因为在RHS查找中，此变量的值并未赋值。</p>
+<h2 id="第2章-词法作用域"><a href="#第2章-词法作用域" class="headerlink" title="第2章 词法作用域"></a>第2章 词法作用域</h2><p><strong>词法作用域</strong> 定义在词法阶段的作用域，写代码时将变量和块作用域写在哪里来决定词法作用域。</p>
+
       
     </div>
     
@@ -338,6 +348,8 @@
             <a href="/tags/nodejs/" rel="tag"># nodejs</a>
           
             <a href="/tags/js/" rel="tag"># js</a>
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
           
         </div>
       
@@ -457,7 +469,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -490,7 +502,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第1章-作用域是什么"><span class="nav-number">2.</span> <span class="nav-text">第1章 作用域是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1编译原理"><span class="nav-number">2.1.</span> <span class="nav-text">1.1编译原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2理解作用域"><span class="nav-number">2.2.</span> <span class="nav-text">1.2理解作用域</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第1章-作用域是什么"><span class="nav-number">2.</span> <span class="nav-text">第1章 作用域是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编译原理"><span class="nav-number">2.1.</span> <span class="nav-text">编译原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理解作用域"><span class="nav-number">2.2.</span> <span class="nav-text">理解作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域嵌套"><span class="nav-number">2.3.</span> <span class="nav-text">作用域嵌套</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常"><span class="nav-number">2.4.</span> <span class="nav-text">异常</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第2章-词法作用域"><span class="nav-number">3.</span> <span class="nav-text">第2章 词法作用域</span></a></li></ol></div>
             
 
           </div>
