@@ -88,7 +88,7 @@
 <meta property="og:description" content="前言我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。 第1章 作用域是什么作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ 本人理解， 这个是针对所有编程语">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.l3f.win/images/post/youdongknow01.jpg">
-<meta property="og:updated_time" content="2018-04-09T09:48:02.399Z">
+<meta property="og:updated_time" content="2018-04-10T08:50:18.919Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《你不知道的JavaScript》上卷读书笔记">
 <meta name="twitter:description" content="前言我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。 第1章 作用域是什么作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ 本人理解， 这个是针对所有编程语">
@@ -352,7 +352,27 @@
 <ol>
 <li>模块管理<br>使用模块管理工具，之后有详细说明</li>
 </ol>
-<h3 id="函数作用域"><a href="#函数作用域" class="headerlink" title="函数作用域"></a>函数作用域</h3>
+<h3 id="函数作用域"><a href="#函数作用域" class="headerlink" title="函数作用域"></a>函数作用域</h3><p>区分函数声明和表达式最简单的方法就是看function关键字出现在声明中的位置，如果function是声明中的第一个词，那么就是函数声明，否则就是一个函数表达式。</p>
+<ol>
+<li><p>匿名和具名<br> 匿名函数表达式简单快捷，但是它也有几个缺点<br> a. 匿名函数不会显示出有意义的函数名，使得调试很困难<br> b. 如果没有函数名，在递归中，在事件触发后需要解绑自身<br> c. 匿名函数省略了对于代码可读性。</p>
+</li>
+<li><p>立即执行函数表达式<br> (function foo(){})() 表示立即执行也可以写成 (function foo(){}())<br> 除了可以立即执行外还可以传递参数<br> 例子</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var a=2;</span><br><span class="line"></span><br><span class="line">(<span class="keyword">function</span> foo(global)&#123; //将参数window改名为global</span><br><span class="line">    var a = 3;</span><br><span class="line">    console.log(a);</span><br><span class="line">    console.log(global.a);</span><br><span class="line">&#125;(window)); //将window全局变量作为参数传入</span><br><span class="line"></span><br><span class="line">console.log(a);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="块作用域"><a href="#块作用域" class="headerlink" title="块作用域"></a>块作用域</h3><p>除了函数作用域外，还有一种块作用域</p>
+<p>歧义的块作用域<br>例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(var i=0; i&lt;10; i++)&#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>不过块作用域看似很安全，其实也会污染全局变量。</p>
+<ol>
+<li><code>with</code>  不仅是一个难于理解的结构，也是块作用域，在with内创建的变量不会污染外部变量</li>
+<li><code>try/catch</code> catch内声明的变量尽在catch内部有效</li>
+<li><p><code>let</code> ES6引入的新的变量声明方式<br> 之前我们有提到歧义的块作用域，我们来比较一下var 和 let区别</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用var</span></span><br><span class="line"><span class="keyword">for</span>(var i=0; i&lt;10; i++)&#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">&#125;</span><br><span class="line">console.log(i); //0,1,2,..,9, 10</span><br><span class="line"><span class="comment">#使用let</span></span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">let</span> i=0; i&lt;10; i++)&#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">&#125;</span><br><span class="line">console.log(i); //0,1,2,..,9, Uncaught ReferenceError: i is not defined</span><br></pre></td></tr></table></figure>
+<p> <em>let 进行声明不会在块作用域中进行提升。</em></p>
+</li>
+<li><code>const</code> 声明固定的常量，它也不会被提升到全局。</li>
+</ol>
+
       
     </div>
     
@@ -526,7 +546,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第1章-作用域是什么"><span class="nav-number">2.</span> <span class="nav-text">第1章 作用域是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编译原理"><span class="nav-number">2.1.</span> <span class="nav-text">编译原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理解作用域"><span class="nav-number">2.2.</span> <span class="nav-text">理解作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域嵌套"><span class="nav-number">2.3.</span> <span class="nav-text">作用域嵌套</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常"><span class="nav-number">2.4.</span> <span class="nav-text">异常</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第2章-词法作用域"><span class="nav-number">3.</span> <span class="nav-text">第2章 词法作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查找"><span class="nav-number">3.1.</span> <span class="nav-text">查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欺骗词法"><span class="nav-number">3.2.</span> <span class="nav-text">欺骗词法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第3章-函数作用域和块作用域"><span class="nav-number">4.</span> <span class="nav-text">第3章 函数作用域和块作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数中的作用域"><span class="nav-number">4.1.</span> <span class="nav-text">函数中的作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏内部实现"><span class="nav-number">4.2.</span> <span class="nav-text">隐藏内部实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数作用域"><span class="nav-number">4.3.</span> <span class="nav-text">函数作用域</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第1章-作用域是什么"><span class="nav-number">2.</span> <span class="nav-text">第1章 作用域是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编译原理"><span class="nav-number">2.1.</span> <span class="nav-text">编译原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理解作用域"><span class="nav-number">2.2.</span> <span class="nav-text">理解作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域嵌套"><span class="nav-number">2.3.</span> <span class="nav-text">作用域嵌套</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常"><span class="nav-number">2.4.</span> <span class="nav-text">异常</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第2章-词法作用域"><span class="nav-number">3.</span> <span class="nav-text">第2章 词法作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查找"><span class="nav-number">3.1.</span> <span class="nav-text">查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欺骗词法"><span class="nav-number">3.2.</span> <span class="nav-text">欺骗词法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第3章-函数作用域和块作用域"><span class="nav-number">4.</span> <span class="nav-text">第3章 函数作用域和块作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数中的作用域"><span class="nav-number">4.1.</span> <span class="nav-text">函数中的作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏内部实现"><span class="nav-number">4.2.</span> <span class="nav-text">隐藏内部实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数作用域"><span class="nav-number">4.3.</span> <span class="nav-text">函数作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#块作用域"><span class="nav-number">4.4.</span> <span class="nav-text">块作用域</span></a></li></ol></li></ol></div>
             
 
           </div>
