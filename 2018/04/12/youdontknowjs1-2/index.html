@@ -99,25 +99,25 @@
 
 
 
-  <meta name="description" content="@BLOCK您可以将Stylus中的任何代码块分配给一个变量，然后调用它，作为参数传递或以任何其他方式重用。要定义一个块，可以在分配符号之后用增加的缩进记下它：123foo =  width: 20px  height: 20px 或者在@block关键字中使用花括号语法：1234foo = @block &amp;#123;  width: 20px  height: 20px&amp;#125; 如果你想在任">
-<meta name="keywords" content="stylus,CSS3,学习Stylus">
+  <meta name="description" content="第1章 关于thisthis 关键字是Javascript中最复杂的机制之一。到现在我也是对this一知半解，完全没有弄清楚。 为什么要用thisthis 示例123456789101112131415161718192021function identify()&amp;#123;    return this.name.toUpperCase();&amp;#125;function speak()&amp;#123">
+<meta name="keywords" content="nodejs,js,javascript,你不知道的JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习stylus【17】@BLOCK">
-<meta property="og:url" content="http://www.l3f.win/2018/03/01/学习stylus【17】/index.html">
+<meta property="og:title" content="《你不知道的JavaScript》上卷读书笔记第二部分">
+<meta property="og:url" content="http://www.l3f.win/2018/04/12/youdontknowjs1-2/index.html">
 <meta property="og:site_name" content="L3F.WIN">
-<meta property="og:description" content="@BLOCK您可以将Stylus中的任何代码块分配给一个变量，然后调用它，作为参数传递或以任何其他方式重用。要定义一个块，可以在分配符号之后用增加的缩进记下它：123foo =  width: 20px  height: 20px 或者在@block关键字中使用花括号语法：1234foo = @block &amp;#123;  width: 20px  height: 20px&amp;#125; 如果你想在任">
+<meta property="og:description" content="第1章 关于thisthis 关键字是Javascript中最复杂的机制之一。到现在我也是对this一知半解，完全没有弄清楚。 为什么要用thisthis 示例123456789101112131415161718192021function identify()&amp;#123;    return this.name.toUpperCase();&amp;#125;function speak()&amp;#123">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-01T02:33:43.548Z">
+<meta property="og:updated_time" content="2018-04-12T07:27:27.529Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习stylus【17】@BLOCK">
-<meta name="twitter:description" content="@BLOCK您可以将Stylus中的任何代码块分配给一个变量，然后调用它，作为参数传递或以任何其他方式重用。要定义一个块，可以在分配符号之后用增加的缩进记下它：123foo =  width: 20px  height: 20px 或者在@block关键字中使用花括号语法：1234foo = @block &amp;#123;  width: 20px  height: 20px&amp;#125; 如果你想在任">
+<meta name="twitter:title" content="《你不知道的JavaScript》上卷读书笔记第二部分">
+<meta name="twitter:description" content="第1章 关于thisthis 关键字是Javascript中最复杂的机制之一。到现在我也是对this一知半解，完全没有弄清楚。 为什么要用thisthis 示例123456789101112131415161718192021function identify()&amp;#123;    return this.name.toUpperCase();&amp;#125;function speak()&amp;#123">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.l3f.win/2018/03/01/学习stylus【17】/"/>
+  <link rel="canonical" href="http://www.l3f.win/2018/04/12/youdontknowjs1-2/"/>
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>学习stylus【17】@BLOCK | L3F.WIN</title>
+  <title>《你不知道的JavaScript》上卷读书笔记第二部分 | L3F.WIN</title>
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/01/学习stylus【17】/">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/04/12/youdontknowjs1-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="winbug">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">学习stylus【17】@BLOCK
+          <h1 class="post-title" itemprop="name headline">《你不知道的JavaScript》上卷读书笔记第二部分
               
             
           </h1>
@@ -325,7 +325,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-01T09:23:24+08:00">2018-03-01</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-12T11:48:39+08:00">2018-04-12</time>
             
 
             
@@ -346,7 +346,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/你不知道的JavaScript/" itemprop="url" rel="index"><span itemprop="name">你不知道的JavaScript</span></a></span>
 
                 
                 
@@ -380,10 +380,14 @@
       
 
       
-        <h2 id="BLOCK"><a href="#BLOCK" class="headerlink" title="@BLOCK"></a>@BLOCK</h2><p>您可以将Stylus中的任何代码块分配给一个变量，然后调用它，作为参数传递或以任何其他方式重用。<br>要定义一个块，可以在分配符号之后用增加的缩进记下它：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">foo =</span><br><span class="line">  width: 20px</span><br><span class="line">  height: 20px</span><br></pre></td></tr></table></figure></p>
-<p>或者在@block关键字中使用花括号语法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">foo = @block &#123;</span><br><span class="line">  width: 20px</span><br><span class="line">  height: 20px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>如果你想在任何地方渲染这个块，你可以在插值中调用这个变量，所以<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.icon</span><br><span class="line">  &#123;foo&#125;</span><br><span class="line">=&gt;</span><br><span class="line">.icon &#123;</span><br><span class="line">  width: 20px;</span><br><span class="line">  height: 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>顺便说一句，你也可以使用传递给块mixin的块的方式相同。<br>现在，您只能将该变量作为其他变量传递并在插值内呈现。 将来我们会提供更多的处理方法。</p>
+        <h2 id="第1章-关于this"><a href="#第1章-关于this" class="headerlink" title="第1章 关于this"></a>第1章 关于this</h2><p><code>this</code> 关键字是Javascript中最复杂的机制之一。到现在我也是对this一知半解，完全没有弄清楚。</p>
+<h3 id="为什么要用this"><a href="#为什么要用this" class="headerlink" title="为什么要用this"></a>为什么要用this</h3><p><strong>this</strong> 示例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">identify</span></span>()&#123;</span><br><span class="line">    <span class="built_in">return</span> this.name.toUpperCase();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">speak</span></span>()&#123;</span><br><span class="line">    var greeting = <span class="string">"Hello, I'm "</span> + identify.call( this );</span><br><span class="line">    console.log( greeting );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var me = &#123;</span><br><span class="line">    name: <span class="string">"Lisa"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var you = &#123;</span><br><span class="line">    name: <span class="string">"John"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">identify.call( me ); //LISA</span><br><span class="line">identify.call( you ); //JOHN</span><br><span class="line">speak.call( me ); //Hello, I<span class="string">'m LISA</span></span><br><span class="line"><span class="string">speak.call( you ); //Hello, I'</span>m JOHN</span><br></pre></td></tr></table></figure></p>
+<p><strong>简单说明</strong><br>每个函数都包含两个非继承而来的方法：call()方法和apply()方法。<br>call()的第一个参数是作为函数上下文的对象，之后的参数可以是任意形式。</p>
+<p>this 提供了一种更优雅的方式来隐式“传递”一个对象引用，因此可以将API设计得更加简洁并且易于复用。</p>
+<h3 id="误解"><a href="#误解" class="headerlink" title="误解"></a>误解</h3><p>太拘泥于“ this ”的字面意思就会产生一些误解。有两种常见的对于this的解释，但是他们都是错误的。</p>
+<ol>
+<li>指向自身（<em>错误理解</em>）</li>
+</ol>
 
       
     </div>
@@ -404,11 +408,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/stylus/" rel="tag"># stylus</a>
+            <a href="/tags/nodejs/" rel="tag"># nodejs</a>
           
-            <a href="/tags/CSS3/" rel="tag"># CSS3</a>
+            <a href="/tags/js/" rel="tag"># js</a>
           
-            <a href="/tags/学习Stylus/" rel="tag"># 学习Stylus</a>
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+            <a href="/tags/你不知道的JavaScript/" rel="tag"># 你不知道的JavaScript</a>
           
         </div>
       
@@ -421,8 +427,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/01/学习stylus【16】/" rel="next" title="学习stylus【16】继承 @EXTEND">
-                <i class="fa fa-chevron-left"></i> 学习stylus【16】继承 @EXTEND
+              <a href="/2018/04/02/youdontknowjs/" rel="next" title="《你不知道的JavaScript》上卷读书笔记第一部分">
+                <i class="fa fa-chevron-left"></i> 《你不知道的JavaScript》上卷读书笔记第一部分
               </a>
             
           </div>
@@ -430,10 +436,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/02/学习stylus【18】/" rel="prev" title="学习stylus【18】URL()">
-                学习stylus【18】URL() <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -606,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BLOCK"><span class="nav-number">1.</span> <span class="nav-text">@BLOCK</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第1章-关于this"><span class="nav-number">1.</span> <span class="nav-text">第1章 关于this</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要用this"><span class="nav-number">1.1.</span> <span class="nav-text">为什么要用this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#误解"><span class="nav-number">1.2.</span> <span class="nav-text">误解</span></a></li></ol></li></ol></div>
             
 
           </div>
