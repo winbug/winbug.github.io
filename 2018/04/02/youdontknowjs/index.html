@@ -5,12 +5,15 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +41,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,49 +49,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.1.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.1.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="nodejs,js,javascript,你不知道的JavaScript," />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.1.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="前言我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。 第1章 作用域是什么作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ 本人理解， 这个是针对所有编程语">
-<meta name="keywords" content="nodejs,js,javascript,你不知道的JavaScript">
-<meta property="og:type" content="article">
-<meta property="og:title" content="《你不知道的JavaScript》上卷读书笔记">
-<meta property="og:url" content="http://www.l3f.win/2018/04/02/youdontknowjs/index.html">
-<meta property="og:site_name" content="L3F.WIN">
-<meta property="og:description" content="前言我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。 第1章 作用域是什么作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ 本人理解， 这个是针对所有编程语">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://www.l3f.win/images/post/youdongknow01.jpg">
-<meta property="og:updated_time" content="2018-04-11T08:50:47.209Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《你不知道的JavaScript》上卷读书笔记">
-<meta name="twitter:description" content="前言我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。 第1章 作用域是什么作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ 本人理解， 这个是针对所有编程语">
-<meta name="twitter:image" content="http://www.l3f.win/images/post/youdongknow01.jpg">
 
 
 
@@ -101,15 +76,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    version: '5.1.4',
+    version: '6.1.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -121,14 +94,42 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="前言我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。 第1章 作用域是什么作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ 本人理解， 这个是针对所有编程语">
+<meta name="keywords" content="nodejs,js,javascript,你不知道的JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《你不知道的JavaScript》上卷读书笔记第一部分">
+<meta property="og:url" content="http://www.l3f.win/2018/04/02/youdontknowjs/index.html">
+<meta property="og:site_name" content="L3F.WIN">
+<meta property="og:description" content="前言我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。 第1章 作用域是什么作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ 本人理解， 这个是针对所有编程语">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.l3f.win/images/post/youdongknow01.jpg">
+<meta property="og:updated_time" content="2018-04-12T03:43:22.603Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《你不知道的JavaScript》上卷读书笔记第一部分">
+<meta name="twitter:description" content="前言我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。 第1章 作用域是什么作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ 本人理解， 这个是针对所有编程语">
+<meta name="twitter:image" content="http://www.l3f.win/images/post/youdongknow01.jpg">
+
+
+
+
+
 
   <link rel="canonical" href="http://www.l3f.win/2018/04/02/youdontknowjs/"/>
 
 
 
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title>《你不知道的JavaScript》上卷读书笔记 | L3F.WIN</title>
+  <title>《你不知道的JavaScript》上卷读书笔记第一部分 | L3F.WIN</title>
   
 
 
@@ -138,9 +139,37 @@
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -156,7 +185,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">L3F.WIN</span>
         <span class="logo-line-after"><i></i></span>
@@ -168,7 +197,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -176,45 +205,52 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
+        
+          
+  
+  <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+</li>
+
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
+        
+          
+  
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+</li>
+
       
         
-        <li class="menu-item menu-item-stylus中文文档">
-          <a href="/categories/Stylus中文文档" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-css3"></i> <br />
-            
-            Stylus中文文档
-          </a>
-        </li>
+        
+          
+  
+  <li class="menu-item menu-item-stylus中文文档">
+    <a href="/categories/Stylus中文文档" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-css3"></i> <br />Stylus中文文档</a>
+</li>
+
       
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -222,12 +258,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -238,6 +282,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -262,11 +308,18 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《你不知道的JavaScript》上卷读书笔记</h1>
+          <h1 class="post-title" itemprop="name headline">《你不知道的JavaScript》上卷读书笔记第一部分
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+            
+                
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -274,11 +327,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-02T14:56:23+08:00">
-                2018-04-02
-              </time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-02T14:56:23+08:00">2018-04-02</time>
             
 
+            
             
 
             
@@ -392,9 +444,24 @@
 <p>行了，现在可以正常工作了。<br>可以对这段代码进行一些改进：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(var i = 1; i &lt;=5; i++)&#123;</span><br><span class="line">    (<span class="keyword">function</span>(j)&#123;</span><br><span class="line">        setTimeout(<span class="keyword">function</span> <span class="function"><span class="title">time</span></span>()&#123;</span><br><span class="line">            console.log(j);</span><br><span class="line">        &#125;, j*1000);</span><br><span class="line">    &#125;)(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>当然，这些IIFE也不过就是函数，因此我们可以将i传递进去，如果愿意的话可以将变量定义为j，当然也可以还叫做i。无论如何这段代码现在可以工作了。<br>在迭代内使用IIFE会为每个迭代都生成一个新的作用域，使得延缓函数的回调可以将新的作用域封闭在每个迭代内部，每个迭代中都会含有一个具有正确值的变量供我们访问。<br>问题解决了！</p>
 <p><strong>重返块作用域</strong><br>使用let将循环闭包更加顺畅<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="built_in">let</span> i = 1; i &lt;=5; i++)&#123;</span><br><span class="line">    setTimeout(<span class="keyword">function</span> <span class="function"><span class="title">time</span></span>()&#123;</span><br><span class="line">        console.log(i);</span><br><span class="line">    &#125;, i*1000);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p>在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在Node环境中，一个.js文件就称之为一个模块（module）。<br>（<em>模块其实也是利用的闭包</em>）<br>示例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">CoolModule</span></span>()&#123;</span><br><span class="line">    var something = <span class="string">"cool"</span>;</span><br><span class="line">    var another = [1,2,3];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">doSomething</span></span>()&#123;</span><br><span class="line">        console.log( something );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">doAnother</span></span>()&#123;</span><br><span class="line">        console.log( another.join(<span class="string">" ! "</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //以对象形式返回</span><br><span class="line">    <span class="built_in">return</span> &#123;</span><br><span class="line">        doSomething: doSomething,</span><br><span class="line">        doAnother: doAnother</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var foo = CoolModule();</span><br><span class="line">foo.doSomething(); //cool</span><br><span class="line">foo.doAnother(); //1!2!3</span><br></pre></td></tr></table></figure></p>
+<p>从模块中返回一个实际的对象并不是必须的，也可以直接返回一个内部函数。（函数也是对象，也具有属性）</p>
+<p><strong>模块模式需要具备的条件</strong></p>
+<ol>
+<li>必须由外部的封闭函数，该函数必须至少被调用一次（每次调用都会创建一个新的模块实例）</li>
+<li>封闭函数必须返回至少一个内部函数，这样内部函数才能在私有作用域中形成闭包，并且可以访问或者修改私有的状态。</li>
+</ol>
+<p><em>*一个具有函数属性的对象本身并不是真正的模块。一个从函数调用所返回的，只有数据属性而没有闭包函数的对象并不是真正的模块。</em></p>
+<p>模块也是普通的函数，因此可以接受参数。</p>
+<p>带参数的实例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> CoolModule(id)&#123;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">identify</span></span>()&#123;</span><br><span class="line">        console.log( id );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> &#123;</span><br><span class="line">        identify: identify</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var foo1 = CoolModule(<span class="string">"foo 1"</span>);</span><br><span class="line">var foo2 = CoolModule(<span class="string">"foo 2"</span>);</span><br><span class="line">foo1.identify(); //foo 1</span><br><span class="line">foo2.identify(); //foo 2</span><br></pre></td></tr></table></figure></p>
+<p>模块模式另一个简单但强大的变化用法是，命名将要作为公共API返回的对象<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">var foo = (<span class="keyword">function</span> CoolModule(id)&#123;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">change</span></span>()&#123;</span><br><span class="line">        //修改公共API</span><br><span class="line">        publicAPI.identify = identify2;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">identify1</span></span>()&#123;</span><br><span class="line">        console.log( id );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">identify2</span></span>()&#123;</span><br><span class="line">        console.log( id.toUpperCase() );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var publicAPI = &#123;</span><br><span class="line">        change: change,</span><br><span class="line">        identify: identify1</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> publicAPI;</span><br><span class="line">&#125;)(<span class="string">"foo module"</span>);</span><br><span class="line"></span><br><span class="line">foo.identify(); //foo module</span><br><span class="line">foo.change();</span><br><span class="line">foo.identify(); //FOO MODULE</span><br></pre></td></tr></table></figure></p>
+<p>通过在模块实例的内部保留对公共API对象的内部引用，可以从内部对模块实例进行修改，包括添加或删除方法和属性，以及修改他们的值。</p>
 
       
     </div>
+
+    
+
     
     
     
@@ -455,14 +522,14 @@
 
     <div class="post-spread">
       
+        <div class="bdsharebuttonbox"><span>分享到： </span><a href="#" class="bds_tsina fa fa-weibo" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin fa fa-weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{},"image":{"viewList":["tsina","weixin"],"viewText":"分享到：","viewSize":"24"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
     </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -506,53 +573,92 @@
               <p class="site-description motion-element" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">32</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">分类</span>
+                  <a href="/archives/">
                 
-              </div>
-            
-
-            
+                    <span class="site-state-item-count">32</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
               
+
               
-              <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">标签</span>
                 
-              </div>
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
             
-
-          </nav>
-
           
-
-          
-
-          
-          
-
-          
-          
-
           
 
         </div>
@@ -568,7 +674,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第1章-作用域是什么"><span class="nav-number">1.</span> <span class="nav-text">第1章 作用域是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编译原理"><span class="nav-number">1.1.</span> <span class="nav-text">编译原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理解作用域"><span class="nav-number">1.2.</span> <span class="nav-text">理解作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域嵌套"><span class="nav-number">1.3.</span> <span class="nav-text">作用域嵌套</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常"><span class="nav-number">1.4.</span> <span class="nav-text">异常</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第2章-词法作用域"><span class="nav-number">2.</span> <span class="nav-text">第2章 词法作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查找"><span class="nav-number">2.1.</span> <span class="nav-text">查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欺骗词法"><span class="nav-number">2.2.</span> <span class="nav-text">欺骗词法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第3章-函数作用域和块作用域"><span class="nav-number">3.</span> <span class="nav-text">第3章 函数作用域和块作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数中的作用域"><span class="nav-number">3.1.</span> <span class="nav-text">函数中的作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏内部实现"><span class="nav-number">3.2.</span> <span class="nav-text">隐藏内部实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数作用域"><span class="nav-number">3.3.</span> <span class="nav-text">函数作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#块作用域"><span class="nav-number">3.4.</span> <span class="nav-text">块作用域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第4章-提升"><span class="nav-number">4.</span> <span class="nav-text">第4章 提升</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数优先"><span class="nav-number">4.1.</span> <span class="nav-text">函数优先</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第5章-作用域闭包"><span class="nav-number">5.</span> <span class="nav-text">第5章 作用域闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#启示"><span class="nav-number">5.1.</span> <span class="nav-text">启示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实质问题"><span class="nav-number">5.2.</span> <span class="nav-text">实质问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#现在我懂了"><span class="nav-number">5.3.</span> <span class="nav-text">现在我懂了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环和闭包（此章非常重要所以基本全部内容录入）"><span class="nav-number">5.4.</span> <span class="nav-text">循环和闭包（此章非常重要所以基本全部内容录入）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第1章-作用域是什么"><span class="nav-number">1.</span> <span class="nav-text">第1章 作用域是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编译原理"><span class="nav-number">1.1.</span> <span class="nav-text">编译原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理解作用域"><span class="nav-number">1.2.</span> <span class="nav-text">理解作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域嵌套"><span class="nav-number">1.3.</span> <span class="nav-text">作用域嵌套</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常"><span class="nav-number">1.4.</span> <span class="nav-text">异常</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第2章-词法作用域"><span class="nav-number">2.</span> <span class="nav-text">第2章 词法作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查找"><span class="nav-number">2.1.</span> <span class="nav-text">查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欺骗词法"><span class="nav-number">2.2.</span> <span class="nav-text">欺骗词法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第3章-函数作用域和块作用域"><span class="nav-number">3.</span> <span class="nav-text">第3章 函数作用域和块作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数中的作用域"><span class="nav-number">3.1.</span> <span class="nav-text">函数中的作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏内部实现"><span class="nav-number">3.2.</span> <span class="nav-text">隐藏内部实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数作用域"><span class="nav-number">3.3.</span> <span class="nav-text">函数作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#块作用域"><span class="nav-number">3.4.</span> <span class="nav-text">块作用域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第4章-提升"><span class="nav-number">4.</span> <span class="nav-text">第4章 提升</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数优先"><span class="nav-number">4.1.</span> <span class="nav-text">函数优先</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第5章-作用域闭包"><span class="nav-number">5.</span> <span class="nav-text">第5章 作用域闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#启示"><span class="nav-number">5.1.</span> <span class="nav-text">启示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实质问题"><span class="nav-number">5.2.</span> <span class="nav-text">实质问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#现在我懂了"><span class="nav-number">5.3.</span> <span class="nav-text">现在我懂了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环和闭包（此章非常重要所以基本全部内容录入）"><span class="nav-number">5.4.</span> <span class="nav-text">循环和闭包（此章非常重要所以基本全部内容录入）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块"><span class="nav-number">5.5.</span> <span class="nav-text">模块</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -589,16 +695,20 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">winbug</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
 
 
 
@@ -606,12 +716,13 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.1.0</div>
 
 
 
 
         
+
 
 
 
@@ -650,7 +761,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -670,16 +785,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -688,18 +793,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.1.0"></script>
 
 
 
@@ -707,23 +807,19 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.1.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.1.0"></script>
 
 
 
   
-
-
-  
-
 
 
 
@@ -750,8 +846,6 @@
 
 
 
-
-
   
 
 
@@ -763,23 +857,12 @@
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
 
   
+
+  
+  
+
   
 
   
