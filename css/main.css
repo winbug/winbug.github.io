@@ -1513,6 +1513,10 @@ pre .javascript .function {
   font-size: 14px;
   margin-top: 2px;
 }
+.posts-expand .post-meta time {
+  border-bottom: 1px dashed #999;
+  cursor: help;
+}
 .post-meta-divider {
   margin: 0 0.5em;
 }
@@ -1821,7 +1825,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff18;
+  background: #ff2585;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2581,14 +2585,6 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
-}
-.bds_weixin,
-.bds_tsina {
-  background-image: none !important;
-  padding-left: 10px !important;
-}
-.bdsharebuttonbox span {
-  float: left;
 }
 .post-title-link {
   padding-bottom: 5px;
