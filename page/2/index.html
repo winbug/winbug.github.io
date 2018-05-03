@@ -285,6 +285,168 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/05/学习stylus【22】/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="winbug">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L3F.WIN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/05/学习stylus【22】/" itemprop="url">
+                  学习stylus【22】可执行性(EXECUTABLE)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-03-05 17:13:38 / 修改时间：17:42:42" itemprop="dateCreated datePublished" datetime="2018-03-05T17:13:38+08:00">2018-03-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="可执行性-EXECUTABLE"><a href="#可执行性-EXECUTABLE" class="headerlink" title="可执行性(EXECUTABLE)"></a>可执行性(EXECUTABLE)</h2><p>正因有stylus可执行性，Stylus才能将自身转换成CSS.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">Usage: stylus [options] [<span class="built_in">command</span>] [&lt; <span class="keyword">in</span> [&gt; out]]</span><br><span class="line">              [file|dir ...]</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line"></span><br><span class="line">  <span class="built_in">help</span> [&lt;<span class="built_in">type</span>&gt;:]&lt;prop&gt; Opens <span class="built_in">help</span> info at MDC <span class="keyword">for</span> &lt;prop&gt; <span class="keyword">in</span></span><br><span class="line">                       your default browser. Optionally</span><br><span class="line">                       searches other resources of &lt;<span class="built_in">type</span>&gt;:</span><br><span class="line">                       safari opera w3c ms caniuse quirksmode</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line"></span><br><span class="line">  -i, --interactive       Start interactive REPL</span><br><span class="line">  -u, --use &lt;path&gt;        Utilize the Stylus plugin at &lt;path&gt;</span><br><span class="line">  -U, --inline            Utilize image inlining via data URI support</span><br><span class="line">  -w, --watch             Watch file(s) <span class="keyword">for</span> changes and re-compile</span><br><span class="line">  -o, --out &lt;dir&gt;         Output to &lt;dir&gt; when passing files</span><br><span class="line">  -C, --css &lt;src&gt; [dest]  Convert CSS input to Stylus</span><br><span class="line">  -I, --include &lt;path&gt;    Add &lt;path&gt; to lookup paths</span><br><span class="line">  -c, --compress          Compress CSS output</span><br><span class="line">  -d, --compare           Display input along with output</span><br><span class="line">  -f, --firebug           Emits debug infos <span class="keyword">in</span> the generated CSS that</span><br><span class="line">                          can be used by the FireStylus Firebug plugin</span><br><span class="line">  -l, --line-numbers      Emits comments <span class="keyword">in</span> the generated CSS</span><br><span class="line">                          indicating the corresponding Stylus line</span><br><span class="line">  -m, --sourcemap         Generates a sourcemap <span class="keyword">in</span> sourcemaps v3 format</span><br><span class="line">  --sourcemap-inline      Inlines sourcemap with full <span class="built_in">source</span> text <span class="keyword">in</span> base64 format</span><br><span class="line">  --sourcemap-root &lt;url&gt;  <span class="string">"sourceRoot"</span> property of the generated sourcemap</span><br><span class="line">  --sourcemap-base &lt;path&gt; Base &lt;path&gt; from <span class="built_in">which</span> sourcemap and all sources are relative</span><br><span class="line">  -P, --prefix [prefix]   Prefix all css classes</span><br><span class="line">  -p, --<span class="built_in">print</span>             Print out the compiled CSS</span><br><span class="line">  --import &lt;file&gt;         Import stylus &lt;file&gt;</span><br><span class="line">  --include-css           Include regular CSS on @import</span><br><span class="line">  -D, --deps              Display dependencies of the compiled file</span><br><span class="line">  --<span class="built_in">disable</span>-cache         Disable caching</span><br><span class="line">  --hoist-atrules         Move @import and @charset to the top</span><br><span class="line">  -r, --resolve-url       Resolve relative urls inside imports</span><br><span class="line">  --resolve-url-nocheck   Like --resolve-url but without file existence check</span><br><span class="line">  -V, --version           Display the version of Stylus</span><br><span class="line">  -h, --<span class="built_in">help</span>              Display <span class="built_in">help</span> information</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/05/学习stylus【22】/#更多" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/05/学习stylus【21】/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1754,154 +1916,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/23/theme01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L3F.WIN">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/23/theme01/" itemprop="url">
-                  theme01
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-02-23 09:17:40 / 修改时间：09:32:05" itemprop="dateCreated datePublished" datetime="2018-02-23T09:17:40+08:00">2018-02-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="学习修改Landscape模板"><a href="#学习修改Landscape模板" class="headerlink" title="学习修改Landscape模板"></a>学习修改Landscape模板</h2><p>本次修改需有一定的前端技术能力， 我们将以Landscape模板作为基础，修改成其他样式的模板。</p>
-<h3 id="1-头部修改"><a href="#1-头部修改" class="headerlink" title="1. 头部修改"></a>1. 头部修改</h3><p>目标： 将Logo 置于页面的左上角，缩小头部的高度。</p>
-<p>首先将Logo，移动到 header-inner 下的 main-nav里面<br>打开landscape目录下的layout/_partial/header.ejs文件<br>将<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">"&lt;%- url_for() %&gt;"</span> id=<span class="string">"logo"</span> class=<span class="string">"main-nav-link"</span>&gt;&lt;%= config.title %&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
-<p>复制到<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;nav id=<span class="string">"main-nav"</span>&gt;</span><br></pre></td></tr></table></figure></p>
-<p>下<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/23/theme01/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1949,7 +1963,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">35</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
