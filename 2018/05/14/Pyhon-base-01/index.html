@@ -112,7 +112,8 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.l3f.win/images/post/python-01.jpg">
 <meta property="og:image" content="http://www.l3f.win/images/post/python-01-01.jpg">
-<meta property="og:updated_time" content="2018-05-14T09:42:54.990Z">
+<meta property="og:image" content="http://www.l3f.win/images/post/python-02.jpg">
+<meta property="og:updated_time" content="2018-05-16T09:28:15.879Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 基础教程">
 <meta name="twitter:description" content="Python 基础教程前言Python: 一种解释型的，面向对象的，带有动态语义的高级程序设计语言。 第1章 基础值是本章将介绍如何获得所需要的软件，及简单的算法。 安装Python下载地址 Windowswindows的安装方法很简单，双击下载后的文件，按照提示进行安装即可。成功后，我们就可以启动IDLE了，如下图，同时按F1键可以调出完整的Python文档。">
@@ -331,12 +332,24 @@
                 
               
 
-              <time title="创建时间：2018-05-14 15:07:05 / 修改时间：17:42:54" itemprop="dateCreated datePublished" datetime="2018-05-14T15:07:05+08:00">2018-05-14</time>
+              <time title="创建时间：2018-05-14 15:07:05" itemprop="dateCreated datePublished" datetime="2018-05-14T15:07:05+08:00">2018-05-14</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-05-16 17:28:15" itemprop="dateModified" datetime="2018-05-16T17:28:15+08:00">2018-05-16</time>
               
             
           </span>
@@ -391,6 +404,35 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;2+2</span><br><span class="line">4</span><br><span class="line">&gt;&gt;&gt;53672+235253</span><br><span class="line">288925</span><br><span class="line">&gt;&gt;&gt;1/2  <span class="comment">#python2</span></span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt;1/2</span><br><span class="line">0.5  <span class="comment">#python3</span></span><br></pre></td></tr></table></figure>
 <p>当整数相除的时候，会将小数点后面的结果省略掉，所以遇到这种情况的时候，可以使用实数进行相除或是让Python改变除法的执行方法</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;from __future__ import division //希望python执行普通的除法</span><br></pre></td></tr></table></figure>
+<h4 id="长整型数"><a href="#长整型数" class="headerlink" title="长整型数"></a>长整型数</h4><p>普通整数不能大于2147483647（也不能小于-2147483648），这个在新版的Python中已经不是很重要了。<br>在旧版本中，在长整型数的后面添加一个<code> L </code>即可。</p>
+<h4 id="十六进制和八进制"><a href="#十六进制和八进制" class="headerlink" title="十六进制和八进制"></a>十六进制和八进制</h4><ol>
+<li><p>十六进制</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;0xAF</span><br><span class="line">175</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>八进制</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;010 <span class="comment">#python2</span></span><br><span class="line">8</span><br><span class="line">&gt;&gt;&gt;0o10 <span class="comment">#python3</span></span><br><span class="line">8</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量基本上就是代表（或者引用）某值的名字。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;x=3</span><br><span class="line">&gt;&gt;&gt;x*2</span><br><span class="line">6</span><br></pre></td></tr></table></figure>
+<h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><p>语句是使用关键字来组成命令，告诉Python需要做什么，语句可以有输出，也可以没有输出。</p>
+<h3 id="获取用户输入"><a href="#获取用户输入" class="headerlink" title="获取用户输入"></a>获取用户输入</h3><p>非常有用的 <strong>input函数</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; input(<span class="string">"The meaning of line: "</span>)</span><br><span class="line">The meaning of line: 42</span><br><span class="line">42</span><br></pre></td></tr></table></figure>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数就像可以用来实现特定功能的小程序一样。函数可以做很多事情，我们也可以自定义函数<br>例如</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;2**3</span><br><span class="line">8</span><br><span class="line">&gt;&gt;&gt;pow(2,3) <span class="comment">#pow就是幂函数</span></span><br><span class="line">8</span><br><span class="line">&gt;&gt;&gt; abs(-100) <span class="comment">#绝对值函数</span></span><br><span class="line">100</span><br><span class="line">&gt;&gt;&gt; round(3.1415926) <span class="comment">#取整函数（四舍五入）</span></span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; import math</span><br><span class="line">&gt;&gt;&gt; math.floor(3.962) <span class="comment">#取整函数，需引入math模块才可以使用</span></span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p>可以把模块想象成导入到Python以增强其功能的扩展。需要使用import来导入模块。使用时使用 模块.函数 的格式来执行<br>为了能够不每次调用函数的时候，都要写模块的名字，可以使用 from 模块 import 函数 这种形式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from math import floor</span><br><span class="line">&gt;&gt;&gt; floor(3.9888)</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+<p>不过为了管理的方便和以后代码的易读性，推荐使用 模块.函数 的格式。</p>
+<h4 id="cmath-和复数"><a href="#cmath-和复数" class="headerlink" title="cmath 和复数"></a>cmath 和复数</h4><p>sqrt函数用于计算一个数字的平方根。如果数值为负数则会弹出错误提示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from math import sqrt</span><br><span class="line">&gt;&gt;&gt; sqrt(-1)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#11&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    sqrt(-1)</span><br><span class="line">ValueError: math domain error</span><br></pre></td></tr></table></figure>
+<p>如何解决这个问题呢，使用cmath</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import cmath</span><br><span class="line">&gt;&gt;&gt; cmath.sqrt(-1)</span><br><span class="line">1j  <span class="comment">#1j是个叙述，以j结尾</span></span><br></pre></td></tr></table></figure>
+<h4 id="回到-future"><a href="#回到-future" class="headerlink" title="回到__future__"></a>回到__future__</h4><p>__future__是个神奇的模块在后面的章节将详细说明。</p>
+<h3 id="保存并执行程序"><a href="#保存并执行程序" class="headerlink" title="保存并执行程序"></a>保存并执行程序</h3><ol>
+<li>在<strong>windows</strong>下</li>
+</ol>
+<p>我们可以使用各种文本编辑器，如visual studio Code 或是 Atom 也可以是 EditPlus等等，也可以使用 IDLE python自带的编辑功能<br>在窗口选择 File → New File就会打开一个新窗口，而且没有交互式提示符，你可以在这里写入您的代码<br>并保存到你指定的文件夹。保存好后，你可以使用 Ctrl + F5来执行你的代码，在你第一个打开的IDLE中将会显示结果。</p>
+<p><img src="/images/post/python-02.jpg" alt="使用IDLE来保存并执行程序"></p>
 
       
     </div>
@@ -608,7 +650,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-基础教程"><span class="nav-number">1.</span> <span class="nav-text">Python 基础教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第1章-基础值是"><span class="nav-number">1.1.</span> <span class="nav-text">第1章 基础值是</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Python"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装Python</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux-和-UNIX"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">Linux 和 UNIX</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法是什么？"><span class="nav-number">1.1.2.</span> <span class="nav-text">算法是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数字和表达式"><span class="nav-number">1.1.3.</span> <span class="nav-text">数字和表达式</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-基础教程"><span class="nav-number">1.</span> <span class="nav-text">Python 基础教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第1章-基础值是"><span class="nav-number">1.1.</span> <span class="nav-text">第1章 基础值是</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Python"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装Python</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux-和-UNIX"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">Linux 和 UNIX</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法是什么？"><span class="nav-number">1.1.2.</span> <span class="nav-text">算法是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数字和表达式"><span class="nav-number">1.1.3.</span> <span class="nav-text">数字和表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#长整型数"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">长整型数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#十六进制和八进制"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">十六进制和八进制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量"><span class="nav-number">1.1.4.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语句"><span class="nav-number">1.1.5.</span> <span class="nav-text">语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取用户输入"><span class="nav-number">1.1.6.</span> <span class="nav-text">获取用户输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">1.1.7.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块"><span class="nav-number">1.1.8.</span> <span class="nav-text">模块</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cmath-和复数"><span class="nav-number">1.1.8.1.</span> <span class="nav-text">cmath 和复数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回到-future"><span class="nav-number">1.1.8.2.</span> <span class="nav-text">回到__future__</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保存并执行程序"><span class="nav-number">1.1.9.</span> <span class="nav-text">保存并执行程序</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
