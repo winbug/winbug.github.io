@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="利用VuePress和Netlify CMS创建一个简单的网站本文属于本人翻译其英文原稿及测试过程中遇到的问题总结而成的，请大家多提意见。可随意转载。 在本教程中，我将向您展示如何使用VuePress 和 Netlify CMS构建一个静态网站。 如果您不熟悉VuePres， 它是由Evan You(Vue的创始人)在Vue之上构建的静态网站生成器。与Nuxt.js不同的是，VuePress的主">
+<meta name="keywords" content="HTML5,Javascript,代码,Nodejs,Vue,VuePress,Netlify">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用VuePress和Netlify CMS创建一个简单的网站">
+<meta property="og:url" content="http://www.l3f.win/2018/12/05/VuePressNetlifyCMS/index.html">
+<meta property="og:site_name" content="L3F.WIN">
+<meta property="og:description" content="利用VuePress和Netlify CMS创建一个简单的网站本文属于本人翻译其英文原稿及测试过程中遇到的问题总结而成的，请大家多提意见。可随意转载。 在本教程中，我将向您展示如何使用VuePress 和 Netlify CMS构建一个静态网站。 如果您不熟悉VuePres， 它是由Evan You(Vue的创始人)在Vue之上构建的静态网站生成器。与Nuxt.js不同的是，VuePress的主">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.l3f.win/images/post/Vuepress.png">
+<meta property="og:image" content="http://www.l3f.win/images/post/vuepress_01.png">
+<meta property="og:image" content="http://www.l3f.win/images/post/vuepress_02.png">
+<meta property="og:image" content="http://www.l3f.win/images/post/vuepress_03.png">
+<meta property="og:image" content="http://www.l3f.win/images/post/vuepress_04.png">
+<meta property="og:image" content="http://www.l3f.win/images/post/vuepress_05.png">
+<meta property="og:image" content="http://www.l3f.win/images/post/vuepress_06.png">
+<meta property="og:image" content="http://www.l3f.win/images/post/vuepress_07.png">
+<meta property="og:image" content="http://www.l3f.win/images/post/vuepress_08.png">
+<meta property="og:updated_time" content="2018-12-05T03:33:38.297Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="利用VuePress和Netlify CMS创建一个简单的网站">
+<meta name="twitter:description" content="利用VuePress和Netlify CMS创建一个简单的网站本文属于本人翻译其英文原稿及测试过程中遇到的问题总结而成的，请大家多提意见。可随意转载。 在本教程中，我将向您展示如何使用VuePress 和 Netlify CMS构建一个静态网站。 如果您不熟悉VuePres， 它是由Evan You(Vue的创始人)在Vue之上构建的静态网站生成器。与Nuxt.js不同的是，VuePress的主">
+<meta name="twitter:image" content="http://www.l3f.win/images/post/Vuepress.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://www.l3f.win/2018/12/05/VuePressNetlifyCMS/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>利用VuePress和Netlify CMS创建一个简单的网站 | L3F.WIN</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">L3F.WIN</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Github及Hexo的使用</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-stylus中文文档">
+    <a href="/categories/Stylus中文文档/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-css3"></i> <br />Stylus中文文档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/12/05/VuePressNetlifyCMS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="winbug">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/common/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L3F.WIN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">利用VuePress和Netlify CMS创建一个简单的网站
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-05 09:45:17 / 修改时间：11:33:38" itemprop="dateCreated datePublished" datetime="2018-12-05T09:45:17+08:00">2018-12-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/post/Vuepress.png" alt="VuePress"></p>
+<h1 id="利用VuePress和Netlify-CMS创建一个简单的网站"><a href="#利用VuePress和Netlify-CMS创建一个简单的网站" class="headerlink" title="利用VuePress和Netlify CMS创建一个简单的网站"></a>利用VuePress和Netlify CMS创建一个简单的网站</h1><p>本文属于本人翻译其英文原稿及测试过程中遇到的问题总结而成的，请大家多提意见。可随意转载。</p>
+<p>在本教程中，我将向您展示如何使用VuePress 和 Netlify CMS构建一个静态网站。 如果您不熟悉VuePres， 它是由Evan You(Vue的创始人)在Vue之上构建的静态网站生成器。与Nuxt.js不同的是，VuePress的主要关注点在于构建静态站点，该站点有自己的构造，并且自动负责许多的设置工作。<br>Netlify,一个针对静态站点的现代化平台，使用其CMS来管理静态站点，这使得任何人都可以通过编辑器轻松的管理网站内容。</p>
+<a id="more"></a>
+<h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><p>首先你要做的是克隆或下载我创建的Git仓库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/andreliem/vuepress-netlify-cms</span><br></pre></td></tr></table></figure>
+<p>克隆完后，您会发现其目录下包含如下的结构</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── LICENSE</span><br><span class="line">├── README.md</span><br><span class="line">├── docs</span><br><span class="line">│   ├── README.md</span><br><span class="line">│   ├── test.md</span><br><span class="line">│   └── welcome.md</span><br><span class="line">├── netlify.toml</span><br><span class="line">├── package.json</span><br><span class="line">└── yarn.lock</span><br></pre></td></tr></table></figure>
+<p>让我们先解释一下这些文件的含义。</p>
+<h3 id="nelify-toml"><a href="#nelify-toml" class="headerlink" title="nelify.toml"></a>nelify.toml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[build]</span><br><span class="line">  <span class="built_in">command</span> = <span class="string">"yarn docs:build"</span></span><br><span class="line">  publish = <span class="string">"docs/.vuepress/dist/"</span></span><br></pre></td></tr></table></figure>
+<p>此文件在部署Netlify的时候使用。Netlify从Github中提取代码，并运行yarn docs:build命令生成静态站点。发布完成后，publish 告诉你公共目录在那里启动你的站点。</p>
+<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"docs:dev"</span>: <span class="string">"vuepress dev docs"</span>,</span><br><span class="line">    <span class="string">"docs:build"</span>: <span class="string">"vuepress build docs"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"devDependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"vuepress"</span>: <span class="string">"^0.9.0"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个文件是标准的VuePress设置，如果您遵循官方的VuePress安装指南安装的话，您将自动拥有这些设置。</p>
+<h3 id="docs"><a href="#docs" class="headerlink" title="/docs"></a>/docs</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">├── docs</span><br><span class="line">│   ├── README.md</span><br><span class="line">│   ├── test.md</span><br><span class="line">│   └── welcome.md</span><br></pre></td></tr></table></figure>
+<p>最后，docs文件夹包含实际的标记文件，这些文件将组成站点本身的内容。这些文件被提交给Github，Netlify CMS将通过一个CMS来处理这些文件，我们将在本教程结束前设置CMS。<br>如果查看这些文件，请注意README.md与其他两个文件不同，因为它是站点的主页文件。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>按照VuePress的建议，我们将使用yarn而不是npm来设置项目。<br>VuePress文档将告诉你为什么。</p>
+<p>当将VuePress安装到以webpack 3.x作为依赖项的现有项目时，目前建议使用yarn而不是npm。 在这种情况下，npm无法生成正确的依赖关系树。(<a href="https://vuepress.vuejs.org/guide/getting-started.html" target="_blank" rel="noopener">https://vuepress.vuejs.org/guide/getting-started.html</a>)</p>
+<p>开始</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn install</span><br></pre></td></tr></table></figure>
+<p>全部安装完成后，我们花一些时间来查看项目中的目录 /docs/.vuepress。这个目录是Vue程序的核心。如果你要扩展VuePress，这里就是你要去的地方。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── components</span><br><span class="line">│   └── PostLayout.vue</span><br><span class="line">├── config.js</span><br><span class="line">├── dist</span><br><span class="line">└── public</span><br><span class="line">    ├── admin</span><br><span class="line">    │   ├── config.yml</span><br><span class="line">    │   └── index.html</span><br><span class="line">    └── images</span><br></pre></td></tr></table></figure>
+<p>上面是.vuepress中的关键文件和目录。<br>components目录是我们可以存储自定义显示组件的地方，例如自定义布局视图。 我们不会在本教程中使用它。</p>
+<h3 id="config-js"><a href="#config-js" class="headerlink" title="config.js"></a>config.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  title: <span class="string">'Netlify CMS + VuePress'</span>,</span><br><span class="line">  description: <span class="string">'Netlify + VuePress'</span>,</span><br><span class="line">  themeConfig: &#123;</span><br><span class="line">    docsDir: <span class="string">'docs'</span>,</span><br><span class="line">    repo: <span class="string">'andreliem/vuepress-netlify-cms'</span>,</span><br><span class="line">    sidebar: [</span><br><span class="line">      <span class="string">'/'</span>,</span><br><span class="line">      <span class="string">'/welcome'</span>,</span><br><span class="line">      <span class="string">'/test'</span></span><br><span class="line">    ],</span><br><span class="line">    nav: [</span><br><span class="line">      &#123;</span><br><span class="line">        text: <span class="string">'Admin'</span>,</span><br><span class="line">        link: <span class="string">'/admin/#/'</span>,</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此文件负责VuePress的大部分配置。 作为示例，sidebar将列出侧边栏显示的实际链接，nav负责顶部标题链接。 sidebar链接到docs根级别包含的markdown文件。 可以是博客文章或项目文档。<br>nav包含指向管理CMS的单个链接。 请注意，此管理部分存在于.vuepress/public/admin中。 公用文件夹是放置VuePress不生成的静态文件和资源的位置。 在这种情况下，我们添加了一些netlify特定代码来设置CMS的基本入口点。</p>
+<p>让我们更详细地查看Netlify CMS的配置文件。</p>
+<p><font color="red">注意</font> 想要通过Netlify CMS来管理自己的网站的话，需要修改此处repo的值， 将仓库名字修改为自己的Github仓库位置 USER/REPO</p>
+<h3 id="config-yml"><a href="#config-yml" class="headerlink" title="config.yml"></a>config.yml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">backend:</span><br><span class="line">  name: github</span><br><span class="line">  repo: andreliem/vuepress-netlify-cms</span><br><span class="line">  branch: master <span class="comment"># Branch to update (optional; defaults to master)</span></span><br><span class="line">media_folder: <span class="string">"docs/.vuepress/public/images"</span></span><br><span class="line">public_folder: <span class="string">"docs/.vuepress/dist/"</span></span><br><span class="line">collections:</span><br><span class="line">  - name: <span class="string">"doc"</span> <span class="comment"># Used in routes, e.g., /admin/collections/blog</span></span><br><span class="line">    label: <span class="string">"Doc"</span> <span class="comment"># Used in the UI</span></span><br><span class="line">    folder: <span class="string">"docs"</span> <span class="comment"># The path to the folder where the documents are stored</span></span><br><span class="line">    create: <span class="literal">true</span> <span class="comment"># Allow users to create new documents in this collection</span></span><br><span class="line">    slug: <span class="string">"&#123;&#123;slug&#125;&#125;"</span> <span class="comment"># Filename template, e.g., YYYY-MM-DD-title.md</span></span><br><span class="line">    fields: <span class="comment"># The fields for each document, usually in front matter</span></span><br><span class="line">      - &#123;label: <span class="string">"Title"</span>, name: <span class="string">"title"</span>, widget: <span class="string">"string"</span>&#125;</span><br><span class="line">      - &#123;label: <span class="string">"Body"</span>, name: <span class="string">"body"</span>, widget: <span class="string">"markdown"</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>这里有很多内容，我建议你阅读Netlify CMS入门指南。<br>以下快速概述。<br>backend 定义了我们的内容存储的位置，在这种情况下，我们将它存储在Github master上的相同名称的repo（仓库）中。<br>media_folder 告诉Netlify存储图像的位置。 我们将它们存储在VuePress希望存储静态资产的公共文件夹中。<br>collections 定义了我们网站上的内容类型。 如果您有使用过WordPress的经验，请将其视为自定义帖子类型。 这是个相当简单的事情，我们可以定义一些关于这些项目的元信息，然后在编辑器中可以编辑的字段。 请注意，markdown文件遵循frontmatter格式。</p>
+<p><font color="red">注意</font> 想要通过Netlify CMS来管理自己的网站的话，需要修改此处repo的值， 将仓库名字修改为自己的Github仓库位置 USER/REPO</p>
+<h2 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h2><p>既然您已经了解了设置方法的基础知识，那么让我们通过以下方式尝试运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn docs:dev</span><br></pre></td></tr></table></figure>
+<p>这时你可以在本地看到运行的结果了<br>在浏览器中输入 <a href="http://localhost:8082" target="_blank" rel="noopener">http://localhost:8082</a>  此处会根据服务器显示内容的不同而不同，请自己查看</p>
+<p><img src="/images/post/vuepress_01.png" alt="展示图"></p>
+<p>此页面引用我们已定义为主页的README.md文件。 这是一个特定于VuePress的约定，可让您轻松获得启动页面而无需任何设计工作。</p>
+<h2 id="Admin"><a href="#Admin" class="headerlink" title="Admin"></a>Admin</h2><p>要在本地进行管理设置，您可以尝试单击管理链接。<br>如果你得到404，请尝试刷新，它应该打开netlify登录界面，如下所示。</p>
+<p><img src="/images/post/vuepress_02.png" alt="展示图"></p>
+<p>在Netlify上部署时不会发生此问题，很可能是因为默认的nginx设置。 （我不是服务器专家）<br>如果你尝试使用github登录它将无法工作，因为你需要使用Netlify和Github来启用访问。 以下部分将介绍如何进行设置：</p>
+<ol>
+<li>netlify部署和托管</li>
+<li>用于CMS访问的netlify标识</li>
+<li>github到netlify访问</li>
+</ol>
+<p>在我们开始之前，假设您有一个Netlify和Github帐户。 如果你不这样做，那么你首先需要这样做。<br>创建新的Netlify站点<br>登录Betlify.com并创建一个新站点。 然后选择项目的存储库，在我的例子中是您正在使用的存储库。 你想在github上为此创建一个新的repo。创建方法及上传方法请参考下面的文章<br><a href="https://www.ttwinbug.com/thread-9992-1-1.html" target="_blank" rel="noopener">Github入门</a><br><a href="https://www.ttwinbug.com/thread-9989-1-1.html" target="_blank" rel="noopener">Github基础</a></p>
+<h3 id="定义部署设置"><a href="#定义部署设置" class="headerlink" title="定义部署设置"></a>定义部署设置</h3><p>接下来，我们告诉Netlify从哪个分支中提取，如何构建项目以及分发文件所在的位置。<br>一般会自动填好，记得检查好Repository是否是自己的</p>
+<p><img src="/images/post/vuepress_03.png" alt="VuePress设置"></p>
+<p>您应该测试使用Netlify部署您的应用程序并确保它有效。</p>
+<h3 id="设置Netlify-Identity"><a href="#设置Netlify-Identity" class="headerlink" title="设置Netlify Identity"></a>设置Netlify Identity</h3><p>现在该网站已上线，我们需要允许人们通过CMS在线编辑内容。 这是我们需要为站点设置Netlify的身份设置的地方。 在主站点设置页面中，导航到底部附近的侧栏上找到的“身份”，然后确保启用身份，如下面的屏幕所示。</p>
+<p><img src="/images/post/vuepress_04.png" alt="设置Netlify Identity"></p>
+<h3 id="配置身份注册-Configure-Identity-Registration"><a href="#配置身份注册-Configure-Identity-Registration" class="headerlink" title="配置身份注册(Configure Identity Registration)"></a>配置身份注册(Configure Identity Registration)</h3><p>接下来，让我们定义谁可以注册CMS以及它们如何连接。 由于这只是一个演示，我们将对任何人“开放”，并使用“GitHub”作为我们的外部提供商进行身份验证。</p>
+<p><img src="/images/post/vuepress_05.png" alt="配置身份注册"></p>
+<h3 id="配置识别服务-Configure-Identify-Services"><a href="#配置识别服务-Configure-Identify-Services" class="headerlink" title="配置识别服务(Configure Identify Services)"></a>配置识别服务(Configure Identify Services)</h3><p>好的，所以我们告诉Netlify任何人都可以注册。 下一步是将服务或网关配置为Github，以便Github允许Netlify将其用作身份验证平台。 转到“Identity”下的“Services”部分。</p>
+<p><img src="/images/post/vuepress_06.png" alt="配置身份注册"></p>
+<p>首先，我们指定将用于CMS的存储库，同样也是同一个存储库。 我们将Roles留空并最后输入您必须从Github检索的Github访问令牌。 单击“Generate access token in GitHub”按钮以开始请求您的权限请求。</p>
+<h3 id="使用Github设置OAuth应用程序"><a href="#使用Github设置OAuth应用程序" class="headerlink" title="使用Github设置OAuth应用程序"></a>使用Github设置OAuth应用程序</h3><p>最后，我们需要使用Github设置OAuth应用程序，这将使我们的VuePress Netlify应用程序通过Github进行身份验证并适当地重定向。 这与您为Facebook，Google等支持OAuth的任何第三方认证系统设置的流程相同……<br>在Github上，导航到Settings-&gt; Developer Settings，然后选择New OAuth App。</p>
+<p><img src="/images/post/vuepress_07.png" alt="使用Github设置OAuth应用程序"></p>
+<p>更新上面的表单字段，但显然有你自己的URL和描述细节。 回调URL应保持原样，并且在在线文档中不是特别容易找到。</p>
+<p><font color="red">注意</font> 为了开通认证，我们还需要开启一步，首先在你刚才创建的Oauth应用处，复制Client ID及 Client Secret的代码， 再回到Netlify  转到 Settings → Access control → OAuth Install provider，将刚才的代码填入当相应的位置。</p>
+<h3 id="开始测试吧"><a href="#开始测试吧" class="headerlink" title="开始测试吧"></a>开始测试吧</h3><p>完成后，您应该可以点击您网站上的管理员链接，并通过您的Github帐户登录。 如果一切顺利，那么您将看到如下的管理面板：</p>
+<p><img src="/images/post/vuepress_08.png" alt="管理面板"></p>
+<p>通过Netlify设置好的网站来访问，本地测试失败</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML5/" rel="tag"># HTML5</a>
+          
+            <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+          
+            <a href="/tags/代码/" rel="tag"># 代码</a>
+          
+            <a href="/tags/Nodejs/" rel="tag"># Nodejs</a>
+          
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
+          
+            <a href="/tags/VuePress/" rel="tag"># VuePress</a>
+          
+            <a href="/tags/Netlify/" rel="tag"># Netlify</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/29/ContentfuWithNuxtjs/" rel="next" title="使用Nuxt.js与Contentful创建简单的可数据库管理博客">
+                <i class="fa fa-chevron-left"></i> 使用Nuxt.js与Contentful创建简单的可数据库管理博客
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/common/avatar.jpg"
+                alt="winbug" />
+            
+              <p class="site-author-name" itemprop="name">winbug</p>
+              <p class="site-description motion-element" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">41</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#利用VuePress和Netlify-CMS创建一个简单的网站"><span class="nav-number">1.</span> <span class="nav-text">利用VuePress和Netlify CMS创建一个简单的网站</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#入门"><span class="nav-number">1.1.</span> <span class="nav-text">入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nelify-toml"><span class="nav-number">1.1.1.</span> <span class="nav-text">nelify.toml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#package-json"><span class="nav-number">1.1.2.</span> <span class="nav-text">package.json</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docs"><span class="nav-number">1.1.3.</span> <span class="nav-text">/docs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#config-js"><span class="nav-number">1.2.1.</span> <span class="nav-text">config.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#config-yml"><span class="nav-number">1.2.2.</span> <span class="nav-text">config.yml</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#执行"><span class="nav-number">1.3.</span> <span class="nav-text">执行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Admin"><span class="nav-number">1.4.</span> <span class="nav-text">Admin</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义部署设置"><span class="nav-number">1.4.1.</span> <span class="nav-text">定义部署设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置Netlify-Identity"><span class="nav-number">1.4.2.</span> <span class="nav-text">设置Netlify Identity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置身份注册-Configure-Identity-Registration"><span class="nav-number">1.4.3.</span> <span class="nav-text">配置身份注册(Configure Identity Registration)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置识别服务-Configure-Identify-Services"><span class="nav-number">1.4.4.</span> <span class="nav-text">配置识别服务(Configure Identify Services)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Github设置OAuth应用程序"><span class="nav-number">1.4.5.</span> <span class="nav-text">使用Github设置OAuth应用程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始测试吧"><span class="nav-number">1.4.6.</span> <span class="nav-text">开始测试吧</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">winbug</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
