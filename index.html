@@ -285,6 +285,303 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/12/05/nodeupandrunning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="winbug">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/common/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L3F.WIN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/05/nodeupandrunning/" itemprop="url">
+                  Node即学即用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-05 17:19:20" itemprop="dateCreated datePublished" datetime="2018-12-05T17:19:20+08:00">2018-12-05</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-12-24 15:30:11" itemprop="dateModified" datetime="2018-12-24T15:30:11+08:00">2018-12-24</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Node即学即用"><a href="#Node即学即用" class="headerlink" title="Node即学即用"></a>Node即学即用</h1><h2 id="第1章-Node-js简介"><a href="#第1章-Node-js简介" class="headerlink" title="第1章 Node.js简介"></a>第1章 Node.js简介</h2><h3 id="开始写代码"><a href="#开始写代码" class="headerlink" title="开始写代码"></a>开始写代码</h3><ol>
+<li><p>Node REPL(Read - Evaluate - Print - Loop) REPL模式输入，求值，输出，循环<br>我们可以启动node，来进行测试一般的Javascript</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">node</span><br><span class="line">&gt;3&gt;2&gt;1</span><br><span class="line"><span class="literal">false</span></span><br><span class="line">&gt;<span class="literal">true</span>==1</span><br><span class="line"><span class="literal">true</span></span><br><span class="line">&gt;<span class="literal">true</span>===1</span><br><span class="line"><span class="literal">false</span></span><br><span class="line">.<span class="built_in">exit</span>  //输入.<span class="built_in">exit</span>退出node环境</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编写首个服务器程序</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var http = require(<span class="string">'http'</span>);</span><br><span class="line">http.createServer(<span class="keyword">function</span> (req, res)&#123;</span><br><span class="line">  res.writeHead(200, &#123;<span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span>&#125;);</span><br><span class="line">  res.end(<span class="string">'Hello World\n'</span>);</span><br><span class="line">&#125;).listen(8000, <span class="string">"127.0.0.1"</span>);</span><br><span class="line">console.log(<span class="string">'Server running at http://127.0.0.1:8000'</span>);</span><br></pre></td></tr></table></figure>
+<p> require(‘http’),导入http模块<br> req参数，请求对象<br> res参数，响应对象<br> res.writeHead设置相应头<br> end方法会关闭HTTP连接</p>
+</li>
+</ol>
+<h3 id="非常有用的元命令"><a href="#非常有用的元命令" class="headerlink" title="非常有用的元命令"></a>非常有用的元命令</h3><p>一般以 . 开头</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.help</td>
+<td>显示帮助菜单</td>
+</tr>
+<tr>
+<td>.clear</td>
+<td>清楚当前运行的内容</td>
+</tr>
+<tr>
+<td>.exit</td>
+<td>退出Node解析器</td>
+</tr>
+</tbody>
+</table>
+<h2 id="第2章-编写有趣的应用"><a href="#第2章-编写有趣的应用" class="headerlink" title="第2章 编写有趣的应用"></a>第2章 编写有趣的应用</h2><h3 id="创建聊天室"><a href="#创建聊天室" class="headerlink" title="创建聊天室"></a>创建聊天室</h3><p>代码1 创建一个聊天室的基础服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var net = require(<span class="string">'net'</span>); //加载net模块</span><br><span class="line"></span><br><span class="line">var chatServer = net.createServer()</span><br><span class="line"></span><br><span class="line">chatServer.on(<span class="string">'connection'</span>, <span class="keyword">function</span>(client)&#123; //on调用connection事件</span><br><span class="line">  client.write(<span class="string">"Hi!\n"</span>);</span><br><span class="line">  client.write(<span class="string">"Bye!\n"</span>);</span><br><span class="line">  </span><br><span class="line">  client.end()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">chatServer.listen(3000);</span><br></pre></td></tr></table></figure>
+<p>代码2 监听所有链接请求</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var net = require(<span class="string">'net'</span>);</span><br><span class="line"></span><br><span class="line">var chatServer = net.createServer()</span><br><span class="line"></span><br><span class="line">chatServer.on(<span class="string">'connection'</span>, <span class="keyword">function</span>(client)&#123;</span><br><span class="line">  client.write(<span class="string">"Hi!\n"</span>);</span><br><span class="line">  </span><br><span class="line">  client.on(<span class="string">'data'</span>, <span class="keyword">function</span>(data)&#123; //关注data事件</span><br><span class="line">    console.log(data.toString()); //不使用toString，后台将显示Buffer后的十六进制字符</span><br><span class="line">  &#125;)</span><br><span class="line">  //此处删除了client.end，为了持续受到数据</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">chatServer.listen(3000);</span><br></pre></td></tr></table></figure>
+<p>代码3 添加用户列表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var net = require(<span class="string">'net'</span>);</span><br><span class="line"></span><br><span class="line">var chatServer = net.createServer(),</span><br><span class="line">    clientList = [];</span><br><span class="line"></span><br><span class="line">chatServer.on(<span class="string">'connection'</span>, <span class="keyword">function</span>(client)&#123;</span><br><span class="line">  client.write(<span class="string">"Hi!\n"</span>);</span><br><span class="line">  clientList.push(client);</span><br><span class="line">  </span><br><span class="line">  client.on(<span class="string">'data'</span>, <span class="keyword">function</span>(data)&#123;</span><br><span class="line">    <span class="keyword">for</span>(var i=0; i&lt;clientList.length; i++)&#123;</span><br><span class="line">      //把数据发给用户</span><br><span class="line">      clientList[i].write(data)</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(data.toString());</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">chatServer.listen(3000);</span><br></pre></td></tr></table></figure>
+<p>完成后多用户可以同时聊天，问题是收到自己的重复信息</p>
+<p>代码4 完善用户对话</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">var net = require(<span class="string">'net'</span>);</span><br><span class="line"></span><br><span class="line">var chatServer = net.createServer(),</span><br><span class="line">    clientList = [];</span><br><span class="line"></span><br><span class="line">chatServer.on(<span class="string">'connection'</span>, <span class="keyword">function</span>(client)&#123;</span><br><span class="line">  client.name= client.remoteAddress + <span class="string">':'</span> + client.remotePort; //获取用户地址及port</span><br><span class="line">  client.write(<span class="string">"Hi "</span> + client.name + <span class="string">'!\n'</span>);</span><br><span class="line">  clientList.push(client);</span><br><span class="line">  </span><br><span class="line">  client.on(<span class="string">'data'</span>, <span class="keyword">function</span>(data)&#123;</span><br><span class="line">    broadcast(data, client);</span><br><span class="line">    console.log(data.toString());</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> broadcast(message, client)&#123;</span><br><span class="line">  <span class="keyword">for</span>(var i=0; i&lt;clientList.length; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(client !== clientList[i])&#123;</span><br><span class="line">      clientList[i].write(client.name + <span class="string">' says '</span> + message);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">chatServer.listen(3000);</span><br></pre></td></tr></table></figure>
+<p>虽然已经完善了不少，问题还是很多，退出用户会出严重错误</p>
+<p>代码5 完善后的最终版</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">var net = require(<span class="string">'net'</span>);</span><br><span class="line"></span><br><span class="line">var chatServer = net.createServer(),</span><br><span class="line">    clientList = [];</span><br><span class="line"></span><br><span class="line">chatServer.on(<span class="string">'connection'</span>, <span class="keyword">function</span>(client)&#123;</span><br><span class="line">  client.name= client.remoteAddress + <span class="string">':'</span> + client.remotePort;</span><br><span class="line">  client.write(<span class="string">"Hi "</span> + client.name + <span class="string">'!\n'</span>);</span><br><span class="line">  console.log(client.name + <span class="string">" joined"</span>);</span><br><span class="line">  clientList.push(client);</span><br><span class="line">  </span><br><span class="line">  client.on(<span class="string">'data'</span>, <span class="keyword">function</span>(data)&#123;</span><br><span class="line">    broadcast(data, client);</span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line">  client.on(<span class="string">'end'</span>, <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    console.log(client.name + <span class="string">" quit"</span>);</span><br><span class="line">    clientList.splice(clientList.indexOf(client),1) //从用户列表中珊瑚已下线的用户</span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line">  //记录错误</span><br><span class="line">  client.on(<span class="string">'error'</span>, <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    console.log(e)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> broadcast(message, client)&#123;</span><br><span class="line">  var cleanup = [];</span><br><span class="line">  <span class="keyword">for</span>(var i=0; i&lt;clientList.length; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(client !== clientList[i])&#123;</span><br><span class="line">      //检查socket的可写状态</span><br><span class="line">      <span class="keyword">if</span>(clientList[i].writable)&#123;</span><br><span class="line">        clientList[i].write(client.name + <span class="string">' says '</span> + message);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          cleanup.push(clientList[i]);</span><br><span class="line">          clientList[i].destroy();  //将用户关闭并移除</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(i=0; i&lt;cleanup.length; i++)&#123;</span><br><span class="line">    clientList.splice(clientList.indexOf(cleanup[i]), 1);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">chatServer.listen(3000);</span><br></pre></td></tr></table></figure>
+<p>增加了对退出用户的删除，错误记录。大家可以慢慢研究</p>
+<h3 id="编写Twitter"><a href="#编写Twitter" class="headerlink" title="编写Twitter"></a>编写Twitter</h3><p>此处使用Express模块，先创建项目目录，进入目录后输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save express</span><br></pre></td></tr></table></figure>
+<p>安装完成后我们就可以继续了。首先创建件的Express服务器</p>
+<h4 id="创建服务器"><a href="#创建服务器" class="headerlink" title="创建服务器"></a>创建服务器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#server.js</span></span><br><span class="line">var express = require(<span class="string">'express'</span>);</span><br><span class="line">var app = express(); //新版已经不适用createServer()来创建了。统一改用express()</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="keyword">function</span>(req, res)&#123;</span><br><span class="line">  res.send(<span class="string">"Welcome to Node Twitter"</span>); //send()方法包含了HTTP头</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(3000);</span><br></pre></td></tr></table></figure>
+<h4 id="添加基础API"><a href="#添加基础API" class="headerlink" title="添加基础API"></a>添加基础API</h4><h2 id="第3章-编写健壮的Node程序"><a href="#第3章-编写健壮的Node程序" class="headerlink" title="第3章 编写健壮的Node程序"></a>第3章 编写健壮的Node程序</h2><h3 id="编写Node-js服务器程序的时候遵循的两个策略"><a href="#编写Node-js服务器程序的时候遵循的两个策略" class="headerlink" title="编写Node.js服务器程序的时候遵循的两个策略"></a>编写Node.js服务器程序的时候遵循的两个策略</h3><ul>
+<li>在设置完成以后，所有操作都是事件驱动的</li>
+<li>如果Node.js需要长时间处理数据，考虑把它分配给web Worker去处理</li>
+</ul>
+<h3 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h3><ol>
+<li>无序的并行I/O<br> Node中所有的I/O操作默认都是无序并行，无序并非乱序，是指顺序无法保证。</li>
+<li>顺序串行I/O<br> 每一个人物都必须在上一个任务完成后才能开始。</li>
+</ol>
+<h3 id="编写产品代码"><a href="#编写产品代码" class="headerlink" title="编写产品代码"></a>编写产品代码</h3><p>编写成熟的代码，是程序更容易维护，更简洁，更易懂。</p>
+<h4 id="差错处理"><a href="#差错处理" class="headerlink" title="差错处理"></a>差错处理</h4><p>在Node.js中使用error时间来处理异步错误</p>
+<p><code>req.on(&#39;error&#39;, function(e){...})</code></p>
+<h4 id="使用多处理器"><a href="#使用多处理器" class="headerlink" title="使用多处理器"></a>使用多处理器</h4><p>Node.js 可以使用 cluster模块来把任务分配给子进程</p>
+<h2 id="第4章-核心API"><a href="#第4章-核心API" class="headerlink" title="第4章 核心API"></a>第4章 核心API</h2><h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><h4 id="EventEmitter类"><a href="#EventEmitter类" class="headerlink" title="EventEmitter类"></a>EventEmitter类</h4><p>提供基础的事件功能</p>
+<ol>
+<li>on 方法为一个事件创建了监听器。<ul>
+<li>两个参数<ul>
+<li>需要监听的事件名称</li>
+<li>事件触发时需要调用的函数。</li>
+</ul>
+</li>
+<li><code>s.on(&#39;abc&#39;, function(){});</code></li>
+</ul>
+</li>
+<li>emit 方法为触发事件<ul>
+<li><code>s.emit(&#39;abc&#39;);</code></li>
+</ul>
+</li>
+</ol>
+<p>实例代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//调用util模块，以便调用inherite方法来添加EventEmitter方法添加到我们的Server类中, 事先之前必须安装utils模块 npm install utils</span><br><span class="line">var utils = require(<span class="string">'util'</span>),  //此处书中有错误，为util模块不是utils模块</span><br><span class="line">EventEmitter = require(<span class="string">'events'</span>).EventEmitter;</span><br><span class="line"></span><br><span class="line">var Server = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  console.log(<span class="string">'init'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">utils.inherits(Server, EventEmitter);</span><br><span class="line"></span><br><span class="line">var s = new Server();</span><br><span class="line">s.on(<span class="string">'abc'</span>, <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  console.log(<span class="string">'abc'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">s.emit(<span class="string">'abc'</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="Callback语法"><a href="#Callback语法" class="headerlink" title="Callback语法"></a>Callback语法</h4><p>使用时间很重要的一个部分是处理回掉函数。</p>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p>Node.js的核心功能之一就是Web服务器。</p>
+<h4 id="HTTP服务器"><a href="#HTTP服务器" class="headerlink" title="HTTP服务器"></a>HTTP服务器</h4><p>使用require调用http模块<br>使用createServer创建服务器<br>并使用.listen监听指定端口<br>还可以使用 request事件监听器，通过EventEmitter调用on方法来完成</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var http = require(<span class="string">'http'</span>);</span><br><span class="line">var server = http.createServer();</span><br><span class="line">var handleReq = <span class="keyword">function</span>(req, res)&#123;</span><br><span class="line">  res.writeHead(200,&#123;&#125;);</span><br><span class="line">  res.end(<span class="string">"hello world"</span>);</span><br><span class="line">&#125;;</span><br><span class="line">server.on(<span class="string">'request'</span>, handleReq);</span><br><span class="line">server.listen(4000);</span><br></pre></td></tr></table></figure>
+<h4 id="HTTP客户端"><a href="#HTTP客户端" class="headerlink" title="HTTP客户端"></a>HTTP客户端</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//向百度的80端口发起HTTP GET请求</span><br><span class="line">var http = require(<span class="string">'http'</span>);</span><br><span class="line">var opts = &#123;</span><br><span class="line">  host: <span class="string">"www.baidu.com"</span>,</span><br><span class="line">  port: 80,</span><br><span class="line">  path: <span class="string">'/'</span>,</span><br><span class="line">  method: <span class="string">'GET'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var req = http.request(opts, <span class="keyword">function</span>(res)&#123;</span><br><span class="line">  console.log(res);</span><br><span class="line">  res.on(<span class="string">'data'</span>, <span class="keyword">function</span>(data)&#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">req.end();</span><br></pre></td></tr></table></figure>
+<p>opts 配置对象，这里我们必须提供的有</p>
+<ul>
+<li>host</li>
+<li>port</li>
+<li>path</li>
+<li>method(可选)</li>
+</ul>
+<p>使用opts创建一个http.request实例req， 传入的回调函数监听response时间，并处理request的数据，需要注意的是需要使用end()来结束请求。</p>
+<ol>
+<li>提交HTTP GET请求</li>
+</ol>
+<p>GET是很常见的HTTP使用方式。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var http = require(<span class="string">'http'</span>);</span><br><span class="line">var opts = &#123;</span><br><span class="line">  host: <span class="string">"www.baidu.com"</span>,</span><br><span class="line">  port: 80,</span><br><span class="line">  path: <span class="string">'/'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var req = http.get(opts, <span class="keyword">function</span>(res)&#123;</span><br><span class="line">  console.log(res);</span><br><span class="line">  res.on(<span class="string">'data'</span>, <span class="keyword">function</span>(data)&#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>去掉了最先的opts里面的method及req.end()，因为这些都已经隐含说明了。<br>输出指定编码格式的输出。一般使用<code>response.setEncoding()</code>方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var http = require(<span class="string">'http'</span>);</span><br><span class="line">var opts = &#123;</span><br><span class="line">  host: <span class="string">"www.baidu.com"</span>,</span><br><span class="line">  port: 80,</span><br><span class="line">  path: <span class="string">'/'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var req = http.get(opts, <span class="keyword">function</span>(res)&#123;</span><br><span class="line">  res.setEncoding(<span class="string">'utf8'</span>);</span><br><span class="line">  res.on(<span class="string">'data'</span>, <span class="keyword">function</span>(data)&#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>这样输出出来的就是转码后的内容。</p>
+<ol>
+<li>发送HTTTP POST 和 PUT 数据</li>
+</ol>
+<p>使用POST和PUT可以发送数据</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var http = require(<span class="string">'http'</span>);</span><br><span class="line">var options = &#123;</span><br><span class="line">  host: <span class="string">"www.example.com"</span>,</span><br><span class="line">  port: 80,</span><br><span class="line">  path: <span class="string">'/submit'</span>,</span><br><span class="line">  method: <span class="string">'POST'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var req = http.request(options, <span class="keyword">function</span>(res)&#123;</span><br><span class="line">  res.setEcoding(<span class="string">'utf8'</span>);</span><br><span class="line">  res.on(<span class="string">'data'</span>, <span class="keyword">function</span>(chunk)&#123;</span><br><span class="line">    console.log(<span class="string">'BODY: '</span> + chunk);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">req.write(<span class="string">"my data"</span>);</span><br><span class="line">req.write(<span class="string">"more of my data"</span>);</span><br><span class="line"></span><br><span class="line">req.end();</span><br></pre></td></tr></table></figure>
+<p>使用http.ClientRequest.write()方法，发送上行数据流，服务器在ClientRequest.end()调用之前是不会响应你的数据请求。</p>
+<ol>
+<li>ClientResponse对象</li>
+</ol>
+<p>保存关于请求的许多信息。</p>
+<ul>
+<li>statusCode(HTTP状态)</li>
+<li>header属性(响应对象头)</li>
+</ul>
+<h4 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h4><p>URL模块提供了解析和处理URL字符串的便利工具。</p>
+<p><strong>parse</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var URL = require(<span class="string">'url'</span>);</span><br><span class="line">var myUrl = <span class="string">"https://www.baidu.com/s?wd=javascript%20paseInt&amp;rsv_spt=1&amp;rsv_iqid=0xf6e11e8100009e2d&amp;issp=1&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=2&amp;ie=utf-8&amp;rqlang=cn&amp;tn=baiduhome_pg&amp;rsv_enter=1&amp;oq=javascript%2520%25E5%25AF%25B9%25E8%25B1%25A1&amp;rsv_t=af72%2FXai8pFlwVfzXIUUTPL9cP8%2BsfctlGCXpHeKMTsXzgFgWCGL2wdTA3vEP5QV1vXe&amp;sug=javascript%2520seekto&amp;inputT=4875&amp;rsv_sug3=32&amp;rsv_sug1=15&amp;rsv_sug7=000&amp;rsv_pq=819bc35f000092fd&amp;rsv_sug2=0&amp;rsv_sug4=5270&amp;rsv_sug=1"</span>;</span><br><span class="line"></span><br><span class="line">parsedUrl = URL.parse(myUrl);</span><br><span class="line">console.log(parsedUrl);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>先导入URL模块</li>
+<li>创建URL</li>
+<li>对该URL使用parse方法。<ul>
+<li>href  完整url</li>
+<li>protocol  协议https</li>
+<li>host  服务器名</li>
+<li>auth  用户证书</li>
+<li>hostname  主机名</li>
+<li>port  端口</li>
+<li>pathname  文件路径</li>
+<li>search  包含？的部分</li>
+<li>query 包含？的部分，但删除掉了？</li>
+<li>hash  #之后的部分</li>
+</ul>
+</li>
+</ul>
+<p>parse有两个参数</p>
+<ul>
+<li>url字符串</li>
+<li>布尔值  是否使用queryString模块来解析，默认为false</li>
+</ul>
+<h4 id="querystring"><a href="#querystring" class="headerlink" title="querystring"></a>querystring</h4><p>querystring使用来处理query字符串的简单辅助模块。</p>
+<p><strong>parse</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var qs = require(<span class="string">'querystring'</span>);</span><br><span class="line">var myUrl = <span class="string">"https://www.baidu.com/s?wd=javascript%20paseInt&amp;rsv_spt=1&amp;rsv_iqid=0xf6e11e8100009e2d&amp;issp=1&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=2&amp;ie=utf-8&amp;rqlang=cn&amp;tn=baiduhome_pg&amp;rsv_enter=1&amp;oq=javascript%2520%25E5%25AF%25B9%25E8%25B1%25A1&amp;rsv_t=af72%2FXai8pFlwVfzXIUUTPL9cP8%2BsfctlGCXpHeKMTsXzgFgWCGL2wdTA3vEP5QV1vXe&amp;sug=javascript%2520seekto&amp;inputT=4875&amp;rsv_sug3=32&amp;rsv_sug1=15&amp;rsv_sug7=000&amp;rsv_pq=819bc35f000092fd&amp;rsv_sug2=0&amp;rsv_sug4=5270&amp;rsv_sug=1"</span>;</span><br><span class="line"></span><br><span class="line">parsedUrl = qs.parse(myUrl);</span><br><span class="line">console.log(parsedUrl);</span><br></pre></td></tr></table></figure>
+<p>parse方法把query字符串转换成为一个对象，其中属性是对应query字符串中的关键字和变量值。</p>
+<p><strong>encode</strong></p>
+<p>将parse转换的对象反转为query字符串的格式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var myObj = &#123;<span class="string">'a'</span>:1, <span class="string">'b'</span>:5, <span class="string">'c'</span>: <span class="string">'cats'</span>&#125;;</span><br><span class="line">qs.encode(myObj);</span><br><span class="line"><span class="string">'a=1&amp;b=5&amp;c=cats'</span></span><br></pre></td></tr></table></figure>
+<h3 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h3>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/12/05/VuePressNetlifyCMS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1735,187 +2032,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/04/02/youdontknowjs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L3F.WIN">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/02/youdontknowjs/" itemprop="url">
-                  《你不知道的JavaScript》上卷读书笔记第一部分
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-04-02 14:56:23" itemprop="dateCreated datePublished" datetime="2018-04-02T14:56:23+08:00">2018-04-02</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-04-12 11:51:44" itemprop="dateModified" datetime="2018-04-12T11:51:44+08:00">2018-04-12</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/你不知道的JavaScript/" itemprop="url" rel="index"><span itemprop="name">你不知道的JavaScript</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>前言</strong><br>我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。</p>
-<h2 id="第1章-作用域是什么"><a href="#第1章-作用域是什么" class="headerlink" title="第1章 作用域是什么"></a>第1章 作用域是什么</h2><p>作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ <em>本人理解， 这个是针对所有编程语言的概述。</em> ）</p>
-<h3 id="编译原理"><a href="#编译原理" class="headerlink" title="编译原理"></a>编译原理</h3><p><strong>JavaScript</strong> 是一门编译语言，程序中的一段代码在执行之前会经历3个步骤，统称为编译</p>
-<ol>
-<li>分词/词法分析(Tokenizing/Lexing)</li>
-<li>解析/语法分析(Parsing)</li>
-<li>代码生成<br>（ <em>JavaScript的引擎没有很多时间去优化，一般属于即编译即执行</em> ）</li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/02/youdontknowjs/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1967,7 +2083,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">41</span>
+                    <span class="site-state-item-count">42</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
