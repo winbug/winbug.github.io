@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Vue.js 权威指南第1章 遇见Vue.jsMVVMM 模型（Model）, V 显示（View）, V 显示模型（ViewModel） 实现了ViewModel 自动同步到 View Vue.js是什么Vue.js是一个构建数据驱动的Web界面的库 Vue.js特性 轻量 数据绑定 指令 插件化  Vue.js的Hello World">
+<meta name="keywords" content="nodejs,js,vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue.js 权威指南（读书笔记）">
+<meta property="og:url" content="http://www.l3f.win/2019/01/31/vue-guide/index.html">
+<meta property="og:site_name" content="L3F.WIN">
+<meta property="og:description" content="Vue.js 权威指南第1章 遇见Vue.jsMVVMM 模型（Model）, V 显示（View）, V 显示模型（ViewModel） 实现了ViewModel 自动同步到 View Vue.js是什么Vue.js是一个构建数据驱动的Web界面的库 Vue.js特性 轻量 数据绑定 指令 插件化  Vue.js的Hello World">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-22T07:25:41.651Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue.js 权威指南（读书笔记）">
+<meta name="twitter:description" content="Vue.js 权威指南第1章 遇见Vue.jsMVVMM 模型（Model）, V 显示（View）, V 显示模型（ViewModel） 实现了ViewModel 自动同步到 View Vue.js是什么Vue.js是一个构建数据驱动的Web界面的库 Vue.js特性 轻量 数据绑定 指令 插件化  Vue.js的Hello World">
+
+
+
+
+
+
+  <link rel="canonical" href="http://www.l3f.win/2019/01/31/vue-guide/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>vue.js 权威指南（读书笔记） | L3F.WIN</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">L3F.WIN</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Github及Hexo的使用</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-stylus中文文档">
+    <a href="/categories/Stylus中文文档/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-css3"></i> <br />Stylus中文文档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2019/01/31/vue-guide/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="winbug">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/common/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L3F.WIN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">vue.js 权威指南（读书笔记）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-31 18:18:47" itemprop="dateCreated datePublished" datetime="2019-01-31T18:18:47+08:00">2019-01-31</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-02-22 15:25:41" itemprop="dateModified" datetime="2019-02-22T15:25:41+08:00">2019-02-22</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue-js/" itemprop="url" rel="index"><span itemprop="name">Vue.js</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Vue-js-权威指南"><a href="#Vue-js-权威指南" class="headerlink" title="Vue.js 权威指南"></a>Vue.js 权威指南</h1><h2 id="第1章-遇见Vue-js"><a href="#第1章-遇见Vue-js" class="headerlink" title="第1章 遇见Vue.js"></a>第1章 遇见Vue.js</h2><h3 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h3><p>M 模型（Model）, V 显示（View）, V 显示模型（ViewModel） 实现了ViewModel 自动同步到 View</p>
+<h3 id="Vue-js是什么"><a href="#Vue-js是什么" class="headerlink" title="Vue.js是什么"></a>Vue.js是什么</h3><p>Vue.js是一个构建数据驱动的Web界面的库</p>
+<h3 id="Vue-js特性"><a href="#Vue-js特性" class="headerlink" title="Vue.js特性"></a>Vue.js特性</h3><ol>
+<li>轻量</li>
+<li>数据绑定</li>
+<li>指令</li>
+<li>插件化</li>
+</ol>
+<h3 id="Vue-js的Hello-World"><a href="#Vue-js的Hello-World" class="headerlink" title="Vue.js的Hello World"></a>Vue.js的Hello World</h3><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span><br><span class="line">  &lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"ie=edge"</span>&gt;</span><br><span class="line">  &lt;title&gt;Vue Hello Word&lt;/title&gt;</span><br><span class="line">  &lt;!-- vue的CDN地址 --&gt;</span><br><span class="line">  &lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=<span class="string">"didi-navigator"</span>&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">    &lt;!-- 指令 --&gt;</span><br><span class="line">      &lt;li v-for=<span class="string">"tab in tabs"</span>&gt;</span><br><span class="line">        &#123;&#123;tab.text&#125;&#125;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">      el: <span class="string">'#didi-navigator'</span>,</span><br><span class="line">      data: &#123;</span><br><span class="line">        tabs: [</span><br><span class="line">          &#123;text: <span class="string">'巴士'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'快车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'专车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'顺风车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'出租车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'代驾'</span>&#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="第2章-数据绑定"><a href="#第2章-数据绑定" class="headerlink" title="第2章 数据绑定"></a>第2章 数据绑定</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><h4 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h4><p>使用双大括号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>插入HTML片段</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;&#123;&#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h4><p>双大括号中可以插入表达式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;cents/100&#125;&#125;</span><br><span class="line">&#123;&#123;<span class="literal">true</span>? 1: 0&#125;&#125;</span><br><span class="line">&#123;&#123;example.split(<span class="string">","</span>)&#125;&#125;</span><br><span class="line">&#123;&#123;example | toUpperCase&#125;&#125; <span class="comment">#为表达式添加过滤</span></span><br><span class="line">&#123;&#123;example | filterA a b&#125;&#125; <span class="comment">#添加参数</span></span><br></pre></td></tr></table></figure>
+<h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">v-if=<span class="string">"show"</span></span><br><span class="line">v-bind:href=<span class="string">"url"</span></span><br><span class="line">v-on:click=<span class="string">"action"</span></span><br></pre></td></tr></table></figure>
+<h3 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h3><p>可以在Vue.config中配置绑定的语法</p>
+<ol>
+<li><p>delimiters</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.config.delimiters = [<span class="string">"&lt;%"</span>,<span class="string">"%&gt;"</span>] 将默认的&#123;&#123;&#125;&#125; 改为&lt;%%&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>unsafeDelimiters</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.config.unsafeDelimiters = [<span class="string">"&lt;%"</span>,<span class="string">"%&gt;"</span>] 将默认的HTML插值改为&lt;%%&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="第3章-指令"><a href="#第3章-指令" class="headerlink" title="第3章 指令"></a>第3章 指令</h2><h3 id="内部指令"><a href="#内部指令" class="headerlink" title="内部指令"></a>内部指令</h3><h4 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h4><p>判断语句</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"didi-navigator"</span>&gt;</span><br><span class="line">  &lt;ul v-if=<span class="string">"ok"</span>&gt;</span><br><span class="line">    &lt;li v-for=<span class="string">"tab in tabs"</span>&gt;</span><br><span class="line">      &#123;&#123;tab.text&#125;&#125;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">  &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  new Vue(&#123;</span><br><span class="line">    el: <span class="string">'#didi-navigator'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      tabs: [</span><br><span class="line">        &#123;text: <span class="string">'巴士'</span>&#125;,</span><br><span class="line">        &#123;text: <span class="string">'快车'</span>&#125;,</span><br><span class="line">        &#123;text: <span class="string">'专车'</span>&#125;,</span><br><span class="line">        &#123;text: <span class="string">'顺风车'</span>&#125;,</span><br><span class="line">        &#123;text: <span class="string">'出租车'</span>&#125;,</span><br><span class="line">        &#123;text: <span class="string">'代驾'</span>&#125;</span><br><span class="line">      ],</span><br><span class="line">      ok: <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h4><p>是否显示，不显示的时候，使用样式表 display:none,这里和v-if的显示不同。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=<span class="string">"didi-navigator"</span>&gt;</span><br><span class="line">    &lt;ul v-show=<span class="string">"ok"</span>&gt;</span><br><span class="line">      &lt;li v-for=<span class="string">"tab in tabs"</span>&gt;</span><br><span class="line">        &#123;&#123;tab.text&#125;&#125;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">      el: <span class="string">'#didi-navigator'</span>,</span><br><span class="line">      data: &#123;</span><br><span class="line">        tabs: [</span><br><span class="line">          &#123;text: <span class="string">'巴士'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'快车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'专车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'顺风车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'出租车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'代驾'</span>&#125;</span><br><span class="line">        ],</span><br><span class="line">        ok: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="v-else"><a href="#v-else" class="headerlink" title="v-else"></a>v-else</h4><p>必须同 <code>v-if</code> 或 <code>v-show</code>一起使用充当else功能</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=<span class="string">"didi-navigator"</span>&gt;</span><br><span class="line">    &lt;ul v-show=<span class="string">"ok"</span>&gt;</span><br><span class="line">      &lt;li v-for=<span class="string">"tab in tabs"</span>&gt;</span><br><span class="line">        &#123;&#123;tab.text&#125;&#125;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;p v-if=<span class="string">"ok"</span>&gt;我是对的&lt;/p&gt;</span><br><span class="line">    &lt;p v-else=<span class="string">"ok"</span>&gt;我错了&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">      el: <span class="string">'#didi-navigator'</span>,</span><br><span class="line">      data: &#123;</span><br><span class="line">        tabs: [</span><br><span class="line">          &#123;text: <span class="string">'巴士'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'快车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'专车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'顺风车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'出租车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'代驾'</span>&#125;</span><br><span class="line">        ],</span><br><span class="line">        ok: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h4><p>v-model 绑定input, select, text, checkbox, radio等表单控件的双向数据</p>
+<p><strong> v-model参数 </strong></p>
+<ol>
+<li><strong>number</strong> 将用户的输入自动转换为Number类型</li>
+<li><p><strong>lazy</strong> 在默认情况下，v-model 在每次 input 事件触发后将输入框的值与数据进行同步 (除了上述输入法组合文字时)。你可以添加 lazy 修饰符，从而转变为使用 change 事件进行同步</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=<span class="string">"didi-navigator"</span>&gt;</span><br><span class="line">    &lt;ul v-show=<span class="string">"ok"</span>&gt;</span><br><span class="line">      &lt;li v-for=<span class="string">"tab in tabs"</span>&gt;</span><br><span class="line">        &#123;&#123;tab.text&#125;&#125;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;p v-if=<span class="string">"ok"</span>&gt;我是对的&lt;/p&gt;</span><br><span class="line">    &lt;p v-else=<span class="string">"ok"</span>&gt;我错了&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">    &lt;input v-model.lazy=<span class="string">"msg"</span>&gt;&lt;br&gt;</span><br><span class="line">    &#123;&#123;msg&#125;&#125;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">      el: <span class="string">'#didi-navigator'</span>,</span><br><span class="line">      data: &#123;</span><br><span class="line">        tabs: [</span><br><span class="line">          &#123;text: <span class="string">'巴士'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'快车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'专车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'顺风车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'出租车'</span>&#125;,</span><br><span class="line">          &#123;text: <span class="string">'代驾'</span>&#125;</span><br><span class="line">        ],</span><br><span class="line">        ok: <span class="literal">false</span>,</span><br><span class="line">        msg: <span class="string">"内容是在change事件后才改变的"</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>trim</strong> 如果要自动过滤用户输入的首尾空白字符，可以给 v-model 添加 trim 修饰符</p>
+</li>
+</ol>
+<h4 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h4><p>for循环</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=<span class="string">"example"</span>&gt;</span><br><span class="line">    &lt;ul id=<span class="string">"demo"</span>&gt;</span><br><span class="line">      &lt;!--<span class="variable">$index</span>,<span class="variable">$key</span>两个隐性变量在新的vue版本中被移除--&gt; </span><br><span class="line">      &lt;li v-for=<span class="string">"(item, index) in items"</span> class=<span class="string">"item-&#123;&#123;index&#125;&#125;"</span>&gt;</span><br><span class="line">        &#123;&#123;index&#125;&#125; - &#123;&#123;parentMessage&#125;&#125; &#123;&#123;item.msg&#125;&#125;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">  &lt;/div&gt; </span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var demo = new Vue(&#123;</span><br><span class="line">      el: <span class="string">'#demo'</span>,</span><br><span class="line">      data: &#123;</span><br><span class="line">        parentMessage: <span class="string">'滴滴'</span>,</span><br><span class="line">        items: [</span><br><span class="line">          &#123;msg: <span class="string">'顺风车'</span>&#125;,</span><br><span class="line">          &#123;msg: <span class="string">'专车'</span>&#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>Vue.js 1.0.17及以后版本都支持of分割符 <code>item in/of items</code></p>
+<h4 id="v-text"><a href="#v-text" class="headerlink" title="v-text"></a>v-text</h4><p>使用v-text可以使用Mustache语法轻松的操控元素中的纯文本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=<span class="string">"example"</span>&gt;</span><br><span class="line">    &lt;span v-text=<span class="string">"'姓名：' + name"</span>&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt; </span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var demo = new Vue(&#123;</span><br><span class="line">      el: <span class="string">'#example'</span>,</span><br><span class="line">      data: &#123;</span><br><span class="line">        name: <span class="string">'Winbug'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a>v-html</h4><p>使用v-html可以使用Mustache语法轻松的操控元素中的HTML片段（不推荐使用，容易导致XSS攻击）</p>
+<h4 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h4><p>v-bind将一个或多个attribute动态绑定到表达式, <code>v-bind:</code> 可以缩写为<code>:</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;example&quot;&gt;</span><br><span class="line">    &lt;span :class=&quot;className&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt; </span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var demo = new Vue(&#123;</span><br><span class="line">      el: &apos;#example&apos;,</span><br><span class="line">      data: &#123;</span><br><span class="line">        className: &apos;Winbug&apos;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="v-on"><a href="#v-on" class="headerlink" title="v-on"></a>v-on</h4><p>v-on 用于绑定事件监听器。<code>v-on:</code> 可以缩写为 <code>@</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=<span class="string">"example"</span>&gt;</span><br><span class="line">    &lt;span :class=<span class="string">"className"</span> @click=<span class="string">"myName"</span>&gt;Click Me&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt; </span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var demo = new Vue(&#123;</span><br><span class="line">      el: <span class="string">'#example'</span>,</span><br><span class="line">      data: &#123;</span><br><span class="line">        className: <span class="string">'Winbug'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        myName: <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">          alert(this.className);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>相关事件修饰符</p>
+<ul>
+<li>.stop 阻止冒泡</li>
+<li>.prevent  阻止默认行为</li>
+<li>.capture  添加事件侦听器时使用capture模式</li>
+<li>.self 绑定元素本身时触发回调</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 阻止单击事件继续传播 --&gt;</span><br><span class="line">&lt;a v-on:click.stop=<span class="string">"doThis"</span>&gt;&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 提交事件不再重载页面 --&gt;</span><br><span class="line">&lt;form v-on:submit.prevent=<span class="string">"onSubmit"</span>&gt;&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 修饰符可以串联 --&gt;</span><br><span class="line">&lt;a v-on:click.stop.prevent=<span class="string">"doThat"</span>&gt;&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 只有修饰符 --&gt;</span><br><span class="line">&lt;form v-on:submit.prevent&gt;&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 添加事件监听器时使用事件捕获模式 --&gt;</span><br><span class="line">&lt;!-- 即元素自身触发的事件先在此处理，然后才交由内部元素进行处理 --&gt;</span><br><span class="line">&lt;div v-on:click.capture=<span class="string">"doThis"</span>&gt;...&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 只当在 event.target 是当前元素自身时触发处理函数 --&gt;</span><br><span class="line">&lt;!-- 即事件不是从内部元素触发的 --&gt;</span><br><span class="line">&lt;div v-on:click.self=<span class="string">"doThat"</span>&gt;...&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="v-el-和-v-ref被-ref所替换"><a href="#v-el-和-v-ref被-ref所替换" class="headerlink" title="v-el 和 v-ref被 ref所替换"></a>v-el 和 v-ref被 ref所替换</h4><p>为DOM元素注册一个索引，方便通过所属势力的$els访问这个元素。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=<span class="string">"example"</span>&gt;</span><br><span class="line">    &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">        &lt;input <span class="built_in">type</span>=<span class="string">"text"</span> ref=<span class="string">"input1"</span>/&gt;</span><br><span class="line">        &lt;button @click=<span class="string">"add"</span>&gt;添加&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt; </span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var demo = new Vue(&#123;</span><br><span class="line">      el: <span class="string">'#example'</span>,</span><br><span class="line">      data: &#123;</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        add: <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">          this.<span class="variable">$refs</span>.input1.value=<span class="string">"22"</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="v-pre-可以用来显示原始Mustahce标签。"><a href="#v-pre-可以用来显示原始Mustahce标签。" class="headerlink" title="v-pre 可以用来显示原始Mustahce标签。"></a>v-pre 可以用来显示原始Mustahce标签。</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=<span class="string">"example"</span>&gt;</span><br><span class="line">    &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">      &lt;span v-pre&gt;&#123;&#123; this will not be compiled &#125;&#125;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt; </span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var demo = new Vue(&#123;</span><br><span class="line">      el: <span class="string">'#example'</span>,</span><br><span class="line">      data: &#123;</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="v-cloak-这个指令保持在元素上直到关联实例结束编译。和-CSS-规则如-v-cloak-display-none-一起用时，这个指令可以隐藏未编译的-Mustache-标签直到实例准备完毕。"><a href="#v-cloak-这个指令保持在元素上直到关联实例结束编译。和-CSS-规则如-v-cloak-display-none-一起用时，这个指令可以隐藏未编译的-Mustache-标签直到实例准备完毕。" class="headerlink" title="v-cloak  这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 [v-cloak] { display: none } 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。"></a>v-cloak  这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 [v-cloak] { display: none } 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。</h4><p>v-cloak 在CSS样式表中添加</p>
+<h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h3><h4 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h4><ol>
+<li><p>钩子函数</p>
+<ul>
+<li>bind 只调用一次，指令第一次绑定到元素上时调用</li>
+<li>update 在bind之后立即以初始值为参数第一次调用，之后每当绑定值变化时调用。</li>
+<li><p>unbind 只调用一次，在指令从元素上解绑时调用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(<span class="string">'my-directive'</span>, &#123;</span><br><span class="line">  <span class="built_in">bind</span>: <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    //准备工作</span><br><span class="line">    //例如，添加事件处理器或只需要运行一次的高耗任务</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  update: <span class="keyword">function</span>(newValue, oldValue)&#123;</span><br><span class="line">    //值更新时的工作</span><br><span class="line">    //也会以初始值为参数调用一次</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  unbind: <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    //清理工作</span><br><span class="line">    //例如，删除<span class="built_in">bind</span>()添加的事件监听器</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注册之后，在Vue.js模板中添加前缀 <code>v-</code> 使用<br>如 <code>&lt;div v-my-directive=&quot;someValue&quot;&gt;</code></p>
+</li>
+</ul>
+</li>
+<li><p>指令实例属性(2.x更新了此属性)</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>el</td>
+<td>指令绑定的元素</td>
+</tr>
+<tr>
+<td>vnode</td>
+<td>Vue 编译生成的虚拟节点。</td>
+</tr>
+<tr>
+<td>oldVnode</td>
+<td>上一个虚拟节点，仅在 update 和 componentUpdated 钩子中可用。</td>
+</tr>
+<tr>
+<td>binding</td>
+<td>一个对象，包含以下属性</td>
+</tr>
+<tr>
+<td>expression</td>
+<td>指令的表达式，不包括参数和过滤器</td>
+</tr>
+<tr>
+<td>arg</td>
+<td>指令的参数</td>
+</tr>
+<tr>
+<td>value</td>
+<td>指令的绑定值，例如：v-my-directive=”1 + 1” 中，绑定值为 2。</td>
+</tr>
+<tr>
+<td>oldValue</td>
+<td>指令绑定的前一个值，仅在 update 和 componentUpdated 钩子中可用。无论值是否改变都可用。</td>
+</tr>
+<tr>
+<td>name</td>
+<td>指令的名字，不包含前缀</td>
+</tr>
+<tr>
+<td>modifiers</td>
+<td>一个对象，包含指令的修饰符</td>
+</tr>
+</tbody>
+</table>
+<p>以上属性视为只读<br>不同于 Vue 1.x，所有的挂载元素会被 Vue 生成的 DOM 替换。因此不推荐挂载root实例到 <code>&lt;html&gt;</code> 或者 <code>&lt;body&gt;</code> 上。</p>
+<p><strong>Vue去掉警告 You are running Vue in development mode</strong><br>这样解决：  </p>
+<p><code>Vue.config.productionTip = false</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=<span class="string">"example"</span> @click=<span class="string">'up'</span> style=<span class="string">"height: 500px; width: 100%; background: #CC0000"</span>&gt;</span><br><span class="line">    &lt;div id=<span class="string">"demo"</span> v-demo:hello.a.b=<span class="string">"message"</span>&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">      Vue.config.productionTip = <span class="literal">false</span>;</span><br><span class="line">      Vue.directive(<span class="string">'demo'</span>, &#123;</span><br><span class="line">        <span class="built_in">bind</span>: <span class="keyword">function</span> (el, binding, vnode) &#123;</span><br><span class="line">          var s = JSON.stringify</span><br><span class="line">          el.innerHTML =</span><br><span class="line">            <span class="string">'name: '</span>       + s(binding.name) + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">            <span class="string">'value: '</span>      + s(binding.value) + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">            <span class="string">'expression: '</span> + s(binding.expression) + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">            <span class="string">'argument: '</span>   + s(binding.arg) + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">            <span class="string">'modifiers: '</span>  + s(binding.modifiers) + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">            <span class="string">'vnode keys: '</span> + Object.keys(vnode).join(<span class="string">', '</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line">      new Vue(&#123;</span><br><span class="line">        el: <span class="string">'#example'</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">          message: <span class="string">'hello!'</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">  &lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/nodejs/" rel="tag"># nodejs</a>
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+            <a href="/tags/vue/" rel="tag"># vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/17/vuepresssexperience/" rel="next" title="VuePress开发经验总结">
+                <i class="fa fa-chevron-left"></i> VuePress开发经验总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/common/avatar.jpg"
+                alt="winbug" />
+            
+              <p class="site-author-name" itemprop="name">winbug</p>
+              <p class="site-description motion-element" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue-js-权威指南"><span class="nav-number">1.</span> <span class="nav-text">Vue.js 权威指南</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第1章-遇见Vue-js"><span class="nav-number">1.1.</span> <span class="nav-text">第1章 遇见Vue.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM"><span class="nav-number">1.1.1.</span> <span class="nav-text">MVVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-js是什么"><span class="nav-number">1.1.2.</span> <span class="nav-text">Vue.js是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-js特性"><span class="nav-number">1.1.3.</span> <span class="nav-text">Vue.js特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-js的Hello-World"><span class="nav-number">1.1.4.</span> <span class="nav-text">Vue.js的Hello World</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第2章-数据绑定"><span class="nav-number">1.2.</span> <span class="nav-text">第2章 数据绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">1.2.1.</span> <span class="nav-text">语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#插值"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">插值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表达式"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指令"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">指令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分隔符"><span class="nav-number">1.2.2.</span> <span class="nav-text">分隔符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第3章-指令"><span class="nav-number">1.3.</span> <span class="nav-text">第3章 指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内部指令"><span class="nav-number">1.3.1.</span> <span class="nav-text">内部指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#v-if"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">v-if</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-show"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">v-show</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-else"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">v-else</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-model"><span class="nav-number">1.3.1.4.</span> <span class="nav-text">v-model</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-for"><span class="nav-number">1.3.1.5.</span> <span class="nav-text">v-for</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-text"><span class="nav-number">1.3.1.6.</span> <span class="nav-text">v-text</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-html"><span class="nav-number">1.3.1.7.</span> <span class="nav-text">v-html</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-bind"><span class="nav-number">1.3.1.8.</span> <span class="nav-text">v-bind</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-on"><span class="nav-number">1.3.1.9.</span> <span class="nav-text">v-on</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-el-和-v-ref被-ref所替换"><span class="nav-number">1.3.1.10.</span> <span class="nav-text">v-el 和 v-ref被 ref所替换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-pre-可以用来显示原始Mustahce标签。"><span class="nav-number">1.3.1.11.</span> <span class="nav-text">v-pre 可以用来显示原始Mustahce标签。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-cloak-这个指令保持在元素上直到关联实例结束编译。和-CSS-规则如-v-cloak-display-none-一起用时，这个指令可以隐藏未编译的-Mustache-标签直到实例准备完毕。"><span class="nav-number">1.3.1.12.</span> <span class="nav-text">v-cloak  这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 [v-cloak] { display: none } 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义指令"><span class="nav-number">1.3.2.</span> <span class="nav-text">自定义指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基础"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">基础</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">winbug</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
