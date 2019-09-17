@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="第一章 JavaScript基础篇缩略标记 对象  12345var car = new Object();car.color = &apos;red&apos;;car.wheels = 4;car.hubcaps = &apos;spinning&apos;;car.age = 4; 👇 123456var car = &amp;#123;    color: &apos;red&apos;,    wheels: 4,    hubcaps: &apos;spinn">
+<meta name="keywords" content="javascript,编程,jquery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript与jQuery技术精粹">
+<meta property="og:url" content="http://www.l3f.win/2019/09/16/jsandjqueryessence/index.html">
+<meta property="og:site_name" content="L3F.WIN">
+<meta property="og:description" content="第一章 JavaScript基础篇缩略标记 对象  12345var car = new Object();car.color = &apos;red&apos;;car.wheels = 4;car.hubcaps = &apos;spinning&apos;;car.age = 4; 👇 123456var car = &amp;#123;    color: &apos;red&apos;,    wheels: 4,    hubcaps: &apos;spinn">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-17T06:20:30.654Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Javascript与jQuery技术精粹">
+<meta name="twitter:description" content="第一章 JavaScript基础篇缩略标记 对象  12345var car = new Object();car.color = &apos;red&apos;;car.wheels = 4;car.hubcaps = &apos;spinning&apos;;car.age = 4; 👇 123456var car = &amp;#123;    color: &apos;red&apos;,    wheels: 4,    hubcaps: &apos;spinn">
+
+
+
+
+
+
+  <link rel="canonical" href="http://www.l3f.win/2019/09/16/jsandjqueryessence/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Javascript与jQuery技术精粹 | L3F.WIN</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">L3F.WIN</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Github及Hexo的使用</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-stylus中文文档">
+    <a href="/categories/Stylus中文文档/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-css3"></i> <br />Stylus中文文档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-微信小程序">
+    <a href="/categories/wechatminiapp/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-wechat"></i> <br />微信小程序</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2019/09/16/jsandjqueryessence/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="winbug">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/common/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L3F.WIN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Javascript与jQuery技术精粹
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-16 15:07:05" itemprop="dateCreated datePublished" datetime="2019-09-16T15:07:05+08:00">2019-09-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-17 14:20:30" itemprop="dateModified" datetime="2019-09-17T14:20:30+08:00">2019-09-17</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="第一章-JavaScript基础篇"><a href="#第一章-JavaScript基础篇" class="headerlink" title="第一章 JavaScript基础篇"></a>第一章 JavaScript基础篇</h2><h3 id="缩略标记"><a href="#缩略标记" class="headerlink" title="缩略标记"></a>缩略标记</h3><ul>
+<li>对象</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var car = new Object();</span><br><span class="line">car.color = <span class="string">'red'</span>;</span><br><span class="line">car.wheels = 4;</span><br><span class="line">car.hubcaps = <span class="string">'spinning'</span>;</span><br><span class="line">car.age = 4;</span><br></pre></td></tr></table></figure>
+<p>👇</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var car = &#123;</span><br><span class="line">    color: <span class="string">'red'</span>,</span><br><span class="line">    wheels: 4,</span><br><span class="line">    hubcaps: <span class="string">'spinning'</span>,</span><br><span class="line">    age: 4</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<ul>
+<li>数组</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var arrayN = new Array(<span class="string">'Transformers'</span>, <span class="string">'Transformers2'</span>, <span class="string">'Avatar'</span>, <span class="string">'Indiana Jones4'</span>);</span><br></pre></td></tr></table></figure>
+<p>👇</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var arrayN = [<span class="string">'Transformers'</span>, <span class="string">'Transformers2'</span>, <span class="string">'Avatar'</span>, <span class="string">'Indiana Jones4'</span>];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>三重标记</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var direction;</span><br><span class="line"><span class="keyword">if</span>(x &lt; 200&gt;)&#123;</span><br><span class="line">    direction = 1;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    direction = -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>👇</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var direction = x &lt; 200 ? 1 : -1;</span><br></pre></td></tr></table></figure>
+<h3 id="JSON-数据格式"><a href="#JSON-数据格式" class="headerlink" title="JSON 数据格式"></a>JSON 数据格式</h3><p>JSON 是 JavaScript Object Notation的缩写，使用JSON可以更方便的存储数据</p>
+<p><strong>示例</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var band = &#123;</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"The Red Hot Chili Peoppers"</span>,</span><br><span class="line">    <span class="string">"members"</span>:[</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"name"</span>: <span class="string">"Anthony"</span>,</span><br><span class="line">            <span class="string">"role"</span>: <span class="string">"lead vocals"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"name"</span>: <span class="string">"xxxxx"</span>,</span><br><span class="line">            <span class="string">"role"</span>: <span class="string">"lead yyyy"</span></span><br><span class="line">        &#125;</span><br><span class="line">        ……</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript自带函数（数学，数组以及字符串函数）"><a href="#JavaScript自带函数（数学，数组以及字符串函数）" class="headerlink" title="JavaScript自带函数（数学，数组以及字符串函数）"></a>JavaScript自带函数（数学，数组以及字符串函数）</h3><p>自带的函数可以帮我们省略n多代码。</p>
+<p>举例如 <em>sort(), Math.max(), split(), join()</em> </p>
+<h3 id="事件代理"><a href="#事件代理" class="headerlink" title="事件代理"></a>事件代理</h3><p>当某一特定的元素或者其上DOM层的所有元素发生某一事件时，可以通过单一的处理程序<strong>对父元素</strong>进行处理来简化事件处理过程，而不是使用大量的程序。</p>
+<h3 id="匿名函数和模块模式"><a href="#匿名函数和模块模式" class="headerlink" title="匿名函数和模块模式"></a>匿名函数和模块模式</h3><p>为了减少无用的全局变量，通常的解决办法就是创建匿名函数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var name = <span class="string">"Chris"</span>;</span><br><span class="line">var age = <span class="string">'34'</span>;</span><br><span class="line">var status = <span class="string">'single'</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">createMember</span></span>()&#123;</span><br><span class="line">    //[……]</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getMemberDetails</span></span>()&#123;</span><br><span class="line">    //[……]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>👇</p>
+<p>匿名函数myApplication<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var myApplication = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    var name = <span class="string">"Chris"</span>;</span><br><span class="line">    var age = <span class="string">'34'</span>;</span><br><span class="line">    var status = <span class="string">'single'</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">createMember</span></span>()&#123;</span><br><span class="line">        //[……]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">getMemberDetails</span></span>()&#123;</span><br><span class="line">        //[……]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;();</span><br></pre></td></tr></table></figure></p>
+<p>👇</p>
+<p>外部可调用时<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var myApplication = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    var name = <span class="string">"Chris"</span>;</span><br><span class="line">    var age = <span class="string">'34'</span>;</span><br><span class="line">    var status = <span class="string">'single'</span>;</span><br><span class="line">    <span class="built_in">return</span>&#123;</span><br><span class="line">        <span class="keyword">function</span> <span class="function"><span class="title">createMember</span></span>()&#123;</span><br><span class="line">            //[……]</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">function</span> <span class="function"><span class="title">getMemberDetails</span></span>()&#123;</span><br><span class="line">            //[……]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;();</span><br><span class="line">//myApplication.createMember() and myApplication.getMemeberDetails()可以工作。</span><br></pre></td></tr></table></figure></p>
+<p>👇</p>
+<p>揭示模块模式（更方便）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var myApplication = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    var name = <span class="string">"Chris"</span>;</span><br><span class="line">    var age = <span class="string">'34'</span>;</span><br><span class="line">    var status = <span class="string">'single'</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">createMember</span></span>()&#123;</span><br><span class="line">        //[……]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">getMemberDetails</span></span>()&#123;</span><br><span class="line">        //[……]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span>&#123;</span><br><span class="line">        create: createMember,</span><br><span class="line">        get: getMemberDetails</span><br><span class="line">    &#125;</span><br><span class="line">&#125;();</span><br><span class="line">//myApplication.create() and myApplication.get()可以工作。</span><br></pre></td></tr></table></figure></p>
+<h3 id="允许配置"><a href="#允许配置" class="headerlink" title="允许配置"></a>允许配置</h3><p>编程的最后阶段，为了使代码易于被其他开发人员使用和更改，添加配置功能，如</p>
+<ul>
+<li>CSS和ID名称</li>
+<li>生成的字符串</li>
+<li>数据</li>
+<li>地点，语言等</li>
+</ul>
+<h3 id="与后台交互"><a href="#与后台交互" class="headerlink" title="与后台交互"></a>与后台交互</h3><p>Ajax + JSON-P</p>
+<h3 id="库文件"><a href="#库文件" class="headerlink" title="库文件"></a>库文件</h3><p>YUI, jQuery, Dojo</p>
+<h2 id="第二章-复查JavaScript代码的启示"><a href="#第二章-复查JavaScript代码的启示" class="headerlink" title="第二章 复查JavaScript代码的启示"></a>第二章 复查JavaScript代码的启示</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>复查可以帮助开发者发现各种错误，学习更多经验，更好的维护编码标准。</p>
+<h3 id="哪里可以复查？"><a href="#哪里可以复查？" class="headerlink" title="哪里可以复查？"></a>哪里可以复查？</h3><ul>
+<li>JSMentors</li>
+<li>freenode IRC</li>
+<li>Code Review</li>
+<li>Twitter</li>
+<li>GitHub</li>
+</ul>
+<h3 id="构造复查请求"><a href="#构造复查请求" class="headerlink" title="构造复查请求"></a>构造复查请求</h3><p><strong>找到有经验的人员</strong></p>
+<ul>
+<li>隔离出复查代码，确保其可运行级有完整的注释</li>
+<li>使复查者能够查看演示更改代码</li>
+<li>不要提交全部项目文件</li>
+<li>标出可以改进的地方</li>
+<li>有耐心</li>
+</ul>
+<h3 id="代码复查人员需要提供的信息"><a href="#代码复查人员需要提供的信息" class="headerlink" title="代码复查人员需要提供的信息"></a>代码复查人员需要提供的信息</h3><ul>
+<li>复查代码应提供的内容</li>
+</ul>
+<ol>
+<li>正确性</li>
+<li>功能复杂性</li>
+<li>目标一致性</li>
+<li>代码可维护性</li>
+<li>可扩缩性</li>
+<li>维持编码风格</li>
+</ol>
+<ul>
+<li>复查者守则</li>
+</ul>
+<ol>
+<li>清晰的评论</li>
+<li>提出不足</li>
+<li>提供内容的详细资料</li>
+<li>给出解决方案</li>
+</ol>
+<h3 id="协作代码复查"><a href="#协作代码复查" class="headerlink" title="协作代码复查"></a>协作代码复查</h3><h2 id="七步测试法"><a href="#七步测试法" class="headerlink" title="七步测试法"></a>七步测试法</h2><h3 id="问题的关键不在于你"><a href="#问题的关键不在于你" class="headerlink" title="问题的关键不在于你"></a>问题的关键不在于你</h3><p>不要仅及于你或客户开发，为使用你产品的用户开发，删减不可维护臃肿的内容，创建易于使用，便于维护的产品。</p>
+<h3 id="七步测试法介绍"><a href="#七步测试法介绍" class="headerlink" title="七步测试法介绍"></a>七步测试法介绍</h3><ol>
+<li>关闭JavaScript<br>网页是否能正常显示，功能是否能够实现（解决方案： 利用JavaScript为文件添加类，然后让所有的CSS依附于这个类）</li>
+<li>怎样改变外观、感受和内容<br>尽量不将外观，文字等元素写入到JavaScript文档中。</li>
+<li>最终产品的可用性和语义性</li>
+<li>基本原理</li>
+<li>与其他语言的交互性</li>
+<li>维护人员是否专注</li>
+<li>测试方案，升级维护是否简单易行</li>
+</ol>
+<h2 id="JavaScript十个古怪之处和秘密"><a href="#JavaScript十个古怪之处和秘密" class="headerlink" title="JavaScript十个古怪之处和秘密"></a>JavaScript十个古怪之处和秘密</h2><h3 id="数据类型及定义"><a href="#数据类型及定义" class="headerlink" title="数据类型及定义"></a>数据类型及定义</h3><ol>
+<li>NULL是一个对象，但不能看作对象的实例，因为它什么也没有。</li>
+<li>NaN是一个数字 </li>
+<li>空数组==FALSE</li>
+</ol>
+<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+            <a href="/tags/编程/" rel="tag"># 编程</a>
+          
+            <a href="/tags/jquery/" rel="tag"># jquery</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/23/wechatMiniApp01/" rel="next" title="微信小程序学习">
+                <i class="fa fa-chevron-left"></i> 微信小程序学习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/common/avatar.jpg"
+                alt="winbug" />
+            
+              <p class="site-author-name" itemprop="name">winbug</p>
+              <p class="site-description motion-element" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">47</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章-JavaScript基础篇"><span class="nav-number">1.</span> <span class="nav-text">第一章 JavaScript基础篇</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缩略标记"><span class="nav-number">1.1.</span> <span class="nav-text">缩略标记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON-数据格式"><span class="nav-number">1.2.</span> <span class="nav-text">JSON 数据格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript自带函数（数学，数组以及字符串函数）"><span class="nav-number">1.3.</span> <span class="nav-text">JavaScript自带函数（数学，数组以及字符串函数）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件代理"><span class="nav-number">1.4.</span> <span class="nav-text">事件代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名函数和模块模式"><span class="nav-number">1.5.</span> <span class="nav-text">匿名函数和模块模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#允许配置"><span class="nav-number">1.6.</span> <span class="nav-text">允许配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#与后台交互"><span class="nav-number">1.7.</span> <span class="nav-text">与后台交互</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#库文件"><span class="nav-number">1.8.</span> <span class="nav-text">库文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章-复查JavaScript代码的启示"><span class="nav-number">2.</span> <span class="nav-text">第二章 复查JavaScript代码的启示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">2.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哪里可以复查？"><span class="nav-number">2.2.</span> <span class="nav-text">哪里可以复查？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造复查请求"><span class="nav-number">2.3.</span> <span class="nav-text">构造复查请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码复查人员需要提供的信息"><span class="nav-number">2.4.</span> <span class="nav-text">代码复查人员需要提供的信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#协作代码复查"><span class="nav-number">2.5.</span> <span class="nav-text">协作代码复查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七步测试法"><span class="nav-number">3.</span> <span class="nav-text">七步测试法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题的关键不在于你"><span class="nav-number">3.1.</span> <span class="nav-text">问题的关键不在于你</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七步测试法介绍"><span class="nav-number">3.2.</span> <span class="nav-text">七步测试法介绍</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript十个古怪之处和秘密"><span class="nav-number">4.</span> <span class="nav-text">JavaScript十个古怪之处和秘密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型及定义"><span class="nav-number">4.1.</span> <span class="nav-text">数据类型及定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式"><span class="nav-number">4.2.</span> <span class="nav-text">正则表达式</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">winbug</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
