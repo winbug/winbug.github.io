@@ -1,106 +1,24 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '6.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.l3f.win","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
   <meta name="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
 <meta property="og:type" content="website">
@@ -108,23 +26,20 @@
 <meta property="og:url" content="http://www.l3f.win/page/2/index.html">
 <meta property="og:site_name" content="L3F.WIN">
 <meta property="og:description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="winbug">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="L3F.WIN">
-<meta name="twitter:description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
+
+<link rel="canonical" href="http://www.l3f.win/page/2/">
 
 
-
-
-
-
-  <link rel="canonical" href="http://www.l3f.win/page/2/"/>
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -136,72 +51,58 @@
 
 
 
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">L3F.WIN</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">Github及Hexo的使用</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">L3F.WIN</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Github及Hexo的使用</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
@@ -209,58 +110,20 @@
 
 
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-stylus中文文档">
-    <a href="/categories/Stylus中文文档/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-css3"></i> <br />Stylus中文文档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-微信小程序">
-    <a href="/categories/wechatminiapp/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-wechat"></i> <br />微信小程序</a>
-  </li>
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-      
-      
-    </ul>
-  
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
-  
-    
+  </li>
+        <li class="menu-item menu-item-archives">
 
-  
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
-  
+  </li>
+  </ul>
 </nav>
 
-
-
-  
 
 
 
@@ -268,105 +131,63 @@
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content index">
             
-  <section id="posts" class="posts-expand">
-    
-      
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="posts-expand">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/08/24/html5css3-authoritative-guide/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/09/06/google-chrome-themes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/24/html5css3-authoritative-guide/" itemprop="url">
-                  HTML5与CSS3权威指南，代码汇总
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/09/06/google-chrome-themes/" class="post-title-link" itemprop="url">谷歌Chrome浏览器，自制改造主题帖</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2018-08-24 11:29:16 / 修改时间：16:03:38" itemprop="dateCreated datePublished" datetime="2018-08-24T11:29:16+08:00">2018-08-24</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="创建时间：2018-09-06 09:44:04" itemprop="dateCreated datePublished" datetime="2018-09-06T09:44:04+08:00">2018-09-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2018-10-11 11:01:44" itemprop="dateModified" datetime="2018-10-11T11:01:44+08:00">2018-10-11</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -374,156 +195,67 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          <h1 id="HTML5与CSS3权威指南，代码汇总"><a href="#HTML5与CSS3权威指南，代码汇总" class="headerlink" title="HTML5与CSS3权威指南，代码汇总"></a>HTML5与CSS3权威指南，代码汇总</h1><h2 id="Canvas-绘制矩形"><a href="#Canvas-绘制矩形" class="headerlink" title="Canvas 绘制矩形"></a>Canvas 绘制矩形</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"zh"</span> dir=<span class="string">"ltr"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">  &lt;title&gt;HTML5, CSS3权威指南——canvas&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body onload=<span class="string">"draw('canvas')"</span>&gt;</span><br><span class="line">  &lt;article&gt;</span><br><span class="line">    &lt;h1&gt;canvas元素示例&lt;/h1&gt;</span><br><span class="line">    &lt;canvas id=<span class="string">"canvas"</span> width=<span class="string">"400"</span> height=<span class="string">"300"</span>&gt;&lt;/canvas&gt;</span><br><span class="line">  &lt;/article&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    <span class="keyword">function</span> draw(id) &#123;</span><br><span class="line">      var canvas = document.getElementById(id);</span><br><span class="line">      <span class="keyword">if</span> (canvas == null) &#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      var context = canvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line">      context.fillStyle = <span class="string">"#EEEEFF"</span>;</span><br><span class="line">      context.fillRect(0, 0, 400, 300);</span><br><span class="line">      context.fillStyle = <span class="string">"red"</span>;</span><br><span class="line">      context.strokeStyle = <span class="string">"blue"</span>;</span><br><span class="line">      context.lineWidth = 1;</span><br><span class="line">      context.fillRect(50, 50, 100, 100);</span><br><span class="line">      context.strokeRect(50, 50, 100, 100);</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/post/html5css3_post_01.jpg" alt="绘制矩形"></p>
+          <h1 id="主题帖"><a href="#主题帖" class="headerlink" title="主题帖"></a>主题帖</h1><p>此贴只做个人爱好，收集一些Google Chrome浏览器主题，并做一定修改。<br>不一定符合其他人的口味，所以也不做宣传。请看客，喜欢就下。不喜欢我也不负责修改。谢谢。</p>
+<h2 id="Custom-Myself-v1-0"><a href="#Custom-Myself-v1-0" class="headerlink" title="Custom Myself v1.0"></a>Custom Myself v1.0</h2><p><img src="/images/post/google-theme-01.jpg" alt="Custom Myself -- Google Chrome theme"></p>
+<p><a href="/download/chromethemes/theme0001.crx">下载文件</a></p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/24/html5css3-authoritative-guide/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/09/06/google-chrome-themes/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/07/10/python-study-guide/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/08/24/html5css3-authoritative-guide/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/10/python-study-guide/" itemprop="url">
-                  Python学习手册（阅读笔记）
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/08/24/html5css3-authoritative-guide/" class="post-title-link" itemprop="url">HTML5与CSS3权威指南，代码汇总</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2018-07-10 10:10:33" itemprop="dateCreated datePublished" datetime="2018-07-10T10:10:33+08:00">2018-07-10</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-07-31 11:07:16" itemprop="dateModified" datetime="2018-07-31T11:07:16+08:00">2018-07-31</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="创建时间：2018-08-24 11:29:16 / 修改时间：16:03:38" itemprop="dateCreated datePublished" datetime="2018-08-24T11:29:16+08:00">2018-08-24</time>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -531,10 +263,80 @@
     <div class="post-body" itemprop="articleBody">
 
       
+          <h1 id="HTML5与CSS3权威指南，代码汇总"><a href="#HTML5与CSS3权威指南，代码汇总" class="headerlink" title="HTML5与CSS3权威指南，代码汇总"></a>HTML5与CSS3权威指南，代码汇总</h1><h2 id="Canvas-绘制矩形"><a href="#Canvas-绘制矩形" class="headerlink" title="Canvas 绘制矩形"></a>Canvas 绘制矩形</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"zh"</span> dir=<span class="string">"ltr"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">  &lt;title&gt;HTML5, CSS3权威指南——canvas&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body onload=<span class="string">"draw('canvas')"</span>&gt;</span><br><span class="line">  &lt;article&gt;</span><br><span class="line">    &lt;h1&gt;canvas元素示例&lt;/h1&gt;</span><br><span class="line">    &lt;canvas id=<span class="string">"canvas"</span> width=<span class="string">"400"</span> height=<span class="string">"300"</span>&gt;&lt;/canvas&gt;</span><br><span class="line">  &lt;/article&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    <span class="keyword">function</span> draw(id) &#123;</span><br><span class="line">      var canvas = document.getElementById(id);</span><br><span class="line">      <span class="keyword">if</span> (canvas == null) &#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      var context = canvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line">      context.fillStyle = <span class="string">"#EEEEFF"</span>;</span><br><span class="line">      context.fillRect(0, 0, 400, 300);</span><br><span class="line">      context.fillStyle = <span class="string">"red"</span>;</span><br><span class="line">      context.strokeStyle = <span class="string">"blue"</span>;</span><br><span class="line">      context.lineWidth = 1;</span><br><span class="line">      context.fillRect(50, 50, 100, 100);</span><br><span class="line">      context.strokeRect(50, 50, 100, 100);</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/post/html5css3_post_01.jpg" alt="绘制矩形"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/08/24/html5css3-authoritative-guide/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/07/10/python-study-guide/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="winbug">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L3F.WIN">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/07/10/python-study-guide/" class="post-title-link" itemprop="url">Python学习手册（阅读笔记）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-07-10 10:10:33" itemprop="dateCreated datePublished" datetime="2018-07-10T10:10:33+08:00">2018-07-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2018-07-31 11:07:16" itemprop="dateModified" datetime="2018-07-31T11:07:16+08:00">2018-07-31</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
           <h2 id="第1章-问答环节"><a href="#第1章-问答环节" class="headerlink" title="第1章 问答环节"></a>第1章 问答环节</h2><h3 id="为什么选择Python"><a href="#为什么选择Python" class="headerlink" title="为什么选择Python"></a>为什么选择Python</h3><ol>
 <li>软件质量， 可重用性，可维护性 （EIBTI,明了胜于晦涩）</li>
 <li>提高开发者的效率， 使用更少的代码完成更多的工作</li>
@@ -544,149 +346,69 @@
 <li>享受编程的乐趣</li>
 </ol>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/10/python-study-guide/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/07/10/python-study-guide/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/05/14/Python-base-01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/14/Python-base-01/" itemprop="url">
-                  Python 基础教程
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/05/14/Python-base-01/" class="post-title-link" itemprop="url">Python 基础教程</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-05-14 15:07:05" itemprop="dateCreated datePublished" datetime="2018-05-14T15:07:05+08:00">2018-05-14</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-07-10 10:09:43" itemprop="dateModified" datetime="2018-07-10T10:09:43+08:00">2018-07-10</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -694,176 +416,83 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p><strong>前言</strong><br>Python: 一种解释型的，面向对象的，带有动态语义的高级程序设计语言。<br>由于IDLE所使用的字体导致我们程序的结果出现参差不齐，所以这里推荐使用<a href="https://pan.baidu.com/s/10Sou7obI3qGB24mKCywOPA" target="_blank" rel="noopener">Yahei Consolas Hybrid字体</a> 密码： qbgc。</p>
 <h2 id="第1章-基础值是"><a href="#第1章-基础值是" class="headerlink" title="第1章 基础值是"></a>第1章 基础值是</h2><p>本章将介绍如何获得所需要的软件，及简单的算法。</p>
 <h3 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h3><p><a href="https://www.python.org/downloads/" target="_blank" rel="noopener">下载地址</a></p>
 <h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>windows的安装方法很简单，双击下载后的文件，按照提示进行安装即可。<br>成功后，我们就可以启动IDLE了，如下图，同时按F1键可以调出完整的Python文档。<br><img src="/images/post/python-01.jpg" alt="Python安装成功"></p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/14/Python-base-01/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/05/14/Python-base-01/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/05/02/youdontknowjs2-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/02/youdontknowjs2-2/" itemprop="url">
-                  《你不知道的JavaScript》中卷读书笔记第二部分 异步和性能
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/05/02/youdontknowjs2-2/" class="post-title-link" itemprop="url">《你不知道的JavaScript》中卷读书笔记第二部分 异步和性能</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-05-02 09:41:52" itemprop="dateCreated datePublished" datetime="2018-05-02T09:41:52+08:00">2018-05-02</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-05-07 11:43:47" itemprop="dateModified" datetime="2018-05-07T11:43:47+08:00">2018-05-07</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/你不知道的JavaScript/" itemprop="url" rel="index"><span itemprop="name">你不知道的JavaScript</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript/" itemprop="url" rel="index"><span itemprop="name">你不知道的JavaScript</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -871,179 +500,87 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h1 id="《你不知道的JavaScript》中卷读书笔记第二部分-异步和性能"><a href="#《你不知道的JavaScript》中卷读书笔记第二部分-异步和性能" class="headerlink" title="《你不知道的JavaScript》中卷读书笔记第二部分 异步和性能"></a>《你不知道的JavaScript》中卷读书笔记第二部分 异步和性能</h1><h2 id="第1章-异步"><a href="#第1章-异步" class="headerlink" title="第1章 异步"></a>第1章 异步</h2><p>程序中现在运行的部分和将来运行的部分之间的关系就是异步编程的核心</p>
 <h3 id="分块的程序"><a href="#分块的程序" class="headerlink" title="分块的程序"></a>分块的程序</h3><p>可以把Javascript程序写在单个.js文件中，但是这个程序几乎一定是由多个块组成的。这些块中只有一个是现在执行，其余的则会在将来执行。最常见的块单位是函数。</p>
 <p><strong>异步1</strong>，从现在到将来的等待，最简单的方法是使用回调函数</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//ajax()是某个库中提供的某个Ajax函数</span><br><span class="line">var data = ajax(<span class="string">"http://some.url.1"</span>);</span><br><span class="line">console.log( data );</span><br><span class="line">//data什么结果都没有</span><br><span class="line">//这时我们可以使用回调函数</span><br><span class="line">ajax(<span class="string">"http://some.url.1"</span>, <span class="keyword">function</span> myCallbackFunction(data)&#123;</span><br><span class="line">  console.log( data ); //得到数据</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 <p><strong>异步2</strong>，可以使用siteTimeout()</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">now</span></span>()&#123;</span><br><span class="line">    <span class="built_in">return</span> 21;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">later</span></span>()&#123;</span><br><span class="line">    answer = answer * 2;</span><br><span class="line">    console.log(<span class="string">"Meaning of life: "</span>, answer );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var answer = now();</span><br><span class="line">setTimeout( later, 1000 );  //Meaning of life:  42</span><br></pre></td></tr></table></figure>
-<p>任何时候，只要把一段代码包装成一个函数，并指定它在某个事件（定时器，鼠标点击，Ajax相应）时执行，你就是在代码中创建了一个将来执行的块，也由此在这个程序中引入了异步机制。<br>
+<p>任何时候，只要把一段代码包装成一个函数，并指定它在某个事件（定时器，鼠标点击，Ajax相应）时执行，你就是在代码中创建了一个将来执行的块，也由此在这个程序中引入了异步机制。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/02/youdontknowjs2-2/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/05/02/youdontknowjs2-2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/04/23/youdontknowjs2-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/23/youdontknowjs2-1/" itemprop="url">
-                  《你不知道的JavaScript》中卷读书笔记第一部分
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/04/23/youdontknowjs2-1/" class="post-title-link" itemprop="url">《你不知道的JavaScript》中卷读书笔记第一部分</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-04-23 11:40:35" itemprop="dateCreated datePublished" datetime="2018-04-23T11:40:35+08:00">2018-04-23</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-05-02 09:36:16" itemprop="dateModified" datetime="2018-05-02T09:36:16+08:00">2018-05-02</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/你不知道的JavaScript/" itemprop="url" rel="index"><span itemprop="name">你不知道的JavaScript</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript/" itemprop="url" rel="index"><span itemprop="name">你不知道的JavaScript</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1051,10 +588,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h2 id="第1章-类型"><a href="#第1章-类型" class="headerlink" title="第1章 类型"></a>第1章 类型</h2><p>Javascript的类型包括 Undefined, Null, Boolean, String, Number, Object</p>
 <h3 id="内置类型"><a href="#内置类型" class="headerlink" title="内置类型"></a>内置类型</h3><ol>
 <li>空值(null)</li>
@@ -1063,169 +596,82 @@
 <li>数字(number)</li>
 <li>字符串(string)</li>
 <li>对象(object)</li>
-<li>符号(symbol, ES6中新增)<br><em>除对象外，其他统称为“基本类型”</em><br>我们可以通过<code>typeof</code>运算符来查看值的类型。
+<li>符号(symbol, ES6中新增)</li>
+</ol>
+<p><em>除对象外，其他统称为“基本类型”</em><br>我们可以通过<code>typeof</code>运算符来查看值的类型。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/23/youdontknowjs2-1/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/04/23/youdontknowjs2-1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/04/12/youdontknowjs1-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/12/youdontknowjs1-2/" itemprop="url">
-                  《你不知道的JavaScript》上卷读书笔记第二部分
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/04/12/youdontknowjs1-2/" class="post-title-link" itemprop="url">《你不知道的JavaScript》上卷读书笔记第二部分</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-04-12 11:48:39" itemprop="dateCreated datePublished" datetime="2018-04-12T11:48:39+08:00">2018-04-12</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-04-23 11:04:45" itemprop="dateModified" datetime="2018-04-23T11:04:45+08:00">2018-04-23</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/你不知道的JavaScript/" itemprop="url" rel="index"><span itemprop="name">你不知道的JavaScript</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript/" itemprop="url" rel="index"><span itemprop="name">你不知道的JavaScript</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1233,174 +679,82 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h2 id="第1章-关于this"><a href="#第1章-关于this" class="headerlink" title="第1章 关于this"></a>第1章 关于this</h2><p><code>this</code> 关键字是Javascript中最复杂的机制之一。到现在我也是对this一知半解，完全没有弄清楚。</p>
-<h3 id="为什么要用this"><a href="#为什么要用this" class="headerlink" title="为什么要用this"></a>为什么要用this</h3><p><strong>this</strong> 示例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">identify</span></span>()&#123;</span><br><span class="line">    <span class="built_in">return</span> this.name.toUpperCase();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">speak</span></span>()&#123;</span><br><span class="line">    var greeting = <span class="string">"Hello, I'm "</span> + identify.call( this );</span><br><span class="line">    console.log( greeting );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var me = &#123;</span><br><span class="line">    name: <span class="string">"Lisa"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var you = &#123;</span><br><span class="line">    name: <span class="string">"John"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">identify.call( me ); //LISA</span><br><span class="line">identify.call( you ); //JOHN</span><br><span class="line">speak.call( me ); //Hello, I<span class="string">'m LISA</span></span><br><span class="line"><span class="string">speak.call( you ); //Hello, I'</span>m JOHN</span><br></pre></td></tr></table></figure></p>
+<h3 id="为什么要用this"><a href="#为什么要用this" class="headerlink" title="为什么要用this"></a>为什么要用this</h3><p><strong>this</strong> 示例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">identify</span></span>()&#123;</span><br><span class="line">    <span class="built_in">return</span> this.name.toUpperCase();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">speak</span></span>()&#123;</span><br><span class="line">    var greeting = <span class="string">"Hello, I'm "</span> + identify.call( this );</span><br><span class="line">    console.log( greeting );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var me = &#123;</span><br><span class="line">    name: <span class="string">"Lisa"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var you = &#123;</span><br><span class="line">    name: <span class="string">"John"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">identify.call( me ); //LISA</span><br><span class="line">identify.call( you ); //JOHN</span><br><span class="line">speak.call( me ); //Hello, I<span class="string">'m LISA</span></span><br><span class="line"><span class="string">speak.call( you ); //Hello, I'</span>m JOHN</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/12/youdontknowjs1-2/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/04/12/youdontknowjs1-2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/04/02/youdontknowjs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/02/youdontknowjs/" itemprop="url">
-                  《你不知道的JavaScript》上卷读书笔记第一部分
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/04/02/youdontknowjs/" class="post-title-link" itemprop="url">《你不知道的JavaScript》上卷读书笔记第一部分</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-04-02 14:56:23" itemprop="dateCreated datePublished" datetime="2018-04-02T14:56:23+08:00">2018-04-02</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-04-12 11:51:44" itemprop="dateModified" datetime="2018-04-12T11:51:44+08:00">2018-04-12</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/你不知道的JavaScript/" itemprop="url" rel="index"><span itemprop="name">你不知道的JavaScript</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript/" itemprop="url" rel="index"><span itemprop="name">你不知道的JavaScript</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1408,10 +762,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p><strong>前言</strong><br>我们大部分人对Javascript的了解，都是一知半解。并没有去真正的了解它，学习它，导致我们在遇到问题时就会退缩。学习《你不知道的JavaScript》其实就是为了叫我们更好的了解Javascript, 并掌握它。</p>
 <h2 id="第1章-作用域是什么"><a href="#第1章-作用域是什么" class="headerlink" title="第1章 作用域是什么"></a>第1章 作用域是什么</h2><p>作用域是所有编程语言最基本的功能之一，通过一套设计良好的规则来存储变量，并且可以方便的找到这些变量，这套规则被称为作用域。（ <em>本人理解， 这个是针对所有编程语言的概述。</em> ）</p>
 <h3 id="编译原理"><a href="#编译原理" class="headerlink" title="编译原理"></a>编译原理</h3><p><strong>JavaScript</strong> 是一门编译语言，程序中的一段代码在执行之前会经历3个步骤，统称为编译</p>
@@ -1421,167 +771,78 @@
 <li>代码生成<br>（ <em>JavaScript的引擎没有很多时间去优化，一般属于即编译即执行</em> ）</li>
 </ol>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/02/youdontknowjs/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/04/02/youdontknowjs/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/27/vue-js-study-note-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/27/vue-js-study-note-1/" itemprop="url">
-                  vue.js - 学习笔记一
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/27/vue-js-study-note-1/" class="post-title-link" itemprop="url">vue.js - 学习笔记一</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-03-27 17:18:47" itemprop="dateCreated datePublished" datetime="2018-03-27T17:18:47+08:00">2018-03-27</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-03-28 10:00:46" itemprop="dateModified" datetime="2018-03-28T10:00:46+08:00">2018-03-28</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue-js/" itemprop="url" rel="index"><span itemprop="name">Vue.js</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue-js/" itemprop="url" rel="index"><span itemprop="name">Vue.js</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1589,163 +850,78 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><h3 id="Vue-js-是什么？"><a href="#Vue-js-是什么？" class="headerlink" title="Vue.js 是什么？"></a>Vue.js 是什么？</h3><p>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。</p>
-<h3 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h3><p>创建一个html文件，并将以下代码引入即可，这是最简单的vue环境<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h3><p>创建一个html文件，并将以下代码引入即可，这是最简单的vue环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
 <h3 id="简单的例子1-7"><a href="#简单的例子1-7" class="headerlink" title="简单的例子1~7"></a>简单的例子1~7</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 指定vue管理内容区域，需要通过vue展示的内容都要放到找个元素中  通常我们也把它叫做边界 数据只在边界内部解析--&gt;</span><br><span class="line">&lt;div id=<span class="string">"app-1"</span>&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;div id=<span class="string">"app-2"</span>&gt;</span><br><span class="line">    &lt;span v-bind:title=<span class="string">"message"</span>&gt;鼠标悬停几秒钟查看此处动态绑定的提示信息！&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=<span class="string">"app-3"</span>&gt;</span><br><span class="line">    &lt;span v-if = <span class="string">"seen"</span>&gt;现在你可以看到我&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=<span class="string">"app-4"</span>&gt;</span><br><span class="line">    &lt;ol&gt;</span><br><span class="line">        &lt;li v-for=<span class="string">"todo in todos"</span>&gt;</span><br><span class="line">            &#123;&#123;todo.text&#125;&#125;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">    &lt;/ol&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=<span class="string">"app-5"</span>&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123;message&#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;button v-on:click=<span class="string">"reverseMessage"</span>&gt;翻转 message&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script src=<span class="string">"/common/js/vue.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var vm = new Vue(&#123;</span><br><span class="line">        //el:提供一个在页面上已存在的DOM元素作为Vue实例的挂载目标</span><br><span class="line">        el: <span class="string">'#app-1'</span>,</span><br><span class="line">        //Vue实例的数据对象，用于给View 提供数据</span><br><span class="line">        data: &#123;</span><br><span class="line">            msg: <span class="string">"Hello Vue"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    var app2 = new Vue(&#123;</span><br><span class="line">        el: <span class="string">'#app-2'</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">            message: <span class="string">"页面加载于"</span> + new Date().toLocaleString()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    //vue使用判断</span><br><span class="line">    var app3 = new Vue(&#123;</span><br><span class="line">        el: <span class="string">'#app-3'</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            seen: <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    var app4 = new Vue(&#123;</span><br><span class="line">        el: <span class="string">'#app-4'</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            todos: [</span><br><span class="line">                &#123;text: <span class="string">'学习 Javascript'</span>&#125;,</span><br><span class="line">                &#123;text: <span class="string">'学习 Vue'</span>&#125;,</span><br><span class="line">                &#123;text: <span class="string">'创建激动人心的代码'</span>&#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    var app5 = new Vue(&#123;</span><br><span class="line">        el: <span class="string">"#app-5"</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">            message: <span class="string">"Hello Vue.js"</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            reverseMessage: <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">                this.message = this.message.split(<span class="string">''</span>).reverse().join(<span class="string">""</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/27/vue-js-study-note-1/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/03/27/vue-js-study-note-1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/13/学习stylus【27】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/13/%E5%AD%A6%E4%B9%A0stylus%E3%80%9027%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/13/学习stylus【27】/" itemprop="url">
-                  学习stylus【27】SOURCEMAPS
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/13/%E5%AD%A6%E4%B9%A0stylus%E3%80%9027%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【27】SOURCEMAPS</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2018-03-13 09:27:09 / 修改时间：09:35:46" itemprop="dateCreated datePublished" datetime="2018-03-13T09:27:09+08:00">2018-03-13</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1753,217 +929,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="SOURCEMAPS"><a href="#SOURCEMAPS" class="headerlink" title="SOURCEMAPS"></a>SOURCEMAPS</h2><p>Stylus支持基础的源地图 <a href="https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k" target="_blank" rel="noopener">Sourcemap v3 spec</a></p>
+          <h2 id="SOURCEMAPS"><a href="#SOURCEMAPS" class="headerlink" title="SOURCEMAPS"></a>SOURCEMAPS</h2><p>Stylus支持基础的源地图 <a href="https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k" target="_blank" rel="noopener">Sourcemap v3 spec</a></p>
 <h3 id="创建一个源地图"><a href="#创建一个源地图" class="headerlink" title="创建一个源地图"></a>创建一个源地图</h3><p>使用Stylus文件传递–sourcemap标志（或-m）。 这将创建一个style.css文件和一个style.css.map文件作为您的style.styl的兄弟文件，并将style.css底部的sourcemap链接放到您的sourcemap中。<br><em>stylus -m style.styl</em><br>您也可以在观看文件时运行此命令。 例如： <em>stylus -w -m style.styl</em>。 这会在每次保存时更新您的源映射。</p>
-<h3 id="Javascript-API"><a href="#Javascript-API" class="headerlink" title="Javascript API"></a>Javascript API</h3><p>使用选项对象或布尔值设置sourcemap设置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'stylus'</span>);</span><br><span class="line"></span><br><span class="line">var style = stylus(str)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'filename'</span>, <span class="string">'file.styl'</span>)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'sourcemap'</span>, options);</span><br><span class="line"></span><br><span class="line">style.render(<span class="keyword">function</span>(err, css) &#123;</span><br><span class="line">  // generated sourcemap object</span><br><span class="line">  console.log(style.sourcemap);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Javascript-API"><a href="#Javascript-API" class="headerlink" title="Javascript API"></a>Javascript API</h3><p>使用选项对象或布尔值设置sourcemap设置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'stylus'</span>);</span><br><span class="line"></span><br><span class="line">var style = stylus(str)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'filename'</span>, <span class="string">'file.styl'</span>)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'sourcemap'</span>, options);</span><br><span class="line"></span><br><span class="line">style.render(<span class="keyword">function</span>(err, css) &#123;</span><br><span class="line">  // generated sourcemap object</span><br><span class="line">  console.log(style.sourcemap);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><p><code>comment</code>     在生成的CSS中添加一个带<code>sourceMappingURL</code>的注释（默认值：<code>true</code>）<br><code>inline</code>      使用base64格式的全部源文本内联源图（默认：“false”）<br><code>sourceRoot</code>  生成的源映射的“sourceRoot”属性<br><code>basePath</code>    源图和所有源相对的基本路径（默认值：<code>.</code>）</p>
 
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/12/学习stylus【26】/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L3F.WIN">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/12/学习stylus【26】/" itemprop="url">
-                  学习stylus【26】JavaScript API
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-03-12 15:20:12 / 修改时间：15:34:56" itemprop="dateCreated datePublished" datetime="2018-03-12T15:20:12+08:00">2018-03-12</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="JavaScript-API"><a href="#JavaScript-API" class="headerlink" title="JavaScript API"></a>JavaScript API</h2><p>require模块，用给定的Stylus代码字符串调用render()，以及（可选的）optional对象。<br>传递filename参数可以利用Stylus框架提供更好的错误报告。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'stylus'</span>);</span><br><span class="line"></span><br><span class="line">stylus.render(str, &#123; filename: <span class="string">'nesting.css'</span> &#125;, <span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) throw err;</span><br><span class="line">  console.log(css);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>我们可以用更渐进的方式实现做一样的事：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'stylus'</span>);</span><br><span class="line"></span><br><span class="line">stylus(str)</span><br><span class="line">.<span class="built_in">set</span>(<span class="string">'filename'</span>, <span class="string">'nesting.css'</span>)</span><br><span class="line">.render(<span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">  // logic</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/12/学习stylus【26】/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
 
   
   <nav class="pagination">
@@ -1975,217 +962,108 @@
           </div>
           
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
-        
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/images/common/avatar.jpg"
-                alt="winbug" />
-            
-              <p class="site-author-name" itemprop="name">winbug</p>
-              <p class="site-description motion-element" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">48</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">分类</span>
-                  
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">36</span>
-                    <span class="site-state-item-name">标签</span>
-                  
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">winbug</span>
-
-  
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">winbug</p>
+  <div class="site-description" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.2.0</div>
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
+        
 
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">winbug</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
 
         
 
@@ -2196,103 +1074,24 @@
 
 
 
-        
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
-
-
-
-  
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -2308,28 +1107,10 @@
 
 
 
-  
 
 
 
 
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
   
 

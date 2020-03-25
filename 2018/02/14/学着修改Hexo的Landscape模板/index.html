@@ -1,135 +1,54 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.l3f.win","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '6.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
-
-  <meta name="description" content="Hexo Landscape模板修改1. Landscape菜单的修改themes/landscape/_config.yml使用Editor工具打开_config.yml文件，找到 menu ，下面就是你需要修改的菜单选项了。输入格式 1菜单名称: 链接地址 2. 修改Read Morethemes/landscape/_config.yml使用Editor工具打开_config.yml文件，找">
-<meta name="keywords" content="themes,Landscape,Hexo,返回顶部">
+  <meta name="description" content="Hexo Landscape模板修改1. Landscape菜单的修改themes&#x2F;landscape&#x2F;_config.yml使用Editor工具打开_config.yml文件，找到 menu ，下面就是你需要修改的菜单选项了。输入格式 1菜单名称: 链接地址  2. 修改Read Morethemes&#x2F;landscape&#x2F;_config.yml使用Editor工具打开_config.yml文件，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学着修改Hexo的Landscape模板">
-<meta property="og:url" content="http://www.l3f.win/2018/02/14/学着修改Hexo的Landscape模板/index.html">
+<meta property="og:url" content="http://www.l3f.win/2018/02/14/%E5%AD%A6%E7%9D%80%E4%BF%AE%E6%94%B9Hexo%E7%9A%84Landscape%E6%A8%A1%E6%9D%BF/index.html">
 <meta property="og:site_name" content="L3F.WIN">
-<meta property="og:description" content="Hexo Landscape模板修改1. Landscape菜单的修改themes/landscape/_config.yml使用Editor工具打开_config.yml文件，找到 menu ，下面就是你需要修改的菜单选项了。输入格式 1菜单名称: 链接地址 2. 修改Read Morethemes/landscape/_config.yml使用Editor工具打开_config.yml文件，找">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:description" content="Hexo Landscape模板修改1. Landscape菜单的修改themes&#x2F;landscape&#x2F;_config.yml使用Editor工具打开_config.yml文件，找到 menu ，下面就是你需要修改的菜单选项了。输入格式 1菜单名称: 链接地址  2. 修改Read Morethemes&#x2F;landscape&#x2F;_config.yml使用Editor工具打开_config.yml文件，">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.l3f.win/images/post/l3f_04.jpg">
 <meta property="og:image" content="http://www.l3f.win/images/post/l3f_05.png">
-<meta property="og:updated_time" content="2018-02-22T07:29:15.913Z">
+<meta property="article:published_time" content="2018-02-14T11:36:02.000Z">
+<meta property="article:modified_time" content="2018-02-22T07:29:15.913Z">
+<meta property="article:author" content="winbug">
+<meta property="article:tag" content="themes">
+<meta property="article:tag" content="Landscape">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="返回顶部">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学着修改Hexo的Landscape模板">
-<meta name="twitter:description" content="Hexo Landscape模板修改1. Landscape菜单的修改themes/landscape/_config.yml使用Editor工具打开_config.yml文件，找到 menu ，下面就是你需要修改的菜单选项了。输入格式 1菜单名称: 链接地址 2. 修改Read Morethemes/landscape/_config.yml使用Editor工具打开_config.yml文件，找">
 <meta name="twitter:image" content="http://www.l3f.win/images/post/l3f_04.jpg">
 
+<link rel="canonical" href="http://www.l3f.win/2018/02/14/%E5%AD%A6%E7%9D%80%E4%BF%AE%E6%94%B9Hexo%E7%9A%84Landscape%E6%A8%A1%E6%9D%BF/">
 
 
-
-
-
-  <link rel="canonical" href="http://www.l3f.win/2018/02/14/学着修改Hexo的Landscape模板/"/>
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -141,71 +60,58 @@
 
 
 
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">L3F.WIN</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">Github及Hexo的使用</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">L3F.WIN</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Github及Hexo的使用</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
@@ -213,58 +119,20 @@
 
 
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-stylus中文文档">
-    <a href="/categories/Stylus中文文档/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-css3"></i> <br />Stylus中文文档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-微信小程序">
-    <a href="/categories/wechatminiapp/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-wechat"></i> <br />微信小程序</a>
-  </li>
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-      
-      
-    </ul>
-  
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
-  
-    
+  </li>
+        <li class="menu-item menu-item-archives">
 
-  
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
-  
+  </li>
+  </ul>
 </nav>
 
-
-
-  
 
 
 
@@ -272,113 +140,62 @@
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content post">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/14/学着修改Hexo的Landscape模板/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/14/%E5%AD%A6%E7%9D%80%E4%BF%AE%E6%94%B9Hexo%E7%9A%84Landscape%E6%A8%A1%E6%9D%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">学着修改Hexo的Landscape模板
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          学着修改Hexo的Landscape模板
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-02-14 19:36:02" itemprop="dateCreated datePublished" datetime="2018-02-14T19:36:02+08:00">2018-02-14</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-02-22 15:29:15" itemprop="dateModified" datetime="2018-02-22T15:29:15+08:00">2018-02-22</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -386,359 +203,190 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
         <h2 id="Hexo-Landscape模板修改"><a href="#Hexo-Landscape模板修改" class="headerlink" title="Hexo Landscape模板修改"></a>Hexo Landscape模板修改</h2><h3 id="1-Landscape菜单的修改"><a href="#1-Landscape菜单的修改" class="headerlink" title="1. Landscape菜单的修改"></a>1. Landscape菜单的修改</h3><p><strong>themes/landscape/_config.yml</strong><br>使用Editor工具打开_config.yml文件，找到 <em>menu</em> ，下面就是你需要修改的菜单选项了。<br>输入格式</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">菜单名称: 链接地址</span><br></pre></td></tr></table></figure>
+
 <h3 id="2-修改Read-More"><a href="#2-修改Read-More" class="headerlink" title="2. 修改Read More"></a>2. 修改Read More</h3><p><strong>themes/landscape/_config.yml</strong><br>使用Editor工具打开_config.yml文件，找到 <em>excerpt_link</em> ，下面就是你需要修改的菜单选项了。<br>输入格式</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">excerpt_link: <span class="string">'希望显示的文字'</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="3-添加一个返回到顶部的按钮"><a href="#3-添加一个返回到顶部的按钮" class="headerlink" title="3. 添加一个返回到顶部的按钮"></a>3. 添加一个返回到顶部的按钮</h3><p>我们发现landscape模板本身不带返回顶部按钮，那我们自己制作一个好了<br><strong>1. themes/landscape/layout/_partial/footer.ejs</strong><br>使用Editor工具打开footer.ejs文件，在<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer id=<span class="string">"footer"</span>&gt;</span><br></pre></td></tr></table></figure></p>
+
+<h3 id="3-添加一个返回到顶部的按钮"><a href="#3-添加一个返回到顶部的按钮" class="headerlink" title="3. 添加一个返回到顶部的按钮"></a>3. 添加一个返回到顶部的按钮</h3><p>我们发现landscape模板本身不带返回顶部按钮，那我们自己制作一个好了<br><strong>1. themes/landscape/layout/_partial/footer.ejs</strong><br>使用Editor工具打开footer.ejs文件，在</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer id=<span class="string">"footer"</span>&gt;</span><br></pre></td></tr></table></figure>
 <p>中添加以下代码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">"goBack"</span> onclick=<span class="string">"window.scrollTo('0','0')"</span>&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>2. themes/landscape/source/css/_partial/footer.styl</strong><br>使用Editor工具打开footer.styl文件，添加以下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#footer .goBack</span></span><br><span class="line">  width 40px</span><br><span class="line">  height 30px</span><br><span class="line">  text-align center</span><br><span class="line">  background <span class="comment">#f1f1f1 url(images/scrolltop.png) no-repeat 0 0</span></span><br><span class="line">  position fixed</span><br><span class="line">  bottom 110px</span><br><span class="line">  cursor pointer</span><br><span class="line">  border 1px solid <span class="comment">#cdcdcd</span></span><br><span class="line">  border-radius 3px</span><br><span class="line">  right 0</span><br></pre></td></tr></table></figure></p>
+<p><strong>2. themes/landscape/source/css/_partial/footer.styl</strong><br>使用Editor工具打开footer.styl文件，添加以下代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#footer .goBack</span></span><br><span class="line">  width 40px</span><br><span class="line">  height 30px</span><br><span class="line">  text-align center</span><br><span class="line">  background <span class="comment">#f1f1f1 url(images/scrolltop.png) no-repeat 0 0</span></span><br><span class="line">  position fixed</span><br><span class="line">  bottom 110px</span><br><span class="line">  cursor pointer</span><br><span class="line">  border 1px solid <span class="comment">#cdcdcd</span></span><br><span class="line">  border-radius 3px</span><br><span class="line">  right 0</span><br></pre></td></tr></table></figure>
 <p>图片放入 <em>themes/landscape/source/css/images</em> 文件夹下，可以按照自己喜欢的返回图标进行相应的修改高宽</p>
 <p>这样我们就创建了一个简单的返回顶部按钮，效果图如下<br><img src="/images/post/l3f_04.jpg" alt="返回顶部按钮" title="返回顶部按钮示例"><br><strong>注意</strong><br>修改.styl文件后，在使用 <em>hexo generate</em> 命令之前，先使用 <em>hexo clean</em> 否则会出现部署的时候样式不完整</p>
-<h3 id="4-修改原有模板的字体"><a href="#4-修改原有模板的字体" class="headerlink" title="4. 修改原有模板的字体"></a>4. 修改原有模板的字体</h3><p>默认的字体很可能对英语系现实很漂亮，可是对中文来说，显得略粗，我们这次修改styl文件，将相应的字体变细<br>因为是内容页，所以我们先打开 <strong>themes/landscape/source/css/_partial/article.styl</strong> 文件<br>查找到以下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.article-title</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-修改原有模板的字体"><a href="#4-修改原有模板的字体" class="headerlink" title="4. 修改原有模板的字体"></a>4. 修改原有模板的字体</h3><p>默认的字体很可能对英语系现实很漂亮，可是对中文来说，显得略粗，我们这次修改styl文件，将相应的字体变细<br>因为是内容页，所以我们先打开 <strong>themes/landscape/source/css/_partial/article.styl</strong> 文件<br>查找到以下代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.article-title</span><br></pre></td></tr></table></figure>
 <p>将里面的 font-weight: bold 删除</p>
-<p>接着找到以下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.article-entry</span><br></pre></td></tr></table></figure></p>
-<p>将其下面的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">h1, h2, h3, h4, h5, h6</span><br><span class="line">  font-weight: bold</span><br></pre></td></tr></table></figure></p>
+<p>接着找到以下代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.article-entry</span><br></pre></td></tr></table></figure>
+<p>将其下面的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">h1, h2, h3, h4, h5, h6</span><br><span class="line">  font-weight: bold</span><br></pre></td></tr></table></figure>
 <p>删除<br>刷新你的页面，是不是清爽多了。</p>
 <p>本次的内容还没有结束， 我们想要增加自己的自定义字体，该怎么办呢？这里面我们已SquadaOne字体为例</p>
 <ol>
 <li><p>打开 <strong>themes/landscape/source/css/style.styl</strong> 文件<br>在里面添加以下代码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@font-face</span><br><span class="line">  font-family: SquadaOne</span><br><span class="line">  font-style: normal</span><br><span class="line">  font-weight: normal</span><br><span class="line">  src url(squadaone-path) format(<span class="string">"truetype"</span>)</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@font-face</span><br><span class="line">  font-family: SquadaOne</span><br><span class="line">  font-style: normal</span><br><span class="line">  font-weight: normal</span><br><span class="line">  src url(squadaone-path) format(<span class="string">"truetype"</span>)</span><br></pre></td></tr></table></figure></li>
 <li><p>打开 <strong>themes/landscape/source/css/_variables.styl</strong> 文件<br>在里面添加以下代码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">squadaone-path = <span class="string">"fonts/SquadaOne-Regular.woff.ttf"</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>复制SquadaOne的字体文件到 <strong>themes/landscape/source/css/fonts</strong> 文件夹下面</p>
 </li>
 <li><p>修改主页logo名称 打开 <strong>themes/landscape/source/css/_partial/header.styl</strong><br>找到 <em>#logo</em><br>在里面添加以下代码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">font-family: SquadaOne</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">font-family: SquadaOne</span><br></pre></td></tr></table></figure></li>
 <li><p>最好hexo clean一下服务。我们看看现在的样子吧<br><img src="/images/post/l3f_05.png" alt="自定义字体" title="自定义字体"></p>
 </li>
 </ol>
-<h3 id="5-修改你的share分享链接"><a href="#5-修改你的share分享链接" class="headerlink" title="5. 修改你的share分享链接"></a>5. 修改你的share分享链接</h3><p>我们发现默认的landscape模板的share地址是错误的，如何改成正确的呢，我们先打开根目录下的 <strong>_config.yml</strong><br>找到 <em>url:</em><br>并修改他的值为你自己的域名<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line">url: http://www.l3f.win</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-修改你的share分享链接"><a href="#5-修改你的share分享链接" class="headerlink" title="5. 修改你的share分享链接"></a>5. 修改你的share分享链接</h3><p>我们发现默认的landscape模板的share地址是错误的，如何改成正确的呢，我们先打开根目录下的 <strong>_config.yml</strong><br>找到 <em>url:</em><br>并修改他的值为你自己的域名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line">url: http://www.l3f.win</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
 
-      
     </div>
 
     
-
     
     
-    
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/themes/" rel="tag"># themes</a>
-          
-            <a href="/tags/Landscape/" rel="tag"># Landscape</a>
-          
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
-          
-            <a href="/tags/返回顶部/" rel="tag"># 返回顶部</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/02/14/学习stylus【9】/" rel="next" title="学习stylus【9】哈希（Hashes）">
-                <i class="fa fa-chevron-left"></i> 学习stylus【9】哈希（Hashes）
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/themes/" rel="tag"># themes</a>
+              <a href="/tags/Landscape/" rel="tag"># Landscape</a>
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8/" rel="tag"># 返回顶部</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/22/学习stylus【10】/" rel="prev" title="学习stylus【10】迭代(Iteration)">
-                学习stylus【10】迭代(Iteration) <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-  
-
-
-
-        </div>
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/02/14/%E5%AD%A6%E4%B9%A0stylus%E3%80%909%E3%80%91/" rel="prev" title="学习stylus【9】哈希（Hashes）">
+      <i class="fa fa-chevron-left"></i> 学习stylus【9】哈希（Hashes）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/02/22/%E5%AD%A6%E4%B9%A0stylus%E3%80%9010%E3%80%91/" rel="next" title="学习stylus【10】迭代(Iteration)">
+      学习stylus【10】迭代(Iteration) <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/images/common/avatar.jpg"
-                alt="winbug" />
-            
-              <p class="site-author-name" itemprop="name">winbug</p>
-              <p class="site-description motion-element" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">48</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">分类</span>
-                  
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">36</span>
-                    <span class="site-state-item-name">标签</span>
-                  
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-Landscape模板修改"><span class="nav-number">1.</span> <span class="nav-text">Hexo Landscape模板修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Landscape菜单的修改"><span class="nav-number">1.1.</span> <span class="nav-text">1. Landscape菜单的修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-修改Read-More"><span class="nav-number">1.2.</span> <span class="nav-text">2. 修改Read More</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-添加一个返回到顶部的按钮"><span class="nav-number">1.3.</span> <span class="nav-text">3. 添加一个返回到顶部的按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-修改原有模板的字体"><span class="nav-number">1.4.</span> <span class="nav-text">4. 修改原有模板的字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-修改你的share分享链接"><span class="nav-number">1.5.</span> <span class="nav-text">5. 修改你的share分享链接</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-Landscape模板修改"><span class="nav-number">1.</span> <span class="nav-text">Hexo Landscape模板修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Landscape菜单的修改"><span class="nav-number">1.1.</span> <span class="nav-text">1. Landscape菜单的修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-修改Read-More"><span class="nav-number">1.2.</span> <span class="nav-text">2. 修改Read More</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-添加一个返回到顶部的按钮"><span class="nav-number">1.3.</span> <span class="nav-text">3. 添加一个返回到顶部的按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-修改原有模板的字体"><span class="nav-number">1.4.</span> <span class="nav-text">4. 修改原有模板的字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-修改你的share分享链接"><span class="nav-number">1.5.</span> <span class="nav-text">5. 修改你的share分享链接</span></a></li></ol></li></ol></div>
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">winbug</span>
-
-  
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">winbug</p>
+  <div class="site-description" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.2.0</div>
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
+        
 
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">winbug</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
 
         
 
@@ -749,107 +397,24 @@
 
 
 
-        
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
-
-
-
-  
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -865,28 +430,10 @@
 
 
 
-  
 
 
 
 
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
   
 

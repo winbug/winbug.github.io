@@ -1,132 +1,50 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.l3f.win","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '6.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
-
-  <meta name="description" content="Stylue内置方法red(color)返回color中的红色比重1red(#c00)  =&amp;gt; 204 green(color)返回color中的绿色比重。1green(#c00)  =&amp;gt; 204 blue(color)返回color中的蓝色比重。1blue(#c00)  =&amp;gt; 204 alpha(color)返回color中的透明度比重12345alpha(#fff)// =&amp;">
-<meta name="keywords" content="CSS3,stylus,学习Stylus">
+  <meta name="description" content="Stylue内置方法red(color)返回color中的红色比重 1red(#c00)  &#x3D;&gt; 204  green(color)返回color中的绿色比重。 1green(#c00)  &#x3D;&gt; 204  blue(color)返回color中的蓝色比重。 1blue(#c00)  &#x3D;&gt; 204  alpha(color)返回color中的透明度比重 12345alpha(#ff">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习stylus【5】Stylue内置方法">
-<meta property="og:url" content="http://www.l3f.win/2018/02/06/学习stylus【5】/index.html">
+<meta property="og:url" content="http://www.l3f.win/2018/02/06/%E5%AD%A6%E4%B9%A0stylus%E3%80%905%E3%80%91/index.html">
 <meta property="og:site_name" content="L3F.WIN">
-<meta property="og:description" content="Stylue内置方法red(color)返回color中的红色比重1red(#c00)  =&amp;gt; 204 green(color)返回color中的绿色比重。1green(#c00)  =&amp;gt; 204 blue(color)返回color中的蓝色比重。1blue(#c00)  =&amp;gt; 204 alpha(color)返回color中的透明度比重12345alpha(#fff)// =&amp;">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-01T02:32:46.969Z">
+<meta property="og:description" content="Stylue内置方法red(color)返回color中的红色比重 1red(#c00)  &#x3D;&gt; 204  green(color)返回color中的绿色比重。 1green(#c00)  &#x3D;&gt; 204  blue(color)返回color中的蓝色比重。 1blue(#c00)  &#x3D;&gt; 204  alpha(color)返回color中的透明度比重 12345alpha(#ff">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-02-05T23:27:51.000Z">
+<meta property="article:modified_time" content="2018-03-01T02:32:46.969Z">
+<meta property="article:author" content="winbug">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="stylus">
+<meta property="article:tag" content="学习Stylus">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习stylus【5】Stylue内置方法">
-<meta name="twitter:description" content="Stylue内置方法red(color)返回color中的红色比重1red(#c00)  =&amp;gt; 204 green(color)返回color中的绿色比重。1green(#c00)  =&amp;gt; 204 blue(color)返回color中的蓝色比重。1blue(#c00)  =&amp;gt; 204 alpha(color)返回color中的透明度比重12345alpha(#fff)// =&amp;">
+
+<link rel="canonical" href="http://www.l3f.win/2018/02/06/%E5%AD%A6%E4%B9%A0stylus%E3%80%905%E3%80%91/">
 
 
-
-
-
-
-  <link rel="canonical" href="http://www.l3f.win/2018/02/06/学习stylus【5】/"/>
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -138,71 +56,58 @@
 
 
 
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">L3F.WIN</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">Github及Hexo的使用</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">L3F.WIN</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Github及Hexo的使用</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
@@ -210,58 +115,20 @@
 
 
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-stylus中文文档">
-    <a href="/categories/Stylus中文文档/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-css3"></i> <br />Stylus中文文档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-微信小程序">
-    <a href="/categories/wechatminiapp/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-wechat"></i> <br />微信小程序</a>
-  </li>
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-      
-      
-    </ul>
-  
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
-  
-    
+  </li>
+        <li class="menu-item menu-item-archives">
 
-  
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
-  
+  </li>
+  </ul>
 </nav>
 
-
-
-  
 
 
 
@@ -269,131 +136,71 @@
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content post">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/06/学习stylus【5】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/06/%E5%AD%A6%E4%B9%A0stylus%E3%80%905%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">学习stylus【5】Stylue内置方法
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          学习stylus【5】Stylue内置方法
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-02-06 07:27:51" itemprop="dateCreated datePublished" datetime="2018-02-06T07:27:51+08:00">2018-02-06</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-03-01 10:32:46" itemprop="dateModified" datetime="2018-03-01T10:32:46+08:00">2018-03-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -401,392 +208,417 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+        <p><strong>Stylue内置方法</strong><br><em>red(color)</em><br>返回color中的红色比重</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">red(<span class="comment">#c00)  =&gt; 204</span></span><br></pre></td></tr></table></figure>
 
-      
-        <p><strong>Stylue内置方法</strong><br><em>red(color)</em><br>返回color中的红色比重<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">red(<span class="comment">#c00)  =&gt; 204</span></span><br></pre></td></tr></table></figure></p>
-<p><em>green(color)</em><br>返回color中的绿色比重。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">green(<span class="comment">#c00)  =&gt; 204</span></span><br></pre></td></tr></table></figure></p>
-<p><em>blue(color)</em><br>返回color中的蓝色比重。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blue(<span class="comment">#c00)  =&gt; 204</span></span><br></pre></td></tr></table></figure></p>
-<p><em>alpha(color)</em><br>返回color中的透明度比重<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alpha(<span class="comment">#fff)</span></span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">alpha(rgba(0,0,0,0.3))</span><br><span class="line">// =&gt; 0.3</span><br></pre></td></tr></table></figure></p>
-<p><em>dark(color)</em><br>检查color是否是暗色。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dark(black)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">dark(<span class="comment">#005716)</span></span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">dark(white)</span><br><span class="line">// =&gt; <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
+<p><em>green(color)</em><br>返回color中的绿色比重。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">green(<span class="comment">#c00)  =&gt; 204</span></span><br></pre></td></tr></table></figure>
+
+<p><em>blue(color)</em><br>返回color中的蓝色比重。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blue(<span class="comment">#c00)  =&gt; 204</span></span><br></pre></td></tr></table></figure>
+
+<p><em>alpha(color)</em><br>返回color中的透明度比重</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alpha(<span class="comment">#fff)</span></span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">alpha(rgba(0,0,0,0.3))</span><br><span class="line">// =&gt; 0.3</span><br></pre></td></tr></table></figure>
+
+<p><em>dark(color)</em><br>检查color是否是暗色。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dark(black)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">dark(<span class="comment">#005716)</span></span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">dark(white)</span><br><span class="line">// =&gt; <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p><em>light(color)</em><br>检查color是否是亮色。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">light(black)</span><br><span class="line">// =&gt; <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">light(white)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">light(<span class="comment">#00FF40)</span></span><br><span class="line">// =&gt; <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<p><em>hue(color)</em><br>返回给定color的色调。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hue(hsla(50deg, 100%, 80%))</span><br><span class="line">// =&gt; 50deg</span><br></pre></td></tr></table></figure></p>
-<p><em>saturation(color)</em><br>返回给定color的饱和度。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">saturation(hsla(50deg, 100%, 80%))</span><br><span class="line">// =&gt; 100%</span><br></pre></td></tr></table></figure></p>
-<p><em>lightness(color)</em><br>返回给定color的亮度。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lightness(hsla(50deg, 100%, 80%))</span><br><span class="line">// =&gt; 80%</span><br></pre></td></tr></table></figure></p>
-<p><em>push(expr, args…)</em><br>后面推送给定的args给expr.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nums = 1 2</span><br><span class="line">push(nums, 3, 4, 5)</span><br><span class="line"></span><br><span class="line">nums</span><br><span class="line">// =&gt; 1 2 3 4 5</span><br><span class="line">别名为append().</span><br></pre></td></tr></table></figure></p>
-<p><em>pop(expr)</em><br>从表达式的尾部抽取第一个值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nums = 4 5 3 2 1</span><br><span class="line">num = pop(nums)</span><br><span class="line"></span><br><span class="line">nums</span><br><span class="line">// =&gt; 4 5 3 2</span><br><span class="line">num</span><br><span class="line">// =&gt; 1</span><br></pre></td></tr></table></figure></p>
-<p><em>shift(expr)</em><br>从表达式的前部抽取第一个值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nums = 4 5 3 2 1</span><br><span class="line">num = <span class="built_in">shift</span>(nums)</span><br><span class="line"></span><br><span class="line">nums</span><br><span class="line">// =&gt; 5 3 2 1</span><br><span class="line">num</span><br><span class="line">// =&gt; 4</span><br></pre></td></tr></table></figure></p>
-<p><em>unshift(expr, args…)</em><br>起始位置插入给定的args给expr.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nums = 4 5</span><br><span class="line">unshift(nums, 3, 2, 1)</span><br><span class="line"></span><br><span class="line">nums</span><br><span class="line">// =&gt; 1 2 3 4 5</span><br><span class="line">别名为prepend().</span><br></pre></td></tr></table></figure></p>
-<p><em>index(list, value)</em><br>返回列表中值的索引（从零开始）。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list = 1 2 3</span><br><span class="line"></span><br><span class="line">index(list, 2)</span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">index(1px solid red, red)</span><br><span class="line">// =&gt; 2</span><br></pre></td></tr></table></figure></p>
-<p><em>keys(pairs)</em><br>返回给定pairs中的键。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pairs = (one 1) (two 2) (three 3)</span><br><span class="line">keys(pairs)</span><br><span class="line">// =&gt; one two three</span><br></pre></td></tr></table></figure></p>
-<p><em>values(pairs)</em><br>返回给定pairs中的值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pairs = (one 1) (two 2) (three 3)</span><br><span class="line">values(pairs)</span><br><span class="line">// =&gt; 1 2 3</span><br></pre></td></tr></table></figure></p>
-<p><em>list-separator(list)</em><br>返回给定列表的分隔符。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list1 = a b c</span><br><span class="line"> list-separator(list1)</span><br><span class="line"> // =&gt; <span class="string">' '</span></span><br><span class="line"></span><br><span class="line"> list2 = a, b, c</span><br><span class="line"> list-separator(list2)</span><br><span class="line"> // =&gt; <span class="string">','</span></span><br></pre></td></tr></table></figure></p>
-<p><em>typeof(node)</em><br>字符串形式返回node类型。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>(12)</span><br><span class="line">// =&gt; <span class="string">'unit'</span></span><br><span class="line"></span><br><span class="line">typeof(12)</span><br><span class="line">// =&gt; <span class="string">'unit'</span></span><br><span class="line"></span><br><span class="line">typeof(<span class="comment">#fff)</span></span><br><span class="line">// =&gt; <span class="string">'rgba'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">type</span>-of(<span class="comment">#fff)</span></span><br><span class="line">// =&gt; <span class="string">'rgba'</span></span><br><span class="line">别名有<span class="built_in">type</span>-of和<span class="built_in">type</span>.</span><br></pre></td></tr></table></figure></p>
-<p><em>unit(unit[, type])</em><br>返回unit类型的字符串或空字符串，或者赋予type值而无需单位转换。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">unit(10)</span><br><span class="line">// =&gt; <span class="string">''</span></span><br><span class="line"></span><br><span class="line">unit(15in)</span><br><span class="line">// =&gt; <span class="string">'in'</span></span><br><span class="line"></span><br><span class="line">unit(15%, <span class="string">'px'</span>)</span><br><span class="line">// =&gt; 15px</span><br><span class="line"></span><br><span class="line">unit(15%, px)</span><br><span class="line">// =&gt; 15px</span><br></pre></td></tr></table></figure></p>
-<p><em>percentage(num)</em><br>将数字转换为百分比。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">percentage(.5)</span><br><span class="line">// =&gt; 50%</span><br><span class="line"></span><br><span class="line">percentage(4 / 100)</span><br><span class="line">// =&gt; 4%</span><br></pre></td></tr></table></figure></p>
-<p><em>match(pattern, string)</em><br>检测string是否匹配给定的pattern.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">match(<span class="string">'^foo(bar)?'</span>, foo)</span><br><span class="line">match(<span class="string">'^foo(bar)?'</span>, foobar)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">match(<span class="string">'^foo(bar)?'</span>, <span class="string">'foo'</span>)</span><br><span class="line">match(<span class="string">'^foo(bar)?'</span>, <span class="string">'foobar'</span>)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">match(<span class="string">'^foo(bar)?'</span>, <span class="string">'bar'</span>)</span><br><span class="line">// =&gt; <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
-<p><em>abs(unit)</em><br>绝对值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">abs(-5px)</span><br><span class="line">// =&gt; 5px</span><br><span class="line"></span><br><span class="line">abs(5px)</span><br><span class="line">// =&gt; 5px</span><br></pre></td></tr></table></figure></p>
-<p><em>ceil(unit)</em><br>向上取整。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ceil(5.5in)</span><br><span class="line">// =&gt; 6in</span><br></pre></td></tr></table></figure></p>
-<p><em>floor(unit)</em><br>向下取整。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">floor(5.6px)</span><br><span class="line">// =&gt; 5px</span><br></pre></td></tr></table></figure></p>
-<p><em>round(unit)</em><br>四舍五入取整。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">round(5.5px)</span><br><span class="line">// =&gt; 6px</span><br><span class="line"></span><br><span class="line">round(5.4px)</span><br><span class="line">// =&gt; 5px</span><br></pre></td></tr></table></figure></p>
-<p><em>sin(angle)</em><br>返回给定角度的正弦值。 如果角度以度为单位，如45度，则视为度数，否则视为弧度。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sin(30deg)</span><br><span class="line">// =&gt; 0.5</span><br><span class="line"></span><br><span class="line">sin(3*PI/4)</span><br><span class="line">// =&gt; 0.707106781</span><br></pre></td></tr></table></figure></p>
-<p><em>cos(angle)</em><br>返回给定角度的余弦值。 如果角度以度为单位，如45度，则视为度数，否则视为弧度。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cos(180deg)</span><br><span class="line">// =&gt; -1</span><br></pre></td></tr></table></figure></p>
-<p><em>tan(angle)</em><br>返回给定角度的切线值。 如果角度以度为单位，如45度，则视为度数，否则视为弧度。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tan(45deg)</span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">tan(90deg)</span><br><span class="line">// =&gt; Infinity</span><br></pre></td></tr></table></figure></p>
-<p><em>min(a, b)</em><br>取较小值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">min(1, 5)</span><br><span class="line">// =&gt; 1</span><br></pre></td></tr></table></figure></p>
-<p><em>max(a, b)</em><br>取较大值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">max(1, 5)</span><br><span class="line">// =&gt; 5</span><br></pre></td></tr></table></figure></p>
-<p><em>even(unit)</em><br>是否为偶数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">even(6px)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<p><em>odd(unit)</em><br>是否为奇数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">odd(5mm)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<p><em>sum(nums)</em><br>求和。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sum(1 2 3)</span><br><span class="line">// =&gt; 6</span><br></pre></td></tr></table></figure></p>
-<p><em>avg(nums)</em><br>求平均数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">avg(1 2 3)</span><br><span class="line">// =&gt; 2</span><br></pre></td></tr></table></figure></p>
-<p><em>range(start, stop[, step])</em><br>按给定步骤返回从开始到结束（包含）的单位列表。 如果step参数省略，则默认为1.该步骤不能为零。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">range(1, 6)</span><br><span class="line">// equals to `1..6`</span><br><span class="line">// 1 2 3 4 5 6</span><br><span class="line"></span><br><span class="line">range(1, 6, 2)</span><br><span class="line">// 1 3 5</span><br><span class="line"></span><br><span class="line">range(-6, -1, 2)</span><br><span class="line">// -6 -4 -2</span><br><span class="line"></span><br><span class="line">range(1px, 3px, 0.5px)</span><br><span class="line">// 1px 1.5px 2px 2.5px 3px</span><br></pre></td></tr></table></figure></p>
-<p>它经常用于for循环：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(10px, 50px, 10)</span><br><span class="line">  .col-&#123;i&#125;</span><br><span class="line">    width: i</span><br><span class="line">=&gt;</span><br><span class="line">.col-10 &#123;</span><br><span class="line">  width: 10px;</span><br><span class="line">&#125;</span><br><span class="line">.col-20 &#123;</span><br><span class="line">  width: 20px;</span><br><span class="line">&#125;</span><br><span class="line">.col-30 &#123;</span><br><span class="line">  width: 30px;</span><br><span class="line">&#125;</span><br><span class="line">.col-40 &#123;</span><br><span class="line">  width: 40px;</span><br><span class="line">&#125;</span><br><span class="line">.col-50 &#123;</span><br><span class="line">  width: 50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><em>base-convert(num, base, width)</em><br>将num转为相应进制（base）的结果，用零填充宽度（默认宽度为2）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">base-convert(1, 10, 3)</span><br><span class="line">// =&gt; 001</span><br><span class="line"></span><br><span class="line">base-convert(14, 16, 1)</span><br><span class="line">// =&gt; e</span><br><span class="line"></span><br><span class="line">base-convert(42, 2)</span><br><span class="line">// =&gt; 101010</span><br></pre></td></tr></table></figure></p>
-<p><em>replace(pattern, replacement, val)</em><br>返回被replacement替换过pattern部分的val结果，说白了就是替换。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">replace(i, e, <span class="string">'griin'</span>)</span><br><span class="line">// =&gt; <span class="string">'green'</span></span><br><span class="line"></span><br><span class="line">replace(i, e, griin)</span><br><span class="line">// =&gt; <span class="comment">#008000</span></span><br></pre></td></tr></table></figure></p>
-<p><em>join(delim, vals…)</em><br>给定vals使用delim连接。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">join(<span class="string">' '</span>, 1 2 3)</span><br><span class="line">// =&gt; <span class="string">"1 2 3"</span></span><br><span class="line"></span><br><span class="line">join(<span class="string">','</span>, 1 2 3)</span><br><span class="line">// =&gt; <span class="string">"1,2,3"</span></span><br><span class="line"></span><br><span class="line">join(<span class="string">', '</span>, foo bar baz)</span><br><span class="line">// =&gt; <span class="string">"foo, bar, baz"</span></span><br><span class="line"></span><br><span class="line">join(<span class="string">', '</span>, foo, bar, baz)</span><br><span class="line">// =&gt; <span class="string">"foo, bar, baz"</span></span><br><span class="line"></span><br><span class="line">join(<span class="string">', '</span>, 1 2, 3 4, 5 6)</span><br><span class="line">// =&gt; <span class="string">"1 2, 3 4, 5 6"</span></span><br></pre></td></tr></table></figure></p>
-<p><em>split(delim, val)</em><br>通过将字符串分隔为子串来将字符串/标识分解为字符串数组。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">split(_, bar1_bar2_bar3)</span><br><span class="line">// =&gt; bar1 bar2 bar3</span><br><span class="line"></span><br><span class="line">split(_, <span class="string">'bar1_bar2_bar3'</span>)</span><br><span class="line">// =&gt; <span class="string">'bar1'</span> <span class="string">'bar2'</span> <span class="string">'bar3'</span></span><br></pre></td></tr></table></figure></p>
-<p><em>substr(val, start, length)</em><br>返回从指定位置开始的指定字符数的字符串。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">substr(ident, 1, 2)</span><br><span class="line">// =&gt; de</span><br><span class="line"></span><br><span class="line">substr(<span class="string">'string'</span>, 1, 2)</span><br><span class="line">// =&gt; <span class="string">'tr'</span></span><br><span class="line"></span><br><span class="line">val = dredd</span><br><span class="line">substr(substr(val, 1), 0, 3)</span><br><span class="line">// =&gt; <span class="comment">#f00</span></span><br></pre></td></tr></table></figure></p>
-<p><em>slice(val, start[, end])</em><br>提取一个字符串/列表的一部分，并返回一个新的字符串/列表。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slice(‘lorem’ ‘ipsum’ ‘dolor’, 1, 2) slice(‘lorem’ ‘ipsum’ ‘dolor’, 1, -1) // =&gt; ‘ipsum’</span><br><span class="line">slice(‘lorem ipsum’, 1, 5) // =&gt; ‘orem’ slice(rredd, 1, -1) // =&gt; <span class="comment">#f00</span></span><br><span class="line">slice(1px solid black, 1) // =&gt; solid <span class="comment">#000</span></span><br></pre></td></tr></table></figure></p>
-<p><em>hsla(color | h,s,l,a)</em><br>转换给定color为HSLA节点，或h,s,l,a比重值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hsla(10deg, 50%, 30%, 0.5)</span><br><span class="line">// =&gt; HSLA</span><br><span class="line"></span><br><span class="line">hsla(<span class="comment">#ffcc00)</span></span><br><span class="line">// =&gt; HSLA</span><br></pre></td></tr></table></figure></p>
-<p><em>hsl(color | h,s,l)</em><br>转换给定color为HSLA节点，或h,s,l比重值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hsla(10, 50, 30)</span><br><span class="line">// =&gt; HSLA</span><br><span class="line"></span><br><span class="line">hsla(<span class="comment">#ffcc00)</span></span><br><span class="line">// =&gt; HSLA</span><br></pre></td></tr></table></figure></p>
-<p><em>rgba(color | r,g,b,a)</em><br>从r,g,b,a通道返回RGBA, 或提供color来调整透明度。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">rgba(255,0,0,0.5)</span><br><span class="line">// =&gt; rgba(255,0,0,0.5)</span><br><span class="line"></span><br><span class="line">rgba(255,0,0,1)</span><br><span class="line">// =&gt; <span class="comment">#ff0000</span></span><br><span class="line"></span><br><span class="line">rgba(<span class="comment">#ffcc00, 0.5)</span></span><br><span class="line">// rgba(255,204,0,0.5)</span><br><span class="line">另外，stylus支持<span class="comment">#rgba以及#rrggbbaa符号。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#fc08</span></span><br><span class="line">// =&gt; rgba(255,204,0,0.5)</span><br><span class="line"></span><br><span class="line"><span class="comment">#ffcc00ee</span></span><br><span class="line">// =&gt; rgba(255,204,0,0.9)</span><br></pre></td></tr></table></figure></p>
-<p><em>rgb(color | r,g,b)</em><br>从r,g,b通道返回RGBA或生成一个RGBA节点。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rgb(255,204,0)</span><br><span class="line">// =&gt; <span class="comment">#ffcc00</span></span><br><span class="line"></span><br><span class="line">rgb(<span class="comment">#fff)</span></span><br><span class="line">// =&gt; <span class="comment">#fff</span></span><br></pre></td></tr></table></figure></p>
-<p><em>blend(top[, bottom])</em><br>使用正常混合将给定的顶部颜色混合在底部颜色上。 底部参数是可选的，默认为#fff。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">blend(rgba(<span class="comment">#FFF, 0.5), #000)</span></span><br><span class="line">// =&gt; <span class="comment">#808080</span></span><br><span class="line"></span><br><span class="line">blend(rgba(<span class="comment">#FFDE00,.42), #19C261)</span></span><br><span class="line">// =&gt; <span class="comment">#7ace38</span></span><br><span class="line"></span><br><span class="line">blend(rgba(lime, 0.5), rgba(red, 0.25))</span><br><span class="line">// =&gt; rgba(128,128,0,0.625)</span><br></pre></td></tr></table></figure></p>
-<p><em>lighten(color, amount)</em><br>给定color增亮amount值。该方法单位敏感，例如，支持百分比，如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lighten(<span class="comment">#2c2c2c, 30)</span></span><br><span class="line">// =&gt; <span class="comment">#787878</span></span><br><span class="line"></span><br><span class="line">lighten(<span class="comment">#2c2c2c, 30%)</span></span><br><span class="line">// =&gt; <span class="comment">#393939</span></span><br></pre></td></tr></table></figure></p>
-<p><em>darken(color, amount)</em><br>给定color变暗amount值。该方法单位敏感，例如，支持百分比，如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">darken(<span class="comment">#D62828, 30)</span></span><br><span class="line">// =&gt; <span class="comment">#551010</span></span><br><span class="line"></span><br><span class="line">darken(<span class="comment">#D62828, 30%)</span></span><br><span class="line">// =&gt; <span class="comment">#961c1c</span></span><br></pre></td></tr></table></figure></p>
-<p><em>desaturate(color, amount)</em><br>给定color饱和度减小amount.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">desaturate(<span class="comment">#f00, 40%)</span></span><br><span class="line">// =&gt; <span class="comment">#c33</span></span><br></pre></td></tr></table></figure></p>
-<p><em>saturate(color, amount)</em><br>给定color饱和度增加amount.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">saturate(<span class="comment">#c33, 40%)</span></span><br><span class="line">// =&gt; <span class="comment">#f00</span></span><br></pre></td></tr></table></figure></p>
-<p><em>complement(color)</em><br>补色。 等于旋转色调180度。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">complement(<span class="comment">#fd0cc7)</span></span><br><span class="line">// =&gt; <span class="comment">#0cfd42</span></span><br></pre></td></tr></table></figure></p>
-<p><em>invert(color)</em><br>颜色反相。红绿蓝颜色反转，透明度不变。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">invert(<span class="comment">#d62828)</span></span><br><span class="line">// =&gt; <span class="comment">#29d7d7</span></span><br></pre></td></tr></table></figure></p>
-<p><em>spin(color, amount)</em><br>以角度旋转给定颜色的色调。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">spin(<span class="comment">#ff0000, 90deg)</span></span><br><span class="line">// =&gt; <span class="comment">#80ff00</span></span><br></pre></td></tr></table></figure></p>
-<p><em>grayscale(color)</em><br>给出给定颜色的灰度等价颜色。 相当于100％去饱和。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grayscale(<span class="comment">#fd0cc7)</span></span><br><span class="line">// =&gt; <span class="comment">#0cfd42</span></span><br></pre></td></tr></table></figure></p>
-<p><em>mix(color1, color2[, amount])</em><br>按给定量混合两种颜色。参数都是可选的，默认为50％。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mix(<span class="comment">#000, #fff, 30%)</span></span><br><span class="line">// =&gt; <span class="comment">#b2b2b2</span></span><br></pre></td></tr></table></figure></p>
-<p><em>tint(color, amount)</em><br>将给定的颜色与白色混合。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tint(<span class="comment">#fd0cc7,66%)</span></span><br><span class="line">// =&gt; <span class="comment">#feaceb</span></span><br></pre></td></tr></table></figure></p>
-<p><em>shade(color, amount)</em><br>将给定的颜色与黑色混合。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">shade(<span class="comment">#fd0cc7,66%)</span></span><br><span class="line">// =&gt; <span class="comment">#560443</span></span><br></pre></td></tr></table></figure></p>
-<p><em>luminosity(color)</em><br>返回给定颜色的相对亮度。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">luminosity(white)</span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">luminosity(<span class="comment">#000)</span></span><br><span class="line">// =&gt; 0</span><br><span class="line"></span><br><span class="line">luminosity(red)</span><br><span class="line">// =&gt; 0.2126</span><br></pre></td></tr></table></figure></p>
-<p><em>contrast(top[, bottom])</em><br>基于Lea Verou提供的基于“对比度”工具的脚本，返回顶部和底部颜色之间的对比度比率对象。<br>第二个参数是可选的，默认为#fff。<br>返回对象中的主键是比例，它的最小值和最大值与底部颜色透明时的比例不同。 在这种情况下，错误也包含一个错误余量。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">contrast(<span class="comment">#000, #fff).ratio</span></span><br><span class="line">=&gt; 21</span><br><span class="line">contrast(<span class="comment">#000, rgba(#FFF, 0.5))</span></span><br><span class="line">=&gt; &#123; <span class="string">"ratio"</span>: <span class="string">"13.15;"</span>, <span class="string">"error"</span>: <span class="string">"-7.85"</span>, <span class="string">"min"</span>: <span class="string">"5.3"</span>, <span class="string">"max"</span>: <span class="string">"21"</span> &#125;</span><br></pre></td></tr></table></figure></p>
-<p><em>transparentify(top[, bottom, alpha])</em><br>返回给定顶部颜色的透明版本，就好像它是在给定的底部颜色上混合（或者最接近它，如果可能的话）。<br>第二个参数是可选的，默认为#fff。<br>第三个参数是可选的，并覆盖自动检测的alpha。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">transparentify(<span class="comment">#808080)</span></span><br><span class="line">=&gt; rgba(0,0,0,0.5)</span><br><span class="line"></span><br><span class="line">transparentify(<span class="comment">#414141, #000)</span></span><br><span class="line">=&gt; rgba(255,255,255,0.25)</span><br><span class="line"></span><br><span class="line">transparentify(<span class="comment">#91974C, #F34949, 0.5)</span></span><br><span class="line">=&gt; rgba(47,229,79,0.5)</span><br></pre></td></tr></table></figure></p>
-<p><em>unquote(str | ident)</em><br>给定str引号去除，返回Literal节点。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">unquote(<span class="string">"sans-serif"</span>)</span><br><span class="line">// =&gt; sans-serif</span><br><span class="line"></span><br><span class="line">unquote(sans-serif)</span><br><span class="line">// =&gt; sans-serif</span><br><span class="line"></span><br><span class="line">unquote(<span class="string">'1px / 2px'</span>)</span><br><span class="line">// =&gt; 1px / 2px</span><br></pre></td></tr></table></figure></p>
-<p><em>convert(str)</em><br>像unquote()，但尝试将给定的内容转换为Stylus节点。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">unit = convert(<span class="string">'40px'</span>)</span><br><span class="line">typeof(unit)</span><br><span class="line">// =&gt; <span class="string">'unit'</span></span><br><span class="line"></span><br><span class="line">color = convert(<span class="string">'#fff'</span>)</span><br><span class="line">typeof(color)</span><br><span class="line">// =&gt; <span class="string">'rgba'</span></span><br><span class="line"></span><br><span class="line">foo = convert(<span class="string">'foo'</span>)</span><br><span class="line">typeof(foo)</span><br><span class="line">// =&gt; <span class="string">'ident'</span></span><br></pre></td></tr></table></figure></p>
-<p>s(fmt, …)<br>s()方法类似于unquote()，不过后者返回的是Literal节点，而这里起接受一个格式化的字符串，非常像C语言的sprintf(). 目前，唯一标识符是%s.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">s(<span class="string">'bar()'</span>);</span><br><span class="line">// =&gt; bar()</span><br><span class="line"></span><br><span class="line">s(<span class="string">'bar(%s)'</span>, <span class="string">'baz'</span>);</span><br><span class="line">// =&gt; bar(<span class="string">"baz"</span>)</span><br><span class="line"></span><br><span class="line">s(<span class="string">'bar(%s)'</span>, baz);</span><br><span class="line">// =&gt; bar(baz)</span><br><span class="line"></span><br><span class="line">s(<span class="string">'bar(%s)'</span>, 15px);</span><br><span class="line">// =&gt; bar(15px)</span><br><span class="line"></span><br><span class="line">s(<span class="string">'rgba(%s, %s, %s, 0.5)'</span>, 255, 100, 50);</span><br><span class="line">// =&gt; rgba(255, 100, 50, 0.5)</span><br><span class="line"></span><br><span class="line">s(<span class="string">'bar(%Z)'</span>, 15px);</span><br><span class="line">// =&gt; bar(%Z)</span><br><span class="line"></span><br><span class="line">s(<span class="string">'bar(%s, %s)'</span>, 15px);</span><br><span class="line">// =&gt; bar(15px, null)</span><br></pre></td></tr></table></figure></p>
+
+<p><em>light(color)</em><br>检查color是否是亮色。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">light(black)</span><br><span class="line">// =&gt; <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">light(white)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">light(<span class="comment">#00FF40)</span></span><br><span class="line">// =&gt; <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p><em>hue(color)</em><br>返回给定color的色调。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hue(hsla(50deg, 100%, 80%))</span><br><span class="line">// =&gt; 50deg</span><br></pre></td></tr></table></figure>
+
+<p><em>saturation(color)</em><br>返回给定color的饱和度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">saturation(hsla(50deg, 100%, 80%))</span><br><span class="line">// =&gt; 100%</span><br></pre></td></tr></table></figure>
+
+<p><em>lightness(color)</em><br>返回给定color的亮度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lightness(hsla(50deg, 100%, 80%))</span><br><span class="line">// =&gt; 80%</span><br></pre></td></tr></table></figure>
+
+<p><em>push(expr, args…)</em><br>后面推送给定的args给expr.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nums = 1 2</span><br><span class="line">push(nums, 3, 4, 5)</span><br><span class="line"></span><br><span class="line">nums</span><br><span class="line">// =&gt; 1 2 3 4 5</span><br><span class="line">别名为append().</span><br></pre></td></tr></table></figure>
+
+<p><em>pop(expr)</em><br>从表达式的尾部抽取第一个值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nums = 4 5 3 2 1</span><br><span class="line">num = pop(nums)</span><br><span class="line"></span><br><span class="line">nums</span><br><span class="line">// =&gt; 4 5 3 2</span><br><span class="line">num</span><br><span class="line">// =&gt; 1</span><br></pre></td></tr></table></figure>
+
+<p><em>shift(expr)</em><br>从表达式的前部抽取第一个值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nums = 4 5 3 2 1</span><br><span class="line">num = <span class="built_in">shift</span>(nums)</span><br><span class="line"></span><br><span class="line">nums</span><br><span class="line">// =&gt; 5 3 2 1</span><br><span class="line">num</span><br><span class="line">// =&gt; 4</span><br></pre></td></tr></table></figure>
+
+<p><em>unshift(expr, args…)</em><br>起始位置插入给定的args给expr.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nums = 4 5</span><br><span class="line">unshift(nums, 3, 2, 1)</span><br><span class="line"></span><br><span class="line">nums</span><br><span class="line">// =&gt; 1 2 3 4 5</span><br><span class="line">别名为prepend().</span><br></pre></td></tr></table></figure>
+
+<p><em>index(list, value)</em><br>返回列表中值的索引（从零开始）。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list = 1 2 3</span><br><span class="line"></span><br><span class="line">index(list, 2)</span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">index(1px solid red, red)</span><br><span class="line">// =&gt; 2</span><br></pre></td></tr></table></figure>
+
+<p><em>keys(pairs)</em><br>返回给定pairs中的键。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pairs = (one 1) (two 2) (three 3)</span><br><span class="line">keys(pairs)</span><br><span class="line">// =&gt; one two three</span><br></pre></td></tr></table></figure>
+
+<p><em>values(pairs)</em><br>返回给定pairs中的值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pairs = (one 1) (two 2) (three 3)</span><br><span class="line">values(pairs)</span><br><span class="line">// =&gt; 1 2 3</span><br></pre></td></tr></table></figure>
+
+<p><em>list-separator(list)</em><br>返回给定列表的分隔符。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list1 = a b c</span><br><span class="line"> list-separator(list1)</span><br><span class="line"> // =&gt; <span class="string">' '</span></span><br><span class="line"></span><br><span class="line"> list2 = a, b, c</span><br><span class="line"> list-separator(list2)</span><br><span class="line"> // =&gt; <span class="string">','</span></span><br></pre></td></tr></table></figure>
+
+<p><em>typeof(node)</em><br>字符串形式返回node类型。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>(12)</span><br><span class="line">// =&gt; <span class="string">'unit'</span></span><br><span class="line"></span><br><span class="line">typeof(12)</span><br><span class="line">// =&gt; <span class="string">'unit'</span></span><br><span class="line"></span><br><span class="line">typeof(<span class="comment">#fff)</span></span><br><span class="line">// =&gt; <span class="string">'rgba'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">type</span>-of(<span class="comment">#fff)</span></span><br><span class="line">// =&gt; <span class="string">'rgba'</span></span><br><span class="line">别名有<span class="built_in">type</span>-of和<span class="built_in">type</span>.</span><br></pre></td></tr></table></figure>
+
+<p><em>unit(unit[, type])</em><br>返回unit类型的字符串或空字符串，或者赋予type值而无需单位转换。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">unit(10)</span><br><span class="line">// =&gt; <span class="string">''</span></span><br><span class="line"></span><br><span class="line">unit(15in)</span><br><span class="line">// =&gt; <span class="string">'in'</span></span><br><span class="line"></span><br><span class="line">unit(15%, <span class="string">'px'</span>)</span><br><span class="line">// =&gt; 15px</span><br><span class="line"></span><br><span class="line">unit(15%, px)</span><br><span class="line">// =&gt; 15px</span><br></pre></td></tr></table></figure>
+
+<p><em>percentage(num)</em><br>将数字转换为百分比。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">percentage(.5)</span><br><span class="line">// =&gt; 50%</span><br><span class="line"></span><br><span class="line">percentage(4 / 100)</span><br><span class="line">// =&gt; 4%</span><br></pre></td></tr></table></figure>
+
+<p><em>match(pattern, string)</em><br>检测string是否匹配给定的pattern.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">match(<span class="string">'^foo(bar)?'</span>, foo)</span><br><span class="line">match(<span class="string">'^foo(bar)?'</span>, foobar)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">match(<span class="string">'^foo(bar)?'</span>, <span class="string">'foo'</span>)</span><br><span class="line">match(<span class="string">'^foo(bar)?'</span>, <span class="string">'foobar'</span>)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">match(<span class="string">'^foo(bar)?'</span>, <span class="string">'bar'</span>)</span><br><span class="line">// =&gt; <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p><em>abs(unit)</em><br>绝对值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">abs(-5px)</span><br><span class="line">// =&gt; 5px</span><br><span class="line"></span><br><span class="line">abs(5px)</span><br><span class="line">// =&gt; 5px</span><br></pre></td></tr></table></figure>
+
+<p><em>ceil(unit)</em><br>向上取整。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ceil(5.5in)</span><br><span class="line">// =&gt; 6in</span><br></pre></td></tr></table></figure>
+
+<p><em>floor(unit)</em><br>向下取整。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">floor(5.6px)</span><br><span class="line">// =&gt; 5px</span><br></pre></td></tr></table></figure>
+
+<p><em>round(unit)</em><br>四舍五入取整。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">round(5.5px)</span><br><span class="line">// =&gt; 6px</span><br><span class="line"></span><br><span class="line">round(5.4px)</span><br><span class="line">// =&gt; 5px</span><br></pre></td></tr></table></figure>
+
+<p><em>sin(angle)</em><br>返回给定角度的正弦值。 如果角度以度为单位，如45度，则视为度数，否则视为弧度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sin(30deg)</span><br><span class="line">// =&gt; 0.5</span><br><span class="line"></span><br><span class="line">sin(3*PI/4)</span><br><span class="line">// =&gt; 0.707106781</span><br></pre></td></tr></table></figure>
+
+<p><em>cos(angle)</em><br>返回给定角度的余弦值。 如果角度以度为单位，如45度，则视为度数，否则视为弧度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cos(180deg)</span><br><span class="line">// =&gt; -1</span><br></pre></td></tr></table></figure>
+
+<p><em>tan(angle)</em><br>返回给定角度的切线值。 如果角度以度为单位，如45度，则视为度数，否则视为弧度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tan(45deg)</span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">tan(90deg)</span><br><span class="line">// =&gt; Infinity</span><br></pre></td></tr></table></figure>
+
+<p><em>min(a, b)</em><br>取较小值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">min(1, 5)</span><br><span class="line">// =&gt; 1</span><br></pre></td></tr></table></figure>
+
+<p><em>max(a, b)</em><br>取较大值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">max(1, 5)</span><br><span class="line">// =&gt; 5</span><br></pre></td></tr></table></figure>
+
+<p><em>even(unit)</em><br>是否为偶数。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">even(6px)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p><em>odd(unit)</em><br>是否为奇数。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">odd(5mm)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p><em>sum(nums)</em><br>求和。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sum(1 2 3)</span><br><span class="line">// =&gt; 6</span><br></pre></td></tr></table></figure>
+
+<p><em>avg(nums)</em><br>求平均数。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">avg(1 2 3)</span><br><span class="line">// =&gt; 2</span><br></pre></td></tr></table></figure>
+
+<p><em>range(start, stop[, step])</em><br>按给定步骤返回从开始到结束（包含）的单位列表。 如果step参数省略，则默认为1.该步骤不能为零。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">range(1, 6)</span><br><span class="line">// equals to `1..6`</span><br><span class="line">// 1 2 3 4 5 6</span><br><span class="line"></span><br><span class="line">range(1, 6, 2)</span><br><span class="line">// 1 3 5</span><br><span class="line"></span><br><span class="line">range(-6, -1, 2)</span><br><span class="line">// -6 -4 -2</span><br><span class="line"></span><br><span class="line">range(1px, 3px, 0.5px)</span><br><span class="line">// 1px 1.5px 2px 2.5px 3px</span><br></pre></td></tr></table></figure>
+<p>它经常用于for循环：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(10px, 50px, 10)</span><br><span class="line">  .col-&#123;i&#125;</span><br><span class="line">    width: i</span><br><span class="line">=&gt;</span><br><span class="line">.col-10 &#123;</span><br><span class="line">  width: 10px;</span><br><span class="line">&#125;</span><br><span class="line">.col-20 &#123;</span><br><span class="line">  width: 20px;</span><br><span class="line">&#125;</span><br><span class="line">.col-30 &#123;</span><br><span class="line">  width: 30px;</span><br><span class="line">&#125;</span><br><span class="line">.col-40 &#123;</span><br><span class="line">  width: 40px;</span><br><span class="line">&#125;</span><br><span class="line">.col-50 &#123;</span><br><span class="line">  width: 50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>base-convert(num, base, width)</em><br>将num转为相应进制（base）的结果，用零填充宽度（默认宽度为2）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">base-convert(1, 10, 3)</span><br><span class="line">// =&gt; 001</span><br><span class="line"></span><br><span class="line">base-convert(14, 16, 1)</span><br><span class="line">// =&gt; e</span><br><span class="line"></span><br><span class="line">base-convert(42, 2)</span><br><span class="line">// =&gt; 101010</span><br></pre></td></tr></table></figure>
+
+<p><em>replace(pattern, replacement, val)</em><br>返回被replacement替换过pattern部分的val结果，说白了就是替换。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">replace(i, e, <span class="string">'griin'</span>)</span><br><span class="line">// =&gt; <span class="string">'green'</span></span><br><span class="line"></span><br><span class="line">replace(i, e, griin)</span><br><span class="line">// =&gt; <span class="comment">#008000</span></span><br></pre></td></tr></table></figure>
+
+<p><em>join(delim, vals…)</em><br>给定vals使用delim连接。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">join(<span class="string">' '</span>, 1 2 3)</span><br><span class="line">// =&gt; <span class="string">"1 2 3"</span></span><br><span class="line"></span><br><span class="line">join(<span class="string">','</span>, 1 2 3)</span><br><span class="line">// =&gt; <span class="string">"1,2,3"</span></span><br><span class="line"></span><br><span class="line">join(<span class="string">', '</span>, foo bar baz)</span><br><span class="line">// =&gt; <span class="string">"foo, bar, baz"</span></span><br><span class="line"></span><br><span class="line">join(<span class="string">', '</span>, foo, bar, baz)</span><br><span class="line">// =&gt; <span class="string">"foo, bar, baz"</span></span><br><span class="line"></span><br><span class="line">join(<span class="string">', '</span>, 1 2, 3 4, 5 6)</span><br><span class="line">// =&gt; <span class="string">"1 2, 3 4, 5 6"</span></span><br></pre></td></tr></table></figure>
+
+<p><em>split(delim, val)</em><br>通过将字符串分隔为子串来将字符串/标识分解为字符串数组。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">split(_, bar1_bar2_bar3)</span><br><span class="line">// =&gt; bar1 bar2 bar3</span><br><span class="line"></span><br><span class="line">split(_, <span class="string">'bar1_bar2_bar3'</span>)</span><br><span class="line">// =&gt; <span class="string">'bar1'</span> <span class="string">'bar2'</span> <span class="string">'bar3'</span></span><br></pre></td></tr></table></figure>
+
+<p><em>substr(val, start, length)</em><br>返回从指定位置开始的指定字符数的字符串。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">substr(ident, 1, 2)</span><br><span class="line">// =&gt; de</span><br><span class="line"></span><br><span class="line">substr(<span class="string">'string'</span>, 1, 2)</span><br><span class="line">// =&gt; <span class="string">'tr'</span></span><br><span class="line"></span><br><span class="line">val = dredd</span><br><span class="line">substr(substr(val, 1), 0, 3)</span><br><span class="line">// =&gt; <span class="comment">#f00</span></span><br></pre></td></tr></table></figure>
+
+<p><em>slice(val, start[, end])</em><br>提取一个字符串/列表的一部分，并返回一个新的字符串/列表。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slice(‘lorem’ ‘ipsum’ ‘dolor’, 1, 2) slice(‘lorem’ ‘ipsum’ ‘dolor’, 1, -1) // =&gt; ‘ipsum’</span><br><span class="line">slice(‘lorem ipsum’, 1, 5) // =&gt; ‘orem’ slice(rredd, 1, -1) // =&gt; <span class="comment">#f00</span></span><br><span class="line">slice(1px solid black, 1) // =&gt; solid <span class="comment">#000</span></span><br></pre></td></tr></table></figure>
+
+<p><em>hsla(color | h,s,l,a)</em><br>转换给定color为HSLA节点，或h,s,l,a比重值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hsla(10deg, 50%, 30%, 0.5)</span><br><span class="line">// =&gt; HSLA</span><br><span class="line"></span><br><span class="line">hsla(<span class="comment">#ffcc00)</span></span><br><span class="line">// =&gt; HSLA</span><br></pre></td></tr></table></figure>
+
+<p><em>hsl(color | h,s,l)</em><br>转换给定color为HSLA节点，或h,s,l比重值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hsla(10, 50, 30)</span><br><span class="line">// =&gt; HSLA</span><br><span class="line"></span><br><span class="line">hsla(<span class="comment">#ffcc00)</span></span><br><span class="line">// =&gt; HSLA</span><br></pre></td></tr></table></figure>
+
+<p><em>rgba(color | r,g,b,a)</em><br>从r,g,b,a通道返回RGBA, 或提供color来调整透明度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">rgba(255,0,0,0.5)</span><br><span class="line">// =&gt; rgba(255,0,0,0.5)</span><br><span class="line"></span><br><span class="line">rgba(255,0,0,1)</span><br><span class="line">// =&gt; <span class="comment">#ff0000</span></span><br><span class="line"></span><br><span class="line">rgba(<span class="comment">#ffcc00, 0.5)</span></span><br><span class="line">// rgba(255,204,0,0.5)</span><br><span class="line">另外，stylus支持<span class="comment">#rgba以及#rrggbbaa符号。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#fc08</span></span><br><span class="line">// =&gt; rgba(255,204,0,0.5)</span><br><span class="line"></span><br><span class="line"><span class="comment">#ffcc00ee</span></span><br><span class="line">// =&gt; rgba(255,204,0,0.9)</span><br></pre></td></tr></table></figure>
+
+<p><em>rgb(color | r,g,b)</em><br>从r,g,b通道返回RGBA或生成一个RGBA节点。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rgb(255,204,0)</span><br><span class="line">// =&gt; <span class="comment">#ffcc00</span></span><br><span class="line"></span><br><span class="line">rgb(<span class="comment">#fff)</span></span><br><span class="line">// =&gt; <span class="comment">#fff</span></span><br></pre></td></tr></table></figure>
+
+<p><em>blend(top[, bottom])</em><br>使用正常混合将给定的顶部颜色混合在底部颜色上。 底部参数是可选的，默认为#fff。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">blend(rgba(<span class="comment">#FFF, 0.5), #000)</span></span><br><span class="line">// =&gt; <span class="comment">#808080</span></span><br><span class="line"></span><br><span class="line">blend(rgba(<span class="comment">#FFDE00,.42), #19C261)</span></span><br><span class="line">// =&gt; <span class="comment">#7ace38</span></span><br><span class="line"></span><br><span class="line">blend(rgba(lime, 0.5), rgba(red, 0.25))</span><br><span class="line">// =&gt; rgba(128,128,0,0.625)</span><br></pre></td></tr></table></figure>
+
+<p><em>lighten(color, amount)</em><br>给定color增亮amount值。该方法单位敏感，例如，支持百分比，如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lighten(<span class="comment">#2c2c2c, 30)</span></span><br><span class="line">// =&gt; <span class="comment">#787878</span></span><br><span class="line"></span><br><span class="line">lighten(<span class="comment">#2c2c2c, 30%)</span></span><br><span class="line">// =&gt; <span class="comment">#393939</span></span><br></pre></td></tr></table></figure>
+
+<p><em>darken(color, amount)</em><br>给定color变暗amount值。该方法单位敏感，例如，支持百分比，如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">darken(<span class="comment">#D62828, 30)</span></span><br><span class="line">// =&gt; <span class="comment">#551010</span></span><br><span class="line"></span><br><span class="line">darken(<span class="comment">#D62828, 30%)</span></span><br><span class="line">// =&gt; <span class="comment">#961c1c</span></span><br></pre></td></tr></table></figure>
+
+<p><em>desaturate(color, amount)</em><br>给定color饱和度减小amount.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">desaturate(<span class="comment">#f00, 40%)</span></span><br><span class="line">// =&gt; <span class="comment">#c33</span></span><br></pre></td></tr></table></figure>
+<p><em>saturate(color, amount)</em><br>给定color饱和度增加amount.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">saturate(<span class="comment">#c33, 40%)</span></span><br><span class="line">// =&gt; <span class="comment">#f00</span></span><br></pre></td></tr></table></figure>
+
+<p><em>complement(color)</em><br>补色。 等于旋转色调180度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">complement(<span class="comment">#fd0cc7)</span></span><br><span class="line">// =&gt; <span class="comment">#0cfd42</span></span><br></pre></td></tr></table></figure>
+
+<p><em>invert(color)</em><br>颜色反相。红绿蓝颜色反转，透明度不变。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">invert(<span class="comment">#d62828)</span></span><br><span class="line">// =&gt; <span class="comment">#29d7d7</span></span><br></pre></td></tr></table></figure>
+
+<p><em>spin(color, amount)</em><br>以角度旋转给定颜色的色调。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">spin(<span class="comment">#ff0000, 90deg)</span></span><br><span class="line">// =&gt; <span class="comment">#80ff00</span></span><br></pre></td></tr></table></figure>
+
+<p><em>grayscale(color)</em><br>给出给定颜色的灰度等价颜色。 相当于100％去饱和。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grayscale(<span class="comment">#fd0cc7)</span></span><br><span class="line">// =&gt; <span class="comment">#0cfd42</span></span><br></pre></td></tr></table></figure>
+
+<p><em>mix(color1, color2[, amount])</em><br>按给定量混合两种颜色。参数都是可选的，默认为50％。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mix(<span class="comment">#000, #fff, 30%)</span></span><br><span class="line">// =&gt; <span class="comment">#b2b2b2</span></span><br></pre></td></tr></table></figure>
+
+<p><em>tint(color, amount)</em><br>将给定的颜色与白色混合。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tint(<span class="comment">#fd0cc7,66%)</span></span><br><span class="line">// =&gt; <span class="comment">#feaceb</span></span><br></pre></td></tr></table></figure>
+<p><em>shade(color, amount)</em><br>将给定的颜色与黑色混合。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">shade(<span class="comment">#fd0cc7,66%)</span></span><br><span class="line">// =&gt; <span class="comment">#560443</span></span><br></pre></td></tr></table></figure>
+
+<p><em>luminosity(color)</em><br>返回给定颜色的相对亮度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">luminosity(white)</span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">luminosity(<span class="comment">#000)</span></span><br><span class="line">// =&gt; 0</span><br><span class="line"></span><br><span class="line">luminosity(red)</span><br><span class="line">// =&gt; 0.2126</span><br></pre></td></tr></table></figure>
+
+<p><em>contrast(top[, bottom])</em><br>基于Lea Verou提供的基于“对比度”工具的脚本，返回顶部和底部颜色之间的对比度比率对象。<br>第二个参数是可选的，默认为#fff。<br>返回对象中的主键是比例，它的最小值和最大值与底部颜色透明时的比例不同。 在这种情况下，错误也包含一个错误余量。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">contrast(<span class="comment">#000, #fff).ratio</span></span><br><span class="line">=&gt; 21</span><br><span class="line">contrast(<span class="comment">#000, rgba(#FFF, 0.5))</span></span><br><span class="line">=&gt; &#123; <span class="string">"ratio"</span>: <span class="string">"13.15;"</span>, <span class="string">"error"</span>: <span class="string">"-7.85"</span>, <span class="string">"min"</span>: <span class="string">"5.3"</span>, <span class="string">"max"</span>: <span class="string">"21"</span> &#125;</span><br></pre></td></tr></table></figure>
+<p><em>transparentify(top[, bottom, alpha])</em><br>返回给定顶部颜色的透明版本，就好像它是在给定的底部颜色上混合（或者最接近它，如果可能的话）。<br>第二个参数是可选的，默认为#fff。<br>第三个参数是可选的，并覆盖自动检测的alpha。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">transparentify(<span class="comment">#808080)</span></span><br><span class="line">=&gt; rgba(0,0,0,0.5)</span><br><span class="line"></span><br><span class="line">transparentify(<span class="comment">#414141, #000)</span></span><br><span class="line">=&gt; rgba(255,255,255,0.25)</span><br><span class="line"></span><br><span class="line">transparentify(<span class="comment">#91974C, #F34949, 0.5)</span></span><br><span class="line">=&gt; rgba(47,229,79,0.5)</span><br></pre></td></tr></table></figure>
+
+<p><em>unquote(str | ident)</em><br>给定str引号去除，返回Literal节点。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">unquote(<span class="string">"sans-serif"</span>)</span><br><span class="line">// =&gt; sans-serif</span><br><span class="line"></span><br><span class="line">unquote(sans-serif)</span><br><span class="line">// =&gt; sans-serif</span><br><span class="line"></span><br><span class="line">unquote(<span class="string">'1px / 2px'</span>)</span><br><span class="line">// =&gt; 1px / 2px</span><br></pre></td></tr></table></figure>
+
+<p><em>convert(str)</em><br>像unquote()，但尝试将给定的内容转换为Stylus节点。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">unit = convert(<span class="string">'40px'</span>)</span><br><span class="line">typeof(unit)</span><br><span class="line">// =&gt; <span class="string">'unit'</span></span><br><span class="line"></span><br><span class="line">color = convert(<span class="string">'#fff'</span>)</span><br><span class="line">typeof(color)</span><br><span class="line">// =&gt; <span class="string">'rgba'</span></span><br><span class="line"></span><br><span class="line">foo = convert(<span class="string">'foo'</span>)</span><br><span class="line">typeof(foo)</span><br><span class="line">// =&gt; <span class="string">'ident'</span></span><br></pre></td></tr></table></figure>
+
+<p>s(fmt, …)<br>s()方法类似于unquote()，不过后者返回的是Literal节点，而这里起接受一个格式化的字符串，非常像C语言的sprintf(). 目前，唯一标识符是%s.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">s(<span class="string">'bar()'</span>);</span><br><span class="line">// =&gt; bar()</span><br><span class="line"></span><br><span class="line">s(<span class="string">'bar(%s)'</span>, <span class="string">'baz'</span>);</span><br><span class="line">// =&gt; bar(<span class="string">"baz"</span>)</span><br><span class="line"></span><br><span class="line">s(<span class="string">'bar(%s)'</span>, baz);</span><br><span class="line">// =&gt; bar(baz)</span><br><span class="line"></span><br><span class="line">s(<span class="string">'bar(%s)'</span>, 15px);</span><br><span class="line">// =&gt; bar(15px)</span><br><span class="line"></span><br><span class="line">s(<span class="string">'rgba(%s, %s, %s, 0.5)'</span>, 255, 100, 50);</span><br><span class="line">// =&gt; rgba(255, 100, 50, 0.5)</span><br><span class="line"></span><br><span class="line">s(<span class="string">'bar(%Z)'</span>, 15px);</span><br><span class="line">// =&gt; bar(%Z)</span><br><span class="line"></span><br><span class="line">s(<span class="string">'bar(%s, %s)'</span>, 15px);</span><br><span class="line">// =&gt; bar(15px, null)</span><br></pre></td></tr></table></figure>
 <p>为表现一致检测这个%字符串操作符。</p>
-<p><em>basename(path[, ext])</em><br>返回路径的基本名称，（可选）删除扩展名。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">basename(<span class="string">'images/foo.png'</span>)</span><br><span class="line">// =&gt; <span class="string">"foo.png"</span></span><br><span class="line"></span><br><span class="line">basename(<span class="string">'images/foo.png'</span>, <span class="string">'.png'</span>)</span><br><span class="line">// =&gt; <span class="string">"foo"</span></span><br></pre></td></tr></table></figure></p>
-<p><em>dirname(path)</em><br>返回路径的文件夹名称<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dirname(<span class="string">'images/foo.png'</span>)</span><br><span class="line">// =&gt; <span class="string">"images"</span></span><br></pre></td></tr></table></figure></p>
-<p><em>extname(path)</em><br>返回包含点的路径的文件扩展名。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">extname(<span class="string">'images/foo.png'</span>)</span><br><span class="line">// =&gt; <span class="string">".png"</span></span><br></pre></td></tr></table></figure></p>
-<p><em>pathjoin(…)</em><br>加入执行路径。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pathjoin(<span class="string">'images'</span>, <span class="string">'foo.png'</span>)</span><br><span class="line">// =&gt; <span class="string">"images/foo.png"</span></span><br><span class="line"></span><br><span class="line">path = <span class="string">'images/foo.png'</span></span><br><span class="line">ext = extname(path)</span><br><span class="line">pathjoin(dirname(path), basename(path, ext) + _thumb + ext)</span><br><span class="line">// =&gt; <span class="string">'images/foo_thumb.png'</span></span><br></pre></td></tr></table></figure></p>
-<p><em>called-from property</em><br>所谓的从属性包含了以相反的顺序调用当前函数的函数列表（第一项是最深的函数）。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">foo()</span><br><span class="line">  bar()</span><br><span class="line"></span><br><span class="line">bar()</span><br><span class="line">  baz()</span><br><span class="line"></span><br><span class="line">baz()</span><br><span class="line">  <span class="built_in">return</span> called-from</span><br><span class="line"></span><br><span class="line">foo()</span><br><span class="line">// =&gt; bar foo</span><br></pre></td></tr></table></figure></p>
-<p><em>current-media()</em><br>current-media()函数返回当前块的@media规则的字符串，如果块上面没有@media，则返回空。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@media only screen and (min-width: 1024px)</span><br><span class="line">  current-media()</span><br><span class="line">// =&gt; <span class="string">'@media (only screen and (min-width: (1024px)))'</span></span><br></pre></td></tr></table></figure></p>
-<p><em>+cache(keys…)</em><br>+cache是一个非常强大的内置函数，允许您创建自己的“高速缓存”混合。<br>“Cachable mixin”就是在第一次调用时将其内容应用于给定的选择器，但是会在第二次调用时使用相同的参数来扩展第一个调用的选择器。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">size(<span class="variable">$width</span>, <span class="variable">$height</span> = <span class="variable">$width</span>)</span><br><span class="line">  +cache(<span class="string">'w'</span> + <span class="variable">$width</span>)</span><br><span class="line">    width: <span class="variable">$width</span></span><br><span class="line">  +cache(<span class="string">'h'</span> + <span class="variable">$height</span>)</span><br><span class="line">    height: <span class="variable">$height</span></span><br><span class="line"></span><br><span class="line">.a</span><br><span class="line">  size: 10px 20px</span><br><span class="line">.b</span><br><span class="line">  size: 10px 2em</span><br><span class="line">.c</span><br><span class="line">  size: 1px 2em</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line"></span><br><span class="line">.a,</span><br><span class="line">.b &#123;</span><br><span class="line">  width: 10px;</span><br><span class="line">&#125;</span><br><span class="line">.a &#123;</span><br><span class="line">  height: 20px;</span><br><span class="line">&#125;</span><br><span class="line">.b,</span><br><span class="line">.c &#123;</span><br><span class="line">  height: 2em;</span><br><span class="line">&#125;</span><br><span class="line">.c &#123;</span><br><span class="line">  width: 1px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><em>+prefix-classes(prefix)</em><br>可以使用 +prefix-classes为任何一个类添加前缀<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+prefix-classes(<span class="string">'foo-'</span>)</span><br><span class="line">  .bar</span><br><span class="line">    width: 10px</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line"></span><br><span class="line">.foo-bar &#123;</span><br><span class="line">  width: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><em>lookup(name)</em><br>允许查找具有给定名称的变量，作为字符串传递。 如果变量未定义，则返回null。<br>当需要使用动态生成的名称获取变量的值时非常有用：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">font-size-1 = 10px</span><br><span class="line">font-size-2 = 20px</span><br><span class="line">font-size-3 = 30px</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> 1..3</span><br><span class="line">  .text-&#123;i&#125;</span><br><span class="line">    font-size: lookup(<span class="string">'font-size-'</span> + i)</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line"></span><br><span class="line">.text-1 &#123;</span><br><span class="line">  font-size: 10px;</span><br><span class="line">&#125;</span><br><span class="line">.text-2 &#123;</span><br><span class="line">  font-size: 20px;</span><br><span class="line">&#125;</span><br><span class="line">.text-3 &#123;</span><br><span class="line">  font-size: 30px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><em>define(name, expr[, global])</em><br>允许创建或覆盖具有给定名称的变量，作为字符串传递到当前范围（如果全局为true，则为全局范围）。<br>这个bif可以用在你希望插入变量名的情况下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">prefix = <span class="string">'border'</span></span><br><span class="line">border = &#123; color: <span class="comment">#000, length: 1px, style: solid &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> prop, val <span class="keyword">in</span> border</span><br><span class="line">  define(prefix + <span class="string">'-'</span> + prop, val)</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  border: border-length border-style border-color</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line"></span><br><span class="line">body &#123;</span><br><span class="line">  border: 1px solid <span class="comment">#000;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><em>operate(op, left, right)</em><br>在left和right操作对象上执行给定的op.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">op = <span class="string">'+'</span></span><br><span class="line">operate(op, 15, 5)</span><br><span class="line">// =&gt; 20</span><br></pre></td></tr></table></figure></p>
-<p><em>length([expr])</em><br>括号表达式扮演元组，length()方法返回该表达式的长度。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">length((1 2 3 4))</span><br><span class="line">// =&gt; 4</span><br><span class="line"></span><br><span class="line">length((1 2))</span><br><span class="line">// =&gt; 2</span><br><span class="line"></span><br><span class="line">length((1))</span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">length(())</span><br><span class="line">// =&gt; 0</span><br><span class="line"></span><br><span class="line">length(1 2 3)</span><br><span class="line">// =&gt; 3</span><br><span class="line"></span><br><span class="line">length(1)</span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">length()</span><br><span class="line">// =&gt; 0</span><br></pre></td></tr></table></figure></p>
-<p><em>selector()</em><br>返回当前编译的选择器, 适用于&amp;子选择器。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.foo</span><br><span class="line">  selector()</span><br><span class="line">// =&gt; <span class="string">'.foo'</span></span><br><span class="line"></span><br><span class="line">.foo</span><br><span class="line">  &amp;:hover</span><br><span class="line">    selector()</span><br><span class="line">// <span class="string">'.foo:hover'</span></span><br></pre></td></tr></table></figure></p>
-<p><em>selector-exists(selector)</em><br>根据提供的选择器是否存在返回ture或false、<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">.foo</span><br><span class="line">  color red</span><br><span class="line"></span><br><span class="line">  a</span><br><span class="line">    font-size 12px</span><br><span class="line"></span><br><span class="line">selector-exists(<span class="string">'.foo'</span>) // <span class="literal">true</span></span><br><span class="line">selector-exists(<span class="string">'.foo a'</span>) // <span class="literal">true</span></span><br><span class="line">selector-exists(<span class="string">'.foo li'</span>) // <span class="literal">false</span></span><br><span class="line">selector-exists(<span class="string">'.bar'</span>) // <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">.foo</span><br><span class="line">  color red</span><br><span class="line"></span><br><span class="line">  a</span><br><span class="line">    font-size 12px</span><br><span class="line"></span><br><span class="line">  selector-exists(<span class="string">'a'</span>) // <span class="literal">false</span></span><br><span class="line">  selector-exists(selector() + <span class="string">' a'</span>) // <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<p><em>warn(msg)</em><br>使用给定的error警告，并不退出。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">warn(<span class="string">"oh noes!"</span>)</span><br></pre></td></tr></table></figure></p>
-<p><em>error(msg)</em><br>伴随着给定的错误msg退出。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">add(a, b)</span><br><span class="line">  unless a is a <span class="string">'unit'</span> and b is a <span class="string">'unit'</span></span><br><span class="line">    error(<span class="string">'add() expects units'</span>)</span><br><span class="line">  a + b</span><br></pre></td></tr></table></figure></p>
-<p><em>last(expr)</em><br>返回给定expr的最后一个值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nums = 1 2 3</span><br><span class="line">last(nums)</span><br><span class="line">last(1 2 3)</span><br><span class="line">// =&gt; 3</span><br><span class="line"></span><br><span class="line">list = (one 1) (two 2) (three 3)</span><br><span class="line">last(list)</span><br><span class="line">// =&gt; (three 3)</span><br></pre></td></tr></table></figure></p>
-<p><em>p(expr)</em><br>检查给定的expr.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">fonts = Arial, sans-serif</span><br><span class="line">p(<span class="string">'test'</span>)</span><br><span class="line">p(123)</span><br><span class="line">p((1 2 3))</span><br><span class="line">p(fonts)</span><br><span class="line">p(<span class="comment">#fff)</span></span><br><span class="line">p(rgba(0,0,0,0.2))</span><br><span class="line"></span><br><span class="line">add(a, b)</span><br><span class="line">  a + b</span><br><span class="line"></span><br><span class="line">p(add)</span><br><span class="line">=&gt;</span><br><span class="line"></span><br><span class="line">inspect: <span class="string">"test"</span></span><br><span class="line">inspect: 123</span><br><span class="line">inspect: 1 2 3</span><br><span class="line">inspect: Arial, sans-serif</span><br><span class="line">inspect: <span class="comment">#fff</span></span><br><span class="line">inspect: rgba(0,0,0,0.2)</span><br><span class="line">inspect: add(a, b)</span><br></pre></td></tr></table></figure></p>
-<p><em>opposite-position(positions)</em><br>返回给定positions相反内容。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">opposite-position(right)</span><br><span class="line">// =&gt; left</span><br><span class="line"></span><br><span class="line">opposite-position(top left)</span><br><span class="line">// =&gt; bottom right</span><br><span class="line"></span><br><span class="line">opposite-position(<span class="string">'top'</span> <span class="string">'left'</span>)</span><br><span class="line">// =&gt; bottom right</span><br></pre></td></tr></table></figure></p>
-<p><em>image-size(path)</em><br>返回指定path图片的width和height. 向上查找路径的方法和@import一样，paths设置的时候改变。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">width(img)</span><br><span class="line">  <span class="built_in">return</span> image-size(img)[0]</span><br><span class="line"></span><br><span class="line">height(img)</span><br><span class="line">  <span class="built_in">return</span> image-size(img)[1]</span><br><span class="line"></span><br><span class="line">image-size(<span class="string">'tux.png'</span>)</span><br><span class="line">// =&gt; 405px 250px</span><br><span class="line"></span><br><span class="line">image-size(<span class="string">'tux.png'</span>)[0] == width(<span class="string">'tux.png'</span>)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<p><em>embedurl(path[, encoding])</em><br>以编码（可用编码：base64（默认值）和utf8）编码的url（）文字返回内联图像。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">background: embedurl(<span class="string">'logo.png'</span>)</span><br><span class="line">// =&gt; background: url(<span class="string">"data:image/png;base64,…"</span>)</span><br><span class="line"></span><br><span class="line">background: embedurl(<span class="string">'logo.svg'</span>, <span class="string">'utf8'</span>)</span><br><span class="line">// =&gt; background: url(<span class="string">"data:image/svg+xml;charset=utf-8,…"</span>)</span><br></pre></td></tr></table></figure></p>
-<p><em>add-property(name, expr)</em><br>添加属性名称，将给定的expr添加到最近的块中。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">*json(path[, options])*</span><br><span class="line">将.json文件转换为stylus变量或对象。 嵌套变量对象键用连字符（ - ）连接。</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"small"</span>: <span class="string">"screen and (max-width:400px)"</span>,</span><br><span class="line">    <span class="string">"tablet"</span>: &#123;</span><br><span class="line">        <span class="string">"landscape"</span>: <span class="string">"screen and (min-width:600px) and (orientation:landscape)"</span>,</span><br><span class="line">        <span class="string">"portrait"</span>: <span class="string">"screen and (min-width:600px) and (orientation:portrait)"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">json(<span class="string">'media-queries.json'</span>)</span><br><span class="line"></span><br><span class="line">@media small</span><br><span class="line">// =&gt; @media screen and (max-width:400px)</span><br><span class="line"></span><br><span class="line">@media tablet-landscape</span><br><span class="line">// =&gt; @media screen and (min-width:600px) and (orientation:landscape)</span><br><span class="line"></span><br><span class="line">vars = json(<span class="string">'vars.json'</span>, &#123; <span class="built_in">hash</span>: <span class="literal">true</span> &#125;)</span><br><span class="line">body</span><br><span class="line">  width: vars.width</span><br><span class="line"></span><br><span class="line">vars = json(<span class="string">'vars.json'</span>, &#123; <span class="built_in">hash</span>: <span class="literal">true</span>, leave-strings: <span class="literal">true</span> &#125;)</span><br><span class="line">typeof(vars.icon)</span><br><span class="line">// =&gt; <span class="string">'string'</span></span><br><span class="line"></span><br><span class="line">// don<span class="string">'t throw an error if the JSON file doesn'</span>t exist</span><br><span class="line">optional = json(<span class="string">'optional.json'</span>, &#123; <span class="built_in">hash</span>: <span class="literal">true</span>, optional: <span class="literal">true</span> &#125;)</span><br><span class="line">typeof(optional)</span><br><span class="line">// =&gt; <span class="string">'null'</span></span><br></pre></td></tr></table></figure></p>
-<p><em>use(path)</em><br>你可以在’.styl’文件中用use()函数在给定的路径上使用任何给定的js-plugin，就像这样：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">use(<span class="string">"plugins/add.js"</span>)</span><br><span class="line"></span><br><span class="line">width add(10, 100)</span><br><span class="line">// =&gt; width: 110</span><br></pre></td></tr></table></figure></p>
-<p>而在这种情况下add.js插件看起来是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var plugin = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  <span class="built_in">return</span> <span class="keyword">function</span>(style)&#123;</span><br><span class="line">    style.define(<span class="string">'add'</span>, <span class="keyword">function</span>(a, b) &#123;</span><br><span class="line">      <span class="built_in">return</span> a.operate(<span class="string">'+'</span>, b);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line">module.exports = plugin;</span><br></pre></td></tr></table></figure></p>
-<p>如果您想返回任何Stylus对象，如RGBA，Ident或Unit，则可以使用提供的Stylus节点，如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var plugin = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  <span class="built_in">return</span> <span class="keyword">function</span>(style)&#123;</span><br><span class="line">    var nodes = this.nodes;</span><br><span class="line">    style.define(<span class="string">'something'</span>, <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">      <span class="built_in">return</span> new nodes.Ident(<span class="string">'foobar'</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line">module.exports = plugin;</span><br></pre></td></tr></table></figure></p>
-<p>您可以使用散列对象作为可选的第二个参数传递任何选项：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use(<span class="string">"plugins/add.js"</span>, &#123; foo: bar &#125;)</span><br></pre></td></tr></table></figure></p>
-<p><em>Undefined Functions</em><br>未定义的函数将以文字形式输出，例如，我们可以在我们的css中调用rgba-stop(50％,#fff)，并按照您的预期输出。 我们也可以在帮助者中使用它。<br>在下面的例子中，我们简单地定义函数stop()，它返回文字rgba-stop()调用。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">stop(pos, rgba)</span><br><span class="line">  rgba-stop(pos, rgba)</span><br><span class="line"></span><br><span class="line">stop(50%, orange)</span><br><span class="line">// =&gt; rgba-stop(50%, <span class="comment">#ffa500)</span></span><br></pre></td></tr></table></figure></p>
+<p><em>basename(path[, ext])</em><br>返回路径的基本名称，（可选）删除扩展名。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">basename(<span class="string">'images/foo.png'</span>)</span><br><span class="line">// =&gt; <span class="string">"foo.png"</span></span><br><span class="line"></span><br><span class="line">basename(<span class="string">'images/foo.png'</span>, <span class="string">'.png'</span>)</span><br><span class="line">// =&gt; <span class="string">"foo"</span></span><br></pre></td></tr></table></figure>
 
-      
+<p><em>dirname(path)</em><br>返回路径的文件夹名称</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dirname(<span class="string">'images/foo.png'</span>)</span><br><span class="line">// =&gt; <span class="string">"images"</span></span><br></pre></td></tr></table></figure>
+
+<p><em>extname(path)</em><br>返回包含点的路径的文件扩展名。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">extname(<span class="string">'images/foo.png'</span>)</span><br><span class="line">// =&gt; <span class="string">".png"</span></span><br></pre></td></tr></table></figure>
+
+<p><em>pathjoin(…)</em><br>加入执行路径。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pathjoin(<span class="string">'images'</span>, <span class="string">'foo.png'</span>)</span><br><span class="line">// =&gt; <span class="string">"images/foo.png"</span></span><br><span class="line"></span><br><span class="line">path = <span class="string">'images/foo.png'</span></span><br><span class="line">ext = extname(path)</span><br><span class="line">pathjoin(dirname(path), basename(path, ext) + _thumb + ext)</span><br><span class="line">// =&gt; <span class="string">'images/foo_thumb.png'</span></span><br></pre></td></tr></table></figure>
+
+<p><em>called-from property</em><br>所谓的从属性包含了以相反的顺序调用当前函数的函数列表（第一项是最深的函数）。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">foo()</span><br><span class="line">  bar()</span><br><span class="line"></span><br><span class="line">bar()</span><br><span class="line">  baz()</span><br><span class="line"></span><br><span class="line">baz()</span><br><span class="line">  <span class="built_in">return</span> called-from</span><br><span class="line"></span><br><span class="line">foo()</span><br><span class="line">// =&gt; bar foo</span><br></pre></td></tr></table></figure>
+
+<p><em>current-media()</em><br>current-media()函数返回当前块的@media规则的字符串，如果块上面没有@media，则返回空。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@media only screen and (min-width: 1024px)</span><br><span class="line">  current-media()</span><br><span class="line">// =&gt; <span class="string">'@media (only screen and (min-width: (1024px)))'</span></span><br></pre></td></tr></table></figure>
+
+<p><em>+cache(keys…)</em><br>+cache是一个非常强大的内置函数，允许您创建自己的“高速缓存”混合。<br>“Cachable mixin”就是在第一次调用时将其内容应用于给定的选择器，但是会在第二次调用时使用相同的参数来扩展第一个调用的选择器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">size(<span class="variable">$width</span>, <span class="variable">$height</span> = <span class="variable">$width</span>)</span><br><span class="line">  +cache(<span class="string">'w'</span> + <span class="variable">$width</span>)</span><br><span class="line">    width: <span class="variable">$width</span></span><br><span class="line">  +cache(<span class="string">'h'</span> + <span class="variable">$height</span>)</span><br><span class="line">    height: <span class="variable">$height</span></span><br><span class="line"></span><br><span class="line">.a</span><br><span class="line">  size: 10px 20px</span><br><span class="line">.b</span><br><span class="line">  size: 10px 2em</span><br><span class="line">.c</span><br><span class="line">  size: 1px 2em</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line"></span><br><span class="line">.a,</span><br><span class="line">.b &#123;</span><br><span class="line">  width: 10px;</span><br><span class="line">&#125;</span><br><span class="line">.a &#123;</span><br><span class="line">  height: 20px;</span><br><span class="line">&#125;</span><br><span class="line">.b,</span><br><span class="line">.c &#123;</span><br><span class="line">  height: 2em;</span><br><span class="line">&#125;</span><br><span class="line">.c &#123;</span><br><span class="line">  width: 1px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>+prefix-classes(prefix)</em><br>可以使用 +prefix-classes为任何一个类添加前缀</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+prefix-classes(<span class="string">'foo-'</span>)</span><br><span class="line">  .bar</span><br><span class="line">    width: 10px</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line"></span><br><span class="line">.foo-bar &#123;</span><br><span class="line">  width: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>lookup(name)</em><br>允许查找具有给定名称的变量，作为字符串传递。 如果变量未定义，则返回null。<br>当需要使用动态生成的名称获取变量的值时非常有用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">font-size-1 = 10px</span><br><span class="line">font-size-2 = 20px</span><br><span class="line">font-size-3 = 30px</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> 1..3</span><br><span class="line">  .text-&#123;i&#125;</span><br><span class="line">    font-size: lookup(<span class="string">'font-size-'</span> + i)</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line"></span><br><span class="line">.text-1 &#123;</span><br><span class="line">  font-size: 10px;</span><br><span class="line">&#125;</span><br><span class="line">.text-2 &#123;</span><br><span class="line">  font-size: 20px;</span><br><span class="line">&#125;</span><br><span class="line">.text-3 &#123;</span><br><span class="line">  font-size: 30px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>define(name, expr[, global])</em><br>允许创建或覆盖具有给定名称的变量，作为字符串传递到当前范围（如果全局为true，则为全局范围）。<br>这个bif可以用在你希望插入变量名的情况下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">prefix = <span class="string">'border'</span></span><br><span class="line">border = &#123; color: <span class="comment">#000, length: 1px, style: solid &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> prop, val <span class="keyword">in</span> border</span><br><span class="line">  define(prefix + <span class="string">'-'</span> + prop, val)</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  border: border-length border-style border-color</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line"></span><br><span class="line">body &#123;</span><br><span class="line">  border: 1px solid <span class="comment">#000;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><em>operate(op, left, right)</em><br>在left和right操作对象上执行给定的op.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">op = <span class="string">'+'</span></span><br><span class="line">operate(op, 15, 5)</span><br><span class="line">// =&gt; 20</span><br></pre></td></tr></table></figure>
+
+<p><em>length([expr])</em><br>括号表达式扮演元组，length()方法返回该表达式的长度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">length((1 2 3 4))</span><br><span class="line">// =&gt; 4</span><br><span class="line"></span><br><span class="line">length((1 2))</span><br><span class="line">// =&gt; 2</span><br><span class="line"></span><br><span class="line">length((1))</span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">length(())</span><br><span class="line">// =&gt; 0</span><br><span class="line"></span><br><span class="line">length(1 2 3)</span><br><span class="line">// =&gt; 3</span><br><span class="line"></span><br><span class="line">length(1)</span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">length()</span><br><span class="line">// =&gt; 0</span><br></pre></td></tr></table></figure>
+
+<p><em>selector()</em><br>返回当前编译的选择器, 适用于&amp;子选择器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.foo</span><br><span class="line">  selector()</span><br><span class="line">// =&gt; <span class="string">'.foo'</span></span><br><span class="line"></span><br><span class="line">.foo</span><br><span class="line">  &amp;:hover</span><br><span class="line">    selector()</span><br><span class="line">// <span class="string">'.foo:hover'</span></span><br></pre></td></tr></table></figure>
+
+<p><em>selector-exists(selector)</em><br>根据提供的选择器是否存在返回ture或false、</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">.foo</span><br><span class="line">  color red</span><br><span class="line"></span><br><span class="line">  a</span><br><span class="line">    font-size 12px</span><br><span class="line"></span><br><span class="line">selector-exists(<span class="string">'.foo'</span>) // <span class="literal">true</span></span><br><span class="line">selector-exists(<span class="string">'.foo a'</span>) // <span class="literal">true</span></span><br><span class="line">selector-exists(<span class="string">'.foo li'</span>) // <span class="literal">false</span></span><br><span class="line">selector-exists(<span class="string">'.bar'</span>) // <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">.foo</span><br><span class="line">  color red</span><br><span class="line"></span><br><span class="line">  a</span><br><span class="line">    font-size 12px</span><br><span class="line"></span><br><span class="line">  selector-exists(<span class="string">'a'</span>) // <span class="literal">false</span></span><br><span class="line">  selector-exists(selector() + <span class="string">' a'</span>) // <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p><em>warn(msg)</em><br>使用给定的error警告，并不退出。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">warn(<span class="string">"oh noes!"</span>)</span><br></pre></td></tr></table></figure>
+
+<p><em>error(msg)</em><br>伴随着给定的错误msg退出。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">add(a, b)</span><br><span class="line">  unless a is a <span class="string">'unit'</span> and b is a <span class="string">'unit'</span></span><br><span class="line">    error(<span class="string">'add() expects units'</span>)</span><br><span class="line">  a + b</span><br></pre></td></tr></table></figure>
+
+<p><em>last(expr)</em><br>返回给定expr的最后一个值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nums = 1 2 3</span><br><span class="line">last(nums)</span><br><span class="line">last(1 2 3)</span><br><span class="line">// =&gt; 3</span><br><span class="line"></span><br><span class="line">list = (one 1) (two 2) (three 3)</span><br><span class="line">last(list)</span><br><span class="line">// =&gt; (three 3)</span><br></pre></td></tr></table></figure>
+
+<p><em>p(expr)</em><br>检查给定的expr.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">fonts = Arial, sans-serif</span><br><span class="line">p(<span class="string">'test'</span>)</span><br><span class="line">p(123)</span><br><span class="line">p((1 2 3))</span><br><span class="line">p(fonts)</span><br><span class="line">p(<span class="comment">#fff)</span></span><br><span class="line">p(rgba(0,0,0,0.2))</span><br><span class="line"></span><br><span class="line">add(a, b)</span><br><span class="line">  a + b</span><br><span class="line"></span><br><span class="line">p(add)</span><br><span class="line">=&gt;</span><br><span class="line"></span><br><span class="line">inspect: <span class="string">"test"</span></span><br><span class="line">inspect: 123</span><br><span class="line">inspect: 1 2 3</span><br><span class="line">inspect: Arial, sans-serif</span><br><span class="line">inspect: <span class="comment">#fff</span></span><br><span class="line">inspect: rgba(0,0,0,0.2)</span><br><span class="line">inspect: add(a, b)</span><br></pre></td></tr></table></figure>
+
+<p><em>opposite-position(positions)</em><br>返回给定positions相反内容。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">opposite-position(right)</span><br><span class="line">// =&gt; left</span><br><span class="line"></span><br><span class="line">opposite-position(top left)</span><br><span class="line">// =&gt; bottom right</span><br><span class="line"></span><br><span class="line">opposite-position(<span class="string">'top'</span> <span class="string">'left'</span>)</span><br><span class="line">// =&gt; bottom right</span><br></pre></td></tr></table></figure>
+
+<p><em>image-size(path)</em><br>返回指定path图片的width和height. 向上查找路径的方法和@import一样，paths设置的时候改变。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">width(img)</span><br><span class="line">  <span class="built_in">return</span> image-size(img)[0]</span><br><span class="line"></span><br><span class="line">height(img)</span><br><span class="line">  <span class="built_in">return</span> image-size(img)[1]</span><br><span class="line"></span><br><span class="line">image-size(<span class="string">'tux.png'</span>)</span><br><span class="line">// =&gt; 405px 250px</span><br><span class="line"></span><br><span class="line">image-size(<span class="string">'tux.png'</span>)[0] == width(<span class="string">'tux.png'</span>)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p><em>embedurl(path[, encoding])</em><br>以编码（可用编码：base64（默认值）和utf8）编码的url（）文字返回内联图像。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">background: embedurl(<span class="string">'logo.png'</span>)</span><br><span class="line">// =&gt; background: url(<span class="string">"data:image/png;base64,…"</span>)</span><br><span class="line"></span><br><span class="line">background: embedurl(<span class="string">'logo.svg'</span>, <span class="string">'utf8'</span>)</span><br><span class="line">// =&gt; background: url(<span class="string">"data:image/svg+xml;charset=utf-8,…"</span>)</span><br></pre></td></tr></table></figure>
+
+<p><em>add-property(name, expr)</em><br>添加属性名称，将给定的expr添加到最近的块中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">*json(path[, options])*</span><br><span class="line">将.json文件转换为stylus变量或对象。 嵌套变量对象键用连字符（ - ）连接。</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"small"</span>: <span class="string">"screen and (max-width:400px)"</span>,</span><br><span class="line">    <span class="string">"tablet"</span>: &#123;</span><br><span class="line">        <span class="string">"landscape"</span>: <span class="string">"screen and (min-width:600px) and (orientation:landscape)"</span>,</span><br><span class="line">        <span class="string">"portrait"</span>: <span class="string">"screen and (min-width:600px) and (orientation:portrait)"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">json(<span class="string">'media-queries.json'</span>)</span><br><span class="line"></span><br><span class="line">@media small</span><br><span class="line">// =&gt; @media screen and (max-width:400px)</span><br><span class="line"></span><br><span class="line">@media tablet-landscape</span><br><span class="line">// =&gt; @media screen and (min-width:600px) and (orientation:landscape)</span><br><span class="line"></span><br><span class="line">vars = json(<span class="string">'vars.json'</span>, &#123; <span class="built_in">hash</span>: <span class="literal">true</span> &#125;)</span><br><span class="line">body</span><br><span class="line">  width: vars.width</span><br><span class="line"></span><br><span class="line">vars = json(<span class="string">'vars.json'</span>, &#123; <span class="built_in">hash</span>: <span class="literal">true</span>, leave-strings: <span class="literal">true</span> &#125;)</span><br><span class="line">typeof(vars.icon)</span><br><span class="line">// =&gt; <span class="string">'string'</span></span><br><span class="line"></span><br><span class="line">// don<span class="string">'t throw an error if the JSON file doesn'</span>t exist</span><br><span class="line">optional = json(<span class="string">'optional.json'</span>, &#123; <span class="built_in">hash</span>: <span class="literal">true</span>, optional: <span class="literal">true</span> &#125;)</span><br><span class="line">typeof(optional)</span><br><span class="line">// =&gt; <span class="string">'null'</span></span><br></pre></td></tr></table></figure>
+
+<p><em>use(path)</em><br>你可以在’.styl’文件中用use()函数在给定的路径上使用任何给定的js-plugin，就像这样：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">use(<span class="string">"plugins/add.js"</span>)</span><br><span class="line"></span><br><span class="line">width add(10, 100)</span><br><span class="line">// =&gt; width: 110</span><br></pre></td></tr></table></figure>
+<p>而在这种情况下add.js插件看起来是这样的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var plugin = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  <span class="built_in">return</span> <span class="keyword">function</span>(style)&#123;</span><br><span class="line">    style.define(<span class="string">'add'</span>, <span class="keyword">function</span>(a, b) &#123;</span><br><span class="line">      <span class="built_in">return</span> a.operate(<span class="string">'+'</span>, b);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line">module.exports = plugin;</span><br></pre></td></tr></table></figure>
+<p>如果您想返回任何Stylus对象，如RGBA，Ident或Unit，则可以使用提供的Stylus节点，如下所示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var plugin = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  <span class="built_in">return</span> <span class="keyword">function</span>(style)&#123;</span><br><span class="line">    var nodes = this.nodes;</span><br><span class="line">    style.define(<span class="string">'something'</span>, <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">      <span class="built_in">return</span> new nodes.Ident(<span class="string">'foobar'</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line">module.exports = plugin;</span><br></pre></td></tr></table></figure>
+<p>您可以使用散列对象作为可选的第二个参数传递任何选项：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use(<span class="string">"plugins/add.js"</span>, &#123; foo: bar &#125;)</span><br></pre></td></tr></table></figure>
+
+<p><em>Undefined Functions</em><br>未定义的函数将以文字形式输出，例如，我们可以在我们的css中调用rgba-stop(50％,#fff)，并按照您的预期输出。 我们也可以在帮助者中使用它。<br>在下面的例子中，我们简单地定义函数stop()，它返回文字rgba-stop()调用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">stop(pos, rgba)</span><br><span class="line">  rgba-stop(pos, rgba)</span><br><span class="line"></span><br><span class="line">stop(50%, orange)</span><br><span class="line">// =&gt; rgba-stop(50%, <span class="comment">#ffa500)</span></span><br></pre></td></tr></table></figure>
+
     </div>
 
     
-
     
     
-    
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/CSS3/" rel="tag"># CSS3</a>
-          
-            <a href="/tags/stylus/" rel="tag"># stylus</a>
-          
-            <a href="/tags/学习Stylus/" rel="tag"># 学习Stylus</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/02/05/学习stylus【4】/" rel="next" title="学习stylus【4】Stylus的方法及函数">
-                <i class="fa fa-chevron-left"></i> 学习stylus【4】Stylus的方法及函数
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/CSS3/" rel="tag"># CSS3</a>
+              <a href="/tags/stylus/" rel="tag"># stylus</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0Stylus/" rel="tag"># 学习Stylus</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/11/学习stylus【6】/" rel="prev" title="学习stylus【6】Rest参数（Rest Params）">
-                学习stylus【6】Rest参数（Rest Params） <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-  
-
-
-
-        </div>
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/02/05/%E5%AD%A6%E4%B9%A0stylus%E3%80%904%E3%80%91/" rel="prev" title="学习stylus【4】Stylus的方法及函数">
+      <i class="fa fa-chevron-left"></i> 学习stylus【4】Stylus的方法及函数
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/02/11/%E5%AD%A6%E4%B9%A0stylus%E3%80%906%E3%80%91/" rel="next" title="学习stylus【6】Rest参数（Rest Params）">
+      学习stylus【6】Rest参数（Rest Params） <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/images/common/avatar.jpg"
-                alt="winbug" />
-            
-              <p class="site-author-name" itemprop="name">winbug</p>
-              <p class="site-description motion-element" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">48</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">分类</span>
-                  
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">36</span>
-                    <span class="site-state-item-name">标签</span>
-                  
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">winbug</span>
-
-  
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">winbug</p>
+  <div class="site-description" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.2.0</div>
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
+        
 
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">winbug</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
 
         
 
@@ -797,107 +629,24 @@
 
 
 
-        
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
-
-
-
-  
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -913,28 +662,10 @@
 
 
 
-  
 
 
 
 
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
   
 

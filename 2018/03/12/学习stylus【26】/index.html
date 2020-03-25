@@ -1,132 +1,50 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.l3f.win","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '6.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
-
-  <meta name="description" content="JavaScript APIrequire模块，用给定的Stylus代码字符串调用render()，以及（可选的）optional对象。传递filename参数可以利用Stylus框架提供更好的错误报告。123456var stylus = require(&apos;stylus&apos;);stylus.render(str, &amp;#123; filename: &apos;nesting.css&apos; &amp;#125;, fun">
-<meta name="keywords" content="CSS3,stylus,学习Stylus">
+  <meta name="description" content="JavaScript APIrequire模块，用给定的Stylus代码字符串调用render()，以及（可选的）optional对象。传递filename参数可以利用Stylus框架提供更好的错误报告。 123456var stylus &#x3D; require(&#39;stylus&#39;);stylus.render(str, &amp;#123; filename: &#39;nesting.css&#39; &amp;#125;, fu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习stylus【26】JavaScript API">
-<meta property="og:url" content="http://www.l3f.win/2018/03/12/学习stylus【26】/index.html">
+<meta property="og:url" content="http://www.l3f.win/2018/03/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%9026%E3%80%91/index.html">
 <meta property="og:site_name" content="L3F.WIN">
-<meta property="og:description" content="JavaScript APIrequire模块，用给定的Stylus代码字符串调用render()，以及（可选的）optional对象。传递filename参数可以利用Stylus框架提供更好的错误报告。123456var stylus = require(&apos;stylus&apos;);stylus.render(str, &amp;#123; filename: &apos;nesting.css&apos; &amp;#125;, fun">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-12T07:34:56.476Z">
+<meta property="og:description" content="JavaScript APIrequire模块，用给定的Stylus代码字符串调用render()，以及（可选的）optional对象。传递filename参数可以利用Stylus框架提供更好的错误报告。 123456var stylus &#x3D; require(&#39;stylus&#39;);stylus.render(str, &amp;#123; filename: &#39;nesting.css&#39; &amp;#125;, fu">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-03-12T07:20:12.000Z">
+<meta property="article:modified_time" content="2018-03-12T07:34:56.476Z">
+<meta property="article:author" content="winbug">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="stylus">
+<meta property="article:tag" content="学习Stylus">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习stylus【26】JavaScript API">
-<meta name="twitter:description" content="JavaScript APIrequire模块，用给定的Stylus代码字符串调用render()，以及（可选的）optional对象。传递filename参数可以利用Stylus框架提供更好的错误报告。123456var stylus = require(&apos;stylus&apos;);stylus.render(str, &amp;#123; filename: &apos;nesting.css&apos; &amp;#125;, fun">
+
+<link rel="canonical" href="http://www.l3f.win/2018/03/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%9026%E3%80%91/">
 
 
-
-
-
-
-  <link rel="canonical" href="http://www.l3f.win/2018/03/12/学习stylus【26】/"/>
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -138,71 +56,58 @@
 
 
 
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">L3F.WIN</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">Github及Hexo的使用</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">L3F.WIN</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Github及Hexo的使用</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
@@ -210,58 +115,20 @@
 
 
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-stylus中文文档">
-    <a href="/categories/Stylus中文文档/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-css3"></i> <br />Stylus中文文档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-微信小程序">
-    <a href="/categories/wechatminiapp/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-wechat"></i> <br />微信小程序</a>
-  </li>
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-      
-      
-    </ul>
-  
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
-  
-    
+  </li>
+        <li class="menu-item menu-item-archives">
 
-  
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
-  
+  </li>
+  </ul>
 </nav>
 
-
-
-  
 
 
 
@@ -269,119 +136,65 @@
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content post">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/12/学习stylus【26】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%9026%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">学习stylus【26】JavaScript API
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          学习stylus【26】JavaScript API
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2018-03-12 15:20:12 / 修改时间：15:34:56" itemprop="dateCreated datePublished" datetime="2018-03-12T15:20:12+08:00">2018-03-12</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -389,344 +202,188 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        <h2 id="JavaScript-API"><a href="#JavaScript-API" class="headerlink" title="JavaScript API"></a>JavaScript API</h2><p>require模块，用给定的Stylus代码字符串调用render()，以及（可选的）optional对象。<br>传递filename参数可以利用Stylus框架提供更好的错误报告。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'stylus'</span>);</span><br><span class="line"></span><br><span class="line">stylus.render(str, &#123; filename: <span class="string">'nesting.css'</span> &#125;, <span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) throw err;</span><br><span class="line">  console.log(css);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>我们可以用更渐进的方式实现做一样的事：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'stylus'</span>);</span><br><span class="line"></span><br><span class="line">stylus(str)</span><br><span class="line">.<span class="built_in">set</span>(<span class="string">'filename'</span>, <span class="string">'nesting.css'</span>)</span><br><span class="line">.render(<span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">  // logic</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+        <h2 id="JavaScript-API"><a href="#JavaScript-API" class="headerlink" title="JavaScript API"></a>JavaScript API</h2><p>require模块，用给定的Stylus代码字符串调用render()，以及（可选的）optional对象。<br>传递filename参数可以利用Stylus框架提供更好的错误报告。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'stylus'</span>);</span><br><span class="line"></span><br><span class="line">stylus.render(str, &#123; filename: <span class="string">'nesting.css'</span> &#125;, <span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) throw err;</span><br><span class="line">  console.log(css);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>我们可以用更渐进的方式实现做一样的事：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'stylus'</span>);</span><br><span class="line"></span><br><span class="line">stylus(str)</span><br><span class="line">.<span class="built_in">set</span>(<span class="string">'filename'</span>, <span class="string">'nesting.css'</span>)</span><br><span class="line">.render(<span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">  // logic</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="set-setting-value"><a href="#set-setting-value" class="headerlink" title=".set(setting, value)"></a>.set(setting, value)</h3><p>应用诸如filename的设置，或导入paths:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.<span class="built_in">set</span>(<span class="string">'filename'</span>, __dirname + <span class="string">'/test.styl'</span>)</span><br><span class="line">.<span class="built_in">set</span>(<span class="string">'paths'</span>, [__dirname, __dirname + <span class="string">'/mixins'</span>])</span><br></pre></td></tr></table></figure></p>
-<h3 id="include-path"><a href="#include-path" class="headerlink" title=".include(path)"></a>.include(path)</h3><p>渐进替换.set(‘paths’,…)的就是.include(). 当其他Stylus库（已暴露路径）暴露的时候，这个是理想的选择。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">stylus(str)</span><br><span class="line">  .include(require(<span class="string">'nib'</span>).path)</span><br><span class="line">  .include(process.env.HOME + <span class="string">'/mixins'</span>)</span><br><span class="line">  .render(...)</span><br></pre></td></tr></table></figure></p>
-<h3 id="import-path"><a href="#import-path" class="headerlink" title=".import(path)"></a>.import(path)</h3><p>推迟给定path导入，直到计算被执行。下面这个例子基本上跟在Stylus片段中执行@import ‘mixins/vendor’一样：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'../'</span>)</span><br><span class="line">  , str = require(<span class="string">'fs'</span>).readFileSync(__dirname + <span class="string">'/test.styl'</span>, <span class="string">'utf8'</span>);</span><br><span class="line"></span><br><span class="line">stylus(str)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'filename'</span>, __dirname + <span class="string">'/test.styl'</span>)</span><br><span class="line">  .import(<span class="string">'mixins/vendor'</span>)</span><br><span class="line">  .render(<span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) throw err;</span><br><span class="line">  console.log(css);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h3 id="define-name-node"><a href="#define-name-node" class="headerlink" title=".define(name, node)"></a>.define(name, node)</h3><p>通过传递一个Node，我们可以定义一个全局变量。当库（该库依赖于其它库可用性）里面暴露某些条件特征的时候，这个就很有用。例如Nib扩展库条件支持node-canvas, 提供图片生成。<br>但这并不是一直可用的，因此Nib可以定义：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.define(<span class="string">'has-canvas'</span>, stylus.nodes.false);</span><br><span class="line">.define(<span class="string">'some-setting'</span>, new stylus.nodes.String(<span class="string">'some value'</span>));</span><br></pre></td></tr></table></figure></p>
-<p>如果可能，Stylus也会转换JavaScript值为Stylus值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.define(<span class="string">'string'</span>, <span class="string">'some string'</span>)</span><br><span class="line">.define(<span class="string">'number'</span>, 15.5)</span><br><span class="line">.define(<span class="string">'some-bool'</span>, <span class="literal">true</span>)</span><br><span class="line">.define(<span class="string">'list'</span>, [1,2,3])</span><br><span class="line">.define(<span class="string">'list'</span>, [1,2,[3,4,[5,6]]])</span><br><span class="line">.define(<span class="string">'list'</span>, &#123; foo: <span class="string">'bar'</span>, bar: <span class="string">'baz'</span> &#125;)</span><br><span class="line">.define(<span class="string">'families'</span>, [<span class="string">'Helvetica Neue'</span>, <span class="string">'Helvetica'</span>, <span class="string">'sans-serif'</span>])</span><br></pre></td></tr></table></figure></p>
-<p>下面是一些规则应用在js函数返回值上：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.define(<span class="string">'get-list'</span>, <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  <span class="built_in">return</span> [<span class="string">'foo'</span>, <span class="string">'bar'</span>, <span class="string">'baz'</span>];</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<h3 id="define-name-fn"><a href="#define-name-fn" class="headerlink" title=".define(name, fn)"></a>.define(name, fn)</h3><p>该方法允许你未Stylus提供JavaScript定义的函数。正如想到JavaScript用C++绑定。当有一些事情无法用Stylus完成的时候，就在JavaScript中定义它。<br>下面这个例子，我们定义了4个函数：add(), sub(), image-width(), image-height(). 这些函数必须返回一个Node, 通过stylus.nodes该构造以及其它nodes都可以了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'../'</span>)</span><br><span class="line">  , nodes = stylus.nodes</span><br><span class="line">  , utils = stylus.utils</span><br><span class="line">  , fs = require(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> add(a, b) &#123;</span><br><span class="line">  <span class="built_in">return</span> a.operate(<span class="string">'+'</span>, b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> sub(a, b) &#123;</span><br><span class="line">  <span class="built_in">return</span> a.operate(<span class="string">'-'</span>, b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> imageDimensions(img) &#123;</span><br><span class="line">  // 宣告 node (img) 是一个 String 节点, </span><br><span class="line">  // 为错误报告传递参数名</span><br><span class="line">  utils.assertType(img, <span class="string">'string'</span>, <span class="string">'img'</span>);</span><br><span class="line">  var path = img.val;</span><br><span class="line"></span><br><span class="line">  // 得到尺寸有必要取得字节数</span><br><span class="line">  // 如果这是真的，你会每种格式都处理下，</span><br><span class="line">  // 而不是读取整个图片 :)</span><br><span class="line">  var data = fs.readFileSync(__dirname + <span class="string">'/'</span> + path);</span><br><span class="line"></span><br><span class="line">  // GIF</span><br><span class="line">  // 当然，你可以支持更多 :)</span><br><span class="line">  <span class="keyword">if</span> (<span class="string">'GIF'</span> == data.slice(0, 3).toString()) &#123;</span><br><span class="line">    var w = data.slice(6, 8)</span><br><span class="line">      , h = data.slice(8, 10);</span><br><span class="line">    w = w[1] &lt;&lt; 8 | w[0];</span><br><span class="line">    h = h[1] &lt;&lt; 8 | h[0];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">return</span> [w, h];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> imageWidth(img) &#123;</span><br><span class="line">  <span class="built_in">return</span> new nodes.Unit(imageDimensions(img)[0]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> imageHeight(img) &#123;</span><br><span class="line">  <span class="built_in">return</span> new nodes.Unit(imageDimensions(img)[1]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">stylus(str)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'filename'</span>, <span class="string">'js-functions.styl'</span>)</span><br><span class="line">  .define(<span class="string">'add'</span>, add)</span><br><span class="line">  .define(<span class="string">'sub'</span>, sub)</span><br><span class="line">  .define(<span class="string">'image-width'</span>, imageWidth)</span><br><span class="line">  .define(<span class="string">'image-height'</span>, imageHeight)</span><br><span class="line">  .render(<span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) throw err;</span><br><span class="line">    console.log(css);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="set-setting-value"><a href="#set-setting-value" class="headerlink" title=".set(setting, value)"></a>.set(setting, value)</h3><p>应用诸如filename的设置，或导入paths:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.<span class="built_in">set</span>(<span class="string">'filename'</span>, __dirname + <span class="string">'/test.styl'</span>)</span><br><span class="line">.<span class="built_in">set</span>(<span class="string">'paths'</span>, [__dirname, __dirname + <span class="string">'/mixins'</span>])</span><br></pre></td></tr></table></figure>
+
+<h3 id="include-path"><a href="#include-path" class="headerlink" title=".include(path)"></a>.include(path)</h3><p>渐进替换.set(‘paths’,…)的就是.include(). 当其他Stylus库（已暴露路径）暴露的时候，这个是理想的选择。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">stylus(str)</span><br><span class="line">  .include(require(<span class="string">'nib'</span>).path)</span><br><span class="line">  .include(process.env.HOME + <span class="string">'/mixins'</span>)</span><br><span class="line">  .render(...)</span><br></pre></td></tr></table></figure>
+
+<h3 id="import-path"><a href="#import-path" class="headerlink" title=".import(path)"></a>.import(path)</h3><p>推迟给定path导入，直到计算被执行。下面这个例子基本上跟在Stylus片段中执行@import ‘mixins/vendor’一样：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'../'</span>)</span><br><span class="line">  , str = require(<span class="string">'fs'</span>).readFileSync(__dirname + <span class="string">'/test.styl'</span>, <span class="string">'utf8'</span>);</span><br><span class="line"></span><br><span class="line">stylus(str)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'filename'</span>, __dirname + <span class="string">'/test.styl'</span>)</span><br><span class="line">  .import(<span class="string">'mixins/vendor'</span>)</span><br><span class="line">  .render(<span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) throw err;</span><br><span class="line">  console.log(css);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="define-name-node"><a href="#define-name-node" class="headerlink" title=".define(name, node)"></a>.define(name, node)</h3><p>通过传递一个Node，我们可以定义一个全局变量。当库（该库依赖于其它库可用性）里面暴露某些条件特征的时候，这个就很有用。例如Nib扩展库条件支持node-canvas, 提供图片生成。<br>但这并不是一直可用的，因此Nib可以定义：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.define(<span class="string">'has-canvas'</span>, stylus.nodes.false);</span><br><span class="line">.define(<span class="string">'some-setting'</span>, new stylus.nodes.String(<span class="string">'some value'</span>));</span><br></pre></td></tr></table></figure>
+<p>如果可能，Stylus也会转换JavaScript值为Stylus值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.define(<span class="string">'string'</span>, <span class="string">'some string'</span>)</span><br><span class="line">.define(<span class="string">'number'</span>, 15.5)</span><br><span class="line">.define(<span class="string">'some-bool'</span>, <span class="literal">true</span>)</span><br><span class="line">.define(<span class="string">'list'</span>, [1,2,3])</span><br><span class="line">.define(<span class="string">'list'</span>, [1,2,[3,4,[5,6]]])</span><br><span class="line">.define(<span class="string">'list'</span>, &#123; foo: <span class="string">'bar'</span>, bar: <span class="string">'baz'</span> &#125;)</span><br><span class="line">.define(<span class="string">'families'</span>, [<span class="string">'Helvetica Neue'</span>, <span class="string">'Helvetica'</span>, <span class="string">'sans-serif'</span>])</span><br></pre></td></tr></table></figure>
+<p>下面是一些规则应用在js函数返回值上：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.define(<span class="string">'get-list'</span>, <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  <span class="built_in">return</span> [<span class="string">'foo'</span>, <span class="string">'bar'</span>, <span class="string">'baz'</span>];</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="define-name-fn"><a href="#define-name-fn" class="headerlink" title=".define(name, fn)"></a>.define(name, fn)</h3><p>该方法允许你未Stylus提供JavaScript定义的函数。正如想到JavaScript用C++绑定。当有一些事情无法用Stylus完成的时候，就在JavaScript中定义它。<br>下面这个例子，我们定义了4个函数：add(), sub(), image-width(), image-height(). 这些函数必须返回一个Node, 通过stylus.nodes该构造以及其它nodes都可以了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'../'</span>)</span><br><span class="line">  , nodes = stylus.nodes</span><br><span class="line">  , utils = stylus.utils</span><br><span class="line">  , fs = require(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> add(a, b) &#123;</span><br><span class="line">  <span class="built_in">return</span> a.operate(<span class="string">'+'</span>, b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> sub(a, b) &#123;</span><br><span class="line">  <span class="built_in">return</span> a.operate(<span class="string">'-'</span>, b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> imageDimensions(img) &#123;</span><br><span class="line">  // 宣告 node (img) 是一个 String 节点, </span><br><span class="line">  // 为错误报告传递参数名</span><br><span class="line">  utils.assertType(img, <span class="string">'string'</span>, <span class="string">'img'</span>);</span><br><span class="line">  var path = img.val;</span><br><span class="line"></span><br><span class="line">  // 得到尺寸有必要取得字节数</span><br><span class="line">  // 如果这是真的，你会每种格式都处理下，</span><br><span class="line">  // 而不是读取整个图片 :)</span><br><span class="line">  var data = fs.readFileSync(__dirname + <span class="string">'/'</span> + path);</span><br><span class="line"></span><br><span class="line">  // GIF</span><br><span class="line">  // 当然，你可以支持更多 :)</span><br><span class="line">  <span class="keyword">if</span> (<span class="string">'GIF'</span> == data.slice(0, 3).toString()) &#123;</span><br><span class="line">    var w = data.slice(6, 8)</span><br><span class="line">      , h = data.slice(8, 10);</span><br><span class="line">    w = w[1] &lt;&lt; 8 | w[0];</span><br><span class="line">    h = h[1] &lt;&lt; 8 | h[0];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">return</span> [w, h];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> imageWidth(img) &#123;</span><br><span class="line">  <span class="built_in">return</span> new nodes.Unit(imageDimensions(img)[0]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> imageHeight(img) &#123;</span><br><span class="line">  <span class="built_in">return</span> new nodes.Unit(imageDimensions(img)[1]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">stylus(str)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'filename'</span>, <span class="string">'js-functions.styl'</span>)</span><br><span class="line">  .define(<span class="string">'add'</span>, add)</span><br><span class="line">  .define(<span class="string">'sub'</span>, sub)</span><br><span class="line">  .define(<span class="string">'image-width'</span>, imageWidth)</span><br><span class="line">  .define(<span class="string">'image-height'</span>, imageHeight)</span><br><span class="line">  .render(<span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) throw err;</span><br><span class="line">    console.log(css);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 <p>为了进一步的参考（直到本文档全部结束），请看下面的文件：</p>
 <p>lib/nodes/*<br>lib/utils.js</p>
-<h3 id="use-fn"><a href="#use-fn" class="headerlink" title=".use(fn)"></a>.use(fn)</h3><p>当被调用时，给定fn被渲染器调用，允许所有上面的方法被使用。这允许插件轻易地暴露自己，定义函数，路径等<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var mylib = <span class="keyword">function</span>(style)&#123;</span><br><span class="line">  style.define(<span class="string">'add'</span>, add);</span><br><span class="line">  style.define(<span class="string">'sub'</span>, sub);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">stylus(str)</span><br><span class="line">  .use(mylib)</span><br><span class="line">  .render(...)</span><br></pre></td></tr></table></figure></p>
-<p>当使用选项调用render()方法时，可以给use选项提供一个函数或一组函数，以便与渲染器一起调用。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">stylus.render(str, &#123; use: mylib &#125;, <span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) throw err;</span><br><span class="line">  console.log(css);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h3 id="deps"><a href="#deps" class="headerlink" title=".deps()"></a>.deps()</h3><p>返回依赖项数组（导入文件）：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">stylus(<span class="string">'@import "a"; @import "b"'</span>)</span><br><span class="line">  .deps();</span><br><span class="line"></span><br><span class="line">// =&gt; [<span class="string">'a.styl'</span>, <span class="string">'b.styl'</span>]</span><br></pre></td></tr></table></figure></p>
+<h3 id="use-fn"><a href="#use-fn" class="headerlink" title=".use(fn)"></a>.use(fn)</h3><p>当被调用时，给定fn被渲染器调用，允许所有上面的方法被使用。这允许插件轻易地暴露自己，定义函数，路径等</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var mylib = <span class="keyword">function</span>(style)&#123;</span><br><span class="line">  style.define(<span class="string">'add'</span>, add);</span><br><span class="line">  style.define(<span class="string">'sub'</span>, sub);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">stylus(str)</span><br><span class="line">  .use(mylib)</span><br><span class="line">  .render(...)</span><br></pre></td></tr></table></figure>
+<p>当使用选项调用render()方法时，可以给use选项提供一个函数或一组函数，以便与渲染器一起调用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">stylus.render(str, &#123; use: mylib &#125;, <span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) throw err;</span><br><span class="line">  console.log(css);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="deps"><a href="#deps" class="headerlink" title=".deps()"></a>.deps()</h3><p>返回依赖项数组（导入文件）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">stylus(<span class="string">'@import "a"; @import "b"'</span>)</span><br><span class="line">  .deps();</span><br><span class="line"></span><br><span class="line">// =&gt; [<span class="string">'a.styl'</span>, <span class="string">'b.styl'</span>]</span><br></pre></td></tr></table></figure>
 <p>也可以查看 –deps CLI flag.</p>
-<h3 id="stylus-resolver-options"><a href="#stylus-resolver-options" class="headerlink" title="stylus.resolver([options])"></a>stylus.resolver([options])</h3><p>可选的内置函数可用于解析导入文件中的相关URL：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">stylus(str)</span><br><span class="line">  .define(<span class="string">'url'</span>, stylus.resolver())</span><br><span class="line">  .render(<span class="keyword">function</span>(err, css) &#123;</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="stylus-resolver-options"><a href="#stylus-resolver-options" class="headerlink" title="stylus.resolver([options])"></a>stylus.resolver([options])</h3><p>可选的内置函数可用于解析导入文件中的相关URL：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">stylus(str)</span><br><span class="line">  .define(<span class="string">'url'</span>, stylus.resolver())</span><br><span class="line">  .render(<span class="keyword">function</span>(err, css) &#123;</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 <p>也可以查看 –resolve-url CLI flag.</p>
 <p>Options:</p>
 <p>paths additional resolution path(s)<br>nocheck don’t check file existence</p>
 
-      
     </div>
 
     
-
     
     
-    
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/CSS3/" rel="tag"># CSS3</a>
-          
-            <a href="/tags/stylus/" rel="tag"># stylus</a>
-          
-            <a href="/tags/学习Stylus/" rel="tag"># 学习Stylus</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/03/12/学习stylus【25】/" rel="next" title="学习stylus【25】自检API(Introspection API)">
-                <i class="fa fa-chevron-left"></i> 学习stylus【25】自检API(Introspection API)
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/CSS3/" rel="tag"># CSS3</a>
+              <a href="/tags/stylus/" rel="tag"># stylus</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0Stylus/" rel="tag"># 学习Stylus</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/13/学习stylus【27】/" rel="prev" title="学习stylus【27】SOURCEMAPS">
-                学习stylus【27】SOURCEMAPS <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-  
-
-
-
-        </div>
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/03/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%9025%E3%80%91/" rel="prev" title="学习stylus【25】自检API(Introspection API)">
+      <i class="fa fa-chevron-left"></i> 学习stylus【25】自检API(Introspection API)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/03/13/%E5%AD%A6%E4%B9%A0stylus%E3%80%9027%E3%80%91/" rel="next" title="学习stylus【27】SOURCEMAPS">
+      学习stylus【27】SOURCEMAPS <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/images/common/avatar.jpg"
-                alt="winbug" />
-            
-              <p class="site-author-name" itemprop="name">winbug</p>
-              <p class="site-description motion-element" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">48</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">分类</span>
-                  
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">36</span>
-                    <span class="site-state-item-name">标签</span>
-                  
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-API"><span class="nav-number">1.</span> <span class="nav-text">JavaScript API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#set-setting-value"><span class="nav-number">1.1.</span> <span class="nav-text">.set(setting, value)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#include-path"><span class="nav-number">1.2.</span> <span class="nav-text">.include(path)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#import-path"><span class="nav-number">1.3.</span> <span class="nav-text">.import(path)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#define-name-node"><span class="nav-number">1.4.</span> <span class="nav-text">.define(name, node)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#define-name-fn"><span class="nav-number">1.5.</span> <span class="nav-text">.define(name, fn)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#use-fn"><span class="nav-number">1.6.</span> <span class="nav-text">.use(fn)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deps"><span class="nav-number">1.7.</span> <span class="nav-text">.deps()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stylus-resolver-options"><span class="nav-number">1.8.</span> <span class="nav-text">stylus.resolver([options])</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-API"><span class="nav-number">1.</span> <span class="nav-text">JavaScript API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#set-setting-value"><span class="nav-number">1.1.</span> <span class="nav-text">.set(setting, value)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#include-path"><span class="nav-number">1.2.</span> <span class="nav-text">.include(path)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#import-path"><span class="nav-number">1.3.</span> <span class="nav-text">.import(path)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#define-name-node"><span class="nav-number">1.4.</span> <span class="nav-text">.define(name, node)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#define-name-fn"><span class="nav-number">1.5.</span> <span class="nav-text">.define(name, fn)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#use-fn"><span class="nav-number">1.6.</span> <span class="nav-text">.use(fn)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deps"><span class="nav-number">1.7.</span> <span class="nav-text">.deps()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stylus-resolver-options"><span class="nav-number">1.8.</span> <span class="nav-text">stylus.resolver([options])</span></a></li></ol></li></ol></div>
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">winbug</span>
-
-  
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">winbug</p>
+  <div class="site-description" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.2.0</div>
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
+        
 
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">winbug</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
 
         
 
@@ -737,107 +394,24 @@
 
 
 
-        
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
-
-
-
-  
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -853,28 +427,10 @@
 
 
 
-  
 
 
 
 
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
   
 

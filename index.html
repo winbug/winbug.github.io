@@ -1,106 +1,24 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '6.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.l3f.win","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
   <meta name="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
 <meta property="og:type" content="website">
@@ -108,23 +26,20 @@
 <meta property="og:url" content="http://www.l3f.win/index.html">
 <meta property="og:site_name" content="L3F.WIN">
 <meta property="og:description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="winbug">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="L3F.WIN">
-<meta name="twitter:description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
+
+<link rel="canonical" href="http://www.l3f.win/">
 
 
-
-
-
-
-  <link rel="canonical" href="http://www.l3f.win/"/>
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -136,72 +51,58 @@
 
 
 
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">L3F.WIN</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">Github及Hexo的使用</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">L3F.WIN</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Github及Hexo的使用</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
@@ -209,58 +110,20 @@
 
 
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home menu-item-active">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-stylus中文文档">
-    <a href="/categories/Stylus中文文档/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-css3"></i> <br />Stylus中文文档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-微信小程序">
-    <a href="/categories/wechatminiapp/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-wechat"></i> <br />微信小程序</a>
-  </li>
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-      
-      
-    </ul>
-  
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
-  
-    
+  </li>
+        <li class="menu-item menu-item-archives">
 
-  
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
-  
+  </li>
+  </ul>
 </nav>
 
-
-
-  
 
 
 
@@ -268,117 +131,63 @@
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content index">
             
-  <section id="posts" class="posts-expand">
-    
-      
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="posts-expand">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2019/09/18/cpp/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2020/01/07/%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/18/cpp/" itemprop="url">
-                  C++ primer 5 代码
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/07/%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3/" class="post-title-link" itemprop="url">算法图解</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-09-18 15:42:59" itemprop="dateCreated datePublished" datetime="2019-09-18T15:42:59+08:00">2019-09-18</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <time title="创建时间：2020-01-07 10:10:33" itemprop="dateCreated datePublished" datetime="2020-01-07T10:10:33+08:00">2020-01-07</time>
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-09-29 17:31:31" itemprop="dateModified" datetime="2019-09-29T17:31:31+08:00">2019-09-29</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-19 16:00:40" itemprop="dateModified" datetime="2020-01-19T16:00:40+08:00">2020-01-19</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -386,155 +195,73 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          <h2 id="第1章-开始"><a href="#第1章-开始" class="headerlink" title="第1章 开始"></a>第1章 开始</h2><h3 id="初识输入输出"><a href="#初识输入输出" class="headerlink" title="初识输入输出"></a>初识输入输出</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;iostream&gt; //载入iostream库</span></span><br><span class="line"></span><br><span class="line">int <span class="function"><span class="title">main</span></span>() &#123;</span><br><span class="line">	std::cout &lt;&lt; <span class="string">"Enter two numbers:"</span> &lt;&lt; std::endl;  //cout输出的ostream类型的对象 &lt;&lt;为输出运算符 endl操纵符结束当前行 标准库定义的所有名字都在命名空间std中</span><br><span class="line">	int v1 = 0, v2 = 0;</span><br><span class="line">	std::cin &gt;&gt; v1 &gt;&gt; v2;   //cin输入的ostream类的对象</span><br><span class="line">	std::cout &lt;&lt; <span class="string">"The sum of "</span> &lt;&lt; v1 &lt;&lt; <span class="string">" and "</span> &lt;&lt; v2</span><br><span class="line">		&lt;&lt; <span class="string">" is "</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="算法图解"><a href="#算法图解" class="headerlink" title="算法图解"></a>算法图解</h1><p>======================================</p>
+<h2 id="算法简介"><a href="#算法简介" class="headerlink" title="算法简介"></a>算法简介</h2><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><h4 id="二分查找能解决什么问题？"><a href="#二分查找能解决什么问题？" class="headerlink" title="二分查找能解决什么问题？"></a>二分查找能解决什么问题？</h4><p>在<strong>有序</strong>的元素列表中快速的找到指定元素位置。使用二分查找可以将查找步骤减少到 $log_2n$ 步</p>
+<h4 id="二分查找的原理"><a href="#二分查找的原理" class="headerlink" title="二分查找的原理"></a>二分查找的原理</h4><p>通过猜测中间的数字，从而每次都将余下的数字排除一半，从而减少查找的次数</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/18/cpp/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2020/01/07/%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2019/09/16/jsandjqueryessence/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2019/09/18/cpp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/16/jsandjqueryessence/" itemprop="url">
-                  Javascript与jQuery技术精粹
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/18/cpp/" class="post-title-link" itemprop="url">C++ primer 5 代码</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-09-16 15:07:05" itemprop="dateCreated datePublished" datetime="2019-09-16T15:07:05+08:00">2019-09-16</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <time title="创建时间：2019-09-18 15:42:59" itemprop="dateCreated datePublished" datetime="2019-09-18T15:42:59+08:00">2019-09-18</time>
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-09-17 14:57:20" itemprop="dateModified" datetime="2019-09-17T14:57:20+08:00">2019-09-17</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-14 17:08:21" itemprop="dateModified" datetime="2019-10-14T17:08:21+08:00">2019-10-14</time>
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -542,166 +269,152 @@
     <div class="post-body" itemprop="articleBody">
 
       
+          <h2 id="第1章-开始"><a href="#第1章-开始" class="headerlink" title="第1章 开始"></a>第1章 开始</h2><h3 id="初识输入输出"><a href="#初识输入输出" class="headerlink" title="初识输入输出"></a>初识输入输出</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;iostream&gt; //载入iostream库</span></span><br><span class="line"></span><br><span class="line">int <span class="function"><span class="title">main</span></span>() &#123;</span><br><span class="line">	std::cout &lt;&lt; <span class="string">"Enter two numbers:"</span> &lt;&lt; std::endl;  //cout输出的ostream类型的对象 &lt;&lt;为输出运算符 endl操纵符结束当前行 标准库定义的所有名字都在命名空间std中</span><br><span class="line">	int v1 = 0, v2 = 0;</span><br><span class="line">	std::cin &gt;&gt; v1 &gt;&gt; v2;   //cin输入的ostream类的对象</span><br><span class="line">	std::cout &lt;&lt; <span class="string">"The sum of "</span> &lt;&lt; v1 &lt;&lt; <span class="string">" and "</span> &lt;&lt; v2</span><br><span class="line">		&lt;&lt; <span class="string">" is "</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/09/18/cpp/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2019/09/16/jsandjqueryessence/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="winbug">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L3F.WIN">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/16/jsandjqueryessence/" class="post-title-link" itemprop="url">Javascript与jQuery技术精粹</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-16 15:07:05" itemprop="dateCreated datePublished" datetime="2019-09-16T15:07:05+08:00">2019-09-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-17 14:57:20" itemprop="dateModified" datetime="2019-09-17T14:57:20+08:00">2019-09-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
           <h2 id="第一章-JavaScript基础篇"><a href="#第一章-JavaScript基础篇" class="headerlink" title="第一章 JavaScript基础篇"></a>第一章 JavaScript基础篇</h2><h3 id="缩略标记"><a href="#缩略标记" class="headerlink" title="缩略标记"></a>缩略标记</h3><ul>
 <li>对象</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var car = new Object();</span><br><span class="line">car.color = <span class="string">'red'</span>;</span><br><span class="line">car.wheels = 4;</span><br><span class="line">car.hubcaps = <span class="string">'spinning'</span>;</span><br><span class="line">car.age = 4;</span><br></pre></td></tr></table></figure>
+
 <p>👇</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var car = &#123;</span><br><span class="line">    color: <span class="string">'red'</span>,</span><br><span class="line">    wheels: 4,</span><br><span class="line">    hubcaps: <span class="string">'spinning'</span>,</span><br><span class="line">    age: 4</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/16/jsandjqueryessence/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2019/09/16/jsandjqueryessence/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2019/07/23/wechatMiniApp01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/23/wechatMiniApp01/" itemprop="url">
-                  微信小程序学习
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/07/23/wechatMiniApp01/" class="post-title-link" itemprop="url">微信小程序学习</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2019-07-23 07:01:29 / 修改时间：17:10:22" itemprop="dateCreated datePublished" datetime="2019-07-23T07:01:29+08:00">2019-07-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/微信小程序/" itemprop="url" rel="index"><span itemprop="name">微信小程序</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">微信小程序</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -709,174 +422,81 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h2 id="微信小程序账号注册"><a href="#微信小程序账号注册" class="headerlink" title="微信小程序账号注册"></a>微信小程序账号注册</h2><p><a href="https://mp.weixin.qq.com/" target="_blank" rel="noopener">注册地址</a></p>
 <p>此处就不多做说明了。按照腾讯公司的要求，将该上传的上传，该填写的填写，一般很顺利的就能注册一个账号。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/23/wechatMiniApp01/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2019/07/23/wechatMiniApp01/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2019/01/31/vue-guide/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/31/vue-guide/" itemprop="url">
-                  vue.js 权威指南（读书笔记）
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/01/31/vue-guide/" class="post-title-link" itemprop="url">vue.js 权威指南（读书笔记）</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2019-01-31 18:18:47" itemprop="dateCreated datePublished" datetime="2019-01-31T18:18:47+08:00">2019-01-31</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-04-02 12:39:09" itemprop="dateModified" datetime="2019-04-02T12:39:09+08:00">2019-04-02</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue-js/" itemprop="url" rel="index"><span itemprop="name">Vue.js</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue-js/" itemprop="url" rel="index"><span itemprop="name">Vue.js</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -884,10 +504,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h1 id="Vue-js-权威指南"><a href="#Vue-js-权威指南" class="headerlink" title="Vue.js 权威指南"></a>Vue.js 权威指南</h1><h2 id="第1章-遇见Vue-js"><a href="#第1章-遇见Vue-js" class="headerlink" title="第1章 遇见Vue.js"></a>第1章 遇见Vue.js</h2><h3 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h3><p>M 模型（Model）, V 显示（View）, V 显示模型（ViewModel） 实现了ViewModel 自动同步到 View</p>
 <h3 id="Vue-js是什么"><a href="#Vue-js是什么" class="headerlink" title="Vue.js是什么"></a>Vue.js是什么</h3><p>Vue.js是一个构建数据驱动的Web界面的库</p>
 <h3 id="Vue-js特性"><a href="#Vue-js特性" class="headerlink" title="Vue.js特性"></a>Vue.js特性</h3><ol>
@@ -898,137 +514,63 @@
 </ol>
 <h3 id="Vue-js的Hello-World"><a href="#Vue-js的Hello-World" class="headerlink" title="Vue.js的Hello World"></a>Vue.js的Hello World</h3>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/01/31/vue-guide/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2019/01/31/vue-guide/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2019/01/17/vuepresssexperience/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/17/vuepresssexperience/" itemprop="url">
-                  VuePress开发经验总结
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/01/17/vuepresssexperience/" class="post-title-link" itemprop="url">VuePress开发经验总结</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2019-01-17 11:22:22 / 修改时间：11:37:11" itemprop="dateCreated datePublished" datetime="2019-01-17T11:22:22+08:00">2019-01-17</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1036,147 +578,70 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h1 id="VuePress开发经验总结"><a href="#VuePress开发经验总结" class="headerlink" title="VuePress开发经验总结"></a>VuePress开发经验总结</h1><h2 id="this-site-和-this-page网站和页面的元数据"><a href="#this-site-和-this-page网站和页面的元数据" class="headerlink" title="this.$site 和 this.$page网站和页面的元数据"></a>this.$site 和 this.$page网站和页面的元数据</h2><p>Layout 组件将会对每一个文档目录下的 .md 执行一次，同时，整个网站以及特定页面的元数据将分别暴露为 this.$site 和 this.$page 属性，它们将会被注入到每一个当前应用的组件中。</p>
 <p>这是你现在看到的这个网站的 $site 的值：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"title"</span>: <span class="string">"VuePress"</span>,</span><br><span class="line">  <span class="string">"description"</span>: <span class="string">"Vue 驱动的静态网站生成器"</span>,</span><br><span class="line">  <span class="string">"base"</span>: <span class="string">"/"</span>,</span><br><span class="line">  <span class="string">"pages"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"lastUpdated"</span>: 1524027677000,</span><br><span class="line">      <span class="string">"path"</span>: <span class="string">"/"</span>,</span><br><span class="line">      <span class="string">"title"</span>: <span class="string">"VuePress"</span>,</span><br><span class="line">      <span class="string">"frontmatter"</span>: &#123;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><strong>网站和页面的元数据</strong><br>Layout 组件将会对每一个文档目录下的 .md 执行一次，同时，整个网站以及特定页面的元数据将分别暴露为 this.$site 和 this.$page 属性，它们将会被注入到每一个当前应用的组件中。<br>下面的这个对象是你正在看的这个页面的 $page 的值：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"lastUpdated"</span>: 1524847549000,</span><br><span class="line">  <span class="string">"path"</span>: <span class="string">"/custom-themes.html"</span>,</span><br><span class="line">  <span class="string">"title"</span>: <span class="string">"自定义主题"</span>,</span><br><span class="line">  <span class="string">"headers"</span>: [/* ... */],</span><br><span class="line">  <span class="string">"frontmatter"</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/01/17/vuepresssexperience/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2019/01/17/vuepresssexperience/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2019/01/15/javascriptsuanfa-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/15/javascriptsuanfa-1/" itemprop="url">
-                  Javascript算法 -- 01 快速排序
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/01/15/javascriptsuanfa-1/" class="post-title-link" itemprop="url">Javascript算法 -- 01 快速排序</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2019-01-15 17:32:10 / 修改时间：17:45:38" itemprop="dateCreated datePublished" datetime="2019-01-15T17:32:10+08:00">2019-01-15</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1184,12 +649,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h1 id="Javascript算法-–-01-快速排序"><a href="#Javascript算法-–-01-快速排序" class="headerlink" title="Javascript算法 – 01 快速排序"></a>Javascript算法 – 01 快速排序</h1><h2 id="快速排序一"><a href="#快速排序一" class="headerlink" title="快速排序一"></a>快速排序一</h2><p>对于数组 <code>arr1 = new Array(15,12,3,2,7,15);</code></p>
+          <h1 id="Javascript算法-–-01-快速排序"><a href="#Javascript算法-–-01-快速排序" class="headerlink" title="Javascript算法 – 01 快速排序"></a>Javascript算法 – 01 快速排序</h1><h2 id="快速排序一"><a href="#快速排序一" class="headerlink" title="快速排序一"></a>快速排序一</h2><p>对于数组 <code>arr1 = new Array(15,12,3,2,7,15);</code></p>
 <ol>
 <li>选择左右边的元素为基准数，7</li>
 <li>将小于7的放在左边，大于7的放在右边，然后将基准数放到中间</li>
@@ -1199,6 +659,7 @@
 <li>最后出来的结果就是从左到右 2 ，3，7，12，15了</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">	var quickSort = <span class="keyword">function</span>(arr) &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.length &lt;= 1) &#123;</span><br><span class="line">    <span class="built_in">return</span> arr;</span><br><span class="line">  &#125;</span><br><span class="line">  var pivotIndex = Math.floor(arr.length / 2);</span><br><span class="line">  var pivot = arr.splice(pivotIndex, 1)[0];</span><br><span class="line">  var left = [];</span><br><span class="line">  var right = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (var i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (arr[i] &lt; pivot) &#123;</span><br><span class="line">      left.push(arr[i]);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      right.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">return</span> quickSort(left).concat([pivot], quickSort(right));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var arr1 = new Array(15,12,3,2,7,15);</span><br><span class="line"></span><br><span class="line">console.log(quickSort(arr1));</span><br></pre></td></tr></table></figure>
+
 <h2 id="快速排序二"><a href="#快速排序二" class="headerlink" title="快速排序二"></a>快速排序二</h2><ol>
 <li>初始化i = -1</li>
 <li>循环数组，找到比支点小的数就将i向右移动一个位置，同时与下标i交换位置</li>
@@ -1206,144 +667,62 @@
 <li>最后我们会得到一个由i指针作为分界点，分割成从下标0-i，和 i+1到最后一个元素。</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/*数组交换*/</span><br><span class="line"><span class="keyword">function</span> swap(A, i, j) &#123;</span><br><span class="line">  const t = A[i];</span><br><span class="line">  A[i] = A[j];</span><br><span class="line">  A[j] = t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> *</span><br><span class="line"> * @param &#123;*&#125; A  数组</span><br><span class="line"> * @param &#123;*&#125; p  起始下标</span><br><span class="line"> * @param &#123;*&#125; r  结束下标 + 1</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">function</span> divide(A, p, r) &#123;</span><br><span class="line">  const x = A[r - 1];</span><br><span class="line">  <span class="built_in">let</span> i = p - 1;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="built_in">let</span> j = p; j &lt; r - 1; j++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (A[j] &lt;= x) &#123;</span><br><span class="line">      i++;</span><br><span class="line">      swap(A, i, j);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  swap(A, i + 1, r - 1);</span><br><span class="line"></span><br><span class="line">  <span class="built_in">return</span> i + 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * </span><br><span class="line"> * @param &#123;*&#125; A  数组</span><br><span class="line"> * @param &#123;*&#125; p  起始下标</span><br><span class="line"> * @param &#123;*&#125; r  结束下标 + 1</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">function</span> qsort(A, p = 0, r) &#123;</span><br><span class="line">  r = r || A.length;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (p &lt; r - 1) &#123;</span><br><span class="line">    const q = divide(A, p, r);</span><br><span class="line">    qsort(A, p, q);</span><br><span class="line">    qsort(A, q + 1, r);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">return</span> A;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(qsort(arr1, p=0, arr1.length))</span><br></pre></td></tr></table></figure>
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/12/05/nodeupandrunning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/05/nodeupandrunning/" itemprop="url">
-                  Node即学即用
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/12/05/nodeupandrunning/" class="post-title-link" itemprop="url">Node即学即用</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-12-05 17:19:20" itemprop="dateCreated datePublished" datetime="2018-12-05T17:19:20+08:00">2018-12-05</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-01-07 17:42:21" itemprop="dateModified" datetime="2019-01-07T17:42:21+08:00">2019-01-07</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1351,149 +730,72 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h1 id="Node即学即用"><a href="#Node即学即用" class="headerlink" title="Node即学即用"></a>Node即学即用</h1><h2 id="第1章-Node-js简介"><a href="#第1章-Node-js简介" class="headerlink" title="第1章 Node.js简介"></a>第1章 Node.js简介</h2><h3 id="开始写代码"><a href="#开始写代码" class="headerlink" title="开始写代码"></a>开始写代码</h3><ol>
 <li><p>Node REPL(Read - Evaluate - Print - Loop) REPL模式输入，求值，输出，循环<br>我们可以启动node，来进行测试一般的Javascript</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">node</span><br><span class="line">&gt;3&gt;2&gt;1</span><br><span class="line"><span class="literal">false</span></span><br><span class="line">&gt;<span class="literal">true</span>==1</span><br><span class="line"><span class="literal">true</span></span><br><span class="line">&gt;<span class="literal">true</span>===1</span><br><span class="line"><span class="literal">false</span></span><br><span class="line">.<span class="built_in">exit</span>  //输入.<span class="built_in">exit</span>退出node环境</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>编写首个服务器程序</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var http = require(<span class="string">'http'</span>);</span><br><span class="line">http.createServer(<span class="keyword">function</span> (req, res)&#123;</span><br><span class="line">  res.writeHead(200, &#123;<span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span>&#125;);</span><br><span class="line">  res.end(<span class="string">'Hello World\n'</span>);</span><br><span class="line">&#125;).listen(8000, <span class="string">"127.0.0.1"</span>);</span><br><span class="line">console.log(<span class="string">'Server running at http://127.0.0.1:8000'</span>);</span><br></pre></td></tr></table></figure>
+
 <p> require(‘http’),导入http模块<br> req参数，请求对象<br> res参数，响应对象<br> res.writeHead设置相应头<br> end方法会关闭HTTP连接</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/05/nodeupandrunning/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/12/05/nodeupandrunning/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/12/05/VuePressNetlifyCMS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/05/VuePressNetlifyCMS/" itemprop="url">
-                  利用VuePress和Netlify CMS创建一个简单的网站
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/12/05/VuePressNetlifyCMS/" class="post-title-link" itemprop="url">利用VuePress和Netlify CMS创建一个简单的网站</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2018-12-05 09:45:17 / 修改时间：11:33:38" itemprop="dateCreated datePublished" datetime="2018-12-05T09:45:17+08:00">2018-12-05</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1501,157 +803,73 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p><img src="/images/post/Vuepress.png" alt="VuePress"></p>
 <h1 id="利用VuePress和Netlify-CMS创建一个简单的网站"><a href="#利用VuePress和Netlify-CMS创建一个简单的网站" class="headerlink" title="利用VuePress和Netlify CMS创建一个简单的网站"></a>利用VuePress和Netlify CMS创建一个简单的网站</h1><p>本文属于本人翻译其英文原稿及测试过程中遇到的问题总结而成的，请大家多提意见。可随意转载。</p>
 <p>在本教程中，我将向您展示如何使用VuePress 和 Netlify CMS构建一个静态网站。 如果您不熟悉VuePres， 它是由Evan You(Vue的创始人)在Vue之上构建的静态网站生成器。与Nuxt.js不同的是，VuePress的主要关注点在于构建静态站点，该站点有自己的构造，并且自动负责许多的设置工作。<br>Netlify,一个针对静态站点的现代化平台，使用其CMS来管理静态站点，这使得任何人都可以通过编辑器轻松的管理网站内容。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/05/VuePressNetlifyCMS/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/12/05/VuePressNetlifyCMS/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/11/29/ContentfuWithNuxtjs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/29/ContentfuWithNuxtjs/" itemprop="url">
-                  使用Nuxt.js与Contentful创建简单的可数据库管理博客
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/11/29/ContentfuWithNuxtjs/" class="post-title-link" itemprop="url">使用Nuxt.js与Contentful创建简单的可数据库管理博客</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-11-29 15:55:12" itemprop="dateCreated datePublished" datetime="2018-11-29T15:55:12+08:00">2018-11-29</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-12-04 09:40:44" itemprop="dateModified" datetime="2018-12-04T09:40:44+08:00">2018-12-04</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1659,214 +877,31 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h1 id="使用Nuxt-js与Contentful创建简单的可数据库管理博客"><a href="#使用Nuxt-js与Contentful创建简单的可数据库管理博客" class="headerlink" title="使用Nuxt.js与Contentful创建简单的可数据库管理博客"></a>使用Nuxt.js与Contentful创建简单的可数据库管理博客</h1><p>让我们体验一下时下较流行的框架 Nuxt.js + Contentful的组合方式来创建个人博客。<br>本文将向您展示如何设置Contentful及Nuxt.js项目，以及Contentful对内容的管理方法</p>
 <h2 id="涉及环境"><a href="#涉及环境" class="headerlink" title="涉及环境"></a>涉及环境</h2><p>Node V11.0.0<br>Npm  V6.4.1<br>Nuxt V2.3.4<br>Contentful V0.17.1</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/29/ContentfuWithNuxtjs/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/11/29/ContentfuWithNuxtjs/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/09/06/google-chrome-themes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L3F.WIN">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/06/google-chrome-themes/" itemprop="url">
-                  谷歌Chrome浏览器，自制改造主题帖
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-09-06 09:44:04" itemprop="dateCreated datePublished" datetime="2018-09-06T09:44:04+08:00">2018-09-06</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-10-11 11:01:44" itemprop="dateModified" datetime="2018-10-11T11:01:44+08:00">2018-10-11</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="主题帖"><a href="#主题帖" class="headerlink" title="主题帖"></a>主题帖</h1><p>此贴只做个人爱好，收集一些Google Chrome浏览器主题，并做一定修改。<br>不一定符合其他人的口味，所以也不做宣传。请看客，喜欢就下。不喜欢我也不负责修改。谢谢。</p>
-<h2 id="Custom-Myself-v1-0"><a href="#Custom-Myself-v1-0" class="headerlink" title="Custom Myself v1.0"></a>Custom Myself v1.0</h2><p><img src="/images/post/google-theme-01.jpg" alt="Custom Myself -- Google Chrome theme"></p>
-<p><a href="/download/chromethemes/theme0001.crx">下载文件</a></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/06/google-chrome-themes/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
 
   
   <nav class="pagination">
@@ -1878,217 +913,108 @@
           </div>
           
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
-        
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/images/common/avatar.jpg"
-                alt="winbug" />
-            
-              <p class="site-author-name" itemprop="name">winbug</p>
-              <p class="site-description motion-element" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">48</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">分类</span>
-                  
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">36</span>
-                    <span class="site-state-item-name">标签</span>
-                  
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">winbug</span>
-
-  
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">winbug</p>
+  <div class="site-description" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.2.0</div>
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
+        
 
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">winbug</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
 
         
 
@@ -2099,103 +1025,24 @@
 
 
 
-        
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
-
-
-
-  
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -2211,28 +1058,10 @@
 
 
 
-  
 
 
 
 
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
   
 

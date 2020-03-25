@@ -1,106 +1,24 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '6.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.l3f.win","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
   <meta name="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
 <meta property="og:type" content="website">
@@ -108,23 +26,20 @@
 <meta property="og:url" content="http://www.l3f.win/page/3/index.html">
 <meta property="og:site_name" content="L3F.WIN">
 <meta property="og:description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="winbug">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="L3F.WIN">
-<meta name="twitter:description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
+
+<link rel="canonical" href="http://www.l3f.win/page/3/">
 
 
-
-
-
-
-  <link rel="canonical" href="http://www.l3f.win/page/3/"/>
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -136,72 +51,58 @@
 
 
 
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">L3F.WIN</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">Github及Hexo的使用</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">L3F.WIN</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Github及Hexo的使用</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
@@ -209,58 +110,20 @@
 
 
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-stylus中文文档">
-    <a href="/categories/Stylus中文文档/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-css3"></i> <br />Stylus中文文档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-微信小程序">
-    <a href="/categories/wechatminiapp/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-wechat"></i> <br />微信小程序</a>
-  </li>
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-      
-      
-    </ul>
-  
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
-  
-    
+  </li>
+        <li class="menu-item menu-item-archives">
 
-  
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
-  
+  </li>
+  </ul>
 </nav>
 
-
-
-  
 
 
 
@@ -268,123 +131,144 @@
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content index">
             
-  <section id="posts" class="posts-expand">
-    
-      
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="posts-expand">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/12/学习stylus【25】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%9026%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/12/学习stylus【25】/" itemprop="url">
-                  学习stylus【25】自检API(Introspection API)
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%9026%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【26】JavaScript API</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
+              <span class="post-meta-item-text">发表于</span>
               
 
-              
-                
+              <time title="创建时间：2018-03-12 15:20:12 / 修改时间：15:34:56" itemprop="dateCreated datePublished" datetime="2018-03-12T15:20:12+08:00">2018-03-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="JavaScript-API"><a href="#JavaScript-API" class="headerlink" title="JavaScript API"></a>JavaScript API</h2><p>require模块，用给定的Stylus代码字符串调用render()，以及（可选的）optional对象。<br>传递filename参数可以利用Stylus框架提供更好的错误报告。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'stylus'</span>);</span><br><span class="line"></span><br><span class="line">stylus.render(str, &#123; filename: <span class="string">'nesting.css'</span> &#125;, <span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) throw err;</span><br><span class="line">  console.log(css);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>我们可以用更渐进的方式实现做一样的事：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var stylus = require(<span class="string">'stylus'</span>);</span><br><span class="line"></span><br><span class="line">stylus(str)</span><br><span class="line">.<span class="built_in">set</span>(<span class="string">'filename'</span>, <span class="string">'nesting.css'</span>)</span><br><span class="line">.render(<span class="keyword">function</span>(err, css)&#123;</span><br><span class="line">  // logic</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/03/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%9026%E3%80%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%9025%E3%80%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="winbug">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L3F.WIN">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%9025%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【25】自检API(Introspection API)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2018-03-12 15:15:16 / 修改时间：15:19:35" itemprop="dateCreated datePublished" datetime="2018-03-12T15:15:16+08:00">2018-03-12</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -392,158 +276,68 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="自检API-Introspection-API"><a href="#自检API-Introspection-API" class="headerlink" title="自检API(Introspection API)"></a>自检API(Introspection API)</h2><p>Stylus支持自我检测的API, 这允许混写以及函数反应调用者的相关性。</p>
-<h3 id="混入-mixin"><a href="#混入-mixin" class="headerlink" title="混入(mixin)"></a>混入(mixin)</h3><p>mixin这个局部变量在函数体内自动赋值。如果调用的函数在根级别，则mixin包含字符串root, 如果其他情况，则是block, 如果调用函数有返回值，最终为false.<br>下面这个例子中，我们定义reset(), 根据其是混入了根部，还是混入块状域，还是混入返回值中，来修改其值，并作为foo属性的值呈现：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">reset()</span><br><span class="line">  <span class="keyword">if</span> mixin == <span class="string">'root'</span></span><br><span class="line">    got</span><br><span class="line">      root <span class="literal">true</span></span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> mixin</span><br><span class="line">    got <span class="string">'a mixin'</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="string">'not a mixin'</span></span><br><span class="line"></span><br><span class="line">reset()</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  reset()</span><br><span class="line">  foo reset()</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line">got &#123;</span><br><span class="line">  root: <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line">body &#123;</span><br><span class="line">  foo: <span class="string">"not a mixin"</span>;</span><br><span class="line">  got: <span class="string">"a mixin"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
+          <h2 id="自检API-Introspection-API"><a href="#自检API-Introspection-API" class="headerlink" title="自检API(Introspection API)"></a>自检API(Introspection API)</h2><p>Stylus支持自我检测的API, 这允许混写以及函数反应调用者的相关性。</p>
+<h3 id="混入-mixin"><a href="#混入-mixin" class="headerlink" title="混入(mixin)"></a>混入(mixin)</h3><p>mixin这个局部变量在函数体内自动赋值。如果调用的函数在根级别，则mixin包含字符串root, 如果其他情况，则是block, 如果调用函数有返回值，最终为false.<br>下面这个例子中，我们定义reset(), 根据其是混入了根部，还是混入块状域，还是混入返回值中，来修改其值，并作为foo属性的值呈现：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">reset()</span><br><span class="line">  <span class="keyword">if</span> mixin == <span class="string">'root'</span></span><br><span class="line">    got</span><br><span class="line">      root <span class="literal">true</span></span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> mixin</span><br><span class="line">    got <span class="string">'a mixin'</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="string">'not a mixin'</span></span><br><span class="line"></span><br><span class="line">reset()</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  reset()</span><br><span class="line">  foo reset()</span><br><span class="line"></span><br><span class="line">=&gt;</span><br><span class="line">got &#123;</span><br><span class="line">  root: <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line">body &#123;</span><br><span class="line">  foo: <span class="string">"not a mixin"</span>;</span><br><span class="line">  got: <span class="string">"a mixin"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/06/学习stylus【24】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/06/%E5%AD%A6%E4%B9%A0stylus%E3%80%9024%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/06/学习stylus【24】/" itemprop="url">
-                  学习stylus【24】连接中间件(Connect Middleware)
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/06/%E5%AD%A6%E4%B9%A0stylus%E3%80%9024%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【24】连接中间件(Connect Middleware)</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2018-03-06 08:53:11 / 修改时间：08:58:47" itemprop="dateCreated datePublished" datetime="2018-03-06T08:53:11+08:00">2018-03-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -551,162 +345,76 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h2 id="连接中间件-Connect-Middleware"><a href="#连接中间件-Connect-Middleware" class="headerlink" title="连接中间件(Connect Middleware)"></a>连接中间件(Connect Middleware)</h2><p>有了连接中间件，无论Stylus片段什么时候改变，这些片段都能够自动编译。</p>
-<h3 id="stylus-middleware-options"><a href="#stylus-middleware-options" class="headerlink" title="stylus.middleware(options)"></a>stylus.middleware(options)</h3><p>选项<br>返回给定options下的连接中间件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">`serve`     从 `dest` 提供stylus文件 [<span class="literal">true</span>]</span><br><span class="line">`force`     总是重新编译</span><br><span class="line">`src`       资源目录用来查找 .styl 文件</span><br><span class="line">`dest`      `src`默认为undefined时，用来输出 .css 文件的目标目录</span><br><span class="line">`compile`   自定义编译函数，接受参数`(str, path)`.</span><br><span class="line">`compress`  是否输出的 .css 文件要被压缩</span><br><span class="line">`firebug`   生成的CSS中发出调试信息，可被Firebug插件FireStylus使用</span><br><span class="line">`linenos`   生成的CSS中发出注解，表明响应的stylus行</span><br><span class="line">`sourcemap` 以sourcemaps v3格式生成源映射</span><br></pre></td></tr></table></figure></p>
+<h3 id="stylus-middleware-options"><a href="#stylus-middleware-options" class="headerlink" title="stylus.middleware(options)"></a>stylus.middleware(options)</h3><p>选项<br>返回给定options下的连接中间件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">`serve`     从 `dest` 提供stylus文件 [<span class="literal">true</span>]</span><br><span class="line">`force`     总是重新编译</span><br><span class="line">`src`       资源目录用来查找 .styl 文件</span><br><span class="line">`dest`      `src`默认为undefined时，用来输出 .css 文件的目标目录</span><br><span class="line">`compile`   自定义编译函数，接受参数`(str, path)`.</span><br><span class="line">`compress`  是否输出的 .css 文件要被压缩</span><br><span class="line">`firebug`   生成的CSS中发出调试信息，可被Firebug插件FireStylus使用</span><br><span class="line">`linenos`   生成的CSS中发出注解，表明响应的stylus行</span><br><span class="line">`sourcemap` 以sourcemaps v3格式生成源映射</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/06/学习stylus【24】/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/03/06/%E5%AD%A6%E4%B9%A0stylus%E3%80%9024%E3%80%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/06/学习stylus【23】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/06/%E5%AD%A6%E4%B9%A0stylus%E3%80%9023%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/06/学习stylus【23】/" itemprop="url">
-                  学习stylus【23】错误报告(Error Reporting)
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/06/%E5%AD%A6%E4%B9%A0stylus%E3%80%9023%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【23】错误报告(Error Reporting)</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2018-03-06 08:45:31 / 修改时间：08:51:39" itemprop="dateCreated datePublished" datetime="2018-03-06T08:45:31+08:00">2018-03-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -714,162 +422,76 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h2 id="错误报告-Error-Reporting"><a href="#错误报告-Error-Reporting" class="headerlink" title="错误报告(Error Reporting)"></a>错误报告(Error Reporting)</h2><p>Stylus内置梦幻般的错误报告，针对语法、解析以及计算错误，完整的堆栈跟踪，行号和文件名。</p>
-<h3 id="解析错误"><a href="#解析错误" class="headerlink" title="解析错误"></a>解析错误</h3><p>解析错误例子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">  form input</span><br><span class="line">    == padding 5px</span><br><span class="line">=&gt;</span><br><span class="line">ParseError: test.styl:3:16</span><br><span class="line">  1| body</span><br><span class="line">  2|    form input</span><br><span class="line">  3|      == padding 5px</span><br><span class="line">---------------------^</span><br><span class="line">  4|</span><br><span class="line"></span><br><span class="line">illegal unary <span class="string">"=="</span>, missing left-hand operand</span><br></pre></td></tr></table></figure></p>
+<h3 id="解析错误"><a href="#解析错误" class="headerlink" title="解析错误"></a>解析错误</h3><p>解析错误例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">  form input</span><br><span class="line">    == padding 5px</span><br><span class="line">=&gt;</span><br><span class="line">ParseError: test.styl:3:16</span><br><span class="line">  1| body</span><br><span class="line">  2|    form input</span><br><span class="line">  3|      == padding 5px</span><br><span class="line">---------------------^</span><br><span class="line">  4|</span><br><span class="line"></span><br><span class="line">illegal unary <span class="string">"=="</span>, missing left-hand operand</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/06/学习stylus【23】/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/03/06/%E5%AD%A6%E4%B9%A0stylus%E3%80%9023%E3%80%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/05/学习stylus【22】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/05/%E5%AD%A6%E4%B9%A0stylus%E3%80%9022%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/05/学习stylus【22】/" itemprop="url">
-                  学习stylus【22】可执行性(EXECUTABLE)
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/05/%E5%AD%A6%E4%B9%A0stylus%E3%80%9022%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【22】可执行性(EXECUTABLE)</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2018-03-05 17:13:38 / 修改时间：17:42:42" itemprop="dateCreated datePublished" datetime="2018-03-05T17:13:38+08:00">2018-03-05</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -877,161 +499,75 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          <h2 id="可执行性-EXECUTABLE"><a href="#可执行性-EXECUTABLE" class="headerlink" title="可执行性(EXECUTABLE)"></a>可执行性(EXECUTABLE)</h2><p>正因有stylus可执行性，Stylus才能将自身转换成CSS.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">Usage: stylus [options] [<span class="built_in">command</span>] [&lt; <span class="keyword">in</span> [&gt; out]]</span><br><span class="line">              [file|dir ...]</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line"></span><br><span class="line">  <span class="built_in">help</span> [&lt;<span class="built_in">type</span>&gt;:]&lt;prop&gt; Opens <span class="built_in">help</span> info at MDC <span class="keyword">for</span> &lt;prop&gt; <span class="keyword">in</span></span><br><span class="line">                       your default browser. Optionally</span><br><span class="line">                       searches other resources of &lt;<span class="built_in">type</span>&gt;:</span><br><span class="line">                       safari opera w3c ms caniuse quirksmode</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line"></span><br><span class="line">  -i, --interactive       Start interactive REPL</span><br><span class="line">  -u, --use &lt;path&gt;        Utilize the Stylus plugin at &lt;path&gt;</span><br><span class="line">  -U, --inline            Utilize image inlining via data URI support</span><br><span class="line">  -w, --watch             Watch file(s) <span class="keyword">for</span> changes and re-compile</span><br><span class="line">  -o, --out &lt;dir&gt;         Output to &lt;dir&gt; when passing files</span><br><span class="line">  -C, --css &lt;src&gt; [dest]  Convert CSS input to Stylus</span><br><span class="line">  -I, --include &lt;path&gt;    Add &lt;path&gt; to lookup paths</span><br><span class="line">  -c, --compress          Compress CSS output</span><br><span class="line">  -d, --compare           Display input along with output</span><br><span class="line">  -f, --firebug           Emits debug infos <span class="keyword">in</span> the generated CSS that</span><br><span class="line">                          can be used by the FireStylus Firebug plugin</span><br><span class="line">  -l, --line-numbers      Emits comments <span class="keyword">in</span> the generated CSS</span><br><span class="line">                          indicating the corresponding Stylus line</span><br><span class="line">  -m, --sourcemap         Generates a sourcemap <span class="keyword">in</span> sourcemaps v3 format</span><br><span class="line">  --sourcemap-inline      Inlines sourcemap with full <span class="built_in">source</span> text <span class="keyword">in</span> base64 format</span><br><span class="line">  --sourcemap-root &lt;url&gt;  <span class="string">"sourceRoot"</span> property of the generated sourcemap</span><br><span class="line">  --sourcemap-base &lt;path&gt; Base &lt;path&gt; from <span class="built_in">which</span> sourcemap and all sources are relative</span><br><span class="line">  -P, --prefix [prefix]   Prefix all css classes</span><br><span class="line">  -p, --<span class="built_in">print</span>             Print out the compiled CSS</span><br><span class="line">  --import &lt;file&gt;         Import stylus &lt;file&gt;</span><br><span class="line">  --include-css           Include regular CSS on @import</span><br><span class="line">  -D, --deps              Display dependencies of the compiled file</span><br><span class="line">  --<span class="built_in">disable</span>-cache         Disable caching</span><br><span class="line">  --hoist-atrules         Move @import and @charset to the top</span><br><span class="line">  -r, --resolve-url       Resolve relative urls inside imports</span><br><span class="line">  --resolve-url-nocheck   Like --resolve-url but without file existence check</span><br><span class="line">  -V, --version           Display the version of Stylus</span><br><span class="line">  -h, --<span class="built_in">help</span>              Display <span class="built_in">help</span> information</span><br></pre></td></tr></table></figure></p>
+          <h2 id="可执行性-EXECUTABLE"><a href="#可执行性-EXECUTABLE" class="headerlink" title="可执行性(EXECUTABLE)"></a>可执行性(EXECUTABLE)</h2><p>正因有stylus可执行性，Stylus才能将自身转换成CSS.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">Usage: stylus [options] [<span class="built_in">command</span>] [&lt; <span class="keyword">in</span> [&gt; out]]</span><br><span class="line">              [file|dir ...]</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line"></span><br><span class="line">  <span class="built_in">help</span> [&lt;<span class="built_in">type</span>&gt;:]&lt;prop&gt; Opens <span class="built_in">help</span> info at MDC <span class="keyword">for</span> &lt;prop&gt; <span class="keyword">in</span></span><br><span class="line">                       your default browser. Optionally</span><br><span class="line">                       searches other resources of &lt;<span class="built_in">type</span>&gt;:</span><br><span class="line">                       safari opera w3c ms caniuse quirksmode</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line"></span><br><span class="line">  -i, --interactive       Start interactive REPL</span><br><span class="line">  -u, --use &lt;path&gt;        Utilize the Stylus plugin at &lt;path&gt;</span><br><span class="line">  -U, --inline            Utilize image inlining via data URI support</span><br><span class="line">  -w, --watch             Watch file(s) <span class="keyword">for</span> changes and re-compile</span><br><span class="line">  -o, --out &lt;dir&gt;         Output to &lt;dir&gt; when passing files</span><br><span class="line">  -C, --css &lt;src&gt; [dest]  Convert CSS input to Stylus</span><br><span class="line">  -I, --include &lt;path&gt;    Add &lt;path&gt; to lookup paths</span><br><span class="line">  -c, --compress          Compress CSS output</span><br><span class="line">  -d, --compare           Display input along with output</span><br><span class="line">  -f, --firebug           Emits debug infos <span class="keyword">in</span> the generated CSS that</span><br><span class="line">                          can be used by the FireStylus Firebug plugin</span><br><span class="line">  -l, --line-numbers      Emits comments <span class="keyword">in</span> the generated CSS</span><br><span class="line">                          indicating the corresponding Stylus line</span><br><span class="line">  -m, --sourcemap         Generates a sourcemap <span class="keyword">in</span> sourcemaps v3 format</span><br><span class="line">  --sourcemap-inline      Inlines sourcemap with full <span class="built_in">source</span> text <span class="keyword">in</span> base64 format</span><br><span class="line">  --sourcemap-root &lt;url&gt;  <span class="string">"sourceRoot"</span> property of the generated sourcemap</span><br><span class="line">  --sourcemap-base &lt;path&gt; Base &lt;path&gt; from <span class="built_in">which</span> sourcemap and all sources are relative</span><br><span class="line">  -P, --prefix [prefix]   Prefix all css classes</span><br><span class="line">  -p, --<span class="built_in">print</span>             Print out the compiled CSS</span><br><span class="line">  --import &lt;file&gt;         Import stylus &lt;file&gt;</span><br><span class="line">  --include-css           Include regular CSS on @import</span><br><span class="line">  -D, --deps              Display dependencies of the compiled file</span><br><span class="line">  --<span class="built_in">disable</span>-cache         Disable caching</span><br><span class="line">  --hoist-atrules         Move @import and @charset to the top</span><br><span class="line">  -r, --resolve-url       Resolve relative urls inside imports</span><br><span class="line">  --resolve-url-nocheck   Like --resolve-url but without file existence check</span><br><span class="line">  -V, --version           Display the version of Stylus</span><br><span class="line">  -h, --<span class="built_in">help</span>              Display <span class="built_in">help</span> information</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/05/学习stylus【22】/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/03/05/%E5%AD%A6%E4%B9%A0stylus%E3%80%9022%E3%80%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/05/学习stylus【21】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/05/%E5%AD%A6%E4%B9%A0stylus%E3%80%9021%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/05/学习stylus【21】/" itemprop="url">
-                  学习stylus【21】字符转码(Char Escaping)
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/05/%E5%AD%A6%E4%B9%A0stylus%E3%80%9021%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【21】字符转码(Char Escaping)</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2018-03-05 09:07:20 / 修改时间：09:09:34" itemprop="dateCreated datePublished" datetime="2018-03-05T09:07:20+08:00">2018-03-05</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1039,159 +575,70 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="字符转码-Char-Escaping"><a href="#字符转码-Char-Escaping" class="headerlink" title="字符转码(Char Escaping)"></a>字符转码(Char Escaping)</h2><p>Stylus可以字符转码。这可以让字符变成标识符，或是渲染成字面量。</p>
-<p>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">  padding 1 \+ 2</span><br><span class="line">=&gt;</span><br><span class="line">body &#123;</span><br><span class="line">  padding: 1 + 2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+          <h2 id="字符转码-Char-Escaping"><a href="#字符转码-Char-Escaping" class="headerlink" title="字符转码(Char Escaping)"></a>字符转码(Char Escaping)</h2><p>Stylus可以字符转码。这可以让字符变成标识符，或是渲染成字面量。</p>
+<p>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">  padding 1 \+ 2</span><br><span class="line">=&gt;</span><br><span class="line">body &#123;</span><br><span class="line">  padding: 1 + 2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意Stylus中/当作为属性使用的时候需要用括号括起来：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">  font 14px/1.4</span><br><span class="line">  font (14px/1.4)</span><br><span class="line">=&gt;</span><br><span class="line">body &#123;</span><br><span class="line">  font: 14px/1.4;</span><br><span class="line">  font: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/05/学习stylus【20】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/05/%E5%AD%A6%E4%B9%A0stylus%E3%80%9020%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/05/学习stylus【20】/" itemprop="url">
-                  学习stylus【20】CSS样式解析(CSS Style Syntax)
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/05/%E5%AD%A6%E4%B9%A0stylus%E3%80%9020%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【20】CSS样式解析(CSS Style Syntax)</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2018-03-05 09:03:24 / 修改时间：09:06:24" itemprop="dateCreated datePublished" datetime="2018-03-05T09:03:24+08:00">2018-03-05</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1199,161 +646,75 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          <h2 id="CSS样式解析-CSS-Style-Syntax"><a href="#CSS样式解析-CSS-Style-Syntax" class="headerlink" title="CSS样式解析(CSS Style Syntax)"></a>CSS样式解析(CSS Style Syntax)</h2><p>Stylus完全支持常规的CSS样式解析，这意味着你无需寻求其它解析器，或指定特别的文件使用特别的样式。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">border-radius()</span><br><span class="line">  -webkit-border-radius arguments</span><br><span class="line">  -moz-border-radius arguments</span><br><span class="line">  border-radius arguments</span><br><span class="line"></span><br><span class="line">body a</span><br><span class="line">  font 12px/1.4 <span class="string">"Lucida Grande"</span>, Arial, sans-serif</span><br><span class="line">  background black</span><br><span class="line">  color <span class="comment">#ccc</span></span><br><span class="line"></span><br><span class="line">form input</span><br><span class="line">  padding 5px</span><br><span class="line">  border 1px solid</span><br><span class="line">  border-radius 5px</span><br></pre></td></tr></table></figure></p>
+          <h2 id="CSS样式解析-CSS-Style-Syntax"><a href="#CSS样式解析-CSS-Style-Syntax" class="headerlink" title="CSS样式解析(CSS Style Syntax)"></a>CSS样式解析(CSS Style Syntax)</h2><p>Stylus完全支持常规的CSS样式解析，这意味着你无需寻求其它解析器，或指定特别的文件使用特别的样式。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">border-radius()</span><br><span class="line">  -webkit-border-radius arguments</span><br><span class="line">  -moz-border-radius arguments</span><br><span class="line">  border-radius arguments</span><br><span class="line"></span><br><span class="line">body a</span><br><span class="line">  font 12px/1.4 <span class="string">"Lucida Grande"</span>, Arial, sans-serif</span><br><span class="line">  background black</span><br><span class="line">  color <span class="comment">#ccc</span></span><br><span class="line"></span><br><span class="line">form input</span><br><span class="line">  padding 5px</span><br><span class="line">  border 1px solid</span><br><span class="line">  border-radius 5px</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/05/学习stylus【20】/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/03/05/%E5%AD%A6%E4%B9%A0stylus%E3%80%9020%E3%80%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/02/学习stylus【19】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/02/%E5%AD%A6%E4%B9%A0stylus%E3%80%9019%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/02/学习stylus【19】/" itemprop="url">
-                  学习stylus【19】CSS字面量(CSS Literal)
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/02/%E5%AD%A6%E4%B9%A0stylus%E3%80%9019%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【19】CSS字面量(CSS Literal)</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2018-03-02 09:14:16 / 修改时间：09:16:09" itemprop="dateCreated datePublished" datetime="2018-03-02T09:14:16+08:00">2018-03-02</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1361,157 +722,67 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="CSS字面量-CSS-Literal"><a href="#CSS字面量-CSS-Literal" class="headerlink" title="CSS字面量(CSS Literal)"></a>CSS字面量(CSS Literal)</h2><p>不管什么原因，如果遇到Stylus搞不定的特殊需求，你可以使用@css使其作为CSS字面量解决之。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@css &#123;</span><br><span class="line">  body &#123;</span><br><span class="line">    font: 14px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">=&gt;</span><br><span class="line">body &#123;</span><br><span class="line">  font: 14px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
+          <h2 id="CSS字面量-CSS-Literal"><a href="#CSS字面量-CSS-Literal" class="headerlink" title="CSS字面量(CSS Literal)"></a>CSS字面量(CSS Literal)</h2><p>不管什么原因，如果遇到Stylus搞不定的特殊需求，你可以使用@css使其作为CSS字面量解决之。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@css &#123;</span><br><span class="line">  body &#123;</span><br><span class="line">    font: 14px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">=&gt;</span><br><span class="line">body &#123;</span><br><span class="line">  font: 14px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/02/学习stylus【18】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/02/%E5%AD%A6%E4%B9%A0stylus%E3%80%9018%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/02/学习stylus【18】/" itemprop="url">
-                  学习stylus【18】URL()
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/02/%E5%AD%A6%E4%B9%A0stylus%E3%80%9018%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【18】URL()</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2018-03-02 08:41:48 / 修改时间：09:16:18" itemprop="dateCreated datePublished" datetime="2018-03-02T08:41:48+08:00">2018-03-02</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1519,162 +790,76 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h2 id="URL"><a href="#URL" class="headerlink" title="URL()"></a>URL()</h2><p>内联Data URI图像<br>Stylus捆绑了一个可选函数，名叫url()，其替换了字面上的url()调用（且使用base64 Data URIs有条件地内联它们）。</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>通过require(‘stylus’).url该函数本身是可用的，其接受一个options对象，当看到url()时候，返回Stylus内部调用的函数。<br>.define(name, callback)方法指定了一个可被调用的JavaScript函数。在这种情况下，因为我们图片在./css/images中，我们可以忽视paths选项（默认情况下，会查找相关要呈现的图像文件）。如果愿意，该行为时可以改变的。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">stylus(str)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'filename'</span>, __dirname + <span class="string">'/css/test.styl'</span>)</span><br><span class="line">  .define(<span class="string">'url'</span>, stylus.url())</span><br><span class="line">  .render(<span class="keyword">function</span>(err, css)&#123;</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>通过require(‘stylus’).url该函数本身是可用的，其接受一个options对象，当看到url()时候，返回Stylus内部调用的函数。<br>.define(name, callback)方法指定了一个可被调用的JavaScript函数。在这种情况下，因为我们图片在./css/images中，我们可以忽视paths选项（默认情况下，会查找相关要呈现的图像文件）。如果愿意，该行为时可以改变的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">stylus(str)</span><br><span class="line">  .<span class="built_in">set</span>(<span class="string">'filename'</span>, __dirname + <span class="string">'/css/test.styl'</span>)</span><br><span class="line">  .define(<span class="string">'url'</span>, stylus.url())</span><br><span class="line">  .render(<span class="keyword">function</span>(err, css)&#123;</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/02/学习stylus【18】/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/03/02/%E5%AD%A6%E4%B9%A0stylus%E3%80%9018%E3%80%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/01/学习stylus【17】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/01/%E5%AD%A6%E4%B9%A0stylus%E3%80%9017%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/01/学习stylus【17】/" itemprop="url">
-                  学习stylus【17】@BLOCK
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/01/%E5%AD%A6%E4%B9%A0stylus%E3%80%9017%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【17】@BLOCK</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2018-03-01 09:23:24 / 修改时间：10:33:43" itemprop="dateCreated datePublished" datetime="2018-03-01T09:23:24+08:00">2018-03-01</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1682,216 +867,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="BLOCK"><a href="#BLOCK" class="headerlink" title="@BLOCK"></a>@BLOCK</h2><p>您可以将Stylus中的任何代码块分配给一个变量，然后调用它，作为参数传递或以任何其他方式重用。<br>要定义一个块，可以在分配符号之后用增加的缩进记下它：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">foo =</span><br><span class="line">  width: 20px</span><br><span class="line">  height: 20px</span><br></pre></td></tr></table></figure></p>
-<p>或者在@block关键字中使用花括号语法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">foo = @block &#123;</span><br><span class="line">  width: 20px</span><br><span class="line">  height: 20px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>如果你想在任何地方渲染这个块，你可以在插值中调用这个变量，所以<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.icon</span><br><span class="line">  &#123;foo&#125;</span><br><span class="line">=&gt;</span><br><span class="line">.icon &#123;</span><br><span class="line">  width: 20px;</span><br><span class="line">  height: 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+          <h2 id="BLOCK"><a href="#BLOCK" class="headerlink" title="@BLOCK"></a>@BLOCK</h2><p>您可以将Stylus中的任何代码块分配给一个变量，然后调用它，作为参数传递或以任何其他方式重用。<br>要定义一个块，可以在分配符号之后用增加的缩进记下它：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">foo =</span><br><span class="line">  width: 20px</span><br><span class="line">  height: 20px</span><br></pre></td></tr></table></figure>
+<p>或者在@block关键字中使用花括号语法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">foo = @block &#123;</span><br><span class="line">  width: 20px</span><br><span class="line">  height: 20px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果你想在任何地方渲染这个块，你可以在插值中调用这个变量，所以</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.icon</span><br><span class="line">  &#123;foo&#125;</span><br><span class="line">=&gt;</span><br><span class="line">.icon &#123;</span><br><span class="line">  width: 20px;</span><br><span class="line">  height: 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>顺便说一句，你也可以使用传递给块mixin的块的方式相同。<br>现在，您只能将该变量作为其他变量传递并在插值内呈现。 将来我们会提供更多的处理方法。</p>
 
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/03/01/学习stylus【16】/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="L3F.WIN">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/01/学习stylus【16】/" itemprop="url">
-                  学习stylus【16】继承 @EXTEND
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-03-01 08:59:15 / 修改时间：10:33:38" itemprop="dateCreated datePublished" datetime="2018-03-01T08:59:15+08:00">2018-03-01</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="继承-EXTEND"><a href="#继承-EXTEND" class="headerlink" title="继承 @EXTEND"></a>继承 @EXTEND</h2><p>Stylus的@extend指令受SASS实现的启发，基本一致，除了些轻微差异。此功能大大简化了继承其他语义规则集的语义规则集的维护。<br>混入的“继承”<br>尽管你可以使用混入实现类似效果，但会导致重复的CSS. 典型的模式式定义如下的几个类名，然后归结到一个元素中，例如”warning message”.<br>该技术实现是没什么问题，但是维护就比较麻烦了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">message,</span><br><span class="line">.warning &#123;</span><br><span class="line">  padding: 10px;</span><br><span class="line">  border: 1px solid <span class="comment">#eee;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.warning &#123;</span><br><span class="line">  color: <span class="comment">#E2E21E;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/01/学习stylus【16】/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
 
   
   <nav class="pagination">
@@ -1903,217 +901,108 @@
           </div>
           
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
-        
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/images/common/avatar.jpg"
-                alt="winbug" />
-            
-              <p class="site-author-name" itemprop="name">winbug</p>
-              <p class="site-description motion-element" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">48</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">分类</span>
-                  
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">36</span>
-                    <span class="site-state-item-name">标签</span>
-                  
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">winbug</span>
-
-  
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">winbug</p>
+  <div class="site-description" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.2.0</div>
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
+        
 
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">winbug</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
 
         
 
@@ -2124,103 +1013,24 @@
 
 
 
-        
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
-
-
-
-  
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -2236,28 +1046,10 @@
 
 
 
-  
 
 
 
 
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
   
 

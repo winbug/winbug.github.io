@@ -1,135 +1,53 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '6.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.l3f.win","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
   <meta name="description" content="第1章 问答环节为什么选择Python 软件质量， 可重用性，可维护性 （EIBTI,明了胜于晦涩） 提高开发者的效率， 使用更少的代码完成更多的工作 程序的可移植性 标准库的支持，Python通过自行开发的库或是第三方的应用支持来进行扩展。 组件集成，可以与众多的编程语言互相调用(C, C++, java, SOAP等) 享受编程的乐趣">
-<meta name="keywords" content="编程,学习手册,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python学习手册（阅读笔记）">
 <meta property="og:url" content="http://www.l3f.win/2018/07/10/python-study-guide/index.html">
 <meta property="og:site_name" content="L3F.WIN">
 <meta property="og:description" content="第1章 问答环节为什么选择Python 软件质量， 可重用性，可维护性 （EIBTI,明了胜于晦涩） 提高开发者的效率， 使用更少的代码完成更多的工作 程序的可移植性 标准库的支持，Python通过自行开发的库或是第三方的应用支持来进行扩展。 组件集成，可以与众多的编程语言互相调用(C, C++, java, SOAP等) 享受编程的乐趣">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.l3f.win/images/post/python-g-01.png">
 <meta property="og:image" content="http://www.l3f.win/images/post/python-g-02.png">
-<meta property="og:updated_time" content="2018-07-31T03:07:16.924Z">
+<meta property="article:published_time" content="2018-07-10T02:10:33.000Z">
+<meta property="article:modified_time" content="2018-07-31T03:07:16.924Z">
+<meta property="article:author" content="winbug">
+<meta property="article:tag" content="编程">
+<meta property="article:tag" content="学习手册">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python学习手册（阅读笔记）">
-<meta name="twitter:description" content="第1章 问答环节为什么选择Python 软件质量， 可重用性，可维护性 （EIBTI,明了胜于晦涩） 提高开发者的效率， 使用更少的代码完成更多的工作 程序的可移植性 标准库的支持，Python通过自行开发的库或是第三方的应用支持来进行扩展。 组件集成，可以与众多的编程语言互相调用(C, C++, java, SOAP等) 享受编程的乐趣">
 <meta name="twitter:image" content="http://www.l3f.win/images/post/python-g-01.png">
 
+<link rel="canonical" href="http://www.l3f.win/2018/07/10/python-study-guide/">
 
 
-
-
-
-  <link rel="canonical" href="http://www.l3f.win/2018/07/10/python-study-guide/"/>
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -141,71 +59,58 @@
 
 
 
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">L3F.WIN</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">Github及Hexo的使用</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">L3F.WIN</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Github及Hexo的使用</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
@@ -213,58 +118,20 @@
 
 
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-stylus中文文档">
-    <a href="/categories/Stylus中文文档/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-css3"></i> <br />Stylus中文文档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-微信小程序">
-    <a href="/categories/wechatminiapp/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-wechat"></i> <br />微信小程序</a>
-  </li>
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-      
-      
-    </ul>
-  
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
-  
-    
+  </li>
+        <li class="menu-item menu-item-archives">
 
-  
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
-  
+  </li>
+  </ul>
 </nav>
 
-
-
-  
 
 
 
@@ -272,121 +139,67 @@
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content post">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/07/10/python-study-guide/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">Python学习手册（阅读笔记）
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          Python学习手册（阅读笔记）
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-07-10 10:10:33" itemprop="dateCreated datePublished" datetime="2018-07-10T10:10:33+08:00">2018-07-10</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-07-31 11:07:16" itemprop="dateModified" datetime="2018-07-31T11:07:16+08:00">2018-07-31</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
 
       
         <h2 id="第1章-问答环节"><a href="#第1章-问答环节" class="headerlink" title="第1章 问答环节"></a>第1章 问答环节</h2><h3 id="为什么选择Python"><a href="#为什么选择Python" class="headerlink" title="为什么选择Python"></a>为什么选择Python</h3><ol>
@@ -398,6 +211,7 @@
 <li>享受编程的乐趣</li>
 </ol>
 <a id="more"></a>
+
 <h3 id="Python的缺点"><a href="#Python的缺点" class="headerlink" title="Python的缺点"></a>Python的缺点</h3><ol>
 <li>与C和C++类的编译语言相比，Python的执行速度还不够快。<br> Python将源代码的语言转为字节码的形式，而不是底层的二进制形式</li>
 </ol>
@@ -412,12 +226,14 @@
 <li>游戏，图像，人工智能，XML，机器人等</li>
 </ol>
 <h2 id="第2章-Python如何运行程序"><a href="#第2章-Python如何运行程序" class="headerlink" title="第2章 Python如何运行程序"></a>第2章 Python如何运行程序</h2><h3 id="Python解释器"><a href="#Python解释器" class="headerlink" title="Python解释器"></a>Python解释器</h3><p>编写的Python代码必须在解释器中运行，解释器是一种让其他程序运行起来的程序。</p>
-<h3 id="程序执行"><a href="#程序执行" class="headerlink" title="程序执行"></a>程序执行</h3><h4 id="程序员视角"><a href="#程序员视角" class="headerlink" title="程序员视角"></a>程序员视角</h4><p>Python的扩展名一般为 <strong>.py </strong>,  利用任何一种文本编辑器就可以创建。在CMD（windows）中, 输入</p>
+<h3 id="程序执行"><a href="#程序执行" class="headerlink" title="程序执行"></a>程序执行</h3><h4 id="程序员视角"><a href="#程序员视角" class="headerlink" title="程序员视角"></a>程序员视角</h4><p>Python的扩展名一般为 *<em>.py *</em>,  利用任何一种文本编辑器就可以创建。在CMD（windows）中, 输入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python script0.py</span><br></pre></td></tr></table></figure>
+
 <p>就可以运行之前输入的代码结果</p>
 <h4 id="Python视角"><a href="#Python视角" class="headerlink" title="Python视角"></a>Python视角</h4><p>运行Python脚本的过程<br>代码 → 字节码（.pyc编译过的源代码） → 虚拟机（PVM）</p>
 <h2 id="如何运行程序"><a href="#如何运行程序" class="headerlink" title="如何运行程序"></a>如何运行程序</h2><h3 id="交互提示模式下编写代码"><a href="#交互提示模式下编写代码" class="headerlink" title="交互提示模式下编写代码"></a>交互提示模式下编写代码</h3><p>在各系统的终端，Shell, CMD中直接进行交互编程<br>输入python后，输入以下代码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="string">"Hello world!"</span>)</span><br><span class="line">Hello world!</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(2 ** 8)</span><br><span class="line">256</span><br></pre></td></tr></table></figure>
+
 <h4 id="为什么使用交互提示模式"><a href="#为什么使用交互提示模式" class="headerlink" title="为什么使用交互提示模式"></a>为什么使用交互提示模式</h4><p>交互提示是体验语言和测试编写中的程序文件的好地方。</p>
 <ol>
 <li>代码立即执行</li>
@@ -434,22 +250,29 @@
 </ol>
 <h3 id="通过文件执行第一段脚本"><a href="#通过文件执行第一段脚本" class="headerlink" title="通过文件执行第一段脚本"></a>通过文件执行第一段脚本</h3><p>使用任何一种文本编辑器(vi, Notepad, IDLE)，创建一个script1.py的文件，并输入以下代码（注意保存时的文件扩展名）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># A first Python script</span></span><br><span class="line">import sys  <span class="comment">#Load a library module</span></span><br><span class="line"><span class="built_in">print</span>(sys.platform) <span class="comment"># 获取平台名称</span></span><br><span class="line"><span class="built_in">print</span>(2 ** 100)</span><br><span class="line">x = <span class="string">'Spam!'</span></span><br><span class="line"><span class="built_in">print</span>(x * 8)</span><br><span class="line">============================== RESTART: D:\D\python\<span class="built_in">test</span>\script1.py ==============================</span><br><span class="line">win32</span><br><span class="line">1267650600228229401496703205376</span><br><span class="line">Spam!Spam!Spam!Spam!Spam!Spam!Spam!Spam!</span><br></pre></td></tr></table></figure>
+
 <p>在终端中，我们使用 Python script1.py来运行程序<br>我们也可以使用 Python script1.py 》 saveit.txt 来保存运行的结果</p>
 <p>值得注意的还有一点，在UNIX和Linux上使用Python，第一行是特定的，要使用 <em>#!/usr/local/bin/python</em></p>
 <h3 id="windows中直接双击执行py文件"><a href="#windows中直接双击执行py文件" class="headerlink" title="windows中直接双击执行py文件"></a>windows中直接双击执行py文件</h3><p>虽然双击后自动执行，但一般情况都是一闪而过，需要保留画面的话，需在代码中加入一条input()函数</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># A first Python script</span></span><br><span class="line">import sys  <span class="comment">#Load a library module</span></span><br><span class="line"><span class="built_in">print</span>(sys.platform)</span><br><span class="line"><span class="built_in">print</span>(2 ** 100)</span><br><span class="line">x = <span class="string">'Spam!'</span></span><br><span class="line"><span class="built_in">print</span>(x * 8)</span><br><span class="line">input(<span class="string">'Press Enter to exit'</span>)</span><br></pre></td></tr></table></figure>
+
 <h3 id="导入模块和重载"><a href="#导入模块和重载" class="headerlink" title="导入模块和重载"></a>导入模块和重载</h3><p>每一个扩展名为.py的Python 源代码文件就是一个模块。其他的文件可以通过导入一个模块读取这个模块的内容</p>
 <p>导入方法</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import script1.py</span><br></pre></td></tr></table></figure>
+
 <p>导入后会自动执行一次源代码，再次导入时，不执行源代码，如果想再次运行文件的话，使用<strong>reload函数</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">from imp import reload  <span class="comment">#Python3.0后，reload被移动到imp标准库模块中</span></span><br><span class="line">reload(script1)</span><br></pre></td></tr></table></figure>
+
 <h3 id="模块的特性：-属性"><a href="#模块的特性：-属性" class="headerlink" title="模块的特性： 属性"></a>模块的特性： 属性</h3><p>模块中的变量一般被称为属性<br><em>如果你的工作目录不是Python默认的工作目录，你需要使用chdir</em></p>
 <p>先创建一个模块文件myfile.py</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title = <span class="string">"The Meaning of Life"</span></span><br></pre></td></tr></table></figure>
+
 <p>导入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import os</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">chdir</span>(<span class="string">"D:\\D\\python"</span>)</span><br><span class="line">&gt;&gt;&gt; from myfile import title</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(title)</span><br><span class="line">The Meaning of Life</span><br></pre></td></tr></table></figure>
+
 <h4 id="模块和命名空间"><a href="#模块和命名空间" class="headerlink" title="模块和命名空间"></a>模块和命名空间</h4><p>Python程序需要导入多个模块，通过import连接起来，每个模块文件是一个独立完备的变量包，即一个命名空间<br>命名空间可以避免变量同名的冲突</p>
 <h3 id="使用exec运行模块文件"><a href="#使用exec运行模块文件" class="headerlink" title="使用exec运行模块文件"></a>使用exec运行模块文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">exec</span>(open(<span class="string">'script1.py'</span>).<span class="built_in">read</span>())</span><br><span class="line">win32</span><br><span class="line">1267650600228229401496703205376</span><br><span class="line">Spam!Spam!Spam!Spam!Spam!Spam!Spam!Spam!</span><br><span class="line">Press Enter to <span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
 <p>exec和import有着同样的效果，但exec不是导入，而是复制代码到exec的地方，对于当前正在使用的变量有潜在默认覆盖的可能。</p>
 <h2 id="第4章-Python对象类型"><a href="#第4章-Python对象类型" class="headerlink" title="第4章 Python对象类型"></a>第4章 Python对象类型</h2><h3 id="为什么使用内置类型"><a href="#为什么使用内置类型" class="headerlink" title="为什么使用内置类型"></a>为什么使用内置类型</h3><ol>
 <li>内置对象使程序更容易编写。不需要所有的功能都自己编写</li>
@@ -465,8 +288,7 @@
 <th>例子 常量/创建</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>数字</td>
 <td>1234， 3.1415， 3+4j, Decimal, Fraction</td>
 </tr>
@@ -506,19 +328,23 @@
 <td>与现实相关的类型</td>
 <td>编译的代码堆栈跟踪</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3><p>数字类型包含，整数，浮点数，以及更为少见的类型</p>
 <p>Python提供了一些数学模块<br>math模块包括更高级的数学工具，如函数，而random模块可以作为随机数字的生成器和随机选择器</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import math</span><br><span class="line">&gt;&gt;&gt; math.pi</span><br><span class="line">3.141592653589793</span><br><span class="line">&gt;&gt;&gt; math.sqrt(85)</span><br><span class="line">9.219544457292887</span><br><span class="line">&gt;&gt;&gt; import random</span><br><span class="line">&gt;&gt;&gt; random.random()</span><br><span class="line">0.7855209527773451</span><br><span class="line">&gt;&gt;&gt; random.choice([1,2,3,4])</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; random.choice([1,2,3,4])</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+
 <h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>字符串是用来记录文本信息的，是字符的集合。字符串是单个字符的字符串的序列</p>
 <h4 id="序列的操作"><a href="#序列的操作" class="headerlink" title="序列的操作"></a>序列的操作</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; S = <span class="string">'Spam'</span></span><br><span class="line">&gt;&gt;&gt; S[0]</span><br><span class="line"><span class="string">'S'</span></span><br><span class="line">&gt;&gt;&gt; len(S)</span><br><span class="line">4</span><br><span class="line">&gt;&gt;&gt; S[3]</span><br><span class="line"><span class="string">'m'</span></span><br><span class="line">&gt;&gt;&gt; S[-1]</span><br><span class="line"><span class="string">'m'</span></span><br></pre></td></tr></table></figure>
+
 <p>字符串的分片操作</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; S[1:3]</span><br><span class="line"><span class="string">'pa'</span></span><br><span class="line">&gt;&gt;&gt; S[:3]</span><br><span class="line"><span class="string">'Spa'</span></span><br><span class="line">&gt;&gt;&gt; S[:4]</span><br><span class="line"><span class="string">'Spam'</span></span><br><span class="line">&gt;&gt;&gt; S[:]</span><br><span class="line"><span class="string">'Spam'</span></span><br></pre></td></tr></table></figure>
+
 <p>字符串可以通过 + 号合并也可以通过 * 号 重复</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; S + <span class="string">' is Boy'</span></span><br><span class="line"><span class="string">'Spam is Boy'</span></span><br><span class="line">&gt;&gt;&gt; S * 8</span><br><span class="line"><span class="string">'SpamSpamSpamSpamSpamSpamSpamSpam'</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="字符串的不可变性"><a href="#字符串的不可变性" class="headerlink" title="字符串的不可变性"></a>字符串的不可变性</h4><p>字符串在Python中具有不可变性，在创建之后不能就地改变。但是可以通过建立一个新的字符串并以同一个变量名对其进行赋值。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; S[0] = <span class="string">'z'</span> <span class="comment">#直接修改字符串出错</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#26&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    S[0] = <span class="string">'z'</span></span><br><span class="line">TypeError: <span class="string">'str'</span> object does not support item assignment</span><br><span class="line">&gt;&gt;&gt; S = <span class="string">'z'</span> + S[1:]</span><br><span class="line">&gt;&gt;&gt; S</span><br><span class="line"><span class="string">'zpam'</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="字符串的特定方法"><a href="#字符串的特定方法" class="headerlink" title="字符串的特定方法"></a>字符串的特定方法</h4><ol>
 <li><p>find方法<br>find方法可以对字符串进行查找操作。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; S.find(<span class="string">'pa'</span>)</span><br><span class="line"> 1</span><br><span class="line"> &gt;&gt;&gt; S.replace(<span class="string">'pa'</span>, <span class="string">'XYZ'</span>)</span><br><span class="line"> <span class="string">'zXYZm'</span></span><br><span class="line"> &gt;&gt;&gt; s</span><br><span class="line"> Traceback (most recent call last):</span><br><span class="line"> File <span class="string">"&lt;pyshell#31&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">     s</span><br><span class="line"> NameError: name <span class="string">'s'</span> is not defined</span><br><span class="line"> &gt;&gt;&gt; S</span><br><span class="line"> <span class="string">'zpam'</span></span><br></pre></td></tr></table></figure>
@@ -533,16 +359,21 @@
 </li>
 <li><p>isalpha方法<br> 检测字符串是否只由字母组成。</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; line2[3].isalpha()</span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 <h4 id="内置方法帮助"><a href="#内置方法帮助" class="headerlink" title="内置方法帮助"></a>内置方法帮助</h4><p>如果想了解对象的相应方法及更多细节，可以调用内置的dir函数，将会返回一个列表，其中包含了对象的所有属性。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; dir(line2)</span><br><span class="line">[<span class="string">'__add__'</span>, <span class="string">'__class__'</span>, <span class="string">'__contains__'</span>, <span class="string">'__delattr__'</span>, <span class="string">'__delitem__'</span>, <span class="string">'__dir__'</span>, <span class="string">'__doc__'</span>, <span class="string">'__eq__'</span>, <span class="string">'__format__'</span>, <span class="string">'__ge__'</span>, <span class="string">'__getattribute__'</span>, <span class="string">'__getitem__'</span>, <span class="string">'__gt__'</span>, <span class="string">'__hash__'</span>, <span class="string">'__iadd__'</span>, <span class="string">'__imul__'</span>, <span class="string">'__init__'</span>, <span class="string">'__init_subclass__'</span>, <span class="string">'__iter__'</span>, <span class="string">'__le__'</span>, <span class="string">'__len__'</span>, <span class="string">'__lt__'</span>, <span class="string">'__mul__'</span>, <span class="string">'__ne__'</span>, <span class="string">'__new__'</span>, <span class="string">'__reduce__'</span>, <span class="string">'__reduce_ex__'</span>, <span class="string">'__repr__'</span>, <span class="string">'__reversed__'</span>, <span class="string">'__rmul__'</span>, <span class="string">'__setattr__'</span>, <span class="string">'__setitem__'</span>, <span class="string">'__sizeof__'</span>, <span class="string">'__str__'</span>, <span class="string">'__subclasshook__'</span>, <span class="string">'append'</span>, <span class="string">'clear'</span>, <span class="string">'copy'</span>, <span class="string">'count'</span>, <span class="string">'extend'</span>, <span class="string">'index'</span>, <span class="string">'insert'</span>, <span class="string">'pop'</span>, <span class="string">'remove'</span>, <span class="string">'reverse'</span>, <span class="string">'sort'</span>]</span><br></pre></td></tr></table></figure>
+
 <p>一般以双下划线开头并结尾的变量名是用来表示Python实现细节的命名模式。而这个列表中没有下划线的属性是字符串对象能够调用的方法。<br>具体的函数使用方法，可以使用help函数</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">help</span>(line2.sort)</span><br><span class="line">Help on built-in <span class="keyword">function</span> sort:</span><br><span class="line"></span><br><span class="line">sort(...) method of builtins.list instance</span><br><span class="line">    L.sort(key=None, reverse=False) -&gt; None -- stable sort *IN PLACE*</span><br></pre></td></tr></table></figure>
+
 <p>之后会有正则表达式的相关说明</p>
 <h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>列表对象是Python语言中提供的最通用的序列。列表无固定大小</p>
 <h4 id="序列操作"><a href="#序列操作" class="headerlink" title="序列操作"></a>序列操作</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; L = [123, <span class="string">'spam'</span>, 1.23]</span><br><span class="line">&gt;&gt;&gt; len(L)</span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; L[0]</span><br><span class="line">123</span><br><span class="line">&gt;&gt;&gt; L[:-1]</span><br><span class="line">[123, <span class="string">'spam'</span>]</span><br><span class="line">&gt;&gt;&gt; L + [4,5,6]</span><br><span class="line">[123, <span class="string">'spam'</span>, 1.23, 4, 5, 6]</span><br><span class="line">&gt;&gt;&gt; L <span class="comment">#上面的修改不会改变原有列表</span></span><br><span class="line">[123, <span class="string">'spam'</span>, 1.23]</span><br></pre></td></tr></table></figure>
+
 <h4 id="列表的特定类型的操作"><a href="#列表的特定类型的操作" class="headerlink" title="列表的特定类型的操作"></a>列表的特定类型的操作</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; L.append(<span class="string">'NI'</span>)</span><br><span class="line">&gt;&gt;&gt; L</span><br><span class="line">[123, <span class="string">'spam'</span>, 1.23, <span class="string">'NI'</span>]</span><br><span class="line">&gt;&gt;&gt; L.pop(2)</span><br><span class="line">1.23</span><br><span class="line">&gt;&gt;&gt; L</span><br><span class="line">[123, <span class="string">'spam'</span>, <span class="string">'NI'</span>]</span><br><span class="line">&gt;&gt;&gt; L.reverse()</span><br><span class="line">&gt;&gt;&gt; L</span><br><span class="line">[<span class="string">'NI'</span>, <span class="string">'spam'</span>, 123]</span><br></pre></td></tr></table></figure>
+
 <ol>
 <li><p>append方法，可以扩充列表的大小并在列表的尾部插入一项</p>
 </li>
@@ -559,15 +390,20 @@
 <h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><p>Python中的字典是一种映射。映射是一个其他对象的集合，但是他们是通过键而不是相对位置来存储的。实际上，映射并没有任何可靠的从左至右的顺序。他们简单地将键映射到值。字典具有可变性，可以随需求增大或减小。</p>
 <h4 id="字典的映射操作"><a href="#字典的映射操作" class="headerlink" title="字典的映射操作"></a>字典的映射操作</h4><p>作为常量编写时，字典编写在大括号中。并包含一系列的“减：值”对。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D=&#123;<span class="string">'food'</span>: <span class="string">'Spam'</span>, <span class="string">'quantity'</span>: 4, <span class="string">'color'</span>: <span class="string">'pink'</span>&#125;</span><br></pre></td></tr></table></figure>
+
 <h4 id="重访嵌套"><a href="#重访嵌套" class="headerlink" title="重访嵌套"></a>重访嵌套</h4><h4 id="键的排序：for循环"><a href="#键的排序：for循环" class="headerlink" title="键的排序：for循环"></a>键的排序：for循环</h4><p>因为字典不是序列，他们并不包含任何可靠的从左至右的顺序。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; D = &#123;<span class="string">'a'</span> : 1, <span class="string">'c'</span> : 3, <span class="string">'b'</span> : 2&#125;</span><br><span class="line">&gt;&gt;&gt; D</span><br><span class="line">&#123;<span class="string">'a'</span>: 1, <span class="string">'c'</span>: 3, <span class="string">'b'</span>: 2&#125;</span><br><span class="line">&gt;&gt;&gt; Ks = list(D.keys())</span><br><span class="line">&gt;&gt;&gt; Ks</span><br><span class="line">[<span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'b'</span>]</span><br><span class="line">&gt;&gt;&gt; <span class="keyword">for</span> key <span class="keyword">in</span> Ks:</span><br><span class="line">    <span class="built_in">print</span>(key, <span class="string">'=&gt;'</span>, D[key])</span><br><span class="line"></span><br><span class="line">a =&gt; 1</span><br><span class="line">c =&gt; 3</span><br><span class="line">b =&gt; 2</span><br><span class="line">&gt;&gt;&gt; Ks.sort()</span><br><span class="line">&gt;&gt;&gt; <span class="keyword">for</span> key <span class="keyword">in</span> Ks:</span><br><span class="line">    <span class="built_in">print</span>(key, <span class="string">'=&gt;'</span>, D[key])</span><br><span class="line"></span><br><span class="line">a =&gt; 1</span><br><span class="line">b =&gt; 2</span><br><span class="line">c =&gt; 3</span><br></pre></td></tr></table></figure>
+
 <p>在最新的Python版本中我们可以使用sorted调用结果。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="keyword">for</span> key <span class="keyword">in</span> sorted(D):</span><br><span class="line">    <span class="built_in">print</span>(key, <span class="string">'=&gt;'</span>, D[key])</span><br><span class="line"></span><br><span class="line">a =&gt; 1</span><br><span class="line">b =&gt; 2</span><br><span class="line">c =&gt; 3</span><br></pre></td></tr></table></figure>
+
 <p>for 循环是遍历一个序列中的所有元素并按照顺序对每一个元素运行一些代码的简单并有效的一种方法。</p>
 <h4 id="使用if测试不存在的键"><a href="#使用if测试不存在的键" class="headerlink" title="使用if测试不存在的键"></a>使用if测试不存在的键</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; D</span><br><span class="line">&#123;<span class="string">'a'</span>: 1, <span class="string">'c'</span>: 3, <span class="string">'b'</span>: 2&#125;</span><br><span class="line">&gt;&gt;&gt; <span class="keyword">if</span> not <span class="string">'f'</span> <span class="keyword">in</span> D:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'missing'</span>)</span><br><span class="line"></span><br><span class="line">missing</span><br></pre></td></tr></table></figure>
+
 <p>通过if就能简单的判断一个字典中是否含有该键，当然还有其他方法。</p>
 <h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><p>元组对象其实就是一个不可以改变的列表。元组是序列，但是它具有不可变性， 和字符串类似。从语法上讲，他们编写在圆括号中，支持任意类型，任意嵌套以及常见的序列操作</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; T = (1,2,3,4)</span><br><span class="line">&gt;&gt;&gt; len(T)</span><br><span class="line">4</span><br><span class="line">&gt;&gt;&gt; T + (5,6)</span><br><span class="line">(1, 2, 3, 4, 5, 6)</span><br><span class="line">&gt;&gt;&gt; T[0]</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; T</span><br><span class="line">(1, 2, 3, 4)</span><br><span class="line">&gt;&gt;&gt; T.index(4) <span class="comment">#返回包含子字符串或序列的索引值。</span></span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; T.count(4) <span class="comment">#返回包含子字符串或序列的出现次数。</span></span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
 <p>元组的真正不同之处就是，一经创建就不能改变，包括大小。</p>
 <h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><p>文件对象是Python代码对电脑上外部文件的主要接口。</p>
 <h2 id="第5章-Python的数字"><a href="#第5章-Python的数字" class="headerlink" title="第5章 Python的数字"></a>第5章 Python的数字</h2><h3 id="Python的数字类型"><a href="#Python的数字类型" class="headerlink" title="Python的数字类型"></a>Python的数字类型</h3><p>数字并不是一个真正的对象类型，而是一组类似类型的分类。</p>
@@ -602,20 +438,26 @@
 <h4 id="对象的垃圾收集"><a href="#对象的垃圾收集" class="headerlink" title="对象的垃圾收集"></a>对象的垃圾收集</h4><p>在Python中，每当一个变量名被赋予了一个新的对象，之前的那个对象占用的空间就会被回收。这种自动回收对象空间的技术叫做垃圾收集。</p>
 <h4 id="共享引用"><a href="#共享引用" class="headerlink" title="共享引用"></a>共享引用</h4><p>多变量名引用同一对象，在Python中被称为共享引用</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a =3</span><br><span class="line">&gt;&gt;&gt; b =a</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; a = <span class="string">'spam'</span></span><br><span class="line">&gt;&gt;&gt; a</span><br><span class="line">spam</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+
 <p>很多人会问，改变了a的值，为什么b不发生变化，这其实还停留在一般编程的思考层面上。</p>
 <p><img src="/images/post/python-g-01.png" alt="共享引用1"></p>
 <p><img src="/images/post/python-g-02.png" alt="共享引用2"></p>
 <p>可以看到这里的a其实已经不指向对象数字3，而是指向了对象字符串‘spam’, 在Python中，变量总是一个指向对象的指针，而不是可改变的内存区域的标签，给一个变量赋一个新的值，并不是替换了原始的对象，而是让这个变量去引用完全不同的一个对象。</p>
 <h4 id="共享引用和在原处修改"><a href="#共享引用和在原处修改" class="headerlink" title="共享引用和在原处修改"></a>共享引用和在原处修改</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; L1 = [1,2,3]</span><br><span class="line">&gt;&gt;&gt; L2 = L1</span><br><span class="line">&gt;&gt;&gt; L1 = 24</span><br><span class="line">&gt;&gt;&gt; L1</span><br><span class="line">24</span><br><span class="line">&gt;&gt;&gt; L2</span><br><span class="line">[1, 2, 3]</span><br><span class="line">&gt;&gt;&gt; L1 = L2</span><br><span class="line">&gt;&gt;&gt; L1</span><br><span class="line">[1, 2, 3]</span><br><span class="line">&gt;&gt;&gt; L1[0] = 24</span><br><span class="line">&gt;&gt;&gt; L1</span><br><span class="line">[24, 2, 3]</span><br><span class="line">&gt;&gt;&gt; L2</span><br><span class="line">[24, 2, 3]</span><br></pre></td></tr></table></figure>
+
 <p>这里这种对列表的修改，就造成了共享引用同时发生了变化，因为在这里L1和L2指向的是相同的对象。修改列表里的元素，并不能产生新的对象。而是直接修改了元对象导致。<br>如果不想出现这样的情况就需要进行一些变化</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; L2 = L1[:]</span><br><span class="line">&gt;&gt;&gt; L1[1] = 30</span><br><span class="line">&gt;&gt;&gt; L1</span><br><span class="line">[24, 30, 3]</span><br><span class="line">&gt;&gt;&gt; L2</span><br><span class="line">[24, 2, 3]</span><br></pre></td></tr></table></figure>
+
 <p>通过L2 = L1[:] 创建一个对象列表的副本，这样就不会造成一同变化的情况了<br>而字典或集合应该使用X.copy()方法调用。</p>
 <h4 id="共享引用和相等"><a href="#共享引用和相等" class="headerlink" title="共享引用和相等"></a>共享引用和相等</h4><p>在Python程序中有两种不同的方法来检查对象是否相等。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; L = [1,2,3]</span><br><span class="line">&gt;&gt;&gt; M = L</span><br><span class="line">&gt;&gt;&gt; L == M</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; L is M</span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+
 <p>== 操作符， 测试两个被引用的对象是否有相同的值。<br>is 操作符， 是检查对象的同一性（其他语言的===），是更严格的相等测试。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; L = [1,2,3]</span><br><span class="line">&gt;&gt;&gt; M = [1,2,3]</span><br><span class="line">&gt;&gt;&gt; L == M</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; L is M</span><br><span class="line">False</span><br></pre></td></tr></table></figure>
+
 <p>不过这里需要注意的是，整数和字符串会被缓存复用，所以不适合严格比较</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; X = 42</span><br><span class="line">&gt;&gt;&gt; Y = 42</span><br><span class="line">&gt;&gt;&gt; X == Y</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; X is Y</span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+
 <h2 id="Python的字符串"><a href="#Python的字符串" class="headerlink" title="Python的字符串"></a>Python的字符串</h2><h3 id="字符串常量"><a href="#字符串常量" class="headerlink" title="字符串常量"></a>字符串常量</h3><p>使用方法</p>
 <ol>
 <li>单引号： ‘spa”m’</li>
@@ -634,8 +476,7 @@
 <th>意义</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>\newline</td>
 <td>忽视(连续)</td>
 </tr>
@@ -644,11 +485,11 @@
 <td>反斜杠</td>
 </tr>
 <tr>
-<td>\’</td>
+<td>&#39;</td>
 <td>单引号</td>
 </tr>
 <tr>
-<td>\”</td>
+<td>&quot;</td>
 <td>双引号</td>
 </tr>
 <tr>
@@ -707,328 +548,159 @@
 <td>\other</td>
 <td>不转义</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h4 id="raw字符串抑制转义"><a href="#raw字符串抑制转义" class="headerlink" title="raw字符串抑制转义"></a>raw字符串抑制转义</h4><p>在使用转义字符的时候，其实会遇到这样或那样的问题，为了抑制转义，raw字符串诞生<br>一般字母r（大写或小写）出现在字符串的第一个引号的前面，它将关闭转义机制</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">myfile = open(r<span class="string">'C:\new\text.dat'</span>, <span class="string">'w'</span>)</span><br><span class="line"><span class="comment">#如果非要用转义的话</span></span><br><span class="line">myfile = open(<span class="string">'C:\\new\\text.dat'</span>, <span class="string">'w'</span>)</span><br></pre></td></tr></table></figure>
+
 <h4 id="三重引号编写多行字符串块"><a href="#三重引号编写多行字符串块" class="headerlink" title="三重引号编写多行字符串块"></a>三重引号编写多行字符串块</h4><p>三重引号也可以叫做块字符串，这是一种对编写多行文本数据来说很便捷的语法</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; mantra = <span class="string">""</span><span class="string">"Always look</span></span><br><span class="line"><span class="string">on th bright I'm a good man</span></span><br><span class="line"><span class="string">side of life."</span><span class="string">""</span></span><br><span class="line">&gt;&gt;&gt; mantra</span><br><span class="line"><span class="string">"Always look\non th bright I'm a good man\nside of life."</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(mantra)</span><br><span class="line">Always look</span><br><span class="line">on th bright I<span class="string">'m a good man</span></span><br><span class="line"><span class="string">side of life.</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="实际应用中的字符串"><a href="#实际应用中的字符串" class="headerlink" title="实际应用中的字符串"></a>实际应用中的字符串</h3><h4 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; len(<span class="string">"abc"</span>) <span class="comment">#len函数可以返回字符串的长度</span></span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; <span class="string">'abc'</span>+<span class="string">'def'</span> <span class="comment"># + 号可以连接两个字符串创建出一个新的字符串。</span></span><br><span class="line"><span class="string">'abcdef'</span></span><br><span class="line">&gt;&gt;&gt; <span class="string">'NI!'</span> * 4 <span class="comment"># * 号可以重复制定字符串。</span></span><br><span class="line"><span class="string">'NI!NI!NI!NI!'</span></span><br><span class="line">&gt;&gt;&gt; myjob = <span class="string">"hacker"</span></span><br><span class="line">&gt;&gt;&gt; <span class="keyword">for</span> c <span class="keyword">in</span> myjob: <span class="comment"># 使用for循环迭代字符串操作</span></span><br><span class="line">    <span class="built_in">print</span>(c, end=<span class="string">'  '</span>)</span><br><span class="line">h  a  c  k  e  r  </span><br><span class="line">&gt;&gt;&gt; <span class="string">"k"</span> <span class="keyword">in</span> myjob    <span class="comment"># 使用in来搜索字符串，但返回的是布尔值</span></span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; <span class="string">"z"</span> <span class="keyword">in</span> myjob</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt; <span class="string">'spam'</span> <span class="keyword">in</span> <span class="string">"abcspamdef"</span></span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+
 <h4 id="索引和分片"><a href="#索引和分片" class="headerlink" title="索引和分片"></a>索引和分片</h4>
-      
     </div>
 
     
-
     
     
-    
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/编程/" rel="tag"># 编程</a>
-          
-            <a href="/tags/学习手册/" rel="tag"># 学习手册</a>
-          
-            <a href="/tags/Python/" rel="tag"># Python</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/05/14/Python-base-01/" rel="next" title="Python 基础教程">
-                <i class="fa fa-chevron-left"></i> Python 基础教程
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%89%8B%E5%86%8C/" rel="tag"># 学习手册</a>
+              <a href="/tags/Python/" rel="tag"># Python</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/24/html5css3-authoritative-guide/" rel="prev" title="HTML5与CSS3权威指南，代码汇总">
-                HTML5与CSS3权威指南，代码汇总 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-  
-
-
-
-        </div>
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/05/14/Python-base-01/" rel="prev" title="Python 基础教程">
+      <i class="fa fa-chevron-left"></i> Python 基础教程
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/08/24/html5css3-authoritative-guide/" rel="next" title="HTML5与CSS3权威指南，代码汇总">
+      HTML5与CSS3权威指南，代码汇总 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/images/common/avatar.jpg"
-                alt="winbug" />
-            
-              <p class="site-author-name" itemprop="name">winbug</p>
-              <p class="site-description motion-element" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">48</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">分类</span>
-                  
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">36</span>
-                    <span class="site-state-item-name">标签</span>
-                  
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第1章-问答环节"><span class="nav-number">1.</span> <span class="nav-text">第1章 问答环节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么选择Python"><span class="nav-number">1.1.</span> <span class="nav-text">为什么选择Python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python的缺点"><span class="nav-number">1.2.</span> <span class="nav-text">Python的缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python可以做什么？"><span class="nav-number">1.3.</span> <span class="nav-text">Python可以做什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第2章-Python如何运行程序"><span class="nav-number">2.</span> <span class="nav-text">第2章 Python如何运行程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python解释器"><span class="nav-number">2.1.</span> <span class="nav-text">Python解释器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序执行"><span class="nav-number">2.2.</span> <span class="nav-text">程序执行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序员视角"><span class="nav-number">2.2.1.</span> <span class="nav-text">程序员视角</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python视角"><span class="nav-number">2.2.2.</span> <span class="nav-text">Python视角</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何运行程序"><span class="nav-number">3.</span> <span class="nav-text">如何运行程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#交互提示模式下编写代码"><span class="nav-number">3.1.</span> <span class="nav-text">交互提示模式下编写代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么使用交互提示模式"><span class="nav-number">3.1.1.</span> <span class="nav-text">为什么使用交互提示模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用交互模式的注意事项"><span class="nav-number">3.1.2.</span> <span class="nav-text">使用交互模式的注意事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过文件执行第一段脚本"><span class="nav-number">3.2.</span> <span class="nav-text">通过文件执行第一段脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#windows中直接双击执行py文件"><span class="nav-number">3.3.</span> <span class="nav-text">windows中直接双击执行py文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入模块和重载"><span class="nav-number">3.4.</span> <span class="nav-text">导入模块和重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块的特性：-属性"><span class="nav-number">3.5.</span> <span class="nav-text">模块的特性： 属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模块和命名空间"><span class="nav-number">3.5.1.</span> <span class="nav-text">模块和命名空间</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用exec运行模块文件"><span class="nav-number">3.6.</span> <span class="nav-text">使用exec运行模块文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第4章-Python对象类型"><span class="nav-number">4.</span> <span class="nav-text">第4章 Python对象类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么使用内置类型"><span class="nav-number">4.1.</span> <span class="nav-text">为什么使用内置类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Python的核心数据类型"><span class="nav-number">4.1.1.</span> <span class="nav-text">Python的核心数据类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数字"><span class="nav-number">4.2.</span> <span class="nav-text">数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">4.3.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#序列的操作"><span class="nav-number">4.3.1.</span> <span class="nav-text">序列的操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串的不可变性"><span class="nav-number">4.3.2.</span> <span class="nav-text">字符串的不可变性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串的特定方法"><span class="nav-number">4.3.3.</span> <span class="nav-text">字符串的特定方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内置方法帮助"><span class="nav-number">4.3.4.</span> <span class="nav-text">内置方法帮助</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">4.4.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#序列操作"><span class="nav-number">4.4.1.</span> <span class="nav-text">序列操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表的特定类型的操作"><span class="nav-number">4.4.2.</span> <span class="nav-text">列表的特定类型的操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#边界检查"><span class="nav-number">4.4.3.</span> <span class="nav-text">边界检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表嵌套"><span class="nav-number">4.4.4.</span> <span class="nav-text">列表嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表解析"><span class="nav-number">4.4.5.</span> <span class="nav-text">列表解析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字典"><span class="nav-number">4.5.</span> <span class="nav-text">字典</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字典的映射操作"><span class="nav-number">4.5.1.</span> <span class="nav-text">字典的映射操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重访嵌套"><span class="nav-number">4.5.2.</span> <span class="nav-text">重访嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#键的排序：for循环"><span class="nav-number">4.5.3.</span> <span class="nav-text">键的排序：for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用if测试不存在的键"><span class="nav-number">4.5.4.</span> <span class="nav-text">使用if测试不存在的键</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元组"><span class="nav-number">4.6.</span> <span class="nav-text">元组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件"><span class="nav-number">4.7.</span> <span class="nav-text">文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第5章-Python的数字"><span class="nav-number">5.</span> <span class="nav-text">第5章 Python的数字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python的数字类型"><span class="nav-number">5.1.</span> <span class="nav-text">Python的数字类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数字常量"><span class="nav-number">5.1.1.</span> <span class="nav-text">数字常量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内置数学工具和扩展"><span class="nav-number">5.1.2.</span> <span class="nav-text">内置数学工具和扩展</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第6章-动态类型"><span class="nav-number">6.</span> <span class="nav-text">第6章 动态类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缺少类型声明语句"><span class="nav-number">6.1.</span> <span class="nav-text">缺少类型声明语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量，对象和引用"><span class="nav-number">6.1.1.</span> <span class="nav-text">变量，对象和引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象的垃圾收集"><span class="nav-number">6.1.2.</span> <span class="nav-text">对象的垃圾收集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#共享引用"><span class="nav-number">6.1.3.</span> <span class="nav-text">共享引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#共享引用和在原处修改"><span class="nav-number">6.1.4.</span> <span class="nav-text">共享引用和在原处修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#共享引用和相等"><span class="nav-number">6.1.5.</span> <span class="nav-text">共享引用和相等</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python的字符串"><span class="nav-number">7.</span> <span class="nav-text">Python的字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串常量"><span class="nav-number">7.1.</span> <span class="nav-text">字符串常量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单双引号字符串是一样的"><span class="nav-number">7.1.1.</span> <span class="nav-text">单双引号字符串是一样的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用转义序列代表特殊字节"><span class="nav-number">7.1.2.</span> <span class="nav-text">用转义序列代表特殊字节</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#raw字符串抑制转义"><span class="nav-number">7.1.3.</span> <span class="nav-text">raw字符串抑制转义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三重引号编写多行字符串块"><span class="nav-number">7.1.4.</span> <span class="nav-text">三重引号编写多行字符串块</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实际应用中的字符串"><span class="nav-number">7.2.</span> <span class="nav-text">实际应用中的字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本操作"><span class="nav-number">7.2.1.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#索引和分片"><span class="nav-number">7.2.2.</span> <span class="nav-text">索引和分片</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第1章-问答环节"><span class="nav-number">1.</span> <span class="nav-text">第1章 问答环节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么选择Python"><span class="nav-number">1.1.</span> <span class="nav-text">为什么选择Python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python的缺点"><span class="nav-number">1.2.</span> <span class="nav-text">Python的缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python可以做什么？"><span class="nav-number">1.3.</span> <span class="nav-text">Python可以做什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第2章-Python如何运行程序"><span class="nav-number">2.</span> <span class="nav-text">第2章 Python如何运行程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python解释器"><span class="nav-number">2.1.</span> <span class="nav-text">Python解释器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序执行"><span class="nav-number">2.2.</span> <span class="nav-text">程序执行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序员视角"><span class="nav-number">2.2.1.</span> <span class="nav-text">程序员视角</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python视角"><span class="nav-number">2.2.2.</span> <span class="nav-text">Python视角</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何运行程序"><span class="nav-number">3.</span> <span class="nav-text">如何运行程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#交互提示模式下编写代码"><span class="nav-number">3.1.</span> <span class="nav-text">交互提示模式下编写代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么使用交互提示模式"><span class="nav-number">3.1.1.</span> <span class="nav-text">为什么使用交互提示模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用交互模式的注意事项"><span class="nav-number">3.1.2.</span> <span class="nav-text">使用交互模式的注意事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过文件执行第一段脚本"><span class="nav-number">3.2.</span> <span class="nav-text">通过文件执行第一段脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#windows中直接双击执行py文件"><span class="nav-number">3.3.</span> <span class="nav-text">windows中直接双击执行py文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入模块和重载"><span class="nav-number">3.4.</span> <span class="nav-text">导入模块和重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块的特性：-属性"><span class="nav-number">3.5.</span> <span class="nav-text">模块的特性： 属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模块和命名空间"><span class="nav-number">3.5.1.</span> <span class="nav-text">模块和命名空间</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用exec运行模块文件"><span class="nav-number">3.6.</span> <span class="nav-text">使用exec运行模块文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第4章-Python对象类型"><span class="nav-number">4.</span> <span class="nav-text">第4章 Python对象类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么使用内置类型"><span class="nav-number">4.1.</span> <span class="nav-text">为什么使用内置类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Python的核心数据类型"><span class="nav-number">4.1.1.</span> <span class="nav-text">Python的核心数据类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数字"><span class="nav-number">4.2.</span> <span class="nav-text">数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">4.3.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#序列的操作"><span class="nav-number">4.3.1.</span> <span class="nav-text">序列的操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串的不可变性"><span class="nav-number">4.3.2.</span> <span class="nav-text">字符串的不可变性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串的特定方法"><span class="nav-number">4.3.3.</span> <span class="nav-text">字符串的特定方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内置方法帮助"><span class="nav-number">4.3.4.</span> <span class="nav-text">内置方法帮助</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">4.4.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#序列操作"><span class="nav-number">4.4.1.</span> <span class="nav-text">序列操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表的特定类型的操作"><span class="nav-number">4.4.2.</span> <span class="nav-text">列表的特定类型的操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#边界检查"><span class="nav-number">4.4.3.</span> <span class="nav-text">边界检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表嵌套"><span class="nav-number">4.4.4.</span> <span class="nav-text">列表嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表解析"><span class="nav-number">4.4.5.</span> <span class="nav-text">列表解析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字典"><span class="nav-number">4.5.</span> <span class="nav-text">字典</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字典的映射操作"><span class="nav-number">4.5.1.</span> <span class="nav-text">字典的映射操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重访嵌套"><span class="nav-number">4.5.2.</span> <span class="nav-text">重访嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#键的排序：for循环"><span class="nav-number">4.5.3.</span> <span class="nav-text">键的排序：for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用if测试不存在的键"><span class="nav-number">4.5.4.</span> <span class="nav-text">使用if测试不存在的键</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元组"><span class="nav-number">4.6.</span> <span class="nav-text">元组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件"><span class="nav-number">4.7.</span> <span class="nav-text">文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第5章-Python的数字"><span class="nav-number">5.</span> <span class="nav-text">第5章 Python的数字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python的数字类型"><span class="nav-number">5.1.</span> <span class="nav-text">Python的数字类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数字常量"><span class="nav-number">5.1.1.</span> <span class="nav-text">数字常量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内置数学工具和扩展"><span class="nav-number">5.1.2.</span> <span class="nav-text">内置数学工具和扩展</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第6章-动态类型"><span class="nav-number">6.</span> <span class="nav-text">第6章 动态类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缺少类型声明语句"><span class="nav-number">6.1.</span> <span class="nav-text">缺少类型声明语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量，对象和引用"><span class="nav-number">6.1.1.</span> <span class="nav-text">变量，对象和引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象的垃圾收集"><span class="nav-number">6.1.2.</span> <span class="nav-text">对象的垃圾收集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#共享引用"><span class="nav-number">6.1.3.</span> <span class="nav-text">共享引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#共享引用和在原处修改"><span class="nav-number">6.1.4.</span> <span class="nav-text">共享引用和在原处修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#共享引用和相等"><span class="nav-number">6.1.5.</span> <span class="nav-text">共享引用和相等</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python的字符串"><span class="nav-number">7.</span> <span class="nav-text">Python的字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串常量"><span class="nav-number">7.1.</span> <span class="nav-text">字符串常量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单双引号字符串是一样的"><span class="nav-number">7.1.1.</span> <span class="nav-text">单双引号字符串是一样的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用转义序列代表特殊字节"><span class="nav-number">7.1.2.</span> <span class="nav-text">用转义序列代表特殊字节</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#raw字符串抑制转义"><span class="nav-number">7.1.3.</span> <span class="nav-text">raw字符串抑制转义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三重引号编写多行字符串块"><span class="nav-number">7.1.4.</span> <span class="nav-text">三重引号编写多行字符串块</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实际应用中的字符串"><span class="nav-number">7.2.</span> <span class="nav-text">实际应用中的字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本操作"><span class="nav-number">7.2.1.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#索引和分片"><span class="nav-number">7.2.2.</span> <span class="nav-text">索引和分片</span></a></li></ol></li></ol></li></ol></div>
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">winbug</span>
-
-  
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">winbug</p>
+  <div class="site-description" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.2.0</div>
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
+        
 
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">winbug</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
 
         
 
@@ -1039,107 +711,24 @@
 
 
 
-        
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
-
-
-
-  
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -1155,28 +744,10 @@
 
 
 
-  
 
 
 
 
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
   
 

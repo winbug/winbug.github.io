@@ -1,106 +1,24 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '6.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.l3f.win","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
   <meta name="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
 <meta property="og:type" content="website">
@@ -108,23 +26,20 @@
 <meta property="og:url" content="http://www.l3f.win/page/5/index.html">
 <meta property="og:site_name" content="L3F.WIN">
 <meta property="og:description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="winbug">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="L3F.WIN">
-<meta name="twitter:description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
+
+<link rel="canonical" href="http://www.l3f.win/page/5/">
 
 
-
-
-
-
-  <link rel="canonical" href="http://www.l3f.win/page/5/"/>
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -136,72 +51,58 @@
 
 
 
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">L3F.WIN</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle">Github及Hexo的使用</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">L3F.WIN</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Github及Hexo的使用</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
@@ -209,58 +110,20 @@
 
 
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-stylus中文文档">
-    <a href="/categories/Stylus中文文档/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-css3"></i> <br />Stylus中文文档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-微信小程序">
-    <a href="/categories/wechatminiapp/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-wechat"></i> <br />微信小程序</a>
-  </li>
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-      
-      
-    </ul>
-  
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
-  
-    
+  </li>
+        <li class="menu-item menu-item-archives">
 
-  
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
-  
+  </li>
+  </ul>
 </nav>
 
-
-
-  
 
 
 
@@ -268,135 +131,155 @@
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content index">
             
-  <section id="posts" class="posts-expand">
-    
-      
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="posts-expand">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/12/学习stylus【7】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%908%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/12/学习stylus【7】/" itemprop="url">
-                  学习stylus【7】注释(Comments)
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%908%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【8】条件式</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
+              <time title="创建时间：2018-02-12 19:42:17" itemprop="dateCreated datePublished" datetime="2018-02-12T19:42:17+08:00">2018-02-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2018-03-01 10:33:01" itemprop="dateModified" datetime="2018-03-01T10:33:01+08:00">2018-03-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="条件式"><a href="#条件式" class="headerlink" title="条件式"></a>条件式</h2><p>条件提供控制流，否则就是静态语言了，提供有条件的导入，混合，函数等。 下面的例子是简单的例子，不推荐:)</p>
+<h3 id="if-else-if-else"><a href="#if-else-if-else" class="headerlink" title="if / else if / else"></a><em>if / else if / else</em></h3><p>跟一般的语言一致，if表达式满足(true)的时候执行后面语句块，否则，继续后面的else if或else.<br>下面这个例子，根据overload的条件，决定是使用padding还是margin.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">overload-padding = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> overload-padding</span><br><span class="line">  padding(y, x)</span><br><span class="line">    margin y x</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  padding 5px 10px</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/02/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%908%E3%80%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%907%E3%80%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="winbug">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L3F.WIN">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/12/%E5%AD%A6%E4%B9%A0stylus%E3%80%907%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【7】注释(Comments)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-02-12 07:31:27" itemprop="dateCreated datePublished" datetime="2018-02-12T07:31:27+08:00">2018-02-12</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-03-01 10:32:57" itemprop="dateModified" datetime="2018-03-01T10:32:57+08:00">2018-03-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -404,172 +287,81 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>Stylus支持三种注释，单行注释，多行注释，以及多行缓冲注释。</p>
+<h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><p>跟JavaScript一样，双斜杠，CSS中不输出。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 我是注释!</span><br><span class="line">body</span><br><span class="line">  padding 5px // 蛋疼的padding</span><br></pre></td></tr></table></figure>
 
-      
-        
-          
-            <h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>Stylus支持三种注释，单行注释，多行注释，以及多行缓冲注释。</p>
-<h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><p>跟JavaScript一样，双斜杠，CSS中不输出。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 我是注释!</span><br><span class="line">body</span><br><span class="line">  padding 5px // 蛋疼的padding</span><br></pre></td></tr></table></figure></p>
-<h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><p>多行注释看起来有点像CSS的常规注释。然而，它们只有在compress选项未启用的时候才会被输出。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"> * 给定数值合体</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">add(a, b)</span><br><span class="line">  a + b</span><br></pre></td></tr></table></figure></p>
-<h3 id="多行缓冲注释"><a href="#多行缓冲注释" class="headerlink" title="多行缓冲注释"></a>多行缓冲注释</h3><p>跟多行注释类似，不同之处在于开始的时候，这里是/*!. 这个相当于告诉Stylus压缩的时候这段无视直接输出。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/*!</span><br><span class="line"> * 给定数值合体</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">add(a, b)</span><br><span class="line">  a + b</span><br></pre></td></tr></table></figure></p>
+<h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><p>多行注释看起来有点像CSS的常规注释。然而，它们只有在compress选项未启用的时候才会被输出。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"> * 给定数值合体</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">add(a, b)</span><br><span class="line">  a + b</span><br></pre></td></tr></table></figure>
 
-          
-        
+<h3 id="多行缓冲注释"><a href="#多行缓冲注释" class="headerlink" title="多行缓冲注释"></a>多行缓冲注释</h3><p>跟多行注释类似，不同之处在于开始的时候，这里是/*!. 这个相当于告诉Stylus压缩的时候这段无视直接输出。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/*!</span><br><span class="line"> * 给定数值合体</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">add(a, b)</span><br><span class="line">  a + b</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/11/学习stylus【6】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/11/%E5%AD%A6%E4%B9%A0stylus%E3%80%906%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/11/学习stylus【6】/" itemprop="url">
-                  学习stylus【6】Rest参数（Rest Params）
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/11/%E5%AD%A6%E4%B9%A0stylus%E3%80%906%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【6】Rest参数（Rest Params）</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-02-11 07:24:54" itemprop="dateCreated datePublished" datetime="2018-02-11T07:24:54+08:00">2018-02-11</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-03-01 10:32:52" itemprop="dateModified" datetime="2018-03-01T10:32:52+08:00">2018-03-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -577,173 +369,81 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          <h2 id="Rest参数"><a href="#Rest参数" class="headerlink" title="Rest参数"></a>Rest参数</h2><p><strong>Stylus</strong> 支持name…形式的其余参数。这些参数可以传递给 <a href="/2018/02/01/学习stylus【3】/">混入</a> 或<a href="/2018/02/05/学习stylus【4】/">函数</a>的参数们。这在处理浏览器私有属性，如-moz或-webkit的时候很管用。<br>下面这个例子中，所有的参数们(1px, 2px, …)都被一个args参数给简单处理了：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">box-shadow(args...)</span><br><span class="line">   -webkit-box-shadow args</span><br><span class="line">   -moz-box-shadow args</span><br><span class="line">   box-shadow args</span><br><span class="line"></span><br><span class="line"> <span class="comment">#login</span></span><br><span class="line">   box-shadow 1px 2px 5px <span class="comment">#eee</span></span><br><span class="line"></span><br><span class="line">   =&gt;</span><br><span class="line">   <span class="comment">#login &#123;</span></span><br><span class="line">    -webkit-box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">    -moz-box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">    box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+          <h2 id="Rest参数"><a href="#Rest参数" class="headerlink" title="Rest参数"></a>Rest参数</h2><p><strong>Stylus</strong> 支持name…形式的其余参数。这些参数可以传递给 <a href="/2018/02/01/学习stylus【3】/">混入</a> 或<a href="/2018/02/05/学习stylus【4】/">函数</a>的参数们。这在处理浏览器私有属性，如-moz或-webkit的时候很管用。<br>下面这个例子中，所有的参数们(1px, 2px, …)都被一个args参数给简单处理了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">box-shadow(args...)</span><br><span class="line">   -webkit-box-shadow args</span><br><span class="line">   -moz-box-shadow args</span><br><span class="line">   box-shadow args</span><br><span class="line"></span><br><span class="line"> <span class="comment">#login</span></span><br><span class="line">   box-shadow 1px 2px 5px <span class="comment">#eee</span></span><br><span class="line"></span><br><span class="line">   =&gt;</span><br><span class="line">   <span class="comment">#login &#123;</span></span><br><span class="line">    -webkit-box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">    -moz-box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">    box-shadow: 1px 2px 5px <span class="comment">#eee;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/11/学习stylus【6】/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/02/11/%E5%AD%A6%E4%B9%A0stylus%E3%80%906%E3%80%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/06/学习stylus【5】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/06/%E5%AD%A6%E4%B9%A0stylus%E3%80%905%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/06/学习stylus【5】/" itemprop="url">
-                  学习stylus【5】Stylue内置方法
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/06/%E5%AD%A6%E4%B9%A0stylus%E3%80%905%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【5】Stylue内置方法</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-02-06 07:27:51" itemprop="dateCreated datePublished" datetime="2018-02-06T07:27:51+08:00">2018-02-06</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-03-01 10:32:46" itemprop="dateModified" datetime="2018-03-01T10:32:46+08:00">2018-03-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -751,177 +451,93 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <p><strong>Stylue内置方法</strong><br><em>red(color)</em><br>返回color中的红色比重</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">red(<span class="comment">#c00)  =&gt; 204</span></span><br></pre></td></tr></table></figure>
 
-      
-        
-          <p><strong>Stylue内置方法</strong><br><em>red(color)</em><br>返回color中的红色比重<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">red(<span class="comment">#c00)  =&gt; 204</span></span><br></pre></td></tr></table></figure></p>
-<p><em>green(color)</em><br>返回color中的绿色比重。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">green(<span class="comment">#c00)  =&gt; 204</span></span><br></pre></td></tr></table></figure></p>
-<p><em>blue(color)</em><br>返回color中的蓝色比重。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blue(<span class="comment">#c00)  =&gt; 204</span></span><br></pre></td></tr></table></figure></p>
-<p><em>alpha(color)</em><br>返回color中的透明度比重<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alpha(<span class="comment">#fff)</span></span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">alpha(rgba(0,0,0,0.3))</span><br><span class="line">// =&gt; 0.3</span><br></pre></td></tr></table></figure></p>
-<p><em>dark(color)</em><br>检查color是否是暗色。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dark(black)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">dark(<span class="comment">#005716)</span></span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">dark(white)</span><br><span class="line">// =&gt; <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
+<p><em>green(color)</em><br>返回color中的绿色比重。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">green(<span class="comment">#c00)  =&gt; 204</span></span><br></pre></td></tr></table></figure>
+
+<p><em>blue(color)</em><br>返回color中的蓝色比重。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blue(<span class="comment">#c00)  =&gt; 204</span></span><br></pre></td></tr></table></figure>
+
+<p><em>alpha(color)</em><br>返回color中的透明度比重</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alpha(<span class="comment">#fff)</span></span><br><span class="line">// =&gt; 1</span><br><span class="line"></span><br><span class="line">alpha(rgba(0,0,0,0.3))</span><br><span class="line">// =&gt; 0.3</span><br></pre></td></tr></table></figure>
+
+<p><em>dark(color)</em><br>检查color是否是暗色。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dark(black)</span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">dark(<span class="comment">#005716)</span></span><br><span class="line">// =&gt; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">dark(white)</span><br><span class="line">// =&gt; <span class="literal">false</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/06/学习stylus【5】/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/02/06/%E5%AD%A6%E4%B9%A0stylus%E3%80%905%E3%80%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/05/学习stylus【4】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/05/%E5%AD%A6%E4%B9%A0stylus%E3%80%904%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/05/学习stylus【4】/" itemprop="url">
-                  学习stylus【4】Stylus的方法及函数
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/05/%E5%AD%A6%E4%B9%A0stylus%E3%80%904%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【4】Stylus的方法及函数</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-02-05 07:51:52" itemprop="dateCreated datePublished" datetime="2018-02-05T07:51:52+08:00">2018-02-05</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-03-01 10:33:53" itemprop="dateModified" datetime="2018-03-01T10:33:53+08:00">2018-03-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -929,174 +545,81 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p><strong>方法</strong><br>在 <strong>stylus</strong> 中可以直接定义函数方法，不需要使用 <em>function</em><br>下面是一个最简单的返回值的方法</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">add(a, b)</span><br><span class="line">  a + b</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  padding add(10px, 5)</span><br><span class="line">=&gt;</span><br><span class="line">body&#123;padding: 15px;&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/05/学习stylus【4】/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/02/05/%E5%AD%A6%E4%B9%A0stylus%E3%80%904%E3%80%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/01/学习stylus【3】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/02/01/%E5%AD%A6%E4%B9%A0stylus%E3%80%903%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/01/学习stylus【3】/" itemprop="url">
-                  学习stylus【3】
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/01/%E5%AD%A6%E4%B9%A0stylus%E3%80%903%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【3】</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-02-01 07:09:36" itemprop="dateCreated datePublished" datetime="2018-02-01T07:09:36+08:00">2018-02-01</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-03-01 10:32:36" itemprop="dateModified" datetime="2018-03-01T10:32:36+08:00">2018-03-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1104,173 +627,80 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p><strong>使用运算符号</strong><br>和其他语言一样 <strong>stylus</strong> 也有运算符号，<br>最常用的 + - * / % 等等<br>逻辑运算符号 !, ==, !=, &gt;=, &gt;, &lt;=, &lt;等等<br>在 <strong>stylus</strong> 中都可以使用。而且 <strong>stylus</strong> 提供很多新的运算符号。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/01/学习stylus【3】/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/02/01/%E5%AD%A6%E4%B9%A0stylus%E3%80%903%E3%80%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/01/30/学习stylus【2】/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/01/30/%E5%AD%A6%E4%B9%A0stylus%E3%80%902%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/30/学习stylus【2】/" itemprop="url">
-                  学习stylus【2】变量
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/30/%E5%AD%A6%E4%B9%A0stylus%E3%80%902%E3%80%91/" class="post-title-link" itemprop="url">学习stylus【2】变量</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-01-30 07:01:29" itemprop="dateCreated datePublished" datetime="2018-01-30T07:01:29+08:00">2018-01-30</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-03-01 10:32:14" itemprop="dateModified" datetime="2018-03-01T10:32:14+08:00">2018-03-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1278,174 +708,82 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p><strong>使用变量</strong><br>我们还是以举例开始学习</p>
-<p>我们打开 <em>themes/landscape/source/css</em> 找到 <em>_variables.styl</em> 文件并打开<br>会发现很多如下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// Fonts</span><br><span class="line">font-sans = -apple-system, <span class="string">"Microsoft YaHei"</span> BlinkMacSystemFont,</span><br><span class="line">    <span class="string">"Segoe UI"</span>, <span class="string">"Roboto"</span>, <span class="string">"Oxygen"</span>, <span class="string">"Ubuntu"</span>, <span class="string">"Cantarell"</span>,</span><br><span class="line">    <span class="string">"Fira Sans"</span>, <span class="string">"Droid Sans"</span>, <span class="string">"Helvetica Neue"</span>,</span><br><span class="line">    sans-serif</span><br><span class="line">font-serif = Georgia, <span class="string">"Times New Roman"</span>, serif</span><br><span class="line">font-mono = <span class="string">"Source Code Pro"</span>, Consolas, Monaco, Menlo, Consolas, monospace</span><br><span class="line">font-icon = FontAwesome</span><br><span class="line">font-icon-path = <span class="string">"fonts/fontawesome-webfont"</span></span><br><span class="line">font-icon-version = <span class="string">"4.0.3"</span></span><br><span class="line">font-size = 14px</span><br><span class="line">line-height = 1.6em</span><br><span class="line">line-height-title = 1.1em</span><br></pre></td></tr></table></figure></p>
+<p>我们打开 <em>themes/landscape/source/css</em> 找到 <em>_variables.styl</em> 文件并打开<br>会发现很多如下代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// Fonts</span><br><span class="line">font-sans = -apple-system, <span class="string">"Microsoft YaHei"</span> BlinkMacSystemFont,</span><br><span class="line">    <span class="string">"Segoe UI"</span>, <span class="string">"Roboto"</span>, <span class="string">"Oxygen"</span>, <span class="string">"Ubuntu"</span>, <span class="string">"Cantarell"</span>,</span><br><span class="line">    <span class="string">"Fira Sans"</span>, <span class="string">"Droid Sans"</span>, <span class="string">"Helvetica Neue"</span>,</span><br><span class="line">    sans-serif</span><br><span class="line">font-serif = Georgia, <span class="string">"Times New Roman"</span>, serif</span><br><span class="line">font-mono = <span class="string">"Source Code Pro"</span>, Consolas, Monaco, Menlo, Consolas, monospace</span><br><span class="line">font-icon = FontAwesome</span><br><span class="line">font-icon-path = <span class="string">"fonts/fontawesome-webfont"</span></span><br><span class="line">font-icon-version = <span class="string">"4.0.3"</span></span><br><span class="line">font-size = 14px</span><br><span class="line">line-height = 1.6em</span><br><span class="line">line-height-title = 1.1em</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/30/学习stylus【2】/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/01/30/%E5%AD%A6%E4%B9%A0stylus%E3%80%902%E3%80%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/01/26/学习stylus/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/01/26/%E5%AD%A6%E4%B9%A0stylus/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/26/学习stylus/" itemprop="url">
-                  学习stylus【1】介绍
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/26/%E5%AD%A6%E4%B9%A0stylus/" class="post-title-link" itemprop="url">学习stylus【1】介绍</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-01-26 07:57:26" itemprop="dateCreated datePublished" datetime="2018-01-26T07:57:26+08:00">2018-01-26</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-03-01 10:32:05" itemprop="dateModified" datetime="2018-03-01T10:32:05+08:00">2018-03-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Stylus中文文档/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stylus%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">Stylus中文文档</span></a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1453,157 +791,73 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h2 id="stylus介绍"><a href="#stylus介绍" class="headerlink" title="stylus介绍"></a>stylus介绍</h2><p><strong>stylus</strong> 是一个CSS的预处理框架，2010年产生，来自Node.js社区，主要用来给Node项目进行CSS预处理支持，所以 Stylus 是一种新型语言，可以创建健壮的、动态的、富有表现力的CSS。比较年轻，其本质上做的事情与 SASS/LESS 等类似，应该是有很多借鉴，所以近似脚本的方式去写CSS代码。</p>
 <p><em>.styl</em> 是 <strong>stylus</strong> 的文件扩展名，支持多样性的CSS语法。</p>
 <p><strong>参考文档</strong><br><a href="http://stylus-lang.com/" target="_blank" rel="noopener">官方API</a></p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/26/学习stylus/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/01/26/%E5%AD%A6%E4%B9%A0stylus/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.l3f.win/2018/01/09/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="winbug">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/common/avatar.jpg">
+      <meta itemprop="description" content="业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="L3F.WIN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/09/hello-world/" itemprop="url">
-                  大家好，这是我的第一篇Hexo文章
-                </a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/09/hello-world/" class="post-title-link" itemprop="url">大家好，这是我的第一篇Hexo文章</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-01-09 15:46:52" itemprop="dateCreated datePublished" datetime="2018-01-09T15:46:52+08:00">2018-01-09</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-01-30 10:04:22" itemprop="dateModified" datetime="2018-01-30T10:04:22+08:00">2018-01-30</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1611,59 +865,35 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p>这个域名的内容基本上与Git和Hexo相关</p>
+          <p>这个域名的内容基本上与Git和Hexo相关</p>
 <h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="创建一个新的文章"><a href="#创建一个新的文章" class="headerlink" title="创建一个新的文章"></a>创建一个新的文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
 <p>更多详情请参考: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
 <h3 id="运行服务器"><a href="#运行服务器" class="headerlink" title="运行服务器"></a>运行服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
 <p>更多详情请参考: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
 <h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
 <p>更多详情请参考: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
 <h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
 <p>更多详情请参考: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
-  </section>
+  </div>
 
   
   <nav class="pagination">
@@ -1675,217 +905,108 @@
           </div>
           
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
-        
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/images/common/avatar.jpg"
-                alt="winbug" />
-            
-              <p class="site-author-name" itemprop="name">winbug</p>
-              <p class="site-description motion-element" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">48</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">分类</span>
-                  
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">36</span>
-                    <span class="site-state-item-name">标签</span>
-                  
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-    </main>
+      <!--/noindex-->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">winbug</span>
-
-  
-
-  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">winbug</p>
+  <div class="site-description" itemprop="description">业余时间摸索Github及Hexo创建的网站，顺道学习一些新的知识比如Git及Nodejs等等</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.2.0</div>
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
+        
 
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">winbug</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
 
         
 
@@ -1896,103 +1017,24 @@
 
 
 
-        
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+<script src="/js/utils.js"></script>
 
-
-
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/muse.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
-
-
-
-  
-
-
-
-	
-
-
-
-
-
-  
-
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -2008,28 +1050,10 @@
 
 
 
-  
 
 
 
 
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
   
 
