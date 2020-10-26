@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.l3f.win","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"www.l3f.win","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="利用VuePress和Netlify CMS创建一个简单的网站本文属于本人翻译其英文原稿及测试过程中遇到的问题总结而成的，请大家多提意见。可随意转载。 在本教程中，我将向您展示如何使用VuePress 和 Netlify CMS构建一个静态网站。 如果您不熟悉VuePres， 它是由Evan You(Vue的创始人)在Vue之上构建的静态网站生成器。与Nuxt.js不同的是，VuePress的主">
@@ -39,8 +39,8 @@
 <meta property="article:published_time" content="2018-12-05T01:45:17.000Z">
 <meta property="article:modified_time" content="2018-12-05T03:33:38.297Z">
 <meta property="article:author" content="winbug">
-<meta property="article:tag" content="HTML5">
 <meta property="article:tag" content="Javascript">
+<meta property="article:tag" content="HTML5">
 <meta property="article:tag" content="代码">
 <meta property="article:tag" content="Nodejs">
 <meta property="article:tag" content="Vue">
@@ -121,6 +121,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -140,11 +141,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -287,8 +315,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/HTML5/" rel="tag"># HTML5</a>
               <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+              <a href="/tags/HTML5/" rel="tag"># HTML5</a>
               <a href="/tags/%E4%BB%A3%E7%A0%81/" rel="tag"># 代码</a>
               <a href="/tags/Nodejs/" rel="tag"># Nodejs</a>
               <a href="/tags/Vue/" rel="tag"># Vue</a>
@@ -382,7 +410,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-count">50</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -391,7 +419,7 @@
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-count">42</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -438,6 +466,12 @@
 
       </div>
     </footer>
+    <div id="page_end_html">
+        <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
+        <script type="text/javascript">
+        L2Dwidget.init();
+        </script>
+    </div>  
   </div>
 
   
@@ -461,6 +495,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
